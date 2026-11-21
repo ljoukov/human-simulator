@@ -24,18 +24,29 @@ jobs:
           printf '%s  %s\n' \
             6e42dce574f044fc7f2c4a608be213f6349d538d31d190db343f314ec7ca5368 "$RUNNER_TEMP/upper-limb-glb.zip" \
             d989a6f076054ada639f597a0d21764e7e7b165a008f73493b5c803af826d7f0 "$RUNNER_TEMP/lower-limb-glb.zip" | shasum -a 256 -c -
-          python upper-limb/tools/build_asset.py "$RUNNER_TEMP/upper-limb-glb.zip" upper-limb/assets/upper-limb.glb
-          python lower-limb/tools/build_asset.py "$RUNNER_TEMP/lower-limb-glb.zip" lower-limb/assets/lower-limb.glb
-          shasum -a 256 upper-limb/assets/upper-limb.glb lower-limb/assets/lower-limb.glb
-          printf '%s\n' \
-            '2cf63894d808b77598ff6b3e842a9c63710c8cb751a33cc90030a4374f2cabe1  upper-limb/assets/upper-limb.glb' \
-            '4c807a0ee9827b38a448f95372e7d1667d2a2245078047c7d2bd0c1daeb94be4  lower-limb/assets/lower-limb.glb' | shasum -a 256 -c -
-      - name: Publish byte-identical assets
+      - name: Publish the byte-identical arm
         shell: bash
         run: |
           test "$GITHUB_REF" = refs/heads/main
+          python upper-limb/tools/build_asset.py "$RUNNER_TEMP/upper-limb-glb.zip" upper-limb/assets/upper-limb.glb
+          printf '%s\n' '2cf63894d808b77598ff6b3e842a9c63710c8cb751a33cc90030a4374f2cabe1  upper-limb/assets/upper-limb.glb' | shasum -a 256 -c -
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -- upper-limb/assets/upper-limb.glb lower-limb/assets/lower-limb.glb
-          git commit -m 'Add the animated arm and leg models'
+          git add -- upper-limb/assets/upper-limb.glb
+          git commit -m 'Add the animated arm model'
           git push origin HEAD:refs/heads/main
+      - name: Verify and publish the leg
+        shell: bash
+        run: |
+          python lower-limb/tools/build_asset.py "$RUNNER_TEMP/lower-limb-glb.zip" lower-limb/assets/lower-limb.glb
+          shasum -a 256 lower-limb/assets/lower-limb.glb
+          python .github/compare-leg.py lower-limb/assets/lower-limb.glb .github/leg-reference.json.gz
+          git add -- lower-limb/assets/lower-limb.glb
+          git commit -m 'Add the verified animated leg model'
+          git push origin HEAD:refs/heads/main
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: comparison-leg
+          path: lower-limb/assets/lower-limb.glb
+          if-no-files-found: ignore
