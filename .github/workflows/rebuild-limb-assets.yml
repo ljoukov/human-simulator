@@ -1,0 +1,41 @@
+name: Rebuild published limb assets
+
+on:
+  workflow_dispatch:
+
+jobs:
+  rebuild:
+    runs-on: macos-26
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.8'
+          architecture: arm64
+      - name: Rebuild the two GLBs
+        shell: bash
+        run: |
+          python -m pip install --only-binary=:all: 'numpy==2.5.5' 'scipy==1.18.1' 'DracoPy==2.2.0' 'libigl==2.6.3'
+          curl --fail --silent --show-error --location --retry 3 --max-time 180 https://caskanatomy.info/open3dmodelfiles/upper-limb/upper-limb-glb.zip -o "$RUNNER_TEMP/upper-limb-glb.zip"
+          curl --fail --silent --show-error --location --retry 3 --max-time 180 https://caskanatomy.info/open3dmodelfiles/lower-limb/lower-limb-glb.zip -o "$RUNNER_TEMP/lower-limb-glb.zip"
+          printf '%s  %s\n' \
+            6e42dce574f044fc7f2c4a608be213f6349d538d31d190db343f314ec7ca5368 "$RUNNER_TEMP/upper-limb-glb.zip" \
+            d989a6f076054ada639f597a0d21764e7e7b165a008f73493b5c803af826d7f0 "$RUNNER_TEMP/lower-limb-glb.zip" | shasum -a 256 -c -
+          python upper-limb/tools/build_asset.py "$RUNNER_TEMP/upper-limb-glb.zip" upper-limb/assets/upper-limb.glb
+          python lower-limb/tools/build_asset.py "$RUNNER_TEMP/lower-limb-glb.zip" lower-limb/assets/lower-limb.glb
+          shasum -a 256 upper-limb/assets/upper-limb.glb lower-limb/assets/lower-limb.glb
+          printf '%s\n' \
+            '2cf63894d808b77598ff6b3e842a9c63710c8cb751a33cc90030a4374f2cabe1  upper-limb/assets/upper-limb.glb' \
+            '4c807a0ee9827b38a448f95372e7d1667d2a2245078047c7d2bd0c1daeb94be4  lower-limb/assets/lower-limb.glb' | shasum -a 256 -c -
+      - name: Publish byte-identical assets
+        shell: bash
+        run: |
+          test "$GITHUB_REF" = refs/heads/main
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- upper-limb/assets/upper-limb.glb lower-limb/assets/lower-limb.glb
+          git commit -m 'Add the animated arm and leg models'
+          git push origin HEAD:refs/heads/main
