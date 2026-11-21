@@ -1,0 +1,2588 @@
+{
+  "metadata": {
+    "model": "Rajagopal2016",
+    "source": "https://raw.githubusercontent.com/opensim-org/opensim-models/d9b05d470b1a481c222372c85b75772faf8f7792/Models/Rajagopal/Rajagopal2016.osim",
+    "sourceCommit": "d9b05d470b1a481c222372c85b75772faf8f7792",
+    "sourceSha256": "3f5c5f23e486073f2ad2aa4a4967ffe2fcdd582b1e355512bc54f70c36376bf4",
+    "reference": "https://doi.org/10.1109/TBME.2016.2586891",
+    "openSimVersion": "4.6-2026-06-22-85aaf64",
+    "coordinate": "knee_angle_r",
+    "coupledCoordinate": "knee_angle_r_beta",
+    "fixedCoordinatesDeg": {
+      "hip_flexion_r": 0.0,
+      "hip_adduction_r": 0.0,
+      "hip_rotation_r": 0.0,
+      "ankle_angle_r": 0.0,
+      "subtalar_angle_r": 0.0,
+      "mtp_angle_r": 0.0
+    },
+    "otherCoordinates": "All other coordinates held at model defaults.",
+    "momentArmConvention": "Positive is flexion, negative is extension. Equals minus the muscle-tendon path length derivative with respect to knee flexion in radians.",
+    "scope": "Reference-model muscle-tendon path geometry for a fixed hip and ankle.",
+    "validation": {
+      "derivativeStepRad": 1e-05,
+      "maxAllowedDerivativeErrorM": 5e-05,
+      "maxObservedDerivativeErrorM": {
+        "recfem_r": 7.6349e-06,
+        "vasmed_r": 9.2566e-06,
+        "vasint_r": 1.17995e-05,
+        "vaslat_r": 2.06934e-05,
+        "bflh_r": 1.534e-07,
+        "semimem_r": 2.018e-06,
+        "semiten_r": 3.5294e-06
+      }
+    }
+  },
+  "muscles": {
+    "recfem_r": "Rectus femoris",
+    "vasmed_r": "Vastus medialis",
+    "vasint_r": "Vastus intermedius",
+    "vaslat_r": "Vastus lateralis",
+    "bflh_r": "Biceps femoris, long head",
+    "semimem_r": "Semimembranosus",
+    "semiten_r": "Semitendinosus"
+  },
+  "samples": [
+    {
+      "angleDeg": 0,
+      "lengthM": {
+        "recfem_r": 0.51205732,
+        "vasmed_r": 0.27020945,
+        "vasint_r": 0.28211692,
+        "vaslat_r": 0.29572322,
+        "bflh_r": 0.41399808,
+        "semimem_r": 0.4115188,
+        "semiten_r": 0.45403141
+      },
+      "momentArmM": {
+        "recfem_r": -0.04733129,
+        "vasmed_r": -0.04413256,
+        "vasint_r": -0.04590336,
+        "vaslat_r": -0.04030674,
+        "bflh_r": 0.02895115,
+        "semimem_r": 0.03180798,
+        "semiten_r": 0.03801041
+      }
+    },
+    {
+      "angleDeg": 1,
+      "lengthM": {
+        "recfem_r": 0.51288559,
+        "vasmed_r": 0.27098268,
+        "vasint_r": 0.28291935,
+        "vaslat_r": 0.29643373,
+        "bflh_r": 0.4134915,
+        "semimem_r": 0.41096032,
+        "semiten_r": 0.45336414
+      },
+      "momentArmM": {
+        "recfem_r": -0.04756693,
+        "vasmed_r": -0.04445432,
+        "vasint_r": -0.04603186,
+        "vaslat_r": -0.04109256,
+        "bflh_r": 0.02909806,
+        "semimem_r": 0.0321851,
+        "semiten_r": 0.03844683
+      }
+    },
+    {
+      "angleDeg": 2,
+      "lengthM": {
+        "recfem_r": 0.51371726,
+        "vasmed_r": 0.27176057,
+        "vasint_r": 0.28372321,
+        "vaslat_r": 0.29715698,
+        "bflh_r": 0.41298236,
+        "semimem_r": 0.41039531,
+        "semiten_r": 0.45268932
+      },
+      "momentArmM": {
+        "recfem_r": -0.04772339,
+        "vasmed_r": -0.04466847,
+        "vasint_r": -0.04607036,
+        "vaslat_r": -0.04176831,
+        "bflh_r": 0.02924561,
+        "semimem_r": 0.03255634,
+        "semiten_r": 0.0388742
+      }
+    },
+    {
+      "angleDeg": 3,
+      "lengthM": {
+        "recfem_r": 0.51455108,
+        "vasmed_r": 0.27254139,
+        "vasint_r": 0.28452709,
+        "vaslat_r": 0.29789116,
+        "bflh_r": 0.41247063,
+        "semimem_r": 0.40982388,
+        "semiten_r": 0.45200711
+      },
+      "momentArmM": {
+        "recfem_r": -0.04781616,
+        "vasmed_r": -0.04479311,
+        "vasint_r": -0.04603624,
+        "vaslat_r": -0.04234845,
+        "bflh_r": 0.02939394,
+        "semimem_r": 0.0329219,
+        "semiten_r": 0.03929286
+      }
+    },
+    {
+      "angleDeg": 4,
+      "lengthM": {
+        "recfem_r": 0.51538607,
+        "vasmed_r": 0.27332372,
+        "vasint_r": 0.28532985,
+        "vaslat_r": 0.29863474,
+        "bflh_r": 0.41195631,
+        "semimem_r": 0.40924613,
+        "semiten_r": 0.45131767
+      },
+      "momentArmM": {
+        "recfem_r": -0.04785909,
+        "vasmed_r": -0.04484462,
+        "vasint_r": -0.04594512,
+        "vaslat_r": -0.04284617,
+        "bflh_r": 0.02954319,
+        "semimem_r": 0.03328197,
+        "semiten_r": 0.03970314
+      }
+    },
+    {
+      "angleDeg": 5,
+      "lengthM": {
+        "recfem_r": 0.51622146,
+        "vasmed_r": 0.27410642,
+        "vasint_r": 0.28613062,
+        "vaslat_r": 0.29938637,
+        "bflh_r": 0.41143938,
+        "semimem_r": 0.40866214,
+        "semiten_r": 0.45062114
+      },
+      "momentArmM": {
+        "recfem_r": -0.04786445,
+        "vasmed_r": -0.0448376,
+        "vasint_r": -0.04581088,
+        "vaslat_r": -0.04327336,
+        "bflh_r": 0.02969348,
+        "semimem_r": 0.03363673,
+        "semiten_r": 0.04010536
+      }
+    },
+    {
+      "angleDeg": 6,
+      "lengthM": {
+        "recfem_r": 0.5170567,
+        "vasmed_r": 0.27488858,
+        "vasint_r": 0.28692877,
+        "vaslat_r": 0.30014492,
+        "bflh_r": 0.41091981,
+        "semimem_r": 0.40807201,
+        "semiten_r": 0.44991765
+      },
+      "momentArmM": {
+        "recfem_r": -0.04784295,
+        "vasmed_r": -0.04478496,
+        "vasint_r": -0.04564571,
+        "vaslat_r": -0.0436406,
+        "bflh_r": 0.02984491,
+        "semimem_r": 0.03398633,
+        "semiten_r": 0.04049981
+      }
+    },
+    {
+      "angleDeg": 7,
+      "lengthM": {
+        "recfem_r": 0.51789139,
+        "vasmed_r": 0.27566951,
+        "vasint_r": 0.28772384,
+        "vaslat_r": 0.30090942,
+        "bflh_r": 0.41039759,
+        "semimem_r": 0.40747583,
+        "semiten_r": 0.44920735
+      },
+      "momentArmM": {
+        "recfem_r": -0.04780382,
+        "vasmed_r": -0.04469794,
+        "vasint_r": -0.04546019,
+        "vaslat_r": -0.04395715,
+        "bflh_r": 0.02999755,
+        "semimem_r": 0.03433093,
+        "semiten_r": 0.04088679
+      }
+    },
+    {
+      "angleDeg": 8,
+      "lengthM": {
+        "recfem_r": 0.51872531,
+        "vasmed_r": 0.27644869,
+        "vasint_r": 0.28851556,
+        "vaslat_r": 0.30167906,
+        "bflh_r": 0.40987269,
+        "semimem_r": 0.40687367,
+        "semiten_r": 0.44849037
+      },
+      "momentArmM": {
+        "recfem_r": -0.04775481,
+        "vasmed_r": -0.04458617,
+        "vasint_r": -0.04526328,
+        "vaslat_r": -0.04423097,
+        "bflh_r": 0.03015148,
+        "semimem_r": 0.03467066,
+        "semiten_r": 0.04126657
+      }
+    },
+    {
+      "angleDeg": 9,
+      "lengthM": {
+        "recfem_r": 0.51955833,
+        "vasmed_r": 0.27722576,
+        "vasint_r": 0.28930381,
+        "vaslat_r": 0.30245316,
+        "bflh_r": 0.40934509,
+        "semimem_r": 0.40626563,
+        "semiten_r": 0.44776683
+      },
+      "momentArmM": {
+        "recfem_r": -0.04770231,
+        "vasmed_r": -0.04445769,
+        "vasint_r": -0.04506248,
+        "vaslat_r": -0.04446876,
+        "bflh_r": 0.03030674,
+        "semimem_r": 0.03500566,
+        "semiten_r": 0.04163941
+      }
+    },
+    {
+      "angleDeg": 10,
+      "lengthM": {
+        "recfem_r": 0.52039044,
+        "vasmed_r": 0.2780005,
+        "vasint_r": 0.29008855,
+        "vaslat_r": 0.30323114,
+        "bflh_r": 0.40881478,
+        "semimem_r": 0.40565179,
+        "semiten_r": 0.44703684
+      },
+      "momentArmM": {
+        "recfem_r": -0.04765133,
+        "vasmed_r": -0.04431907,
+        "vasint_r": -0.04486379,
+        "vaslat_r": -0.04467597,
+        "bflh_r": 0.03046337,
+        "semimem_r": 0.03533605,
+        "semiten_r": 0.04200554
+      }
+    },
+    {
+      "angleDeg": 11,
+      "lengthM": {
+        "recfem_r": 0.52122168,
+        "vasmed_r": 0.27877274,
+        "vasint_r": 0.29086986,
+        "vaslat_r": 0.30401247,
+        "bflh_r": 0.40828171,
+        "semimem_r": 0.40503222,
+        "semiten_r": 0.44630052
+      },
+      "momentArmM": {
+        "recfem_r": -0.04760177,
+        "vasmed_r": -0.04417122,
+        "vasint_r": -0.04466792,
+        "vaslat_r": -0.0448524,
+        "bflh_r": 0.03062142,
+        "semimem_r": 0.03566188,
+        "semiten_r": 0.04236515
+      }
+    },
+    {
+      "angleDeg": 12,
+      "lengthM": {
+        "recfem_r": 0.52205205,
+        "vasmed_r": 0.2795423,
+        "vasint_r": 0.29164777,
+        "vaslat_r": 0.30479659,
+        "bflh_r": 0.40774588,
+        "semimem_r": 0.404407,
+        "semiten_r": 0.44555799
+      },
+      "momentArmM": {
+        "recfem_r": -0.04755169,
+        "vasmed_r": -0.04401306,
+        "vasint_r": -0.04447362,
+        "vaslat_r": -0.04499612,
+        "bflh_r": 0.03078091,
+        "semimem_r": 0.03598321,
+        "semiten_r": 0.0427184
+      }
+    },
+    {
+      "angleDeg": 13,
+      "lengthM": {
+        "recfem_r": 0.52288155,
+        "vasmed_r": 0.28030903,
+        "vasint_r": 0.2924223,
+        "vaslat_r": 0.30558294,
+        "bflh_r": 0.40720725,
+        "semimem_r": 0.40377621,
+        "semiten_r": 0.44480936
+      },
+      "momentArmM": {
+        "recfem_r": -0.04750145,
+        "vasmed_r": -0.04384615,
+        "vasint_r": -0.04428201,
+        "vaslat_r": -0.04510831,
+        "bflh_r": 0.03094183,
+        "semimem_r": 0.03630013,
+        "semiten_r": 0.04306549
+      }
+    },
+    {
+      "angleDeg": 14,
+      "lengthM": {
+        "recfem_r": 0.52371016,
+        "vasmed_r": 0.28107277,
+        "vasint_r": 0.29319352,
+        "vaslat_r": 0.30637098,
+        "bflh_r": 0.4066658,
+        "semimem_r": 0.40313993,
+        "semiten_r": 0.44405472
+      },
+      "momentArmM": {
+        "recfem_r": -0.04745031,
+        "vasmed_r": -0.04367085,
+        "vasint_r": -0.04409301,
+        "vaslat_r": -0.04518907,
+        "bflh_r": 0.03110415,
+        "semimem_r": 0.03661272,
+        "semiten_r": 0.04340663
+      }
+    },
+    {
+      "angleDeg": 15,
+      "lengthM": {
+        "recfem_r": 0.52453786,
+        "vasmed_r": 0.28183338,
+        "vasint_r": 0.29396145,
+        "vaslat_r": 0.30716015,
+        "bflh_r": 0.4061215,
+        "semimem_r": 0.40249822,
+        "semiten_r": 0.44329418
+      },
+      "momentArmM": {
+        "recfem_r": -0.04739647,
+        "vasmed_r": -0.04348634,
+        "vasint_r": -0.04390541,
+        "vaslat_r": -0.04523754,
+        "bflh_r": 0.03126783,
+        "semimem_r": 0.03692107,
+        "semiten_r": 0.04374199
+      }
+    },
+    {
+      "angleDeg": 16,
+      "lengthM": {
+        "recfem_r": 0.52536458,
+        "vasmed_r": 0.28259067,
+        "vasint_r": 0.2947261,
+        "vaslat_r": 0.30794987,
+        "bflh_r": 0.40557434,
+        "semimem_r": 0.40185117,
+        "semiten_r": 0.44252785
+      },
+      "momentArmM": {
+        "recfem_r": -0.04733713,
+        "vasmed_r": -0.04329079,
+        "vasint_r": -0.04371693,
+        "vaslat_r": -0.04525193,
+        "bflh_r": 0.03143282,
+        "semimem_r": 0.03722525,
+        "semiten_r": 0.04407176
+      }
+    },
+    {
+      "angleDeg": 17,
+      "lengthM": {
+        "recfem_r": 0.52619019,
+        "vasmed_r": 0.28334443,
+        "vasint_r": 0.29548743,
+        "vaslat_r": 0.30873953,
+        "bflh_r": 0.40502428,
+        "semimem_r": 0.40119885,
+        "semiten_r": 0.44175581
+      },
+      "momentArmM": {
+        "recfem_r": -0.04726861,
+        "vasmed_r": -0.04308138,
+        "vasint_r": -0.04352434,
+        "vaslat_r": -0.04522966,
+        "bflh_r": 0.03159903,
+        "semimem_r": 0.03752532,
+        "semiten_r": 0.0443961
+      }
+    },
+    {
+      "angleDeg": 18,
+      "lengthM": {
+        "recfem_r": 0.52701449,
+        "vasmed_r": 0.28409439,
+        "vasint_r": 0.29624534,
+        "vaslat_r": 0.30952845,
+        "bflh_r": 0.40447131,
+        "semimem_r": 0.40054132,
+        "semiten_r": 0.44097815
+      },
+      "momentArmM": {
+        "recfem_r": -0.04718635,
+        "vasmed_r": -0.04285444,
+        "vasint_r": -0.04332353,
+        "vaslat_r": -0.04516737,
+        "bflh_r": 0.03176639,
+        "semimem_r": 0.03782619,
+        "semiten_r": 0.04471517
+      }
+    },
+    {
+      "angleDeg": 19,
+      "lengthM": {
+        "recfem_r": 0.52783719,
+        "vasmed_r": 0.28484021,
+        "vasint_r": 0.29699963,
+        "vaslat_r": 0.31031591,
+        "bflh_r": 0.40391542,
+        "semimem_r": 0.39987706,
+        "semiten_r": 0.44019498
+      },
+      "momentArmM": {
+        "recfem_r": -0.04708505,
+        "vasmed_r": -0.0426055,
+        "vasint_r": -0.04310958,
+        "vaslat_r": -0.04506104,
+        "bflh_r": 0.0319348,
+        "semimem_r": 0.03828969,
+        "semiten_r": 0.0450291
+      }
+    },
+    {
+      "angleDeg": 20,
+      "lengthM": {
+        "recfem_r": 0.52865792,
+        "vasmed_r": 0.28558145,
+        "vasint_r": 0.29775004,
+        "vaslat_r": 0.3111011,
+        "bflh_r": 0.40335657,
+        "semimem_r": 0.39920483,
+        "semiten_r": 0.43940637
+      },
+      "momentArmM": {
+        "recfem_r": -0.04695873,
+        "vasmed_r": -0.04232945,
+        "vasint_r": -0.04287685,
+        "vaslat_r": -0.04490607,
+        "bflh_r": 0.03210413,
+        "semimem_r": 0.03873973,
+        "semiten_r": 0.04533803
+      }
+    },
+    {
+      "angleDeg": 21,
+      "lengthM": {
+        "recfem_r": 0.52947632,
+        "vasmed_r": 0.28631775,
+        "vasint_r": 0.29849632,
+        "vaslat_r": 0.31188328,
+        "bflh_r": 0.40279477,
+        "semimem_r": 0.39852486,
+        "semiten_r": 0.43861241
+      },
+      "momentArmM": {
+        "recfem_r": -0.04682606,
+        "vasmed_r": -0.04204786,
+        "vasint_r": -0.04264479,
+        "vaslat_r": -0.04472531,
+        "bflh_r": 0.03227412,
+        "semimem_r": 0.03917655,
+        "semiten_r": 0.04564237
+      }
+    },
+    {
+      "angleDeg": 22,
+      "lengthM": {
+        "recfem_r": 0.53029254,
+        "vasmed_r": 0.2870493,
+        "vasint_r": 0.29923875,
+        "vaslat_r": 0.3126623,
+        "bflh_r": 0.40222999,
+        "semimem_r": 0.39783739,
+        "semiten_r": 0.43781317
+      },
+      "momentArmM": {
+        "recfem_r": -0.04670842,
+        "vasmed_r": -0.04178513,
+        "vasint_r": -0.04243554,
+        "vaslat_r": -0.04454416,
+        "bflh_r": 0.0324445,
+        "semimem_r": 0.03960039,
+        "semiten_r": 0.04594248
+      }
+    },
+    {
+      "angleDeg": 23,
+      "lengthM": {
+        "recfem_r": 0.53110682,
+        "vasmed_r": 0.28777643,
+        "vasint_r": 0.29997772,
+        "vaslat_r": 0.31343815,
+        "bflh_r": 0.40166224,
+        "semimem_r": 0.39714263,
+        "semiten_r": 0.43700874
+      },
+      "momentArmM": {
+        "recfem_r": -0.0466031,
+        "vasmed_r": -0.04153951,
+        "vasint_r": -0.04224668,
+        "vaslat_r": -0.04436126,
+        "bflh_r": 0.03261513,
+        "semimem_r": 0.04001126,
+        "semiten_r": 0.04623847
+      }
+    },
+    {
+      "angleDeg": 24,
+      "lengthM": {
+        "recfem_r": 0.53191935,
+        "vasmed_r": 0.28849939,
+        "vasint_r": 0.30071354,
+        "vaslat_r": 0.31421078,
+        "bflh_r": 0.40109151,
+        "semimem_r": 0.39644081,
+        "semiten_r": 0.43619776
+      },
+      "momentArmM": {
+        "recfem_r": -0.04650695,
+        "vasmed_r": -0.04130883,
+        "vasint_r": -0.04207535,
+        "vaslat_r": -0.04417487,
+        "bflh_r": 0.03278583,
+        "semimem_r": 0.04040916,
+        "semiten_r": 0.04672018
+      }
+    },
+    {
+      "angleDeg": 25,
+      "lengthM": {
+        "recfem_r": 0.53273026,
+        "vasmed_r": 0.28921845,
+        "vasint_r": 0.30144651,
+        "vaslat_r": 0.31498012,
+        "bflh_r": 0.4005178,
+        "semimem_r": 0.39573216,
+        "semiten_r": 0.43537793
+      },
+      "momentArmM": {
+        "recfem_r": -0.04641648,
+        "vasmed_r": -0.04109065,
+        "vasint_r": -0.04191833,
+        "vaslat_r": -0.04398301,
+        "bflh_r": 0.03295645,
+        "semimem_r": 0.0407941,
+        "semiten_r": 0.04722321
+      }
+    },
+    {
+      "angleDeg": 26,
+      "lengthM": {
+        "recfem_r": 0.5335396,
+        "vasmed_r": 0.28993378,
+        "vasint_r": 0.30217683,
+        "vaslat_r": 0.31574604,
+        "bflh_r": 0.39994111,
+        "semimem_r": 0.3950169,
+        "semiten_r": 0.43454945
+      },
+      "momentArmM": {
+        "recfem_r": -0.04632791,
+        "vasmed_r": -0.04088222,
+        "vasint_r": -0.04177213,
+        "vaslat_r": -0.04378352,
+        "bflh_r": 0.0331268,
+        "semimem_r": 0.04116607,
+        "semiten_r": 0.04771155
+      }
+    },
+    {
+      "angleDeg": 27,
+      "lengthM": {
+        "recfem_r": 0.53434739,
+        "vasmed_r": 0.29064555,
+        "vasint_r": 0.30290467,
+        "vaslat_r": 0.31650839,
+        "bflh_r": 0.39936146,
+        "semimem_r": 0.39429526,
+        "semiten_r": 0.43371257
+      },
+      "momentArmM": {
+        "recfem_r": -0.04623724,
+        "vasmed_r": -0.0406806,
+        "vasint_r": -0.04163301,
+        "vaslat_r": -0.04357406,
+        "bflh_r": 0.03329669,
+        "semimem_r": 0.04152507,
+        "semiten_r": 0.04818519
+      }
+    },
+    {
+      "angleDeg": 28,
+      "lengthM": {
+        "recfem_r": 0.53515355,
+        "vasmed_r": 0.29135383,
+        "vasint_r": 0.30363012,
+        "vaslat_r": 0.31726699,
+        "bflh_r": 0.39877884,
+        "semimem_r": 0.39356748,
+        "semiten_r": 0.43286755
+      },
+      "momentArmM": {
+        "recfem_r": -0.04614032,
+        "vasmed_r": -0.04048272,
+        "vasint_r": -0.04149709,
+        "vaslat_r": -0.04335221,
+        "bflh_r": 0.03346592,
+        "semimem_r": 0.04187111,
+        "semiten_r": 0.04864413
+      }
+    },
+    {
+      "angleDeg": 29,
+      "lengthM": {
+        "recfem_r": 0.53595793,
+        "vasmed_r": 0.29205866,
+        "vasint_r": 0.30435319,
+        "vaslat_r": 0.31802158,
+        "bflh_r": 0.39819328,
+        "semimem_r": 0.39283376,
+        "semiten_r": 0.43201466
+      },
+      "momentArmM": {
+        "recfem_r": -0.04603293,
+        "vasmed_r": -0.04028542,
+        "vasint_r": -0.04136039,
+        "vaslat_r": -0.0431155,
+        "bflh_r": 0.03363429,
+        "semimem_r": 0.04220419,
+        "semiten_r": 0.04908833
+      }
+    },
+    {
+      "angleDeg": 30,
+      "lengthM": {
+        "recfem_r": 0.53676032,
+        "vasmed_r": 0.29276004,
+        "vasint_r": 0.30507384,
+        "vaslat_r": 0.3187719,
+        "bflh_r": 0.39760479,
+        "semimem_r": 0.39209435,
+        "semiten_r": 0.43115413
+      },
+      "momentArmM": {
+        "recfem_r": -0.04591078,
+        "vasmed_r": -0.0400855,
+        "vasint_r": -0.04121889,
+        "vaslat_r": -0.04286148,
+        "bflh_r": 0.03380158,
+        "semimem_r": 0.04252429,
+        "semiten_r": 0.04951779
+      }
+    },
+    {
+      "angleDeg": 31,
+      "lengthM": {
+        "recfem_r": 0.53756043,
+        "vasmed_r": 0.29345787,
+        "vasint_r": 0.30579194,
+        "vaslat_r": 0.31951764,
+        "bflh_r": 0.39701339,
+        "semimem_r": 0.39134946,
+        "semiten_r": 0.43028625
+      },
+      "momentArmM": {
+        "recfem_r": -0.04577294,
+        "vasmed_r": -0.03987766,
+        "vasint_r": -0.04106772,
+        "vaslat_r": -0.04259211,
+        "bflh_r": 0.0339672,
+        "semimem_r": 0.0428313,
+        "semiten_r": 0.04993238
+      }
+    },
+    {
+      "angleDeg": 32,
+      "lengthM": {
+        "recfem_r": 0.53835801,
+        "vasmed_r": 0.29415196,
+        "vasint_r": 0.3065073,
+        "vaslat_r": 0.32025857,
+        "bflh_r": 0.39641913,
+        "semimem_r": 0.39059933,
+        "semiten_r": 0.42941125
+      },
+      "momentArmM": {
+        "recfem_r": -0.04562018,
+        "vasmed_r": -0.03965763,
+        "vasint_r": -0.04090362,
+        "vaslat_r": -0.04230995,
+        "bflh_r": 0.03413055,
+        "semimem_r": 0.04312506,
+        "semiten_r": 0.05033196
+      }
+    },
+    {
+      "angleDeg": 33,
+      "lengthM": {
+        "recfem_r": 0.53915278,
+        "vasmed_r": 0.2948421,
+        "vasint_r": 0.30721966,
+        "vaslat_r": 0.32099445,
+        "bflh_r": 0.39582203,
+        "semimem_r": 0.38984419,
+        "semiten_r": 0.42852942
+      },
+      "momentArmM": {
+        "recfem_r": -0.04545085,
+        "vasmed_r": -0.03942376,
+        "vasint_r": -0.04072498,
+        "vaslat_r": -0.04201346,
+        "bflh_r": 0.03429141,
+        "semimem_r": 0.04340558,
+        "semiten_r": 0.05071649
+      }
+    },
+    {
+      "angleDeg": 34,
+      "lengthM": {
+        "recfem_r": 0.53994444,
+        "vasmed_r": 0.29552802,
+        "vasint_r": 0.30792877,
+        "vaslat_r": 0.32172502,
+        "bflh_r": 0.39522215,
+        "semimem_r": 0.38908427,
+        "semiten_r": 0.427641
+      },
+      "momentArmM": {
+        "recfem_r": -0.04526322,
+        "vasmed_r": -0.0391743,
+        "vasint_r": -0.04053012,
+        "vaslat_r": -0.04170101,
+        "bflh_r": 0.03444953,
+        "semimem_r": 0.04367283,
+        "semiten_r": 0.05108596
+      }
+    },
+    {
+      "angleDeg": 35,
+      "lengthM": {
+        "recfem_r": 0.54073265,
+        "vasmed_r": 0.29620944,
+        "vasint_r": 0.30863433,
+        "vaslat_r": 0.32244999,
+        "bflh_r": 0.39461953,
+        "semimem_r": 0.3883198,
+        "semiten_r": 0.42674627
+      },
+      "momentArmM": {
+        "recfem_r": -0.0450555,
+        "vasmed_r": -0.03890746,
+        "vasint_r": -0.04031731,
+        "vaslat_r": -0.04137092,
+        "bflh_r": 0.03460468,
+        "semimem_r": 0.0439268,
+        "semiten_r": 0.05144031
+      }
+    },
+    {
+      "angleDeg": 36,
+      "lengthM": {
+        "recfem_r": 0.54151704,
+        "vasmed_r": 0.29688603,
+        "vasint_r": 0.309336,
+        "vaslat_r": 0.32316903,
+        "bflh_r": 0.39401423,
+        "semimem_r": 0.38755101,
+        "semiten_r": 0.42584548
+      },
+      "momentArmM": {
+        "recfem_r": -0.04482582,
+        "vasmed_r": -0.03862137,
+        "vasint_r": -0.04008473,
+        "vaslat_r": -0.04102145,
+        "bflh_r": 0.03475661,
+        "semimem_r": 0.04416747,
+        "semiten_r": 0.05177951
+      }
+    },
+    {
+      "angleDeg": 37,
+      "lengthM": {
+        "recfem_r": 0.54229722,
+        "vasmed_r": 0.29755745,
+        "vasint_r": 0.31003342,
+        "vaslat_r": 0.32388179,
+        "bflh_r": 0.39340632,
+        "semimem_r": 0.38677814,
+        "semiten_r": 0.42493891
+      },
+      "momentArmM": {
+        "recfem_r": -0.04457229,
+        "vasmed_r": -0.03831412,
+        "vasint_r": -0.0398305,
+        "vaslat_r": -0.04065078,
+        "bflh_r": 0.03490506,
+        "semimem_r": 0.04439483,
+        "semiten_r": 0.05210352
+      }
+    },
+    {
+      "angleDeg": 38,
+      "lengthM": {
+        "recfem_r": 0.54307276,
+        "vasmed_r": 0.29822331,
+        "vasint_r": 0.31072621,
+        "vaslat_r": 0.32458788,
+        "bflh_r": 0.39279584,
+        "semimem_r": 0.38600142,
+        "semiten_r": 0.42402682
+      },
+      "momentArmM": {
+        "recfem_r": -0.04429292,
+        "vasmed_r": -0.03798371,
+        "vasint_r": -0.03955272,
+        "vaslat_r": -0.04025708,
+        "bflh_r": 0.03504978,
+        "semimem_r": 0.04460886,
+        "semiten_r": 0.0524123
+      }
+    },
+    {
+      "angleDeg": 39,
+      "lengthM": {
+        "recfem_r": 0.54384318,
+        "vasmed_r": 0.29888319,
+        "vasint_r": 0.31141392,
+        "vaslat_r": 0.32528688,
+        "bflh_r": 0.39218287,
+        "semimem_r": 0.38522107,
+        "semiten_r": 0.42310946
+      },
+      "momentArmM": {
+        "recfem_r": -0.0439857,
+        "vasmed_r": -0.03762813,
+        "vasint_r": -0.03924939,
+        "vaslat_r": -0.03983843,
+        "bflh_r": 0.0351905,
+        "semimem_r": 0.04480954,
+        "semiten_r": 0.05270582
+      }
+    },
+    {
+      "angleDeg": 40,
+      "lengthM": {
+        "recfem_r": 0.54460797,
+        "vasmed_r": 0.29953662,
+        "vasint_r": 0.31209611,
+        "vaslat_r": 0.32597834,
+        "bflh_r": 0.39156748,
+        "semimem_r": 0.38443734,
+        "semiten_r": 0.42218712
+      },
+      "momentArmM": {
+        "recfem_r": -0.04364859,
+        "vasmed_r": -0.03724532,
+        "vasint_r": -0.03891852,
+        "vaslat_r": -0.0393929,
+        "bflh_r": 0.03532696,
+        "semimem_r": 0.04499685,
+        "semiten_r": 0.05298401
+      }
+    },
+    {
+      "angleDeg": 41,
+      "lengthM": {
+        "recfem_r": 0.54536677,
+        "vasmed_r": 0.30018329,
+        "vasint_r": 0.31277242,
+        "vaslat_r": 0.32666194,
+        "bflh_r": 0.39094975,
+        "semimem_r": 0.38365046,
+        "semiten_r": 0.42126006
+      },
+      "momentArmM": {
+        "recfem_r": -0.0433061,
+        "vasmed_r": -0.03686078,
+        "vasint_r": -0.03858439,
+        "vaslat_r": -0.03894525,
+        "bflh_r": 0.03545902,
+        "semimem_r": 0.04517114,
+        "semiten_r": 0.05324723
+      }
+    },
+    {
+      "angleDeg": 42,
+      "lengthM": {
+        "recfem_r": 0.54611977,
+        "vasmed_r": 0.30082346,
+        "vasint_r": 0.3134431,
+        "vaslat_r": 0.32733794,
+        "bflh_r": 0.39032976,
+        "semimem_r": 0.38286065,
+        "semiten_r": 0.42032853
+      },
+      "momentArmM": {
+        "recfem_r": -0.04298568,
+        "vasmed_r": -0.03650296,
+        "vasint_r": -0.03827418,
+        "vaslat_r": -0.03852301,
+        "bflh_r": 0.03558652,
+        "semimem_r": 0.04533274,
+        "semiten_r": 0.05349579
+      }
+    },
+    {
+      "angleDeg": 43,
+      "lengthM": {
+        "recfem_r": 0.54686739,
+        "vasmed_r": 0.30145765,
+        "vasint_r": 0.31410859,
+        "vaslat_r": 0.3280068,
+        "bflh_r": 0.38970758,
+        "semimem_r": 0.38206813,
+        "semiten_r": 0.41939279
+      },
+      "momentArmM": {
+        "recfem_r": -0.04268959,
+        "vasmed_r": -0.03617413,
+        "vasint_r": -0.03799017,
+        "vaslat_r": -0.03812834,
+        "bflh_r": 0.03570921,
+        "semimem_r": 0.04548161,
+        "semiten_r": 0.05372964
+      }
+    },
+    {
+      "angleDeg": 44,
+      "lengthM": {
+        "recfem_r": 0.54761007,
+        "vasmed_r": 0.30208636,
+        "vasint_r": 0.31476937,
+        "vaslat_r": 0.32866904,
+        "bflh_r": 0.3890833,
+        "semimem_r": 0.38127311,
+        "semiten_r": 0.4184531
+      },
+      "momentArmM": {
+        "recfem_r": -0.04242008,
+        "vasmed_r": -0.03587655,
+        "vasint_r": -0.03773461,
+        "vaslat_r": -0.03776337,
+        "bflh_r": 0.03582682,
+        "semimem_r": 0.04561773,
+        "semiten_r": 0.05394872
+      }
+    },
+    {
+      "angleDeg": 45,
+      "lengthM": {
+        "recfem_r": 0.5483483,
+        "vasmed_r": 0.30271017,
+        "vasint_r": 0.31542596,
+        "vaslat_r": 0.32932518,
+        "bflh_r": 0.38845702,
+        "semimem_r": 0.38047584,
+        "semiten_r": 0.41750971
+      },
+      "momentArmM": {
+        "recfem_r": -0.04217938,
+        "vasmed_r": -0.03561243,
+        "vasint_r": -0.03750972,
+        "vaslat_r": -0.0374302,
+        "bflh_r": 0.03593909,
+        "semimem_r": 0.04574106,
+        "semiten_r": 0.05415295
+      }
+    },
+    {
+      "angleDeg": 46,
+      "lengthM": {
+        "recfem_r": 0.54908259,
+        "vasmed_r": 0.30332968,
+        "vasint_r": 0.3160789,
+        "vaslat_r": 0.3299758,
+        "bflh_r": 0.38782882,
+        "semimem_r": 0.37967653,
+        "semiten_r": 0.41656289
+      },
+      "momentArmM": {
+        "recfem_r": -0.04196969,
+        "vasmed_r": -0.03538396,
+        "vasint_r": -0.03731771,
+        "vaslat_r": -0.03713095,
+        "bflh_r": 0.03604577,
+        "semimem_r": 0.04585159,
+        "semiten_r": 0.05434229
+      }
+    },
+    {
+      "angleDeg": 47,
+      "lengthM": {
+        "recfem_r": 0.54981351,
+        "vasmed_r": 0.30394552,
+        "vasint_r": 0.31672879,
+        "vaslat_r": 0.3306215,
+        "bflh_r": 0.38719882,
+        "semimem_r": 0.37887539,
+        "semiten_r": 0.4156129
+      },
+      "momentArmM": {
+        "recfem_r": -0.04179323,
+        "vasmed_r": -0.03519332,
+        "vasint_r": -0.03716078,
+        "vaslat_r": -0.03686769,
+        "bflh_r": 0.03614657,
+        "semimem_r": 0.04594926,
+        "semiten_r": 0.05451667
+      }
+    },
+    {
+      "angleDeg": 48,
+      "lengthM": {
+        "recfem_r": 0.55054166,
+        "vasmed_r": 0.30455839,
+        "vasint_r": 0.31737627,
+        "vaslat_r": 0.33126294,
+        "bflh_r": 0.3865671,
+        "semimem_r": 0.37807267,
+        "semiten_r": 0.41465999
+      },
+      "momentArmM": {
+        "recfem_r": -0.04165221,
+        "vasmed_r": -0.03504265,
+        "vasint_r": -0.03704111,
+        "vaslat_r": -0.03664251,
+        "bflh_r": 0.03624124,
+        "semimem_r": 0.04603407,
+        "semiten_r": 0.05467602
+      }
+    },
+    {
+      "angleDeg": 49,
+      "lengthM": {
+        "recfem_r": 0.55126767,
+        "vasmed_r": 0.30516899,
+        "vasint_r": 0.318022,
+        "vaslat_r": 0.3319008,
+        "bflh_r": 0.3859338,
+        "semimem_r": 0.37726858,
+        "semiten_r": 0.41370443
+      },
+      "momentArmM": {
+        "recfem_r": -0.04154881,
+        "vasmed_r": -0.03493409,
+        "vasint_r": -0.03696089,
+        "vaslat_r": -0.03645747,
+        "bflh_r": 0.03632951,
+        "semimem_r": 0.04610597,
+        "semiten_r": 0.05482028
+      }
+    },
+    {
+      "angleDeg": 50,
+      "lengthM": {
+        "recfem_r": 0.55199222,
+        "vasmed_r": 0.30577808,
+        "vasint_r": 0.31866669,
+        "vaslat_r": 0.3325358,
+        "bflh_r": 0.385299,
+        "semimem_r": 0.37646334,
+        "semiten_r": 0.41274649
+      },
+      "momentArmM": {
+        "recfem_r": -0.04148524,
+        "vasmed_r": -0.03486978,
+        "vasint_r": -0.03692229,
+        "vaslat_r": -0.03631466,
+        "bflh_r": 0.03641113,
+        "semimem_r": 0.04616495,
+        "semiten_r": 0.0549494
+      }
+    },
+    {
+      "angleDeg": 51,
+      "lengthM": {
+        "recfem_r": 0.55271581,
+        "vasmed_r": 0.30638622,
+        "vasint_r": 0.31931088,
+        "vaslat_r": 0.33316847,
+        "bflh_r": 0.38466285,
+        "semimem_r": 0.37565719,
+        "semiten_r": 0.41178642
+      },
+      "momentArmM": {
+        "recfem_r": -0.04142751,
+        "vasmed_r": -0.03481421,
+        "vasint_r": -0.03689132,
+        "vaslat_r": -0.03617957,
+        "bflh_r": 0.03648547,
+        "semimem_r": 0.04621083,
+        "semiten_r": 0.05506317
+      }
+    },
+    {
+      "angleDeg": 52,
+      "lengthM": {
+        "recfem_r": 0.55343813,
+        "vasmed_r": 0.30699315,
+        "vasint_r": 0.31995427,
+        "vaslat_r": 0.33379853,
+        "bflh_r": 0.38402547,
+        "semimem_r": 0.37485036,
+        "semiten_r": 0.41082451
+      },
+      "momentArmM": {
+        "recfem_r": -0.04133862,
+        "vasmed_r": -0.03472897,
+        "vasint_r": -0.03683104,
+        "vaslat_r": -0.03601493,
+        "bflh_r": 0.03655196,
+        "semimem_r": 0.04624341,
+        "semiten_r": 0.05516139
+      }
+    },
+    {
+      "angleDeg": 53,
+      "lengthM": {
+        "recfem_r": 0.55415861,
+        "vasmed_r": 0.30759831,
+        "vasint_r": 0.32059634,
+        "vaslat_r": 0.33442544,
+        "bflh_r": 0.38338699,
+        "semimem_r": 0.37404307,
+        "semiten_r": 0.40986102
+      },
+      "momentArmM": {
+        "recfem_r": -0.04121628,
+        "vasmed_r": -0.03461181,
+        "vasint_r": -0.03673918,
+        "vaslat_r": -0.03581865,
+        "bflh_r": 0.03661035,
+        "semimem_r": 0.04626267,
+        "semiten_r": 0.05524399
+      }
+    },
+    {
+      "angleDeg": 54,
+      "lengthM": {
+        "recfem_r": 0.55487664,
+        "vasmed_r": 0.30820113,
+        "vasint_r": 0.32123651,
+        "vaslat_r": 0.33504864,
+        "bflh_r": 0.38274757,
+        "semimem_r": 0.37323556,
+        "semiten_r": 0.40889622
+      },
+      "momentArmM": {
+        "recfem_r": -0.04105816,
+        "vasmed_r": -0.03446043,
+        "vasint_r": -0.03661344,
+        "vaslat_r": -0.03558859,
+        "bflh_r": 0.0366604,
+        "semimem_r": 0.04626857,
+        "semiten_r": 0.05531089
+      }
+    },
+    {
+      "angleDeg": 55,
+      "lengthM": {
+        "recfem_r": 0.55559158,
+        "vasmed_r": 0.30880099,
+        "vasint_r": 0.32187418,
+        "vaslat_r": 0.33566751,
+        "bflh_r": 0.38210735,
+        "semimem_r": 0.37242807,
+        "semiten_r": 0.4079304
+      },
+      "momentArmM": {
+        "recfem_r": -0.04086189,
+        "vasmed_r": -0.03427254,
+        "vasint_r": -0.0364515,
+        "vaslat_r": -0.03532259,
+        "bflh_r": 0.03670187,
+        "semimem_r": 0.04626108,
+        "semiten_r": 0.05536201
+      }
+    },
+    {
+      "angleDeg": 56,
+      "lengthM": {
+        "recfem_r": 0.55630275,
+        "vasmed_r": 0.30939724,
+        "vasint_r": 0.32250869,
+        "vaslat_r": 0.33628141,
+        "bflh_r": 0.38146649,
+        "semimem_r": 0.37162082,
+        "semiten_r": 0.40696382
+      },
+      "momentArmM": {
+        "recfem_r": -0.04062511,
+        "vasmed_r": -0.03404582,
+        "vasint_r": -0.03625104,
+        "vaslat_r": -0.03501847,
+        "bflh_r": 0.03673455,
+        "semimem_r": 0.04624015,
+        "semiten_r": 0.05539727
+      }
+    },
+    {
+      "angleDeg": 57,
+      "lengthM": {
+        "recfem_r": 0.55700942,
+        "vasmed_r": 0.30998918,
+        "vasint_r": 0.32313934,
+        "vaslat_r": 0.33688965,
+        "bflh_r": 0.38082513,
+        "semimem_r": 0.37081406,
+        "semiten_r": 0.40599676
+      },
+      "momentArmM": {
+        "recfem_r": -0.04034544,
+        "vasmed_r": -0.03377796,
+        "vasint_r": -0.0360097,
+        "vaslat_r": -0.03467405,
+        "bflh_r": 0.0367582,
+        "semimem_r": 0.04620577,
+        "semiten_r": 0.05541661
+      }
+    },
+    {
+      "angleDeg": 58,
+      "lengthM": {
+        "recfem_r": 0.55771081,
+        "vasmed_r": 0.31057606,
+        "vasint_r": 0.32376541,
+        "vaslat_r": 0.33749151,
+        "bflh_r": 0.38018344,
+        "semimem_r": 0.37000802,
+        "semiten_r": 0.4050295
+      },
+      "momentArmM": {
+        "recfem_r": -0.04002051,
+        "vasmed_r": -0.03346665,
+        "vasint_r": -0.03572515,
+        "vaslat_r": -0.03428715,
+        "bflh_r": 0.03677259,
+        "semimem_r": 0.0461579,
+        "semiten_r": 0.05541995
+      }
+    },
+    {
+      "angleDeg": 59,
+      "lengthM": {
+        "recfem_r": 0.55840612,
+        "vasmed_r": 0.31115712,
+        "vasint_r": 0.32438612,
+        "vaslat_r": 0.33808624,
+        "bflh_r": 0.37954158,
+        "semimem_r": 0.36920293,
+        "semiten_r": 0.40406233
+      },
+      "momentArmM": {
+        "recfem_r": -0.03964795,
+        "vasmed_r": -0.03310961,
+        "vasint_r": -0.03539506,
+        "vaslat_r": -0.03385559,
+        "bflh_r": 0.03677752,
+        "semimem_r": 0.04609651,
+        "semiten_r": 0.05540721
+      }
+    },
+    {
+      "angleDeg": 60,
+      "lengthM": {
+        "recfem_r": 0.55909449,
+        "vasmed_r": 0.31173153,
+        "vasint_r": 0.32500065,
+        "vaslat_r": 0.33867302,
+        "bflh_r": 0.37889972,
+        "semimem_r": 0.36839902,
+        "semiten_r": 0.40309552
+      },
+      "momentArmM": {
+        "recfem_r": -0.03922541,
+        "vasmed_r": -0.03270457,
+        "vasint_r": -0.03501711,
+        "vaslat_r": -0.03337721,
+        "bflh_r": 0.03677277,
+        "semimem_r": 0.04602157,
+        "semiten_r": 0.05537834
+      }
+    },
+    {
+      "angleDeg": 61,
+      "lengthM": {
+        "recfem_r": 0.55977517,
+        "vasmed_r": 0.31229856,
+        "vasint_r": 0.32560828,
+        "vaslat_r": 0.33925116,
+        "bflh_r": 0.37825802,
+        "semimem_r": 0.36759655,
+        "semiten_r": 0.40212936
+      },
+      "momentArmM": {
+        "recfem_r": -0.03877202,
+        "vasmed_r": -0.03227132,
+        "vasint_r": -0.03461027,
+        "vaslat_r": -0.03287102,
+        "bflh_r": 0.03675812,
+        "semimem_r": 0.04593321,
+        "semiten_r": 0.0553334
+      }
+    },
+    {
+      "angleDeg": 62,
+      "lengthM": {
+        "recfem_r": 0.56044784,
+        "vasmed_r": 0.31285797,
+        "vasint_r": 0.32620873,
+        "vaslat_r": 0.3398204,
+        "bflh_r": 0.37761667,
+        "semimem_r": 0.36679573,
+        "semiten_r": 0.40116411
+      },
+      "momentArmM": {
+        "recfem_r": -0.03830876,
+        "vasmed_r": -0.03183148,
+        "vasint_r": -0.03419533,
+        "vaslat_r": -0.03235784,
+        "bflh_r": 0.03673335,
+        "semimem_r": 0.04583152,
+        "semiten_r": 0.05527247
+      }
+    },
+    {
+      "angleDeg": 63,
+      "lengthM": {
+        "recfem_r": 0.56111234,
+        "vasmed_r": 0.31340965,
+        "vasint_r": 0.32680188,
+        "vaslat_r": 0.34038062,
+        "bflh_r": 0.37697585,
+        "semimem_r": 0.3659968,
+        "semiten_r": 0.40020008
+      },
+      "momentArmM": {
+        "recfem_r": -0.03783608,
+        "vasmed_r": -0.03138561,
+        "vasint_r": -0.03377277,
+        "vaslat_r": -0.03183819,
+        "bflh_r": 0.03669831,
+        "semimem_r": 0.04571648,
+        "semiten_r": 0.05519547
+      }
+    },
+    {
+      "angleDeg": 64,
+      "lengthM": {
+        "recfem_r": 0.56176851,
+        "vasmed_r": 0.3139535,
+        "vasint_r": 0.32738758,
+        "vaslat_r": 0.34093173,
+        "bflh_r": 0.37633572,
+        "semimem_r": 0.3652,
+        "semiten_r": 0.39923752
+      },
+      "momentArmM": {
+        "recfem_r": -0.03735445,
+        "vasmed_r": -0.03093422,
+        "vasint_r": -0.03334307,
+        "vaslat_r": -0.03131261,
+        "bflh_r": 0.03665281,
+        "semimem_r": 0.04558804,
+        "semiten_r": 0.05510231
+      }
+    },
+    {
+      "angleDeg": 65,
+      "lengthM": {
+        "recfem_r": 0.56241621,
+        "vasmed_r": 0.31448943,
+        "vasint_r": 0.32796573,
+        "vaslat_r": 0.34147361,
+        "bflh_r": 0.37569648,
+        "semimem_r": 0.36440556,
+        "semiten_r": 0.39827674
+      },
+      "momentArmM": {
+        "recfem_r": -0.03686436,
+        "vasmed_r": -0.03047788,
+        "vasint_r": -0.03290675,
+        "vaslat_r": -0.03078165,
+        "bflh_r": 0.03659671,
+        "semimem_r": 0.0454462,
+        "semiten_r": 0.05499294
+      }
+    },
+    {
+      "angleDeg": 66,
+      "lengthM": {
+        "recfem_r": 0.56305528,
+        "vasmed_r": 0.31501735,
+        "vasint_r": 0.32853621,
+        "vaslat_r": 0.34200618,
+        "bflh_r": 0.37505832,
+        "semimem_r": 0.36361371,
+        "semiten_r": 0.397318
+      },
+      "momentArmM": {
+        "recfem_r": -0.03636628,
+        "vasmed_r": -0.03001715,
+        "vasint_r": -0.0324643,
+        "vaslat_r": -0.03024586,
+        "bflh_r": 0.03652986,
+        "semimem_r": 0.04529092,
+        "semiten_r": 0.05486726
+      }
+    },
+    {
+      "angleDeg": 67,
+      "lengthM": {
+        "recfem_r": 0.56368559,
+        "vasmed_r": 0.3155372,
+        "vasint_r": 0.32909892,
+        "vaslat_r": 0.34252936,
+        "bflh_r": 0.37442141,
+        "semimem_r": 0.36282469,
+        "semiten_r": 0.3963616
+      },
+      "momentArmM": {
+        "recfem_r": -0.03586073,
+        "vasmed_r": -0.02955257,
+        "vasint_r": -0.03201625,
+        "vaslat_r": -0.02970582,
+        "bflh_r": 0.0364521,
+        "semimem_r": 0.04512218,
+        "semiten_r": 0.05472521
+      }
+    },
+    {
+      "angleDeg": 68,
+      "lengthM": {
+        "recfem_r": 0.56430701,
+        "vasmed_r": 0.31604891,
+        "vasint_r": 0.32965376,
+        "vaslat_r": 0.34304309,
+        "bflh_r": 0.37378596,
+        "semimem_r": 0.36203873,
+        "semiten_r": 0.39540783
+      },
+      "momentArmM": {
+        "recfem_r": -0.03534822,
+        "vasmed_r": -0.02908473,
+        "vasint_r": -0.03156312,
+        "vaslat_r": -0.02916209,
+        "bflh_r": 0.03636331,
+        "semimem_r": 0.04493997,
+        "semiten_r": 0.05456672
+      }
+    },
+    {
+      "angleDeg": 69,
+      "lengthM": {
+        "recfem_r": 0.56491943,
+        "vasmed_r": 0.31655244,
+        "vasint_r": 0.33020065,
+        "vaslat_r": 0.34354729,
+        "bflh_r": 0.37315216,
+        "semimem_r": 0.36125606,
+        "semiten_r": 0.39445696
+      },
+      "momentArmM": {
+        "recfem_r": -0.03482925,
+        "vasmed_r": -0.02861418,
+        "vasint_r": -0.03110545,
+        "vaslat_r": -0.02861525,
+        "bflh_r": 0.03626336,
+        "semimem_r": 0.04474428,
+        "semiten_r": 0.05439173
+      }
+    },
+    {
+      "angleDeg": 70,
+      "lengthM": {
+        "recfem_r": 0.56552275,
+        "vasmed_r": 0.31704773,
+        "vasint_r": 0.33073952,
+        "vaslat_r": 0.34404193,
+        "bflh_r": 0.3725202,
+        "semimem_r": 0.36047693,
+        "semiten_r": 0.39350929
+      },
+      "momentArmM": {
+        "recfem_r": -0.03430437,
+        "vasmed_r": -0.02814152,
+        "vasint_r": -0.03064377,
+        "vaslat_r": -0.02806588,
+        "bflh_r": 0.03615212,
+        "semimem_r": 0.0445351,
+        "semiten_r": 0.05420019
+      }
+    },
+    {
+      "angleDeg": 71,
+      "lengthM": {
+        "recfem_r": 0.56611688,
+        "vasmed_r": 0.31753478,
+        "vasint_r": 0.33127033,
+        "vaslat_r": 0.344527,
+        "bflh_r": 0.37189028,
+        "semimem_r": 0.35970157,
+        "semiten_r": 0.39256512
+      },
+      "momentArmM": {
+        "recfem_r": -0.03377857,
+        "vasmed_r": -0.02767157,
+        "vasint_r": -0.03018325,
+        "vaslat_r": -0.02751951,
+        "bflh_r": 0.03602942,
+        "semimem_r": 0.04431242,
+        "semiten_r": 0.05399204
+      }
+    },
+    {
+      "angleDeg": 72,
+      "lengthM": {
+        "recfem_r": 0.56670186,
+        "vasmed_r": 0.31801369,
+        "vasint_r": 0.33179315,
+        "vaslat_r": 0.34500259,
+        "bflh_r": 0.3712626,
+        "semimem_r": 0.35893022,
+        "semiten_r": 0.39162471
+      },
+      "momentArmM": {
+        "recfem_r": -0.03325646,
+        "vasmed_r": -0.02720867,
+        "vasint_r": -0.02972864,
+        "vaslat_r": -0.0269812,
+        "bflh_r": 0.03589506,
+        "semimem_r": 0.04407625,
+        "semiten_r": 0.05376725
+      }
+    },
+    {
+      "angleDeg": 73,
+      "lengthM": {
+        "recfem_r": 0.56727777,
+        "vasmed_r": 0.31848458,
+        "vasint_r": 0.33230809,
+        "vaslat_r": 0.34546886,
+        "bflh_r": 0.37063737,
+        "semimem_r": 0.3581631,
+        "semiten_r": 0.39068838
+      },
+      "momentArmM": {
+        "recfem_r": -0.03273803,
+        "vasmed_r": -0.02675261,
+        "vasint_r": -0.02927986,
+        "vaslat_r": -0.02645082,
+        "bflh_r": 0.03574898,
+        "semimem_r": 0.04382657,
+        "semiten_r": 0.05352576
+      }
+    },
+    {
+      "angleDeg": 74,
+      "lengthM": {
+        "recfem_r": 0.56784466,
+        "vasmed_r": 0.31894757,
+        "vasint_r": 0.33281524,
+        "vaslat_r": 0.34592595,
+        "bflh_r": 0.3700148,
+        "semimem_r": 0.35740046,
+        "semiten_r": 0.38975641
+      },
+      "momentArmM": {
+        "recfem_r": -0.03222318,
+        "vasmed_r": -0.02630316,
+        "vasint_r": -0.02883675,
+        "vaslat_r": -0.02592819,
+        "bflh_r": 0.03559114,
+        "semimem_r": 0.04356337,
+        "semiten_r": 0.05326749
+      }
+    },
+    {
+      "angleDeg": 75,
+      "lengthM": {
+        "recfem_r": 0.56840259,
+        "vasmed_r": 0.31940277,
+        "vasint_r": 0.33331471,
+        "vaslat_r": 0.34637397,
+        "bflh_r": 0.36939508,
+        "semimem_r": 0.35664253,
+        "semiten_r": 0.38882909
+      },
+      "momentArmM": {
+        "recfem_r": -0.03171182,
+        "vasmed_r": -0.02586001,
+        "vasint_r": -0.02839914,
+        "vaslat_r": -0.02541308,
+        "bflh_r": 0.03542149,
+        "semimem_r": 0.04328665,
+        "semiten_r": 0.0529924
+      }
+    },
+    {
+      "angleDeg": 76,
+      "lengthM": {
+        "recfem_r": 0.56895163,
+        "vasmed_r": 0.31985029,
+        "vasint_r": 0.33380659,
+        "vaslat_r": 0.34681307,
+        "bflh_r": 0.36877842,
+        "semimem_r": 0.35588955,
+        "semiten_r": 0.38790672
+      },
+      "momentArmM": {
+        "recfem_r": -0.03120378,
+        "vasmed_r": -0.02542283,
+        "vasint_r": -0.0279668,
+        "vaslat_r": -0.02490523,
+        "bflh_r": 0.03523999,
+        "semimem_r": 0.04299642,
+        "semiten_r": 0.05270044
+      }
+    },
+    {
+      "angleDeg": 77,
+      "lengthM": {
+        "recfem_r": 0.56949182,
+        "vasmed_r": 0.32029022,
+        "vasint_r": 0.33429097,
+        "vaslat_r": 0.34724337,
+        "bflh_r": 0.36816504,
+        "semimem_r": 0.35514175,
+        "semiten_r": 0.3869896
+      },
+      "momentArmM": {
+        "recfem_r": -0.03069888,
+        "vasmed_r": -0.02499124,
+        "vasint_r": -0.02753945,
+        "vaslat_r": -0.02440434,
+        "bflh_r": 0.03504662,
+        "semimem_r": 0.04269267,
+        "semiten_r": 0.05239154
+      }
+    },
+    {
+      "angleDeg": 78,
+      "lengthM": {
+        "recfem_r": 0.57002324,
+        "vasmed_r": 0.32072268,
+        "vasint_r": 0.33476792,
+        "vaslat_r": 0.34766498,
+        "bflh_r": 0.36755513,
+        "semimem_r": 0.35439937,
+        "semiten_r": 0.38607801
+      },
+      "momentArmM": {
+        "recfem_r": -0.0301969,
+        "vasmed_r": -0.0245648,
+        "vasint_r": -0.0271168,
+        "vaslat_r": -0.02391005,
+        "bflh_r": 0.03484138,
+        "semimem_r": 0.04237542,
+        "semiten_r": 0.05206568
+      }
+    },
+    {
+      "angleDeg": 79,
+      "lengthM": {
+        "recfem_r": 0.57054591,
+        "vasmed_r": 0.32114773,
+        "vasint_r": 0.33523755,
+        "vaslat_r": 0.34807802,
+        "bflh_r": 0.36694892,
+        "semimem_r": 0.35366265,
+        "semiten_r": 0.38517226
+      },
+      "momentArmM": {
+        "recfem_r": -0.02969755,
+        "vasmed_r": -0.02414305,
+        "vasint_r": -0.0266985,
+        "vaslat_r": -0.02342199,
+        "bflh_r": 0.03462425,
+        "semimem_r": 0.04204468,
+        "semiten_r": 0.05172282
+      }
+    },
+    {
+      "angleDeg": 80,
+      "lengthM": {
+        "recfem_r": 0.57105989,
+        "vasmed_r": 0.32156545,
+        "vasint_r": 0.3356999,
+        "vaslat_r": 0.3484826,
+        "bflh_r": 0.36634659,
+        "semimem_r": 0.35293182,
+        "semiten_r": 0.38427265
+      },
+      "momentArmM": {
+        "recfem_r": -0.02920056,
+        "vasmed_r": -0.02372547,
+        "vasint_r": -0.02628414,
+        "vaslat_r": -0.02293972,
+        "bflh_r": 0.03439526,
+        "semimem_r": 0.04170047,
+        "semiten_r": 0.05136292
+      }
+    },
+    {
+      "angleDeg": 81,
+      "lengthM": {
+        "recfem_r": 0.57156516,
+        "vasmed_r": 0.32197587,
+        "vasint_r": 0.336155,
+        "vaslat_r": 0.34887875,
+        "bflh_r": 0.36574836,
+        "semimem_r": 0.35220711,
+        "semiten_r": 0.38337946
+      },
+      "momentArmM": {
+        "recfem_r": -0.02869679,
+        "vasmed_r": -0.02330293,
+        "vasint_r": -0.02586443,
+        "vaslat_r": -0.0224538,
+        "bflh_r": 0.03415437,
+        "semimem_r": 0.04134285,
+        "semiten_r": 0.050986
+      }
+    },
+    {
+      "angleDeg": 82,
+      "lengthM": {
+        "recfem_r": 0.57206151,
+        "vasmed_r": 0.3223788,
+        "vasint_r": 0.33660266,
+        "vaslat_r": 0.34926631,
+        "bflh_r": 0.36515445,
+        "semimem_r": 0.35148876,
+        "semiten_r": 0.382493
+      },
+      "momentArmM": {
+        "recfem_r": -0.02817735,
+        "vasmed_r": -0.02286665,
+        "vasint_r": -0.02543035,
+        "vaslat_r": -0.02195511,
+        "bflh_r": 0.03390159,
+        "semimem_r": 0.04097184,
+        "semiten_r": 0.05059205
+      }
+    },
+    {
+      "angleDeg": 83,
+      "lengthM": {
+        "recfem_r": 0.57254865,
+        "vasmed_r": 0.32277399,
+        "vasint_r": 0.33704261,
+        "vaslat_r": 0.34964505,
+        "bflh_r": 0.36456504,
+        "semimem_r": 0.350777,
+        "semiten_r": 0.38161356
+      },
+      "momentArmM": {
+        "recfem_r": -0.02764222,
+        "vasmed_r": -0.02241666,
+        "vasint_r": -0.02498188,
+        "vaslat_r": -0.02144367,
+        "bflh_r": 0.03363701,
+        "semimem_r": 0.04058748,
+        "semiten_r": 0.05018105
+      }
+    },
+    {
+      "angleDeg": 84,
+      "lengthM": {
+        "recfem_r": 0.57302631,
+        "vasmed_r": 0.32316121,
+        "vasint_r": 0.3374746,
+        "vaslat_r": 0.35001496,
+        "bflh_r": 0.36398036,
+        "semimem_r": 0.35007206,
+        "semiten_r": 0.38074145
+      },
+      "momentArmM": {
+        "recfem_r": -0.0270914,
+        "vasmed_r": -0.02195296,
+        "vasint_r": -0.02451901,
+        "vaslat_r": -0.02101579,
+        "bflh_r": 0.0333607,
+        "semimem_r": 0.04018979,
+        "semiten_r": 0.04975296
+      }
+    },
+    {
+      "angleDeg": 85,
+      "lengthM": {
+        "recfem_r": 0.57349422,
+        "vasmed_r": 0.32354021,
+        "vasint_r": 0.3378984,
+        "vaslat_r": 0.35038067,
+        "bflh_r": 0.3634006,
+        "semimem_r": 0.34937419,
+        "semiten_r": 0.37987695
+      },
+      "momentArmM": {
+        "recfem_r": -0.02652492,
+        "vasmed_r": -0.02147558,
+        "vasint_r": -0.02404175,
+        "vaslat_r": -0.02088918,
+        "bflh_r": 0.03307276,
+        "semimem_r": 0.03977881,
+        "semiten_r": 0.04930779
+      }
+    },
+    {
+      "angleDeg": 86,
+      "lengthM": {
+        "recfem_r": 0.57395211,
+        "vasmed_r": 0.32391077,
+        "vasint_r": 0.33831374,
+        "vaslat_r": 0.35074405,
+        "bflh_r": 0.36282597,
+        "semimem_r": 0.3486836,
+        "semiten_r": 0.37902038
+      },
+      "momentArmM": {
+        "recfem_r": -0.0259428,
+        "vasmed_r": -0.02098457,
+        "vasint_r": -0.02355013,
+        "vaslat_r": -0.0207496,
+        "bflh_r": 0.03277331,
+        "semimem_r": 0.03935457,
+        "semiten_r": 0.04884552
+      }
+    },
+    {
+      "angleDeg": 87,
+      "lengthM": {
+        "recfem_r": 0.57439971,
+        "vasmed_r": 0.32427263,
+        "vasint_r": 0.33872037,
+        "vaslat_r": 0.35110489,
+        "bflh_r": 0.36225667,
+        "semimem_r": 0.34800053,
+        "semiten_r": 0.37817202
+      },
+      "momentArmM": {
+        "recfem_r": -0.02534507,
+        "vasmed_r": -0.02047997,
+        "vasint_r": -0.02304416,
+        "vaslat_r": -0.02059758,
+        "bflh_r": 0.03246244,
+        "semimem_r": 0.03891712,
+        "semiten_r": 0.04836615
+      }
+    },
+    {
+      "angleDeg": 88,
+      "lengthM": {
+        "recfem_r": 0.57483673,
+        "vasmed_r": 0.32462557,
+        "vasint_r": 0.33911805,
+        "vaslat_r": 0.35146296,
+        "bflh_r": 0.36169288,
+        "semimem_r": 0.34732521,
+        "semiten_r": 0.37733218
+      },
+      "momentArmM": {
+        "recfem_r": -0.02473178,
+        "vasmed_r": -0.01996184,
+        "vasint_r": -0.02252389,
+        "vaslat_r": -0.02043367,
+        "bflh_r": 0.03214031,
+        "semimem_r": 0.03846652,
+        "semiten_r": 0.04786969
+      }
+    },
+    {
+      "angleDeg": 89,
+      "lengthM": {
+        "recfem_r": 0.57526292,
+        "vasmed_r": 0.32496935,
+        "vasint_r": 0.33950652,
+        "vaslat_r": 0.35181808,
+        "bflh_r": 0.36113482,
+        "semimem_r": 0.34665787,
+        "semiten_r": 0.37650116
+      },
+      "momentArmM": {
+        "recfem_r": -0.02410301,
+        "vasmed_r": -0.01943024,
+        "vasint_r": -0.02198938,
+        "vaslat_r": -0.02025838,
+        "bflh_r": 0.03180705,
+        "semimem_r": 0.03800282,
+        "semiten_r": 0.04735617
+      }
+    },
+    {
+      "angleDeg": 90,
+      "lengthM": {
+        "recfem_r": 0.575678,
+        "vasmed_r": 0.32530374,
+        "vasint_r": 0.33988554,
+        "vaslat_r": 0.35217004,
+        "bflh_r": 0.36058267,
+        "semimem_r": 0.34599874,
+        "semiten_r": 0.37567924
+      },
+      "momentArmM": {
+        "recfem_r": -0.02345881,
+        "vasmed_r": -0.01888524,
+        "vasint_r": -0.02144067,
+        "vaslat_r": -0.02007224,
+        "bflh_r": 0.03146281,
+        "semimem_r": 0.03752609,
+        "semiten_r": 0.04682559
+      }
+    },
+    {
+      "angleDeg": 91,
+      "lengthM": {
+        "recfem_r": 0.5760818,
+        "vasmed_r": 0.3256286,
+        "vasint_r": 0.34025496,
+        "vaslat_r": 0.35251877,
+        "bflh_r": 0.36003662,
+        "semimem_r": 0.34534804,
+        "semiten_r": 0.37486673
+      },
+      "momentArmM": {
+        "recfem_r": -0.02281743,
+        "vasmed_r": -0.01834509,
+        "vasint_r": -0.0208958,
+        "vaslat_r": -0.01989293,
+        "bflh_r": 0.03110776,
+        "semimem_r": 0.03703639,
+        "semiten_r": 0.046278
+      }
+    },
+    {
+      "angleDeg": 92,
+      "lengthM": {
+        "recfem_r": 0.5764746,
+        "vasmed_r": 0.32594424,
+        "vasint_r": 0.34061507,
+        "vaslat_r": 0.35286458,
+        "bflh_r": 0.35949687,
+        "semimem_r": 0.344706,
+        "semiten_r": 0.37406393
+      },
+      "momentArmM": {
+        "recfem_r": -0.02219795,
+        "vasmed_r": -0.01782877,
+        "vasint_r": -0.02037361,
+        "vaslat_r": -0.01973841,
+        "bflh_r": 0.03074209,
+        "semimem_r": 0.03653376,
+        "semiten_r": 0.04571339
+      }
+    },
+    {
+      "angleDeg": 93,
+      "lengthM": {
+        "recfem_r": 0.57685679,
+        "vasmed_r": 0.32625109,
+        "vasint_r": 0.34096627,
+        "vaslat_r": 0.35320791,
+        "bflh_r": 0.35896358,
+        "semimem_r": 0.34407284,
+        "semiten_r": 0.37327113
+      },
+      "momentArmM": {
+        "recfem_r": -0.02160166,
+        "vasmed_r": -0.01735148,
+        "vasint_r": -0.01987533,
+        "vaslat_r": -0.01960957,
+        "bflh_r": 0.03036602,
+        "semimem_r": 0.03601827,
+        "semiten_r": 0.04513181
+      }
+    },
+    {
+      "angleDeg": 94,
+      "lengthM": {
+        "recfem_r": 0.57722879,
+        "vasmed_r": 0.32655318,
+        "vasint_r": 0.341309,
+        "vaslat_r": 0.35354923,
+        "bflh_r": 0.35843695,
+        "semimem_r": 0.3434488,
+        "semiten_r": 0.37248863
+      },
+      "momentArmM": {
+        "recfem_r": -0.02102981,
+        "vasmed_r": -0.01726969,
+        "vasint_r": -0.01940218,
+        "vaslat_r": -0.0195072,
+        "bflh_r": 0.02997977,
+        "semimem_r": 0.03549,
+        "semiten_r": 0.0445333
+      }
+    },
+    {
+      "angleDeg": 95,
+      "lengthM": {
+        "recfem_r": 0.57759102,
+        "vasmed_r": 0.32685409,
+        "vasint_r": 0.34164369,
+        "vaslat_r": 0.35388899,
+        "bflh_r": 0.35791715,
+        "semimem_r": 0.34283408,
+        "semiten_r": 0.37171673
+      },
+      "momentArmM": {
+        "recfem_r": -0.02048364,
+        "vasmed_r": -0.01721603,
+        "vasint_r": -0.01895534,
+        "vaslat_r": -0.01943201,
+        "bflh_r": 0.02958358,
+        "semimem_r": 0.03494904,
+        "semiten_r": 0.04391792
+      }
+    },
+    {
+      "angleDeg": 96,
+      "lengthM": {
+        "recfem_r": 0.57794396,
+        "vasmed_r": 0.32715432,
+        "vasint_r": 0.34197202,
+        "vaslat_r": 0.35422768,
+        "bflh_r": 0.35740435,
+        "semimem_r": 0.34222892,
+        "semiten_r": 0.37095571
+      },
+      "momentArmM": {
+        "recfem_r": -0.01996436,
+        "vasmed_r": -0.01719116,
+        "vasint_r": -0.0187665,
+        "vaslat_r": -0.01938463,
+        "bflh_r": 0.02917769,
+        "semimem_r": 0.03439547,
+        "semiten_r": 0.04328572
+      }
+    },
+    {
+      "angleDeg": 97,
+      "lengthM": {
+        "recfem_r": 0.57828807,
+        "vasmed_r": 0.32745437,
+        "vasint_r": 0.3422995,
+        "vaslat_r": 0.35456579,
+        "bflh_r": 0.35689871,
+        "semimem_r": 0.34163353,
+        "semiten_r": 0.37020587
+      },
+      "momentArmM": {
+        "recfem_r": -0.01947317,
+        "vasmed_r": -0.01719566,
+        "vasint_r": -0.01876465,
+        "vaslat_r": -0.01936559,
+        "bflh_r": 0.02876236,
+        "semimem_r": 0.03382941,
+        "semiten_r": 0.04263678
+      }
+    },
+    {
+      "angleDeg": 98,
+      "lengthM": {
+        "recfem_r": 0.57862396,
+        "vasmed_r": 0.32775477,
+        "vasint_r": 0.34262721,
+        "vaslat_r": 0.35490382,
+        "bflh_r": 0.35640041,
+        "semimem_r": 0.34104812,
+        "semiten_r": 0.3694675
+      },
+      "momentArmM": {
+        "recfem_r": -0.01908368,
+        "vasmed_r": -0.01723003,
+        "vasint_r": -0.01879281,
+        "vaslat_r": -0.01937536,
+        "bflh_r": 0.02833786,
+        "semimem_r": 0.03325094,
+        "semiten_r": 0.04197118
+      }
+    },
+    {
+      "angleDeg": 99,
+      "lengthM": {
+        "recfem_r": 0.57895753,
+        "vasmed_r": 0.32805603,
+        "vasint_r": 0.34295569,
+        "vaslat_r": 0.35524227,
+        "bflh_r": 0.35590959,
+        "semimem_r": 0.34047292,
+        "semiten_r": 0.36874089
+      },
+      "momentArmM": {
+        "recfem_r": -0.01914477,
+        "vasmed_r": -0.01729466,
+        "vasint_r": -0.01885158,
+        "vaslat_r": -0.01941432,
+        "bflh_r": 0.02790446,
+        "semimem_r": 0.0326602,
+        "semiten_r": 0.04128901
+      }
+    },
+    {
+      "angleDeg": 100,
+      "lengthM": {
+        "recfem_r": 0.57929245,
+        "vasmed_r": 0.32835869,
+        "vasint_r": 0.34328546,
+        "vaslat_r": 0.35558165,
+        "bflh_r": 0.35542641,
+        "semimem_r": 0.33990814,
+        "semiten_r": 0.36802634
+      },
+      "momentArmM": {
+        "recfem_r": -0.01923764,
+        "vasmed_r": -0.01738985,
+        "vasint_r": -0.01894143,
+        "vaslat_r": -0.01948276,
+        "bflh_r": 0.02746245,
+        "semimem_r": 0.03205729,
+        "semiten_r": 0.04059039
+      }
+    },
+    {
+      "angleDeg": 101,
+      "lengthM": {
+        "recfem_r": 0.57962934,
+        "vasmed_r": 0.32866332,
+        "vasint_r": 0.34361713,
+        "vaslat_r": 0.35592252,
+        "bflh_r": 0.35495101,
+        "semimem_r": 0.33935398,
+        "semiten_r": 0.36732412
+      },
+      "momentArmM": {
+        "recfem_r": -0.01937106,
+        "vasmed_r": -0.01752316,
+        "vasint_r": -0.01907074,
+        "vaslat_r": -0.01958783,
+        "bflh_r": 0.0270122,
+        "semimem_r": 0.03144235,
+        "semiten_r": 0.03987542
+      }
+    },
+    {
+      "angleDeg": 102,
+      "lengthM": {
+        "recfem_r": 0.57996899,
+        "vasmed_r": 0.32897067,
+        "vasint_r": 0.34395146,
+        "vaslat_r": 0.35626559,
+        "bflh_r": 0.35448355,
+        "semimem_r": 0.33881066,
+        "semiten_r": 0.36663452
+      },
+      "momentArmM": {
+        "recfem_r": -0.01955306,
+        "vasmed_r": -0.01770134,
+        "vasint_r": -0.01924716,
+        "vaslat_r": -0.01973592,
+        "bflh_r": 0.02655413,
+        "semimem_r": 0.0308155,
+        "semiten_r": 0.03914423
+      }
+    },
+    {
+      "angleDeg": 103,
+      "lengthM": {
+        "recfem_r": 0.58031224,
+        "vasmed_r": 0.32928152,
+        "vasint_r": 0.34428929,
+        "vaslat_r": 0.35661162,
+        "bflh_r": 0.35402414,
+        "semimem_r": 0.33827839,
+        "semiten_r": 0.36595782
+      },
+      "momentArmM": {
+        "recfem_r": -0.01978291,
+        "vasmed_r": -0.01792339,
+        "vasint_r": -0.01946996,
+        "vaslat_r": -0.01992617,
+        "bflh_r": 0.0260886,
+        "semimem_r": 0.03017688,
+        "semiten_r": 0.03839692
+      }
+    },
+    {
+      "angleDeg": 104,
+      "lengthM": {
+        "recfem_r": 0.58065993,
+        "vasmed_r": 0.32959662,
+        "vasint_r": 0.34463139,
+        "vaslat_r": 0.35696131,
+        "bflh_r": 0.35357293,
+        "semimem_r": 0.33775736,
+        "semiten_r": 0.3652943
+      },
+      "momentArmM": {
+        "recfem_r": -0.02005978,
+        "vasmed_r": -0.01818818,
+        "vasint_r": -0.01973829,
+        "vaslat_r": -0.02015759,
+        "bflh_r": 0.02561596,
+        "semimem_r": 0.02952661,
+        "semiten_r": 0.03763362
+      }
+    },
+    {
+      "angleDeg": 105,
+      "lengthM": {
+        "recfem_r": 0.58101287,
+        "vasmed_r": 0.3299167,
+        "vasint_r": 0.34497857,
+        "vaslat_r": 0.35731538,
+        "bflh_r": 0.35313002,
+        "semimem_r": 0.33724778,
+        "semiten_r": 0.36464425
+      },
+      "momentArmM": {
+        "recfem_r": -0.0203827,
+        "vasmed_r": -0.01849449,
+        "vasint_r": -0.02005121,
+        "vaslat_r": -0.02042914,
+        "bflh_r": 0.02513659,
+        "semimem_r": 0.02886484,
+        "semiten_r": 0.03685447
+      }
+    },
+    {
+      "angleDeg": 106,
+      "lengthM": {
+        "recfem_r": 0.58137184,
+        "vasmed_r": 0.33024248,
+        "vasint_r": 0.34533159,
+        "vaslat_r": 0.35767452,
+        "bflh_r": 0.35269553,
+        "semimem_r": 0.33674985,
+        "semiten_r": 0.36400793
+      },
+      "momentArmM": {
+        "recfem_r": -0.02075063,
+        "vasmed_r": -0.01884102,
+        "vasint_r": -0.0204077,
+        "vaslat_r": -0.02073967,
+        "bflh_r": 0.02465084,
+        "semimem_r": 0.0281917,
+        "semiten_r": 0.03605963
+      }
+    },
+    {
+      "angleDeg": 107,
+      "lengthM": {
+        "recfem_r": 0.58173763,
+        "vasmed_r": 0.33057464,
+        "vasint_r": 0.3456912,
+        "vaslat_r": 0.35803941,
+        "bflh_r": 0.35226957,
+        "semimem_r": 0.33626377,
+        "semiten_r": 0.36338562
+      },
+      "momentArmM": {
+        "recfem_r": -0.02116242,
+        "vasmed_r": -0.01922639,
+        "vasint_r": -0.02080664,
+        "vaslat_r": -0.02108799,
+        "bflh_r": 0.0241591,
+        "semimem_r": 0.02750737,
+        "semiten_r": 0.03524924
+      }
+    },
+    {
+      "angleDeg": 108,
+      "lengthM": {
+        "recfem_r": 0.58211099,
+        "vasmed_r": 0.33091385,
+        "vasint_r": 0.34605813,
+        "vaslat_r": 0.35841067,
+        "bflh_r": 0.35185225,
+        "semimem_r": 0.33578973,
+        "semiten_r": 0.36277759
+      },
+      "momentArmM": {
+        "recfem_r": -0.02161686,
+        "vasmed_r": -0.01964915,
+        "vasint_r": -0.02124685,
+        "vaslat_r": -0.02147282,
+        "bflh_r": 0.02366175,
+        "semimem_r": 0.026812,
+        "semiten_r": 0.03442348
+      }
+    },
+    {
+      "angleDeg": 109,
+      "lengthM": {
+        "recfem_r": 0.58249265,
+        "vasmed_r": 0.33126074,
+        "vasint_r": 0.34643308,
+        "vaslat_r": 0.35878895,
+        "bflh_r": 0.35144365,
+        "semimem_r": 0.33532792,
+        "semiten_r": 0.3621841
+      },
+      "momentArmM": {
+        "recfem_r": -0.02211262,
+        "vasmed_r": -0.02010778,
+        "vasint_r": -0.02172707,
+        "vaslat_r": -0.02189285,
+        "bflh_r": 0.02315918,
+        "semimem_r": 0.02610576,
+        "semiten_r": 0.03358254
+      }
+    },
+    {
+      "angleDeg": 110,
+      "lengthM": {
+        "recfem_r": 0.58288332,
+        "vasmed_r": 0.33161594,
+        "vasint_r": 0.34681674,
+        "vaslat_r": 0.35917483,
+        "bflh_r": 0.35104387,
+        "semimem_r": 0.33487853,
+        "semiten_r": 0.36160543
+      },
+      "momentArmM": {
+        "recfem_r": -0.02264833,
+        "vasmed_r": -0.02060072,
+        "vasint_r": -0.02224599,
+        "vaslat_r": -0.0223467,
+        "bflh_r": 0.02265177,
+        "semimem_r": 0.02538884,
+        "semiten_r": 0.03272661
+      }
+    },
+    {
+      "angleDeg": 111,
+      "lengthM": {
+        "recfem_r": 0.58328367,
+        "vasmed_r": 0.33198001,
+        "vasint_r": 0.34720977,
+        "vaslat_r": 0.3595689,
+        "bflh_r": 0.35065298,
+        "semimem_r": 0.33444174,
+        "semiten_r": 0.36104181
+      },
+      "momentArmM": {
+        "recfem_r": -0.02322113,
+        "vasmed_r": -0.02112517,
+        "vasint_r": -0.0228009,
+        "vaslat_r": -0.0228318,
+        "bflh_r": 0.02213989,
+        "semimem_r": 0.02466141,
+        "semiten_r": 0.03185591
+      }
+    },
+    {
+      "angleDeg": 112,
+      "lengthM": {
+        "recfem_r": 0.58369433,
+        "vasmed_r": 0.33235347,
+        "vasint_r": 0.34761277,
+        "vaslat_r": 0.35997167,
+        "bflh_r": 0.35027107,
+        "semimem_r": 0.33401774,
+        "semiten_r": 0.36049353
+      },
+      "momentArmM": {
+        "recfem_r": -0.02382822,
+        "vasmed_r": -0.02167842,
+        "vasint_r": -0.02338916,
+        "vaslat_r": -0.02334571,
+        "bflh_r": 0.02162389,
+        "semimem_r": 0.02392369,
+        "semiten_r": 0.03097066
+      }
+    },
+    {
+      "angleDeg": 113,
+      "lengthM": {
+        "recfem_r": 0.58411587,
+        "vasmed_r": 0.33273682,
+        "vasint_r": 0.3480263,
+        "vaslat_r": 0.36038363,
+        "bflh_r": 0.34989819,
+        "semimem_r": 0.3336067,
+        "semiten_r": 0.35996082
+      },
+      "momentArmM": {
+        "recfem_r": -0.02446827,
+        "vasmed_r": -0.02225902,
+        "vasint_r": -0.02400953,
+        "vaslat_r": -0.02388711,
+        "bflh_r": 0.02110417,
+        "semimem_r": 0.02317587,
+        "semiten_r": 0.0300711
+      }
+    },
+    {
+      "angleDeg": 114,
+      "lengthM": {
+        "recfem_r": 0.58454887,
+        "vasmed_r": 0.33313052,
+        "vasint_r": 0.34845091,
+        "vaslat_r": 0.36080524,
+        "bflh_r": 0.34953441,
+        "semimem_r": 0.33320881,
+        "semiten_r": 0.35944393
+      },
+      "momentArmM": {
+        "recfem_r": -0.02513986,
+        "vasmed_r": -0.02286551,
+        "vasint_r": -0.02466072,
+        "vaslat_r": -0.0244547,
+        "bflh_r": 0.02058111,
+        "semimem_r": 0.02241816,
+        "semiten_r": 0.02915748
+      }
+    },
+    {
+      "angleDeg": 115,
+      "lengthM": {
+        "recfem_r": 0.58499386,
+        "vasmed_r": 0.333535,
+        "vasint_r": 0.34888713,
+        "vaslat_r": 0.36123696,
+        "bflh_r": 0.34917979,
+        "semimem_r": 0.33282422,
+        "semiten_r": 0.35894311
+      },
+      "momentArmM": {
+        "recfem_r": -0.02584157,
+        "vasmed_r": -0.02349639,
+        "vasint_r": -0.02534144,
+        "vaslat_r": -0.02504713,
+        "bflh_r": 0.0200551,
+        "semimem_r": 0.02165079,
+        "semiten_r": 0.02823005
+      }
+    },
+    {
+      "angleDeg": 116,
+      "lengthM": {
+        "recfem_r": 0.58545134,
+        "vasmed_r": 0.33395068,
+        "vasint_r": 0.34933546,
+        "vaslat_r": 0.36167921,
+        "bflh_r": 0.34883437,
+        "semimem_r": 0.33245311,
+        "semiten_r": 0.3584586
+      },
+      "momentArmM": {
+        "recfem_r": -0.02657193,
+        "vasmed_r": -0.0241502,
+        "vasint_r": -0.02605037,
+        "vaslat_r": -0.02566305,
+        "bflh_r": 0.01952652,
+        "semimem_r": 0.02087398,
+        "semiten_r": 0.02728908
+      }
+    },
+    {
+      "angleDeg": 117,
+      "lengthM": {
+        "recfem_r": 0.58592182,
+        "vasmed_r": 0.33437795,
+        "vasint_r": 0.34979638,
+        "vaslat_r": 0.36213237,
+        "bflh_r": 0.3484982,
+        "semimem_r": 0.33209563,
+        "semiten_r": 0.35799062
+      },
+      "momentArmM": {
+        "recfem_r": -0.02732945,
+        "vasmed_r": -0.02482545,
+        "vasint_r": -0.02678617,
+        "vaslat_r": -0.02630109,
+        "bflh_r": 0.01899576,
+        "semimem_r": 0.02008796,
+        "semiten_r": 0.02633487
+      }
+    },
+    {
+      "angleDeg": 118,
+      "lengthM": {
+        "recfem_r": 0.58640574,
+        "vasmed_r": 0.33481716,
+        "vasint_r": 0.35027035,
+        "vaslat_r": 0.36259683,
+        "bflh_r": 0.34817131,
+        "semimem_r": 0.33175196,
+        "semiten_r": 0.35753941
+      },
+      "momentArmM": {
+        "recfem_r": -0.02811263,
+        "vasmed_r": -0.02552067,
+        "vasint_r": -0.02754752,
+        "vaslat_r": -0.02695989,
+        "bflh_r": 0.0184632,
+        "semimem_r": 0.01929297,
+        "semiten_r": 0.0253677
+      }
+    },
+    {
+      "angleDeg": 119,
+      "lengthM": {
+        "recfem_r": 0.58690354,
+        "vasmed_r": 0.33526865,
+        "vasint_r": 0.3507578,
+        "vaslat_r": 0.36307294,
+        "bflh_r": 0.34785372,
+        "semimem_r": 0.33142223,
+        "semiten_r": 0.35710519
+      },
+      "momentArmM": {
+        "recfem_r": -0.02891995,
+        "vasmed_r": -0.02623442,
+        "vasint_r": -0.02833309,
+        "vaslat_r": -0.02763808,
+        "bflh_r": 0.01792923,
+        "semimem_r": 0.01848926,
+        "semiten_r": 0.02438787
+      }
+    },
+    {
+      "angleDeg": 120,
+      "lengthM": {
+        "recfem_r": 0.58741563,
+        "vasmed_r": 0.33573273,
+        "vasint_r": 0.35125914,
+        "vaslat_r": 0.36356102,
+        "bflh_r": 0.34754546,
+        "semimem_r": 0.33110661,
+        "semiten_r": 0.35668818
+      },
+      "momentArmM": {
+        "recfem_r": -0.0297499,
+        "vasmed_r": -0.0269653,
+        "vasint_r": -0.02914156,
+        "vaslat_r": -0.02833431,
+        "bflh_r": 0.01739422,
+        "semimem_r": 0.01767708,
+        "semiten_r": 0.02339572
+      }
+    }
+  ]
+}

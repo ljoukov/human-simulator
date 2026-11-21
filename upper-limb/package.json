@@ -1,0 +1,15 @@
+{
+  "name": "upper-limb-simulator",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build && node tools/pack-viewer.mjs"
+  },
+  "dependencies": {
+    "three": "0.183.2"
+  },
+  "devDependencies": {
+    "vite": "7.3.1"
+  }
+}

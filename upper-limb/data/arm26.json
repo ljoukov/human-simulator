@@ -1,0 +1,2432 @@
+{
+  "metadata": {
+    "model": "OpenSim Arm26",
+    "opensimVersion": "4.6-2026-06-22-85aaf64",
+    "source": "https://raw.githubusercontent.com/opensim-org/opensim-models/d9b05d470b1a481c222372c85b75772faf8f7792/Models/Arm26/arm26.osim",
+    "sourceCommit": "d9b05d470b1a481c222372c85b75772faf8f7792",
+    "sourceSha256": "e2224d0044eb393b05d64926c3fa1682c451a9adc7f510e5517ef9958d3d41b9",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "attribution": "The OpenSim Development Team (Jeff Reinbolt, Ajay Seth, Ayman Habib and Sam Hamner), adapted from Kate Holzbaur's upper-extremity model.",
+    "derivation": "Sampled the supplied model at each integer degree of right elbow flexion with right shoulder elevation fixed at 0 degrees.",
+    "scope": "Arm26 is a simplified, two-coordinate right arm with six muscle actuators and a fixed forearm rotation. Values describe generic model geometry.",
+    "lengthDefinition": "Whole musculotendon path length, in meters.",
+    "momentArmDefinition": "OpenSim signed elbow moment arm in meters, positive for flexion and negative for extension.",
+    "validation": {
+      "method": "Compared computeMomentArm with the negative finite difference of path length with respect to elbow angle in radians. Used a forward difference at 0 degrees and central differences elsewhere.",
+      "stepRad": 1e-05,
+      "maxAbsDifferenceM": {
+        "BIClong": 1.71e-07,
+        "BICshort": 1.71e-07,
+        "BRA": 0.000153998,
+        "TRIlong": 9.2e-07,
+        "TRIlat": 1.6698e-05,
+        "TRImed": 1.6698e-05
+      }
+    }
+  },
+  "muscles": [
+    "BIClong",
+    "BICshort",
+    "BRA",
+    "TRIlong",
+    "TRIlat",
+    "TRImed"
+  ],
+  "samples": [
+    {
+      "angleDeg": 0,
+      "lengthM": {
+        "BIClong": 0.424575382,
+        "BICshort": 0.341687913,
+        "BRA": 0.147352687,
+        "TRIlong": 0.277609177,
+        "TRIlat": 0.166610488,
+        "TRImed": 0.154238292
+      },
+      "momentArmM": {
+        "BIClong": 0.00937993,
+        "BICshort": 0.00937993,
+        "BRA": 0.015270221,
+        "TRIlong": -0.020095289,
+        "TRIlat": -0.020095289,
+        "TRImed": -0.020095289
+      }
+    },
+    {
+      "angleDeg": 1,
+      "lengthM": {
+        "BIClong": 0.424406467,
+        "BICshort": 0.341518998,
+        "BRA": 0.147089549,
+        "TRIlong": 0.27796403,
+        "TRIlat": 0.166965341,
+        "TRImed": 0.154593145
+      },
+      "momentArmM": {
+        "BIClong": 0.009976094,
+        "BICshort": 0.009976094,
+        "BRA": 0.015185057,
+        "TRIlong": -0.020560342,
+        "TRIlat": -0.020560342,
+        "TRImed": -0.020560342
+      }
+    },
+    {
+      "angleDeg": 2,
+      "lengthM": {
+        "BIClong": 0.424227157,
+        "BICshort": 0.341339688,
+        "BRA": 0.146827789,
+        "TRIlong": 0.278326617,
+        "TRIlat": 0.167327928,
+        "TRImed": 0.154955731
+      },
+      "momentArmM": {
+        "BIClong": 0.010571113,
+        "BICshort": 0.010571113,
+        "BRA": 0.015100329,
+        "TRIlong": -0.020982079,
+        "TRIlat": -0.020982079,
+        "TRImed": -0.020982079
+      }
+    },
+    {
+      "angleDeg": 3,
+      "lengthM": {
+        "BIClong": 0.424037473,
+        "BICshort": 0.341150004,
+        "BRA": 0.146567399,
+        "TRIlong": 0.278696212,
+        "TRIlat": 0.167697523,
+        "TRImed": 0.155325327
+      },
+      "momentArmM": {
+        "BIClong": 0.011164917,
+        "BICshort": 0.011164917,
+        "BRA": 0.015016083,
+        "TRIlong": -0.02136409,
+        "TRIlat": -0.02136409,
+        "TRImed": -0.02136409
+      }
+    },
+    {
+      "angleDeg": 4,
+      "lengthM": {
+        "BIClong": 0.423837436,
+        "BICshort": 0.340949967,
+        "BRA": 0.146308373,
+        "TRIlong": 0.279072152,
+        "TRIlat": 0.168073463,
+        "TRImed": 0.155701267
+      },
+      "momentArmM": {
+        "BIClong": 0.011757436,
+        "BICshort": 0.011757436,
+        "BRA": 0.014932366,
+        "TRIlong": -0.021709699,
+        "TRIlat": -0.021709699,
+        "TRImed": -0.021709699
+      }
+    },
+    {
+      "angleDeg": 5,
+      "lengthM": {
+        "BIClong": 0.423627069,
+        "BICshort": 0.3407396,
+        "BRA": 0.146050704,
+        "TRIlong": 0.27945383,
+        "TRIlat": 0.168455141,
+        "TRImed": 0.156082944
+      },
+      "momentArmM": {
+        "BIClong": 0.0123486,
+        "BICshort": 0.0123486,
+        "BRA": 0.014849224,
+        "TRIlong": -0.022021968,
+        "TRIlat": -0.022021968,
+        "TRImed": -0.022021968
+      }
+    },
+    {
+      "angleDeg": 6,
+      "lengthM": {
+        "BIClong": 0.423406397,
+        "BICshort": 0.340518928,
+        "BRA": 0.145794383,
+        "TRIlong": 0.279840686,
+        "TRIlat": 0.168841998,
+        "TRImed": 0.156469801
+      },
+      "momentArmM": {
+        "BIClong": 0.012938338,
+        "BICshort": 0.012938338,
+        "BRA": 0.0147667,
+        "TRIlong": -0.022303697,
+        "TRIlat": -0.022303697,
+        "TRImed": -0.022303697
+      }
+    },
+    {
+      "angleDeg": 7,
+      "lengthM": {
+        "BIClong": 0.423175444,
+        "BICshort": 0.340287975,
+        "BRA": 0.1455394,
+        "TRIlong": 0.280232213,
+        "TRIlat": 0.169233524,
+        "TRImed": 0.156861327
+      },
+      "momentArmM": {
+        "BIClong": 0.013526579,
+        "BICshort": 0.013526579,
+        "BRA": 0.01468484,
+        "TRIlong": -0.022557445,
+        "TRIlat": -0.022557445,
+        "TRImed": -0.022557445
+      }
+    },
+    {
+      "angleDeg": 8,
+      "lengthM": {
+        "BIClong": 0.422934239,
+        "BICshort": 0.34004677,
+        "BRA": 0.145285746,
+        "TRIlong": 0.280627941,
+        "TRIlat": 0.169629252,
+        "TRImed": 0.157257055
+      },
+      "momentArmM": {
+        "BIClong": 0.014113252,
+        "BICshort": 0.014113252,
+        "BRA": 0.014603685,
+        "TRIlong": -0.022785538,
+        "TRIlat": -0.022785538,
+        "TRImed": -0.022785538
+      }
+    },
+    {
+      "angleDeg": 9,
+      "lengthM": {
+        "BIClong": 0.422682809,
+        "BICshort": 0.33979534,
+        "BRA": 0.145033411,
+        "TRIlong": 0.281027441,
+        "TRIlat": 0.170028752,
+        "TRImed": 0.157656556
+      },
+      "momentArmM": {
+        "BIClong": 0.014698286,
+        "BICshort": 0.014698286,
+        "BRA": 0.014523279,
+        "TRIlong": -0.022990088,
+        "TRIlat": -0.022990088,
+        "TRImed": -0.022990088
+      }
+    },
+    {
+      "angleDeg": 10,
+      "lengthM": {
+        "BIClong": 0.422421182,
+        "BICshort": 0.339533713,
+        "BRA": 0.144782383,
+        "TRIlong": 0.28143032,
+        "TRIlat": 0.170431631,
+        "TRImed": 0.158059435
+      },
+      "momentArmM": {
+        "BIClong": 0.015281609,
+        "BICshort": 0.015281609,
+        "BRA": 0.01444366,
+        "TRIlong": -0.023173007,
+        "TRIlat": -0.023173007,
+        "TRImed": -0.023173007
+      }
+    },
+    {
+      "angleDeg": 11,
+      "lengthM": {
+        "BIClong": 0.42214939,
+        "BICshort": 0.339261921,
+        "BRA": 0.14453265,
+        "TRIlong": 0.281836216,
+        "TRIlat": 0.170837527,
+        "TRImed": 0.158465331
+      },
+      "momentArmM": {
+        "BIClong": 0.015863149,
+        "BICshort": 0.015863149,
+        "BRA": 0.014364871,
+        "TRIlong": -0.023336028,
+        "TRIlat": -0.023336028,
+        "TRImed": -0.023336028
+      }
+    },
+    {
+      "angleDeg": 12,
+      "lengthM": {
+        "BIClong": 0.421867464,
+        "BICshort": 0.338979996,
+        "BRA": 0.144284199,
+        "TRIlong": 0.282244795,
+        "TRIlat": 0.171246106,
+        "TRImed": 0.158873909
+      },
+      "momentArmM": {
+        "BIClong": 0.016442834,
+        "BICshort": 0.016442834,
+        "BRA": 0.014286947,
+        "TRIlong": -0.023480719,
+        "TRIlat": -0.023480719,
+        "TRImed": -0.023480719
+      }
+    },
+    {
+      "angleDeg": 13,
+      "lengthM": {
+        "BIClong": 0.421575438,
+        "BICshort": 0.338687969,
+        "BRA": 0.144037018,
+        "TRIlong": 0.282655749,
+        "TRIlat": 0.17165706,
+        "TRImed": 0.159284864
+      },
+      "momentArmM": {
+        "BIClong": 0.017020591,
+        "BICshort": 0.017020591,
+        "BRA": 0.014209929,
+        "TRIlong": -0.023608497,
+        "TRIlat": -0.023608497,
+        "TRImed": -0.023608497
+      }
+    },
+    {
+      "angleDeg": 14,
+      "lengthM": {
+        "BIClong": 0.421273345,
+        "BICshort": 0.338385876,
+        "BRA": 0.143791092,
+        "TRIlong": 0.283068796,
+        "TRIlat": 0.172070107,
+        "TRImed": 0.15969791
+      },
+      "momentArmM": {
+        "BIClong": 0.017596349,
+        "BICshort": 0.017596349,
+        "BRA": 0.014133851,
+        "TRIlong": -0.023720644,
+        "TRIlat": -0.023720644,
+        "TRImed": -0.023720644
+      }
+    },
+    {
+      "angleDeg": 15,
+      "lengthM": {
+        "BIClong": 0.420961222,
+        "BICshort": 0.338073753,
+        "BRA": 0.143546408,
+        "TRIlong": 0.283483672,
+        "TRIlat": 0.172484983,
+        "TRImed": 0.160112786
+      },
+      "momentArmM": {
+        "BIClong": 0.018170033,
+        "BICshort": 0.018170033,
+        "BRA": 0.014058749,
+        "TRIlong": -0.023818321,
+        "TRIlat": -0.023818321,
+        "TRImed": -0.023818321
+      }
+    },
+    {
+      "angleDeg": 16,
+      "lengthM": {
+        "BIClong": 0.420639104,
+        "BICshort": 0.337751635,
+        "BRA": 0.143302949,
+        "TRIlong": 0.283900134,
+        "TRIlat": 0.172901445,
+        "TRImed": 0.160529249
+      },
+      "momentArmM": {
+        "BIClong": 0.01874157,
+        "BICshort": 0.01874157,
+        "BRA": 0.013984658,
+        "TRIlong": -0.023902577,
+        "TRIlat": -0.023902577,
+        "TRImed": -0.023902577
+      }
+    },
+    {
+      "angleDeg": 17,
+      "lengthM": {
+        "BIClong": 0.420307031,
+        "BICshort": 0.337419562,
+        "BRA": 0.143060701,
+        "TRIlong": 0.284317957,
+        "TRIlat": 0.173319268,
+        "TRImed": 0.160947071
+      },
+      "momentArmM": {
+        "BIClong": 0.019310886,
+        "BICshort": 0.019310886,
+        "BRA": 0.013911609,
+        "TRIlong": -0.023974363,
+        "TRIlat": -0.023974363,
+        "TRImed": -0.023974363
+      }
+    },
+    {
+      "angleDeg": 18,
+      "lengthM": {
+        "BIClong": 0.41996504,
+        "BICshort": 0.337077571,
+        "BRA": 0.142819646,
+        "TRIlong": 0.28473693,
+        "TRIlat": 0.173738241,
+        "TRImed": 0.161366044
+      },
+      "momentArmM": {
+        "BIClong": 0.019877907,
+        "BICshort": 0.019877907,
+        "BRA": 0.013839635,
+        "TRIlong": -0.02403454,
+        "TRIlat": -0.02403454,
+        "TRImed": -0.02403454
+      }
+    },
+    {
+      "angleDeg": 19,
+      "lengthM": {
+        "BIClong": 0.419613174,
+        "BICshort": 0.336725705,
+        "BRA": 0.14257977,
+        "TRIlong": 0.285156857,
+        "TRIlat": 0.174158168,
+        "TRImed": 0.161785972
+      },
+      "momentArmM": {
+        "BIClong": 0.020442559,
+        "BICshort": 0.020442559,
+        "BRA": 0.013768766,
+        "TRIlong": -0.024083889,
+        "TRIlat": -0.024083889,
+        "TRImed": -0.024083889
+      }
+    },
+    {
+      "angleDeg": 20,
+      "lengthM": {
+        "BIClong": 0.419251475,
+        "BICshort": 0.336364006,
+        "BRA": 0.142341053,
+        "TRIlong": 0.285577557,
+        "TRIlat": 0.174578868,
+        "TRImed": 0.162206672
+      },
+      "momentArmM": {
+        "BIClong": 0.021004766,
+        "BICshort": 0.021004766,
+        "BRA": 0.013699031,
+        "TRIlong": -0.024123121,
+        "TRIlat": -0.024123121,
+        "TRImed": -0.024123121
+      }
+    },
+    {
+      "angleDeg": 21,
+      "lengthM": {
+        "BIClong": 0.418879984,
+        "BICshort": 0.335992516,
+        "BRA": 0.142103479,
+        "TRIlong": 0.285998858,
+        "TRIlat": 0.175000169,
+        "TRImed": 0.162627973
+      },
+      "momentArmM": {
+        "BIClong": 0.021564453,
+        "BICshort": 0.021564453,
+        "BRA": 0.013630459,
+        "TRIlong": -0.024152878,
+        "TRIlat": -0.024152878,
+        "TRImed": -0.024152878
+      }
+    },
+    {
+      "angleDeg": 22,
+      "lengthM": {
+        "BIClong": 0.418498748,
+        "BICshort": 0.335611279,
+        "BRA": 0.141867029,
+        "TRIlong": 0.2864206,
+        "TRIlat": 0.175421911,
+        "TRImed": 0.163049714
+      },
+      "momentArmM": {
+        "BIClong": 0.022121543,
+        "BICshort": 0.022121543,
+        "BRA": 0.013563076,
+        "TRIlong": -0.024173748,
+        "TRIlat": -0.024173748,
+        "TRImed": -0.024173748
+      }
+    },
+    {
+      "angleDeg": 23,
+      "lengthM": {
+        "BIClong": 0.418107812,
+        "BICshort": 0.335220344,
+        "BRA": 0.141631684,
+        "TRIlong": 0.286842632,
+        "TRIlat": 0.175843944,
+        "TRImed": 0.163471747
+      },
+      "momentArmM": {
+        "BIClong": 0.02267596,
+        "BICshort": 0.02267596,
+        "BRA": 0.013496908,
+        "TRIlong": -0.024186265,
+        "TRIlat": -0.024186265,
+        "TRImed": -0.024186265
+      }
+    },
+    {
+      "angleDeg": 24,
+      "lengthM": {
+        "BIClong": 0.417707224,
+        "BICshort": 0.334819755,
+        "BRA": 0.141397426,
+        "TRIlong": 0.287264814,
+        "TRIlat": 0.176266125,
+        "TRImed": 0.163893929
+      },
+      "momentArmM": {
+        "BIClong": 0.023227627,
+        "BICshort": 0.023227627,
+        "BRA": 0.013431979,
+        "TRIlong": -0.024190915,
+        "TRIlat": -0.024190915,
+        "TRImed": -0.024190915
+      }
+    },
+    {
+      "angleDeg": 25,
+      "lengthM": {
+        "BIClong": 0.417297032,
+        "BICshort": 0.334409563,
+        "BRA": 0.141164234,
+        "TRIlong": 0.287687011,
+        "TRIlat": 0.176688323,
+        "TRImed": 0.164316126
+      },
+      "momentArmM": {
+        "BIClong": 0.023776467,
+        "BICshort": 0.023776467,
+        "BRA": 0.013368312,
+        "TRIlong": -0.024188144,
+        "TRIlat": -0.024188144,
+        "TRImed": -0.024188144
+      }
+    },
+    {
+      "angleDeg": 26,
+      "lengthM": {
+        "BIClong": 0.416877286,
+        "BICshort": 0.333989817,
+        "BRA": 0.140932089,
+        "TRIlong": 0.288109099,
+        "TRIlat": 0.17711041,
+        "TRImed": 0.164738213
+      },
+      "momentArmM": {
+        "BIClong": 0.024322401,
+        "BICshort": 0.024322401,
+        "BRA": 0.01330593,
+        "TRIlong": -0.024178357,
+        "TRIlat": -0.024178357,
+        "TRImed": -0.024178357
+      }
+    },
+    {
+      "angleDeg": 27,
+      "lengthM": {
+        "BIClong": 0.416448037,
+        "BICshort": 0.333560568,
+        "BRA": 0.140700971,
+        "TRIlong": 0.288530957,
+        "TRIlat": 0.177532268,
+        "TRImed": 0.165160071
+      },
+      "momentArmM": {
+        "BIClong": 0.024865351,
+        "BICshort": 0.024865351,
+        "BRA": 0.013244853,
+        "TRIlong": -0.024161927,
+        "TRIlat": -0.024161927,
+        "TRImed": -0.024161927
+      }
+    },
+    {
+      "angleDeg": 28,
+      "lengthM": {
+        "BIClong": 0.416009339,
+        "BICshort": 0.33312187,
+        "BRA": 0.140470858,
+        "TRIlong": 0.288952472,
+        "TRIlat": 0.177953784,
+        "TRImed": 0.165581587
+      },
+      "momentArmM": {
+        "BIClong": 0.025405236,
+        "BICshort": 0.025405236,
+        "BRA": 0.013185101,
+        "TRIlong": -0.024139194,
+        "TRIlat": -0.024139194,
+        "TRImed": -0.024139194
+      }
+    },
+    {
+      "angleDeg": 29,
+      "lengthM": {
+        "BIClong": 0.415561245,
+        "BICshort": 0.332673776,
+        "BRA": 0.140241729,
+        "TRIlong": 0.289373539,
+        "TRIlat": 0.17837485,
+        "TRImed": 0.166002653
+      },
+      "momentArmM": {
+        "BIClong": 0.025941978,
+        "BICshort": 0.025941978,
+        "BRA": 0.013126692,
+        "TRIlong": -0.024110472,
+        "TRIlat": -0.024110472,
+        "TRImed": -0.024110472
+      }
+    },
+    {
+      "angleDeg": 30,
+      "lengthM": {
+        "BIClong": 0.415103812,
+        "BICshort": 0.332216343,
+        "BRA": 0.140013563,
+        "TRIlong": 0.289794053,
+        "TRIlat": 0.178795365,
+        "TRImed": 0.166423168
+      },
+      "momentArmM": {
+        "BIClong": 0.026475495,
+        "BICshort": 0.026475495,
+        "BRA": 0.013069644,
+        "TRIlong": -0.024076046,
+        "TRIlat": -0.024076046,
+        "TRImed": -0.024076046
+      }
+    },
+    {
+      "angleDeg": 31,
+      "lengthM": {
+        "BIClong": 0.414637096,
+        "BICshort": 0.331749627,
+        "BRA": 0.139786339,
+        "TRIlong": 0.29021392,
+        "TRIlat": 0.179215231,
+        "TRImed": 0.166843034
+      },
+      "momentArmM": {
+        "BIClong": 0.027005705,
+        "BICshort": 0.027005705,
+        "BRA": 0.013013973,
+        "TRIlong": -0.024036183,
+        "TRIlat": -0.024036183,
+        "TRImed": -0.024036183
+      }
+    },
+    {
+      "angleDeg": 32,
+      "lengthM": {
+        "BIClong": 0.414161155,
+        "BICshort": 0.331273686,
+        "BRA": 0.139560033,
+        "TRIlong": 0.290633044,
+        "TRIlat": 0.179634355,
+        "TRImed": 0.167262159
+      },
+      "momentArmM": {
+        "BIClong": 0.027532528,
+        "BICshort": 0.027532528,
+        "BRA": 0.012959693,
+        "TRIlong": -0.023991126,
+        "TRIlat": -0.023991126,
+        "TRImed": -0.023991126
+      }
+    },
+    {
+      "angleDeg": 33,
+      "lengthM": {
+        "BIClong": 0.413676049,
+        "BICshort": 0.33078858,
+        "BRA": 0.139334625,
+        "TRIlong": 0.291051339,
+        "TRIlat": 0.18005265,
+        "TRImed": 0.167680454
+      },
+      "momentArmM": {
+        "BIClong": 0.028055879,
+        "BICshort": 0.028055879,
+        "BRA": 0.01290682,
+        "TRIlong": -0.023941099,
+        "TRIlat": -0.023941099,
+        "TRImed": -0.023941099
+      }
+    },
+    {
+      "angleDeg": 34,
+      "lengthM": {
+        "BIClong": 0.41318184,
+        "BICshort": 0.330294372,
+        "BRA": 0.13911009,
+        "TRIlong": 0.291468719,
+        "TRIlat": 0.18047003,
+        "TRImed": 0.168097833
+      },
+      "momentArmM": {
+        "BIClong": 0.028575675,
+        "BICshort": 0.028575675,
+        "BRA": 0.012855366,
+        "TRIlong": -0.02388631,
+        "TRIlat": -0.02388631,
+        "TRImed": -0.02388631
+      }
+    },
+    {
+      "angleDeg": 35,
+      "lengthM": {
+        "BIClong": 0.412678591,
+        "BICshort": 0.329791122,
+        "BRA": 0.138886407,
+        "TRIlong": 0.291885102,
+        "TRIlat": 0.180886413,
+        "TRImed": 0.168514217
+      },
+      "momentArmM": {
+        "BIClong": 0.029091832,
+        "BICshort": 0.029091832,
+        "BRA": 0.012805342,
+        "TRIlong": -0.023826952,
+        "TRIlat": -0.023826952,
+        "TRImed": -0.023826952
+      }
+    },
+    {
+      "angleDeg": 36,
+      "lengthM": {
+        "BIClong": 0.412166366,
+        "BICshort": 0.329278897,
+        "BRA": 0.138663552,
+        "TRIlong": 0.292300411,
+        "TRIlat": 0.181301722,
+        "TRImed": 0.168929525
+      },
+      "momentArmM": {
+        "BIClong": 0.029604263,
+        "BICshort": 0.029604263,
+        "BRA": 0.012756759,
+        "TRIlong": -0.023763202,
+        "TRIlat": -0.023763202,
+        "TRImed": -0.023763202
+      }
+    },
+    {
+      "angleDeg": 37,
+      "lengthM": {
+        "BIClong": 0.41164523,
+        "BICshort": 0.328757761,
+        "BRA": 0.138441501,
+        "TRIlong": 0.29271457,
+        "TRIlat": 0.181715881,
+        "TRImed": 0.169343684
+      },
+      "momentArmM": {
+        "BIClong": 0.030112883,
+        "BICshort": 0.030112883,
+        "BRA": 0.012709627,
+        "TRIlong": -0.023695226,
+        "TRIlat": -0.023695226,
+        "TRImed": -0.023695226
+      }
+    },
+    {
+      "angleDeg": 38,
+      "lengthM": {
+        "BIClong": 0.41111525,
+        "BICshort": 0.328227781,
+        "BRA": 0.138220232,
+        "TRIlong": 0.293127506,
+        "TRIlat": 0.182128817,
+        "TRImed": 0.169756621
+      },
+      "momentArmM": {
+        "BIClong": 0.030617603,
+        "BICshort": 0.030617603,
+        "BRA": 0.012663955,
+        "TRIlong": -0.023623176,
+        "TRIlat": -0.023623176,
+        "TRImed": -0.023623176
+      }
+    },
+    {
+      "angleDeg": 39,
+      "lengthM": {
+        "BIClong": 0.410576497,
+        "BICshort": 0.327689028,
+        "BRA": 0.137999721,
+        "TRIlong": 0.293539151,
+        "TRIlat": 0.182540462,
+        "TRImed": 0.170168266
+      },
+      "momentArmM": {
+        "BIClong": 0.031118336,
+        "BICshort": 0.031118336,
+        "BRA": 0.01261975,
+        "TRIlong": -0.023547196,
+        "TRIlat": -0.023547196,
+        "TRImed": -0.023547196
+      }
+    },
+    {
+      "angleDeg": 40,
+      "lengthM": {
+        "BIClong": 0.410029039,
+        "BICshort": 0.32714157,
+        "BRA": 0.137779943,
+        "TRIlong": 0.293949436,
+        "TRIlat": 0.182950748,
+        "TRImed": 0.170578551
+      },
+      "momentArmM": {
+        "BIClong": 0.031614993,
+        "BICshort": 0.031614993,
+        "BRA": 0.012577019,
+        "TRIlong": -0.023467419,
+        "TRIlat": -0.023467419,
+        "TRImed": -0.023467419
+      }
+    },
+    {
+      "angleDeg": 41,
+      "lengthM": {
+        "BIClong": 0.40947295,
+        "BICshort": 0.326585481,
+        "BRA": 0.137560876,
+        "TRIlong": 0.294358297,
+        "TRIlat": 0.183359608,
+        "TRImed": 0.170987412
+      },
+      "momentArmM": {
+        "BIClong": 0.032107482,
+        "BICshort": 0.032107482,
+        "BRA": 0.012535768,
+        "TRIlong": -0.023383968,
+        "TRIlat": -0.023383968,
+        "TRImed": -0.023383968
+      }
+    },
+    {
+      "angleDeg": 42,
+      "lengthM": {
+        "BIClong": 0.408908302,
+        "BICshort": 0.326020833,
+        "BRA": 0.137342493,
+        "TRIlong": 0.29476567,
+        "TRIlat": 0.183766981,
+        "TRImed": 0.171394785
+      },
+      "momentArmM": {
+        "BIClong": 0.032595712,
+        "BICshort": 0.032595712,
+        "BRA": 0.012496002,
+        "TRIlong": -0.023296961,
+        "TRIlat": -0.023296961,
+        "TRImed": -0.023296961
+      }
+    },
+    {
+      "angleDeg": 43,
+      "lengthM": {
+        "BIClong": 0.40833517,
+        "BICshort": 0.325447701,
+        "BRA": 0.137124772,
+        "TRIlong": 0.295171494,
+        "TRIlat": 0.184172806,
+        "TRImed": 0.171800609
+      },
+      "momentArmM": {
+        "BIClong": 0.033079589,
+        "BICshort": 0.033079589,
+        "BRA": 0.012457724,
+        "TRIlong": -0.023206504,
+        "TRIlat": -0.023206504,
+        "TRImed": -0.023206504
+      }
+    },
+    {
+      "angleDeg": 44,
+      "lengthM": {
+        "BIClong": 0.407753632,
+        "BICshort": 0.324866163,
+        "BRA": 0.136907688,
+        "TRIlong": 0.295575711,
+        "TRIlat": 0.184577022,
+        "TRImed": 0.172204825
+      },
+      "momentArmM": {
+        "BIClong": 0.033559021,
+        "BICshort": 0.033559021,
+        "BRA": 0.012420938,
+        "TRIlong": -0.0231127,
+        "TRIlat": -0.0231127,
+        "TRImed": -0.0231127
+      }
+    },
+    {
+      "angleDeg": 45,
+      "lengthM": {
+        "BIClong": 0.407163766,
+        "BICshort": 0.324276297,
+        "BRA": 0.136691102,
+        "TRIlong": 0.295978261,
+        "TRIlat": 0.184979572,
+        "TRImed": 0.172607376
+      },
+      "momentArmM": {
+        "BIClong": 0.034033911,
+        "BICshort": 0.034033911,
+        "BRA": 0.012452552,
+        "TRIlong": -0.023015644,
+        "TRIlat": -0.023015644,
+        "TRImed": -0.023015644
+      }
+    },
+    {
+      "angleDeg": 46,
+      "lengthM": {
+        "BIClong": 0.406565651,
+        "BICshort": 0.323678182,
+        "BRA": 0.136471119,
+        "TRIlong": 0.29637909,
+        "TRIlat": 0.185380401,
+        "TRImed": 0.173008204
+      },
+      "momentArmM": {
+        "BIClong": 0.034504163,
+        "BICshort": 0.034504163,
+        "BRA": 0.012755283,
+        "TRIlong": -0.022915426,
+        "TRIlat": -0.022915426,
+        "TRImed": -0.022915426
+      }
+    },
+    {
+      "angleDeg": 47,
+      "lengthM": {
+        "BIClong": 0.405959371,
+        "BICshort": 0.323071902,
+        "BRA": 0.136245873,
+        "TRIlong": 0.296778142,
+        "TRIlat": 0.185779453,
+        "TRImed": 0.173407257
+      },
+      "momentArmM": {
+        "BIClong": 0.034969678,
+        "BICshort": 0.034969678,
+        "BRA": 0.013055605,
+        "TRIlong": -0.02281213,
+        "TRIlat": -0.02281213,
+        "TRImed": -0.02281213
+      }
+    },
+    {
+      "angleDeg": 48,
+      "lengthM": {
+        "BIClong": 0.405345007,
+        "BICshort": 0.322457538,
+        "BRA": 0.136015407,
+        "TRIlong": 0.297175366,
+        "TRIlat": 0.186176677,
+        "TRImed": 0.17380448
+      },
+      "momentArmM": {
+        "BIClong": 0.035430357,
+        "BICshort": 0.035430357,
+        "BRA": 0.01335345,
+        "TRIlong": -0.022705835,
+        "TRIlat": -0.022705835,
+        "TRImed": -0.022705835
+      }
+    },
+    {
+      "angleDeg": 49,
+      "lengthM": {
+        "BIClong": 0.404722647,
+        "BICshort": 0.321835178,
+        "BRA": 0.135779764,
+        "TRIlong": 0.297570708,
+        "TRIlat": 0.18657202,
+        "TRImed": 0.174199823
+      },
+      "momentArmM": {
+        "BIClong": 0.035886099,
+        "BICshort": 0.035886099,
+        "BRA": 0.013648752,
+        "TRIlong": -0.022596617,
+        "TRIlat": -0.022596617,
+        "TRImed": -0.022596617
+      }
+    },
+    {
+      "angleDeg": 50,
+      "lengthM": {
+        "BIClong": 0.404092375,
+        "BICshort": 0.321204907,
+        "BRA": 0.13553899,
+        "TRIlong": 0.29796412,
+        "TRIlat": 0.186965431,
+        "TRImed": 0.174593235
+      },
+      "momentArmM": {
+        "BIClong": 0.0363368,
+        "BICshort": 0.0363368,
+        "BRA": 0.013941444,
+        "TRIlong": -0.022484547,
+        "TRIlat": -0.022484547,
+        "TRImed": -0.022484547
+      }
+    },
+    {
+      "angleDeg": 51,
+      "lengthM": {
+        "BIClong": 0.403454283,
+        "BICshort": 0.320566814,
+        "BRA": 0.135293131,
+        "TRIlong": 0.298355551,
+        "TRIlat": 0.187356862,
+        "TRImed": 0.174984666
+      },
+      "momentArmM": {
+        "BIClong": 0.036782357,
+        "BICshort": 0.036782357,
+        "BRA": 0.014231459,
+        "TRIlong": -0.022369691,
+        "TRIlat": -0.022369691,
+        "TRImed": -0.022369691
+      }
+    },
+    {
+      "angleDeg": 52,
+      "lengthM": {
+        "BIClong": 0.40280846,
+        "BICshort": 0.319920991,
+        "BRA": 0.135042235,
+        "TRIlong": 0.298744954,
+        "TRIlat": 0.187746265,
+        "TRImed": 0.175374068
+      },
+      "momentArmM": {
+        "BIClong": 0.037222662,
+        "BICshort": 0.037222662,
+        "BRA": 0.014518728,
+        "TRIlong": -0.022252113,
+        "TRIlat": -0.022252113,
+        "TRImed": -0.022252113
+      }
+    },
+    {
+      "angleDeg": 53,
+      "lengthM": {
+        "BIClong": 0.402154998,
+        "BICshort": 0.319267529,
+        "BRA": 0.134786349,
+        "TRIlong": 0.299132281,
+        "TRIlat": 0.188133592,
+        "TRImed": 0.175761395
+      },
+      "momentArmM": {
+        "BIClong": 0.037657608,
+        "BICshort": 0.037657608,
+        "BRA": 0.014803183,
+        "TRIlong": -0.022131874,
+        "TRIlat": -0.022131874,
+        "TRImed": -0.022131874
+      }
+    },
+    {
+      "angleDeg": 54,
+      "lengthM": {
+        "BIClong": 0.401493993,
+        "BICshort": 0.318606524,
+        "BRA": 0.134525523,
+        "TRIlong": 0.299517487,
+        "TRIlat": 0.188518798,
+        "TRImed": 0.176146601
+      },
+      "momentArmM": {
+        "BIClong": 0.038087086,
+        "BICshort": 0.038087086,
+        "BRA": 0.015084757,
+        "TRIlong": -0.02200903,
+        "TRIlat": -0.02200903,
+        "TRImed": -0.02200903
+      }
+    },
+    {
+      "angleDeg": 55,
+      "lengthM": {
+        "BIClong": 0.40082554,
+        "BICshort": 0.317938071,
+        "BRA": 0.134259808,
+        "TRIlong": 0.299900526,
+        "TRIlat": 0.188901837,
+        "TRImed": 0.176529641
+      },
+      "momentArmM": {
+        "BIClong": 0.038510982,
+        "BICshort": 0.038510982,
+        "BRA": 0.015363381,
+        "TRIlong": -0.021883638,
+        "TRIlat": -0.021883638,
+        "TRImed": -0.021883638
+      }
+    },
+    {
+      "angleDeg": 56,
+      "lengthM": {
+        "BIClong": 0.400149739,
+        "BICshort": 0.31726227,
+        "BRA": 0.133989257,
+        "TRIlong": 0.300281355,
+        "TRIlat": 0.189282666,
+        "TRImed": 0.17691047
+      },
+      "momentArmM": {
+        "BIClong": 0.038929183,
+        "BICshort": 0.038929183,
+        "BRA": 0.015638984,
+        "TRIlong": -0.021755748,
+        "TRIlat": -0.021755748,
+        "TRImed": -0.021755748
+      }
+    },
+    {
+      "angleDeg": 57,
+      "lengthM": {
+        "BIClong": 0.399466689,
+        "BICshort": 0.31657922,
+        "BRA": 0.133713923,
+        "TRIlong": 0.300659931,
+        "TRIlat": 0.189661242,
+        "TRImed": 0.177289045
+      },
+      "momentArmM": {
+        "BIClong": 0.039341573,
+        "BICshort": 0.039341573,
+        "BRA": 0.015911499,
+        "TRIlong": -0.02162541,
+        "TRIlat": -0.02162541,
+        "TRImed": -0.02162541
+      }
+    },
+    {
+      "angleDeg": 58,
+      "lengthM": {
+        "BIClong": 0.398776494,
+        "BICshort": 0.315889025,
+        "BRA": 0.13343386,
+        "TRIlong": 0.30103621,
+        "TRIlat": 0.190037522,
+        "TRImed": 0.177665325
+      },
+      "momentArmM": {
+        "BIClong": 0.039748034,
+        "BICshort": 0.039748034,
+        "BRA": 0.016180855,
+        "TRIlong": -0.021492673,
+        "TRIlat": -0.021492673,
+        "TRImed": -0.021492673
+      }
+    },
+    {
+      "angleDeg": 59,
+      "lengthM": {
+        "BIClong": 0.398079256,
+        "BICshort": 0.315191788,
+        "BRA": 0.133149123,
+        "TRIlong": 0.301410153,
+        "TRIlat": 0.190411464,
+        "TRImed": 0.178039267
+      },
+      "momentArmM": {
+        "BIClong": 0.040148444,
+        "BICshort": 0.040148444,
+        "BRA": 0.016446982,
+        "TRIlong": -0.021357581,
+        "TRIlat": -0.021357581,
+        "TRImed": -0.021357581
+      }
+    },
+    {
+      "angleDeg": 60,
+      "lengthM": {
+        "BIClong": 0.397375085,
+        "BICshort": 0.314487616,
+        "BRA": 0.132859771,
+        "TRIlong": 0.301781717,
+        "TRIlat": 0.190783028,
+        "TRImed": 0.178410832
+      },
+      "momentArmM": {
+        "BIClong": 0.040542681,
+        "BICshort": 0.040542681,
+        "BRA": 0.01670981,
+        "TRIlong": -0.021220179,
+        "TRIlat": -0.021220179,
+        "TRImed": -0.021220179
+      }
+    },
+    {
+      "angleDeg": 61,
+      "lengthM": {
+        "BIClong": 0.396664087,
+        "BICshort": 0.313776618,
+        "BRA": 0.13256586,
+        "TRIlong": 0.302150864,
+        "TRIlat": 0.191152175,
+        "TRImed": 0.178779978
+      },
+      "momentArmM": {
+        "BIClong": 0.040930618,
+        "BICshort": 0.040930618,
+        "BRA": 0.016969267,
+        "TRIlong": -0.021080508,
+        "TRIlat": -0.021080508,
+        "TRImed": -0.021080508
+      }
+    },
+    {
+      "angleDeg": 62,
+      "lengthM": {
+        "BIClong": 0.395946374,
+        "BICshort": 0.313058905,
+        "BRA": 0.132267452,
+        "TRIlong": 0.302517553,
+        "TRIlat": 0.191518864,
+        "TRImed": 0.179146667
+      },
+      "momentArmM": {
+        "BIClong": 0.041312128,
+        "BICshort": 0.041312128,
+        "BRA": 0.017225282,
+        "TRIlong": -0.020938609,
+        "TRIlat": -0.020938609,
+        "TRImed": -0.020938609
+      }
+    },
+    {
+      "angleDeg": 63,
+      "lengthM": {
+        "BIClong": 0.395222059,
+        "BICshort": 0.31233459,
+        "BRA": 0.131964605,
+        "TRIlong": 0.302881746,
+        "TRIlat": 0.191883057,
+        "TRImed": 0.179510861
+      },
+      "momentArmM": {
+        "BIClong": 0.041687079,
+        "BICshort": 0.041687079,
+        "BRA": 0.017477785,
+        "TRIlong": -0.020794521,
+        "TRIlat": -0.020794521,
+        "TRImed": -0.020794521
+      }
+    },
+    {
+      "angleDeg": 64,
+      "lengthM": {
+        "BIClong": 0.394491259,
+        "BICshort": 0.31160379,
+        "BRA": 0.131657383,
+        "TRIlong": 0.303243406,
+        "TRIlat": 0.192244717,
+        "TRImed": 0.179872521
+      },
+      "momentArmM": {
+        "BIClong": 0.042055338,
+        "BICshort": 0.042055338,
+        "BRA": 0.017726702,
+        "TRIlong": -0.020648281,
+        "TRIlat": -0.020648281,
+        "TRImed": -0.020648281
+      }
+    },
+    {
+      "angleDeg": 65,
+      "lengthM": {
+        "BIClong": 0.393754091,
+        "BICshort": 0.310866622,
+        "BRA": 0.131345848,
+        "TRIlong": 0.303602495,
+        "TRIlat": 0.192603806,
+        "TRImed": 0.180231609
+      },
+      "momentArmM": {
+        "BIClong": 0.042416767,
+        "BICshort": 0.042416767,
+        "BRA": 0.017971961,
+        "TRIlong": -0.020499925,
+        "TRIlat": -0.020499925,
+        "TRImed": -0.020499925
+      }
+    },
+    {
+      "angleDeg": 66,
+      "lengthM": {
+        "BIClong": 0.393010675,
+        "BICshort": 0.310123206,
+        "BRA": 0.131030065,
+        "TRIlong": 0.303958976,
+        "TRIlat": 0.192960287,
+        "TRImed": 0.180588091
+      },
+      "momentArmM": {
+        "BIClong": 0.042771226,
+        "BICshort": 0.042771226,
+        "BRA": 0.018213489,
+        "TRIlong": -0.020349489,
+        "TRIlat": -0.020349489,
+        "TRImed": -0.020349489
+      }
+    },
+    {
+      "angleDeg": 67,
+      "lengthM": {
+        "BIClong": 0.392261135,
+        "BICshort": 0.309373666,
+        "BRA": 0.130710099,
+        "TRIlong": 0.304312814,
+        "TRIlat": 0.193314125,
+        "TRImed": 0.180941929
+      },
+      "momentArmM": {
+        "BIClong": 0.043118572,
+        "BICshort": 0.043118572,
+        "BRA": 0.018451213,
+        "TRIlong": -0.020197006,
+        "TRIlat": -0.020197006,
+        "TRImed": -0.020197006
+      }
+    },
+    {
+      "angleDeg": 68,
+      "lengthM": {
+        "BIClong": 0.391505595,
+        "BICshort": 0.308618126,
+        "BRA": 0.130386018,
+        "TRIlong": 0.304663973,
+        "TRIlat": 0.193665284,
+        "TRImed": 0.181293088
+      },
+      "momentArmM": {
+        "BIClong": 0.043458658,
+        "BICshort": 0.043458658,
+        "BRA": 0.01868506,
+        "TRIlong": -0.020042509,
+        "TRIlat": -0.020042509,
+        "TRImed": -0.020042509
+      }
+    },
+    {
+      "angleDeg": 69,
+      "lengthM": {
+        "BIClong": 0.390744185,
+        "BICshort": 0.307856716,
+        "BRA": 0.130057891,
+        "TRIlong": 0.305012418,
+        "TRIlat": 0.194013729,
+        "TRImed": 0.181641533
+      },
+      "momentArmM": {
+        "BIClong": 0.043791334,
+        "BICshort": 0.043791334,
+        "BRA": 0.018914954,
+        "TRIlong": -0.019886031,
+        "TRIlat": -0.019886031,
+        "TRImed": -0.019886031
+      }
+    },
+    {
+      "angleDeg": 70,
+      "lengthM": {
+        "BIClong": 0.389977033,
+        "BICshort": 0.307089565,
+        "BRA": 0.129725785,
+        "TRIlong": 0.305358115,
+        "TRIlat": 0.194359426,
+        "TRImed": 0.18198723
+      },
+      "momentArmM": {
+        "BIClong": 0.044116445,
+        "BICshort": 0.044116445,
+        "BRA": 0.019140822,
+        "TRIlong": -0.019727602,
+        "TRIlat": -0.019727602,
+        "TRImed": -0.019727602
+      }
+    },
+    {
+      "angleDeg": 71,
+      "lengthM": {
+        "BIClong": 0.389204275,
+        "BICshort": 0.306316806,
+        "BRA": 0.129389774,
+        "TRIlong": 0.30570103,
+        "TRIlat": 0.194702341,
+        "TRImed": 0.182330145
+      },
+      "momentArmM": {
+        "BIClong": 0.044433835,
+        "BICshort": 0.044433835,
+        "BRA": 0.019362589,
+        "TRIlong": -0.019567252,
+        "TRIlat": -0.019567252,
+        "TRImed": -0.019567252
+      }
+    },
+    {
+      "angleDeg": 72,
+      "lengthM": {
+        "BIClong": 0.388426046,
+        "BICshort": 0.305538577,
+        "BRA": 0.129049928,
+        "TRIlong": 0.306042488,
+        "TRIlat": 0.195043799,
+        "TRImed": 0.182671602
+      },
+      "momentArmM": {
+        "BIClong": 0.044743341,
+        "BICshort": 0.044743341,
+        "BRA": 0.019580179,
+        "TRIlong": -0.019579663,
+        "TRIlat": -0.019579663,
+        "TRImed": -0.019579663
+      }
+    },
+    {
+      "angleDeg": 73,
+      "lengthM": {
+        "BIClong": 0.387642485,
+        "BICshort": 0.304755016,
+        "BRA": 0.128706321,
+        "TRIlong": 0.306384505,
+        "TRIlat": 0.195385816,
+        "TRImed": 0.183013619
+      },
+      "momentArmM": {
+        "BIClong": 0.045044797,
+        "BICshort": 0.045044797,
+        "BRA": 0.019793516,
+        "TRIlong": -0.019612063,
+        "TRIlat": -0.019612063,
+        "TRImed": -0.019612063
+      }
+    },
+    {
+      "angleDeg": 74,
+      "lengthM": {
+        "BIClong": 0.386853734,
+        "BICshort": 0.303966265,
+        "BRA": 0.128359029,
+        "TRIlong": 0.306727076,
+        "TRIlat": 0.195728387,
+        "TRImed": 0.183356191
+      },
+      "momentArmM": {
+        "BIClong": 0.045338034,
+        "BICshort": 0.045338034,
+        "BRA": 0.020002524,
+        "TRIlong": -0.019643026,
+        "TRIlat": -0.019643026,
+        "TRImed": -0.019643026
+      }
+    },
+    {
+      "angleDeg": 75,
+      "lengthM": {
+        "BIClong": 0.386059938,
+        "BICshort": 0.303172469,
+        "BRA": 0.128008127,
+        "TRIlong": 0.307070176,
+        "TRIlat": 0.196071487,
+        "TRImed": 0.183699291
+      },
+      "momentArmM": {
+        "BIClong": 0.045622876,
+        "BICshort": 0.045622876,
+        "BRA": 0.020207126,
+        "TRIlong": -0.019672558,
+        "TRIlat": -0.019672558,
+        "TRImed": -0.019672558
+      }
+    },
+    {
+      "angleDeg": 76,
+      "lengthM": {
+        "BIClong": 0.385261245,
+        "BICshort": 0.302373776,
+        "BRA": 0.127653693,
+        "TRIlong": 0.307413781,
+        "TRIlat": 0.196415092,
+        "TRImed": 0.184042895
+      },
+      "momentArmM": {
+        "BIClong": 0.045899144,
+        "BICshort": 0.045899144,
+        "BRA": 0.020407246,
+        "TRIlong": -0.019700666,
+        "TRIlat": -0.019700666,
+        "TRImed": -0.019700666
+      }
+    },
+    {
+      "angleDeg": 77,
+      "lengthM": {
+        "BIClong": 0.384457806,
+        "BICshort": 0.301570337,
+        "BRA": 0.127295806,
+        "TRIlong": 0.307757864,
+        "TRIlat": 0.196759175,
+        "TRImed": 0.184386978
+      },
+      "momentArmM": {
+        "BIClong": 0.046166655,
+        "BICshort": 0.046166655,
+        "BRA": 0.020602806,
+        "TRIlong": -0.019727356,
+        "TRIlat": -0.019727356,
+        "TRImed": -0.019727356
+      }
+    },
+    {
+      "angleDeg": 78,
+      "lengthM": {
+        "BIClong": 0.383649777,
+        "BICshort": 0.300762308,
+        "BRA": 0.126934547,
+        "TRIlong": 0.3081024,
+        "TRIlat": 0.197103711,
+        "TRImed": 0.184731515
+      },
+      "momentArmM": {
+        "BIClong": 0.046425218,
+        "BICshort": 0.046425218,
+        "BRA": 0.020793727,
+        "TRIlong": -0.019752638,
+        "TRIlat": -0.019752638,
+        "TRImed": -0.019752638
+      }
+    },
+    {
+      "angleDeg": 79,
+      "lengthM": {
+        "BIClong": 0.382837314,
+        "BICshort": 0.299949845,
+        "BRA": 0.126569996,
+        "TRIlong": 0.308447366,
+        "TRIlat": 0.197448677,
+        "TRImed": 0.185076481
+      },
+      "momentArmM": {
+        "BIClong": 0.046674639,
+        "BICshort": 0.046674639,
+        "BRA": 0.020979931,
+        "TRIlong": -0.01977652,
+        "TRIlat": -0.01977652,
+        "TRImed": -0.01977652
+      }
+    },
+    {
+      "angleDeg": 80,
+      "lengthM": {
+        "BIClong": 0.382020579,
+        "BICshort": 0.29913311,
+        "BRA": 0.126202237,
+        "TRIlong": 0.308792736,
+        "TRIlat": 0.197794047,
+        "TRImed": 0.185421851
+      },
+      "momentArmM": {
+        "BIClong": 0.046914719,
+        "BICshort": 0.046914719,
+        "BRA": 0.02116134,
+        "TRIlong": -0.01979901,
+        "TRIlat": -0.01979901,
+        "TRImed": -0.01979901
+      }
+    },
+    {
+      "angleDeg": 81,
+      "lengthM": {
+        "BIClong": 0.381199737,
+        "BICshort": 0.298312268,
+        "BRA": 0.125831354,
+        "TRIlong": 0.309138486,
+        "TRIlat": 0.198139797,
+        "TRImed": 0.1857676
+      },
+      "momentArmM": {
+        "BIClong": 0.047145251,
+        "BICshort": 0.047145251,
+        "BRA": 0.021337874,
+        "TRIlong": -0.019820121,
+        "TRIlat": -0.019820121,
+        "TRImed": -0.019820121
+      }
+    },
+    {
+      "angleDeg": 82,
+      "lengthM": {
+        "BIClong": 0.380374956,
+        "BICshort": 0.297487487,
+        "BRA": 0.125457433,
+        "TRIlong": 0.309484591,
+        "TRIlat": 0.198485902,
+        "TRImed": 0.186113706
+      },
+      "momentArmM": {
+        "BIClong": 0.047366024,
+        "BICshort": 0.047366024,
+        "BRA": 0.021509454,
+        "TRIlong": -0.019839861,
+        "TRIlat": -0.019839861,
+        "TRImed": -0.019839861
+      }
+    },
+    {
+      "angleDeg": 83,
+      "lengthM": {
+        "BIClong": 0.379546408,
+        "BICshort": 0.296658939,
+        "BRA": 0.125080562,
+        "TRIlong": 0.309831027,
+        "TRIlat": 0.198832339,
+        "TRImed": 0.186460142
+      },
+      "momentArmM": {
+        "BIClong": 0.047576821,
+        "BICshort": 0.047576821,
+        "BRA": 0.021676,
+        "TRIlong": -0.019858242,
+        "TRIlat": -0.019858242,
+        "TRImed": -0.019858242
+      }
+    },
+    {
+      "angleDeg": 84,
+      "lengthM": {
+        "BIClong": 0.378714271,
+        "BICshort": 0.295826802,
+        "BRA": 0.124700828,
+        "TRIlong": 0.310177578,
+        "TRIlat": 0.199179082,
+        "TRImed": 0.186806886
+      },
+      "momentArmM": {
+        "BIClong": 0.047777419,
+        "BICshort": 0.047777419,
+        "BRA": 0.02183743,
+        "TRIlong": -0.019873691,
+        "TRIlat": -0.019875276,
+        "TRImed": -0.019875276
+      }
+    },
+    {
+      "angleDeg": 85,
+      "lengthM": {
+        "BIClong": 0.377878723,
+        "BICshort": 0.294991254,
+        "BRA": 0.124318322,
+        "TRIlong": 0.310524578,
+        "TRIlat": 0.19952611,
+        "TRImed": 0.187153913
+      },
+      "momentArmM": {
+        "BIClong": 0.047967585,
+        "BICshort": 0.047967585,
+        "BRA": 0.021993665,
+        "TRIlong": -0.019889128,
+        "TRIlat": -0.019890974,
+        "TRImed": -0.019890974
+      }
+    },
+    {
+      "angleDeg": 86,
+      "lengthM": {
+        "BIClong": 0.377039948,
+        "BICshort": 0.294152479,
+        "BRA": 0.123933135,
+        "TRIlong": 0.310871836,
+        "TRIlat": 0.199873397,
+        "TRImed": 0.1875012
+      },
+      "momentArmM": {
+        "BIClong": 0.048147084,
+        "BICshort": 0.048147084,
+        "BRA": 0.022144623,
+        "TRIlong": -0.019903226,
+        "TRIlat": -0.019905348,
+        "TRImed": -0.019905348
+      }
+    },
+    {
+      "angleDeg": 87,
+      "lengthM": {
+        "BIClong": 0.376198136,
+        "BICshort": 0.293310667,
+        "BRA": 0.12354536,
+        "TRIlong": 0.31121933,
+        "TRIlat": 0.200220921,
+        "TRImed": 0.187848724
+      },
+      "momentArmM": {
+        "BIClong": 0.04831567,
+        "BICshort": 0.04831567,
+        "BRA": 0.022290223,
+        "TRIlong": -0.019915996,
+        "TRIlat": -0.019918412,
+        "TRImed": -0.019918412
+      }
+    },
+    {
+      "angleDeg": 88,
+      "lengthM": {
+        "BIClong": 0.375353478,
+        "BICshort": 0.292466009,
+        "BRA": 0.123155091,
+        "TRIlong": 0.311567037,
+        "TRIlat": 0.200568659,
+        "TRImed": 0.188196462
+      },
+      "momentArmM": {
+        "BIClong": 0.048473094,
+        "BICshort": 0.048473094,
+        "BRA": 0.022430383,
+        "TRIlong": -0.019927452,
+        "TRIlat": -0.019930179,
+        "TRImed": -0.019930179
+      }
+    },
+    {
+      "angleDeg": 89,
+      "lengthM": {
+        "BIClong": 0.374506172,
+        "BICshort": 0.291618703,
+        "BRA": 0.122762424,
+        "TRIlong": 0.311914933,
+        "TRIlat": 0.200916587,
+        "TRImed": 0.18854439
+      },
+      "momentArmM": {
+        "BIClong": 0.048619094,
+        "BICshort": 0.048619094,
+        "BRA": 0.022565021,
+        "TRIlong": -0.019937608,
+        "TRIlat": -0.01994066,
+        "TRImed": -0.01994066
+      }
+    },
+    {
+      "angleDeg": 90,
+      "lengthM": {
+        "BIClong": 0.373656419,
+        "BICshort": 0.290768951,
+        "BRA": 0.122367456,
+        "TRIlong": 0.312262997,
+        "TRIlat": 0.201264683,
+        "TRImed": 0.188892487
+      },
+      "momentArmM": {
+        "BIClong": 0.048753405,
+        "BICshort": 0.048753405,
+        "BRA": 0.022694054,
+        "TRIlong": -0.019946479,
+        "TRIlat": -0.01994987,
+        "TRImed": -0.01994987
+      }
+    },
+    {
+      "angleDeg": 91,
+      "lengthM": {
+        "BIClong": 0.372804427,
+        "BICshort": 0.289916958,
+        "BRA": 0.121970285,
+        "TRIlong": 0.312611199,
+        "TRIlat": 0.201612926,
+        "TRImed": 0.189240729
+      },
+      "momentArmM": {
+        "BIClong": 0.048875752,
+        "BICshort": 0.048875752,
+        "BRA": 0.022817399,
+        "TRIlong": -0.019954444,
+        "TRIlat": -0.019957823,
+        "TRImed": -0.019957823
+      }
+    },
+    {
+      "angleDeg": 92,
+      "lengthM": {
+        "BIClong": 0.371950405,
+        "BICshort": 0.289062936,
+        "BRA": 0.121571012,
+        "TRIlong": 0.312959529,
+        "TRIlat": 0.201961291,
+        "TRImed": 0.189589095
+      },
+      "momentArmM": {
+        "BIClong": 0.048985852,
+        "BICshort": 0.048985852,
+        "BRA": 0.022934974,
+        "TRIlong": -0.019960808,
+        "TRIlat": -0.019964531,
+        "TRImed": -0.019964531
+      }
+    },
+    {
+      "angleDeg": 93,
+      "lengthM": {
+        "BIClong": 0.371094571,
+        "BICshort": 0.288207102,
+        "BRA": 0.121169738,
+        "TRIlong": 0.31330796,
+        "TRIlat": 0.202309759,
+        "TRImed": 0.189937562
+      },
+      "momentArmM": {
+        "BIClong": 0.049083412,
+        "BICshort": 0.049083412,
+        "BRA": 0.023046695,
+        "TRIlong": -0.019965929,
+        "TRIlat": -0.019970009,
+        "TRImed": -0.019970009
+      }
+    },
+    {
+      "angleDeg": 94,
+      "lengthM": {
+        "BIClong": 0.370237146,
+        "BICshort": 0.287349677,
+        "BRA": 0.120766565,
+        "TRIlong": 0.31365647,
+        "TRIlat": 0.202658306,
+        "TRImed": 0.19028611
+      },
+      "momentArmM": {
+        "BIClong": 0.049168133,
+        "BICshort": 0.049168133,
+        "BRA": 0.023152479,
+        "TRIlong": -0.019969819,
+        "TRIlat": -0.019974271,
+        "TRImed": -0.019974271
+      }
+    },
+    {
+      "angleDeg": 95,
+      "lengthM": {
+        "BIClong": 0.369378356,
+        "BICshort": 0.286490887,
+        "BRA": 0.120361599,
+        "TRIlong": 0.314005039,
+        "TRIlat": 0.203006912,
+        "TRImed": 0.190634716
+      },
+      "momentArmM": {
+        "BIClong": 0.049239704,
+        "BICshort": 0.049239704,
+        "BRA": 0.023252241,
+        "TRIlong": -0.019972495,
+        "TRIlat": -0.01997733,
+        "TRImed": -0.01997733
+      }
+    },
+    {
+      "angleDeg": 96,
+      "lengthM": {
+        "BIClong": 0.368518434,
+        "BICshort": 0.285630965,
+        "BRA": 0.119954944,
+        "TRIlong": 0.314353644,
+        "TRIlat": 0.203355556,
+        "TRImed": 0.190983359
+      },
+      "momentArmM": {
+        "BIClong": 0.049297808,
+        "BICshort": 0.049297808,
+        "BRA": 0.0233459,
+        "TRIlong": -0.019973969,
+        "TRIlat": -0.0199792,
+        "TRImed": -0.0199792
+      }
+    },
+    {
+      "angleDeg": 97,
+      "lengthM": {
+        "BIClong": 0.367657618,
+        "BICshort": 0.284770149,
+        "BRA": 0.119546709,
+        "TRIlong": 0.31470227,
+        "TRIlat": 0.203704216,
+        "TRImed": 0.191332019
+      },
+      "momentArmM": {
+        "BIClong": 0.049342114,
+        "BICshort": 0.049342114,
+        "BRA": 0.023433369,
+        "TRIlong": -0.019974226,
+        "TRIlat": -0.019979896,
+        "TRImed": -0.019979896
+      }
+    },
+    {
+      "angleDeg": 98,
+      "lengthM": {
+        "BIClong": 0.366796151,
+        "BICshort": 0.283908683,
+        "BRA": 0.119137002,
+        "TRIlong": 0.315050883,
+        "TRIlat": 0.204052872,
+        "TRImed": 0.191680675
+      },
+      "momentArmM": {
+        "BIClong": 0.049372286,
+        "BICshort": 0.049372286,
+        "BRA": 0.023514566,
+        "TRIlong": -0.019973368,
+        "TRIlat": -0.019979431,
+        "TRImed": -0.019979431
+      }
+    },
+    {
+      "angleDeg": 99,
+      "lengthM": {
+        "BIClong": 0.365934284,
+        "BICshort": 0.283046815,
+        "BRA": 0.118725933,
+        "TRIlong": 0.315399475,
+        "TRIlat": 0.204401503,
+        "TRImed": 0.192029307
+      },
+      "momentArmM": {
+        "BIClong": 0.049387975,
+        "BICshort": 0.049387975,
+        "BRA": 0.023589407,
+        "TRIlong": -0.019971318,
+        "TRIlat": -0.019977819,
+        "TRImed": -0.019977819
+      }
+    },
+    {
+      "angleDeg": 100,
+      "lengthM": {
+        "BIClong": 0.365072272,
+        "BICshort": 0.282184803,
+        "BRA": 0.118313614,
+        "TRIlong": 0.315748022,
+        "TRIlat": 0.20475009,
+        "TRImed": 0.192377894
+      },
+      "momentArmM": {
+        "BIClong": 0.049388822,
+        "BICshort": 0.049388822,
+        "BRA": 0.023657807,
+        "TRIlong": -0.019968123,
+        "TRIlat": -0.019975075,
+        "TRImed": -0.019975075
+      }
+    },
+    {
+      "angleDeg": 101,
+      "lengthM": {
+        "BIClong": 0.364210378,
+        "BICshort": 0.281322909,
+        "BRA": 0.117900157,
+        "TRIlong": 0.316096505,
+        "TRIlat": 0.205098613,
+        "TRImed": 0.192726416
+      },
+      "momentArmM": {
+        "BIClong": 0.049374458,
+        "BICshort": 0.049374458,
+        "BRA": 0.023719683,
+        "TRIlong": -0.019963799,
+        "TRIlat": -0.019971211,
+        "TRImed": -0.019971211
+      }
+    },
+    {
+      "angleDeg": 102,
+      "lengthM": {
+        "BIClong": 0.363348869,
+        "BICshort": 0.2804614,
+        "BRA": 0.117485679,
+        "TRIlong": 0.316444903,
+        "TRIlat": 0.205447051,
+        "TRImed": 0.193074854
+      },
+      "momentArmM": {
+        "BIClong": 0.049344504,
+        "BICshort": 0.049344504,
+        "BRA": 0.02377495,
+        "TRIlong": -0.019958678,
+        "TRIlat": -0.019966243,
+        "TRImed": -0.019966243
+      }
+    },
+    {
+      "angleDeg": 103,
+      "lengthM": {
+        "BIClong": 0.362488022,
+        "BICshort": 0.279600554,
+        "BRA": 0.117070294,
+        "TRIlong": 0.316793197,
+        "TRIlat": 0.205795386,
+        "TRImed": 0.193423189
+      },
+      "momentArmM": {
+        "BIClong": 0.04929857,
+        "BICshort": 0.04929857,
+        "BRA": 0.023823525,
+        "TRIlong": -0.019952136,
+        "TRIlat": -0.019960183,
+        "TRImed": -0.019960183
+      }
+    },
+    {
+      "angleDeg": 104,
+      "lengthM": {
+        "BIClong": 0.36162812,
+        "BICshort": 0.278740651,
+        "BRA": 0.11665412,
+        "TRIlong": 0.317141368,
+        "TRIlat": 0.206143598,
+        "TRImed": 0.193771401
+      },
+      "momentArmM": {
+        "BIClong": 0.049236253,
+        "BICshort": 0.049236253,
+        "BRA": 0.023865325,
+        "TRIlong": -0.019944506,
+        "TRIlat": -0.019953045,
+        "TRImed": -0.019953045
+      }
+    },
+    {
+      "angleDeg": 105,
+      "lengthM": {
+        "BIClong": 0.360769451,
+        "BICshort": 0.277881982,
+        "BRA": 0.116237277,
+        "TRIlong": 0.3174894,
+        "TRIlat": 0.206491668,
+        "TRImed": 0.194119472
+      },
+      "momentArmM": {
+        "BIClong": 0.049157143,
+        "BICshort": 0.049157143,
+        "BRA": 0.023900267,
+        "TRIlong": -0.019935544,
+        "TRIlat": -0.019944843,
+        "TRImed": -0.019944843
+      }
+    },
+    {
+      "angleDeg": 106,
+      "lengthM": {
+        "BIClong": 0.359912312,
+        "BICshort": 0.277024843,
+        "BRA": 0.115819884,
+        "TRIlong": 0.317837266,
+        "TRIlat": 0.206839578,
+        "TRImed": 0.194467382
+      },
+      "momentArmM": {
+        "BIClong": 0.049060815,
+        "BICshort": 0.049060815,
+        "BRA": 0.023928267,
+        "TRIlong": -0.019926021,
+        "TRIlat": -0.019935589,
+        "TRImed": -0.019935589
+      }
+    },
+    {
+      "angleDeg": 107,
+      "lengthM": {
+        "BIClong": 0.359057008,
+        "BICshort": 0.276169539,
+        "BRA": 0.115402064,
+        "TRIlong": 0.318184956,
+        "TRIlat": 0.20718731,
+        "TRImed": 0.194815113
+      },
+      "momentArmM": {
+        "BIClong": 0.048946835,
+        "BICshort": 0.048946835,
+        "BRA": 0.023949243,
+        "TRIlong": -0.019915206,
+        "TRIlat": -0.019925298,
+        "TRImed": -0.019925298
+      }
+    },
+    {
+      "angleDeg": 108,
+      "lengthM": {
+        "BIClong": 0.35820385,
+        "BICshort": 0.275316381,
+        "BRA": 0.114983939,
+        "TRIlong": 0.31853245,
+        "TRIlat": 0.207534845,
+        "TRImed": 0.195162648
+      },
+      "momentArmM": {
+        "BIClong": 0.048814758,
+        "BICshort": 0.048814758,
+        "BRA": 0.023963113,
+        "TRIlong": -0.019903356,
+        "TRIlat": -0.019913982,
+        "TRImed": -0.019913982
+      }
+    },
+    {
+      "angleDeg": 109,
+      "lengthM": {
+        "BIClong": 0.357353159,
+        "BICshort": 0.27446569,
+        "BRA": 0.114565635,
+        "TRIlong": 0.318879728,
+        "TRIlat": 0.207882165,
+        "TRImed": 0.195509968
+      },
+      "momentArmM": {
+        "BIClong": 0.048664126,
+        "BICshort": 0.048664126,
+        "BRA": 0.023969796,
+        "TRIlong": -0.019890487,
+        "TRIlat": -0.019901655,
+        "TRImed": -0.019901655
+      }
+    },
+    {
+      "angleDeg": 110,
+      "lengthM": {
+        "BIClong": 0.356505263,
+        "BICshort": 0.273617794,
+        "BRA": 0.114147278,
+        "TRIlong": 0.319226774,
+        "TRIlat": 0.208229252,
+        "TRImed": 0.195857056
+      },
+      "momentArmM": {
+        "BIClong": 0.048494474,
+        "BICshort": 0.048494474,
+        "BRA": 0.023969211,
+        "TRIlong": -0.019876613,
+        "TRIlat": -0.019888328,
+        "TRImed": -0.019888328
+      }
+    },
+    {
+      "angleDeg": 111,
+      "lengthM": {
+        "BIClong": 0.355660496,
+        "BICshort": 0.272773027,
+        "BRA": 0.113728995,
+        "TRIlong": 0.319573569,
+        "TRIlat": 0.20857609,
+        "TRImed": 0.196203894
+      },
+      "momentArmM": {
+        "BIClong": 0.048305321,
+        "BICshort": 0.048305321,
+        "BRA": 0.023961278,
+        "TRIlong": -0.019861739,
+        "TRIlat": -0.019874016,
+        "TRImed": -0.019874016
+      }
+    },
+    {
+      "angleDeg": 112,
+      "lengthM": {
+        "BIClong": 0.354819205,
+        "BICshort": 0.271931736,
+        "BRA": 0.113310915,
+        "TRIlong": 0.319920097,
+        "TRIlat": 0.208922661,
+        "TRImed": 0.196550464
+      },
+      "momentArmM": {
+        "BIClong": 0.048096181,
+        "BICshort": 0.048096181,
+        "BRA": 0.023945918,
+        "TRIlong": -0.019845885,
+        "TRIlat": -0.019858729,
+        "TRImed": -0.019858729
+      }
+    },
+    {
+      "angleDeg": 113,
+      "lengthM": {
+        "BIClong": 0.353981742,
+        "BICshort": 0.271094273,
+        "BRA": 0.112893168,
+        "TRIlong": 0.320266342,
+        "TRIlat": 0.209268947,
+        "TRImed": 0.196896751
+      },
+      "momentArmM": {
+        "BIClong": 0.047866555,
+        "BICshort": 0.047866555,
+        "BRA": 0.023923052,
+        "TRIlong": -0.019829126,
+        "TRIlat": -0.019842482,
+        "TRImed": -0.019842482
+      }
+    },
+    {
+      "angleDeg": 114,
+      "lengthM": {
+        "BIClong": 0.353148469,
+        "BICshort": 0.270261,
+        "BRA": 0.112475887,
+        "TRIlong": 0.320612284,
+        "TRIlat": 0.209614933,
+        "TRImed": 0.197242736
+      },
+      "momentArmM": {
+        "BIClong": 0.047615934,
+        "BICshort": 0.047615934,
+        "BRA": 0.023892603,
+        "TRIlong": -0.019811349,
+        "TRIlat": -0.019825286,
+        "TRImed": -0.019825286
+      }
+    },
+    {
+      "angleDeg": 115,
+      "lengthM": {
+        "BIClong": 0.352319758,
+        "BICshort": 0.269432289,
+        "BRA": 0.112059203,
+        "TRIlong": 0.320957909,
+        "TRIlat": 0.209960601,
+        "TRImed": 0.197588404
+      },
+      "momentArmM": {
+        "BIClong": 0.047343801,
+        "BICshort": 0.047343801,
+        "BRA": 0.023854495,
+        "TRIlong": -0.019792631,
+        "TRIlat": -0.019807153,
+        "TRImed": -0.019807153
+      }
+    },
+    {
+      "angleDeg": 116,
+      "lengthM": {
+        "BIClong": 0.351495987,
+        "BICshort": 0.268608518,
+        "BRA": 0.111643253,
+        "TRIlong": 0.321303198,
+        "TRIlat": 0.210305935,
+        "TRImed": 0.197933739
+      },
+      "momentArmM": {
+        "BIClong": 0.047049632,
+        "BICshort": 0.047049632,
+        "BRA": 0.023808653,
+        "TRIlong": -0.019772982,
+        "TRIlat": -0.019788095,
+        "TRImed": -0.019788095
+      }
+    },
+    {
+      "angleDeg": 117,
+      "lengthM": {
+        "BIClong": 0.350677547,
+        "BICshort": 0.267790078,
+        "BRA": 0.11122817,
+        "TRIlong": 0.321648138,
+        "TRIlat": 0.210650919,
+        "TRImed": 0.198278723
+      },
+      "momentArmM": {
+        "BIClong": 0.046732893,
+        "BICshort": 0.046732893,
+        "BRA": 0.023755003,
+        "TRIlong": -0.019752415,
+        "TRIlat": -0.019768125,
+        "TRImed": -0.019768125
+      }
+    },
+    {
+      "angleDeg": 118,
+      "lengthM": {
+        "BIClong": 0.349864836,
+        "BICshort": 0.266977367,
+        "BRA": 0.110814092,
+        "TRIlong": 0.321992711,
+        "TRIlat": 0.210995538,
+        "TRImed": 0.198623342
+      },
+      "momentArmM": {
+        "BIClong": 0.046393045,
+        "BICshort": 0.046393045,
+        "BRA": 0.023693474,
+        "TRIlong": -0.019730943,
+        "TRIlat": -0.019747253,
+        "TRImed": -0.019747253
+      }
+    },
+    {
+      "angleDeg": 119,
+      "lengthM": {
+        "BIClong": 0.349058262,
+        "BICshort": 0.266170793,
+        "BRA": 0.110401158,
+        "TRIlong": 0.322336902,
+        "TRIlat": 0.211339775,
+        "TRImed": 0.198967579
+      },
+      "momentArmM": {
+        "BIClong": 0.046029544,
+        "BICshort": 0.046029544,
+        "BRA": 0.023623993,
+        "TRIlong": -0.019708576,
+        "TRIlat": -0.019725492,
+        "TRImed": -0.019725492
+      }
+    },
+    {
+      "angleDeg": 120,
+      "lengthM": {
+        "BIClong": 0.348258242,
+        "BICshort": 0.265370773,
+        "BRA": 0.109989506,
+        "TRIlong": 0.322680697,
+        "TRIlat": 0.211683615,
+        "TRImed": 0.199311419
+      },
+      "momentArmM": {
+        "BIClong": 0.045641839,
+        "BICshort": 0.045641839,
+        "BRA": 0.023546494,
+        "TRIlong": -0.019685379,
+        "TRIlat": -0.019702853,
+        "TRImed": -0.019702853
+      }
+    },
+    {
+      "angleDeg": 121,
+      "lengthM": {
+        "BIClong": 0.347465205,
+        "BICshort": 0.264577736,
+        "BRA": 0.109579277,
+        "TRIlong": 0.323024077,
+        "TRIlat": 0.212027043,
+        "TRImed": 0.199654846
+      },
+      "momentArmM": {
+        "BIClong": 0.04522938,
+        "BICshort": 0.04522938,
+        "BRA": 0.023460908,
+        "TRIlong": -0.019661261,
+        "TRIlat": -0.019679347,
+        "TRImed": -0.019679347
+      }
+    },
+    {
+      "angleDeg": 122,
+      "lengthM": {
+        "BIClong": 0.346679586,
+        "BICshort": 0.263792117,
+        "BRA": 0.109170613,
+        "TRIlong": 0.323367028,
+        "TRIlat": 0.212370043,
+        "TRImed": 0.199997847
+      },
+      "momentArmM": {
+        "BIClong": 0.044791613,
+        "BICshort": 0.044791613,
+        "BRA": 0.02336717,
+        "TRIlong": -0.019636284,
+        "TRIlat": -0.019654986,
+        "TRImed": -0.019654986
+      }
+    },
+    {
+      "angleDeg": 123,
+      "lengthM": {
+        "BIClong": 0.345901833,
+        "BICshort": 0.263014364,
+        "BRA": 0.108763657,
+        "TRIlong": 0.323709537,
+        "TRIlat": 0.212712602,
+        "TRImed": 0.200340405
+      },
+      "momentArmM": {
+        "BIClong": 0.044327987,
+        "BICshort": 0.044327987,
+        "BRA": 0.023265218,
+        "TRIlong": -0.019610459,
+        "TRIlat": -0.01962978,
+        "TRImed": -0.01962978
+      }
+    },
+    {
+      "angleDeg": 124,
+      "lengthM": {
+        "BIClong": 0.345132401,
+        "BICshort": 0.262244932,
+        "BRA": 0.108358552,
+        "TRIlong": 0.324051588,
+        "TRIlat": 0.213054703,
+        "TRImed": 0.200682506
+      },
+      "momentArmM": {
+        "BIClong": 0.043837952,
+        "BICshort": 0.043837952,
+        "BRA": 0.023154992,
+        "TRIlong": -0.019583798,
+        "TRIlat": -0.019603741,
+        "TRImed": -0.019603741
+      }
+    },
+    {
+      "angleDeg": 125,
+      "lengthM": {
+        "BIClong": 0.344371757,
+        "BICshort": 0.261484288,
+        "BRA": 0.107955444,
+        "TRIlong": 0.324393167,
+        "TRIlat": 0.213396333,
+        "TRImed": 0.201024136
+      },
+      "momentArmM": {
+        "BIClong": 0.043320964,
+        "BICshort": 0.043320964,
+        "BRA": 0.023036432,
+        "TRIlong": -0.019556268,
+        "TRIlat": -0.019576879,
+        "TRImed": -0.019576879
+      }
+    }
+  ]
+}
