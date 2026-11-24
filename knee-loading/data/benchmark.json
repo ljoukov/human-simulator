@@ -1,0 +1,197 @@
+{
+  "source": {
+    "title": "Grand Challenge knee implant measurements republished by Harba et al.",
+    "url": "https://github.com/gilserrancoli/ReducePoly_forMSK/tree/00b6f94ee8bd2f60ae5b6f07a114f1aade089cb8/ExampleTrackingSimulations/OpenSimModel/subject_GC",
+    "kind": "trial"
+  },
+  "trial": {
+    "id": "ngait_og5-stance-1",
+    "subject": "GC4-JW",
+    "condition": "normal",
+    "role": "calibration"
+  },
+  "runtime": "Deno 2.9.4 / darwin aarch64",
+  "notes": [
+    "Timings are medians after one warm-up at 128 scenarios. CPU and GPU setup are reported separately.",
+    "Batch times include scenario uploads or worker communication and all result readback. Gait frames are resident after setup.",
+    "Both calibration backends reduce to one squared error score per candidate. Candidate sorting and backend agreement are checked outside the timed region."
+  ],
+  "cpu": {
+    "workers": 10,
+    "setupMs": 35.010915999999995,
+    "sharedOutput": true
+  },
+  "gpu": {
+    "adapter": "Apple M4",
+    "fallback": false,
+    "setupMs": 24.017167
+  },
+  "rows": [
+    {
+      "scenarios": 128,
+      "frames": 101,
+      "cpuMode": "single",
+      "cpuMs": 0.24237500000000978,
+      "cpuSingleMs": 0.24237500000000978,
+      "cpuWorkersMs": 0.6800000000000068,
+      "gpuMs": 13.886916999999983,
+      "speedup": 0.017453477974989702,
+      "maxAbsError": 4.76837158203125e-7,
+      "mismatchCount": 0
+    },
+    {
+      "scenarios": 1024,
+      "frames": 101,
+      "cpuMode": "workers",
+      "cpuMs": 0.677250000000015,
+      "cpuSingleMs": 1.7213750000000232,
+      "cpuWorkersMs": 0.677250000000015,
+      "gpuMs": 13.965041999999983,
+      "speedup": 0.048496094748588355,
+      "maxAbsError": 4.76837158203125e-7,
+      "mismatchCount": 0
+    },
+    {
+      "scenarios": 8192,
+      "frames": 101,
+      "cpuMode": "workers",
+      "cpuMs": 2.172499999999957,
+      "cpuSingleMs": 9.369166000000007,
+      "cpuWorkersMs": 2.172499999999957,
+      "gpuMs": 16.75929100000002,
+      "speedup": 0.12962958874572644,
+      "maxAbsError": 7.152557373046875e-7,
+      "mismatchCount": 0
+    },
+    {
+      "scenarios": 32768,
+      "frames": 101,
+      "cpuMode": "workers",
+      "cpuMs": 8.120333000000073,
+      "cpuSingleMs": 31.361999999999966,
+      "cpuWorkersMs": 8.120333000000073,
+      "gpuMs": 26.034832999999935,
+      "speedup": 0.3119026344436353,
+      "maxAbsError": 7.152557373046875e-7,
+      "mismatchCount": 0
+    }
+  ],
+  "repeats": 5,
+  "absTolerance": 0.00002,
+  "relTolerance": 0.00001,
+  "workload": "waveforms",
+  "calibration": {
+    "cpu": {
+      "workers": 10,
+      "setupMs": 31.562625000000025,
+      "sharedOutput": true
+    },
+    "gpu": {
+      "adapter": "Apple M4",
+      "fallback": false,
+      "setupMs": 14.234916999999996
+    },
+    "rows": [
+      {
+        "scenarios": 128,
+        "frames": 91,
+        "cpuMode": "single",
+        "cpuMs": 0.22929199999998673,
+        "cpuSingleMs": 0.22929199999998673,
+        "cpuWorkersMs": 0.7238330000000133,
+        "gpuMs": 13.539915999999948,
+        "speedup": 0.016934521602644182,
+        "maxAbsError": 0.000011444091796875,
+        "mismatchCount": 0,
+        "topCandidateAgreement": {
+          "size": 128,
+          "shared": 128
+        }
+      },
+      {
+        "scenarios": 1024,
+        "frames": 91,
+        "cpuMode": "workers",
+        "cpuMs": 0.5168330000001333,
+        "cpuSingleMs": 3.454250000000002,
+        "cpuWorkersMs": 0.5168330000001333,
+        "gpuMs": 16.577624999999898,
+        "speedup": 0.03117654066852981,
+        "maxAbsError": 0.000019073486328125,
+        "mismatchCount": 0,
+        "topCandidateAgreement": {
+          "size": 256,
+          "shared": 256
+        }
+      },
+      {
+        "scenarios": 8192,
+        "frames": 91,
+        "cpuMode": "workers",
+        "cpuMs": 2.2053330000001097,
+        "cpuSingleMs": 10.95724999999993,
+        "cpuWorkersMs": 2.2053330000001097,
+        "gpuMs": 14.833292000000029,
+        "speedup": 0.14867454911560465,
+        "maxAbsError": 0.00002288818359375,
+        "mismatchCount": 0,
+        "topCandidateAgreement": {
+          "size": 256,
+          "shared": 256
+        }
+      },
+      {
+        "scenarios": 32768,
+        "frames": 91,
+        "cpuMode": "workers",
+        "cpuMs": 8.376541999999972,
+        "cpuSingleMs": 34.8632090000001,
+        "cpuWorkersMs": 8.376541999999972,
+        "gpuMs": 18.709957999999915,
+        "speedup": 0.4477050135548145,
+        "maxAbsError": 0.000030517578125,
+        "mismatchCount": 0,
+        "topCandidateAgreement": {
+          "size": 256,
+          "shared": 256
+        }
+      },
+      {
+        "scenarios": 131072,
+        "frames": 91,
+        "cpuMode": "workers",
+        "cpuMs": 33.656666000000314,
+        "cpuSingleMs": 140.6340409999998,
+        "cpuWorkersMs": 33.656666000000314,
+        "gpuMs": 20.779958999999963,
+        "speedup": 1.6196695094538143,
+        "maxAbsError": 0.000030517578125,
+        "mismatchCount": 0,
+        "topCandidateAgreement": {
+          "size": 256,
+          "shared": 256
+        }
+      },
+      {
+        "scenarios": 262144,
+        "frames": 91,
+        "cpuMode": "workers",
+        "cpuMs": 58.08037500000046,
+        "cpuSingleMs": 290.7823330000001,
+        "cpuWorkersMs": 58.08037500000046,
+        "gpuMs": 28.840000000000146,
+        "speedup": 2.013882628294042,
+        "maxAbsError": 0.000030517578125,
+        "mismatchCount": 0,
+        "topCandidateAgreement": {
+          "size": 256,
+          "shared": 256
+        }
+      }
+    ],
+    "repeats": 5,
+    "absTolerance": 0.00002,
+    "relTolerance": 0.00001,
+    "workload": "calibration"
+  }
+}

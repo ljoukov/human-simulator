@@ -1,0 +1,71 @@
+{
+  "repeats": 7,
+  "devices": {
+    "cloud": "NVIDIA H100 80GB HBM3",
+    "laptopCpu": "Apple M4",
+    "laptopGpu": "Apple M4"
+  },
+  "modalRemoteSeconds": 45.94369974999972,
+  "rows": [
+    {
+      "scenarios": 1024,
+      "frames": 91,
+      "m4NativeMs": 0.132334,
+      "m4NativeWorkers": 8,
+      "m4WebGpuMs": 13.608041999999841,
+      "h100BatchMs": 0.032561,
+      "h100KernelMs": 0.0114559997,
+      "h100BlockBatchMs": 0.033012,
+      "h100BlockKernelMs": 0.0113279996,
+      "topCandidatesMatched": 256,
+      "comparedScores": 1024
+    },
+    {
+      "scenarios": 32768,
+      "frames": 91,
+      "m4NativeMs": 3.999625,
+      "m4NativeWorkers": 10,
+      "m4WebGpuMs": 16.28604200000018,
+      "h100BatchMs": 0.221241,
+      "h100KernelMs": 0.0329920016,
+      "h100BlockBatchMs": 0.231452,
+      "h100BlockKernelMs": 0.0483839996,
+      "topCandidatesMatched": 256,
+      "comparedScores": 32768
+    },
+    {
+      "scenarios": 262144,
+      "frames": 91,
+      "m4NativeMs": 27.240875,
+      "m4NativeWorkers": 10,
+      "m4WebGpuMs": 32.1211659999999,
+      "h100BatchMs": 1.204182,
+      "h100KernelMs": 0.164256006,
+      "h100BlockBatchMs": 1.317839,
+      "h100BlockKernelMs": 0.281823993,
+      "topCandidatesMatched": 256,
+      "comparedScores": 262144
+    },
+    {
+      "scenarios": 1048576,
+      "frames": 91,
+      "m4NativeMs": 116.352625,
+      "m4NativeWorkers": 8,
+      "m4WebGpuMs": 58.10570900000039,
+      "h100BatchMs": 4.733315,
+      "h100KernelMs": 0.627776027,
+      "h100BlockBatchMs": 5.242772,
+      "h100BlockKernelMs": 1.13753605,
+      "topCandidatesMatched": 256,
+      "comparedScores": 1048576
+    }
+  ],
+  "holdout": {
+    "smallCandidates": 32768,
+    "bigCandidates": 1048576,
+    "smallMedialRmseBw": 0.30520130745792395,
+    "bigMedialRmseBw": 0.29310777458133014,
+    "smallLateralRmseBw": 0.5074304761028339,
+    "bigLateralRmseBw": 0.48071886096945693
+  }
+}

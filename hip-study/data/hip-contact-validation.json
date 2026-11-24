@@ -1,0 +1,1153 @@
+{
+  "method": "Quasi-static frontal ordering in the half-rotated lateral frame of the tract. Each clipped band\u2013obstacle triangle polygon supplies affine unilateral gap constraints. A slope-limited displacement envelope couples nearby points over the surface and locally across thin walls. The band stays fixed at its proximal anchors, distal section and tracked deep TFL interface.",
+  "constraints": "The nominal gap is 0.25 mm measured along the projection direction. Scoped constraints exclude the deep TFL lamina and registered iliac attachments, and tolerate positive contributions of immobile corners. The cap shortfall is the target-clearance deficit remaining after projection, before allowing fixed-point/slope-cap infeasibility. The raw deficit restores the fixed-corner contribution on participating faces. Triangle intersections, including anatomical interfaces deliberately left embedded, are evaluated independently.",
+  "shapeMeasures": "Edge percentage is the absolute change in an atlas edge length compared with the same pose before contact. Opposing-wall measurements use neutral outer-face centroids and corresponding material points hit on the opposite band wall with neutral separation 0.15\u20134 mm and opposing normals. The reported change is the absolute difference in their Euclidean separation at the same pose.",
+  "timeMeasures": "Adjacent-step statistics compare the correction vectors relative to the underlying kinematic skinning. Between-frame samples interpolate the displayed angles and call the solver; the time sequence is sampled and does not prove continuous-time nonintersection.",
+  "scope": "Generic atlas illustration; quasi-static unilateral contact with idealized bounded in-sheet shear. No constitutive stress, tissue pressure or disease estimate.",
+  "sources": {
+    "atlasSha256": "129e2cce9be7d132a25e27294c18187ab70552cb4fb8c336b65a76a306230a97",
+    "attachmentsSha256": "0d356d4f354d0c5baba87cce52c8a8f468cb1ee3c77f61331cf0e62266c62dd5",
+    "contactInputSha256": "e528c29c531679153a8a983a65d0ffeb3cfbe31e30619f3ae5265593f582f513",
+    "solverSourceSha256": "73f73809b0551ace42a70ed2659ef82476b6f8d485f8012609bd3192e0339d7c",
+    "wasmSha256": "aacc909314e9f0c3e4f0022120104f1b17e38f9e89ab712204ccc15e1aeffa5f"
+  },
+  "obstacles": [
+    "Tensor fasciae latae",
+    "Gluteus medius muscle",
+    "Gluteus minimus muscle",
+    "Gluteus maximus muscle",
+    "Vastus lateralis muscle",
+    "Femur",
+    "Hip bone",
+    "Trochanteric bursa of gluteus maximus"
+  ],
+  "wallPairs": 287,
+  "edges": 1188,
+  "proximalPins": 29,
+  "distalCutPins": 45,
+  "deepTflInterface": 8,
+  "neutral": {
+    "poseDeg": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "displacementMmP50P90P99Max": [
+      0.0,
+      0.299411,
+      2.126865,
+      3.28862
+    ],
+    "proximalPinMaxMm": 0.0,
+    "distalSectionMaxMm": 0.0,
+    "protectedMedialLayerMaxMm": 0.0,
+    "correctableConstraintMaxDeficitMm": 0.0,
+    "scopedCapShortfallMm": 5.421010862427522e-17,
+    "rawDeficitIncludingEmbeddedCornersMm": 1.6149930888786912,
+    "scopedCapShortfallByObstacleMm": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "rawDeficitByObstacleMm": [
+      0.0,
+      0.684826,
+      0.0,
+      0.0,
+      1.614993,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "addedEdgeChangeAbsPercentP95P99Max": [
+      1.47039,
+      5.842577,
+      14.070223
+    ],
+    "addedOpposingWallDistanceChangeMmP95P99Max": [
+      0.508992,
+      0.838592,
+      1.028622
+    ]
+  },
+  "reportedFrame": {
+    "poseDeg": [
+      5.774,
+      14.151,
+      0.0
+    ],
+    "displacementMmP50P90P99Max": [
+      0.0,
+      0.6027,
+      2.311766,
+      2.562546
+    ],
+    "proximalPinMaxMm": 0.0,
+    "distalSectionMaxMm": 0.0,
+    "protectedMedialLayerMaxMm": 0.0,
+    "correctableConstraintMaxDeficitMm": 2.587398337845996e-17,
+    "scopedCapShortfallMm": 2.386354037556981e-08,
+    "rawDeficitIncludingEmbeddedCornersMm": 1.6361733432859182,
+    "scopedCapShortfallByObstacleMm": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "rawDeficitByObstacleMm": [
+      0.0,
+      0.741039,
+      0.0,
+      0.0,
+      1.636173,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "addedEdgeChangeAbsPercentP95P99Max": [
+      2.192045,
+      7.348259,
+      15.617144
+    ],
+    "addedOpposingWallDistanceChangeMmP95P99Max": [
+      0.973341,
+      1.770031,
+      2.165715
+    ]
+  },
+  "stressPoses": [
+    {
+      "poseDeg": [
+        -30.0,
+        0.0,
+        0.0
+      ],
+      "displacementMmP50P90P99Max": [
+        0.0,
+        1.657395,
+        4.223218,
+        4.925032
+      ],
+      "proximalPinMaxMm": 0.0,
+      "distalSectionMaxMm": 0.0,
+      "protectedMedialLayerMaxMm": 0.0,
+      "correctableConstraintMaxDeficitMm": 2.1684043449710089e-16,
+      "scopedCapShortfallMm": 2.1684043449710089e-16,
+      "rawDeficitIncludingEmbeddedCornersMm": 1.6149930888786912,
+      "scopedCapShortfallByObstacleMm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rawDeficitByObstacleMm": [
+        0.0,
+        0.683182,
+        0.0,
+        0.0,
+        1.614993,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "addedEdgeChangeAbsPercentP95P99Max": [
+        4.970776,
+        13.768222,
+        21.445392
+      ],
+      "addedOpposingWallDistanceChangeMmP95P99Max": [
+        0.813441,
+        1.24842,
+        1.377969
+      ]
+    },
+    {
+      "poseDeg": [
+        75.0,
+        0.0,
+        0.0
+      ],
+      "displacementMmP50P90P99Max": [
+        0.0,
+        1.738711,
+        4.955882,
+        6.216523
+      ],
+      "proximalPinMaxMm": 0.0,
+      "distalSectionMaxMm": 0.0,
+      "protectedMedialLayerMaxMm": 0.0,
+      "correctableConstraintMaxDeficitMm": 2.548920449707559e-07,
+      "scopedCapShortfallMm": 3.614469427528466,
+      "rawDeficitIncludingEmbeddedCornersMm": 3.614469427528466,
+      "scopedCapShortfallByObstacleMm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.614469,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rawDeficitByObstacleMm": [
+        0.0,
+        0.687966,
+        0.0,
+        0.0,
+        3.614469,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "addedEdgeChangeAbsPercentP95P99Max": [
+        4.550462,
+        18.249464,
+        30.9915
+      ],
+      "addedOpposingWallDistanceChangeMmP95P99Max": [
+        0.847256,
+        1.197355,
+        1.611244
+      ]
+    },
+    {
+      "poseDeg": [
+        0.0,
+        -25.0,
+        0.0
+      ],
+      "displacementMmP50P90P99Max": [
+        0.0,
+        5.342105,
+        10.757772,
+        12.172313
+      ],
+      "proximalPinMaxMm": 0.0,
+      "distalSectionMaxMm": 0.0,
+      "protectedMedialLayerMaxMm": 0.0,
+      "correctableConstraintMaxDeficitMm": 4.3368086899420177e-16,
+      "scopedCapShortfallMm": 4.3368086899420177e-16,
+      "rawDeficitIncludingEmbeddedCornersMm": 1.6245092265307903,
+      "scopedCapShortfallByObstacleMm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rawDeficitByObstacleMm": [
+        0.0,
+        0.632478,
+        0.0,
+        0.0,
+        1.624509,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "addedEdgeChangeAbsPercentP95P99Max": [
+        10.28777,
+        16.407985,
+        21.666439
+      ],
+      "addedOpposingWallDistanceChangeMmP95P99Max": [
+        0.729976,
+        1.544443,
+        1.836667
+      ]
+    },
+    {
+      "poseDeg": [
+        0.0,
+        30.0,
+        0.0
+      ],
+      "displacementMmP50P90P99Max": [
+        0.0,
+        2.472362,
+        5.705297,
+        6.65461
+      ],
+      "proximalPinMaxMm": 0.0,
+      "distalSectionMaxMm": 0.0,
+      "protectedMedialLayerMaxMm": 0.0,
+      "correctableConstraintMaxDeficitMm": 0.0,
+      "scopedCapShortfallMm": 5.421010862427522e-17,
+      "rawDeficitIncludingEmbeddedCornersMm": 1.6472896095365286,
+      "scopedCapShortfallByObstacleMm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rawDeficitByObstacleMm": [
+        0.0,
+        0.837652,
+        0.0,
+        0.0,
+        1.64729,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "addedEdgeChangeAbsPercentP95P99Max": [
+        4.917697,
+        12.845326,
+        19.365637
+      ],
+      "addedOpposingWallDistanceChangeMmP95P99Max": [
+        1.449933,
+        1.819284,
+        2.12959
+      ]
+    },
+    {
+      "poseDeg": [
+        0.0,
+        0.0,
+        -30.0
+      ],
+      "displacementMmP50P90P99Max": [
+        0.0,
+        0.686367,
+        3.213392,
+        3.638945
+      ],
+      "proximalPinMaxMm": 0.0,
+      "distalSectionMaxMm": 0.0,
+      "protectedMedialLayerMaxMm": 0.0,
+      "correctableConstraintMaxDeficitMm": 2.1684043449710089e-16,
+      "scopedCapShortfallMm": 2.1684043449710089e-16,
+      "rawDeficitIncludingEmbeddedCornersMm": 2.496328903362155,
+      "scopedCapShortfallByObstacleMm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rawDeficitByObstacleMm": [
+        0.0,
+        0.680336,
+        0.0,
+        0.0,
+        2.496329,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "addedEdgeChangeAbsPercentP95P99Max": [
+        3.302464,
+        10.912363,
+        17.564562
+      ],
+      "addedOpposingWallDistanceChangeMmP95P99Max": [
+        0.524074,
+        0.7572,
+        0.905688
+      ]
+    },
+    {
+      "poseDeg": [
+        0.0,
+        0.0,
+        30.0
+      ],
+      "displacementMmP50P90P99Max": [
+        0.0,
+        0.393954,
+        2.359346,
+        2.957553
+      ],
+      "proximalPinMaxMm": 0.0,
+      "distalSectionMaxMm": 0.0,
+      "protectedMedialLayerMaxMm": 0.0,
+      "correctableConstraintMaxDeficitMm": 2.1684043449710089e-16,
+      "scopedCapShortfallMm": 2.1684043449710089e-16,
+      "rawDeficitIncludingEmbeddedCornersMm": 1.2808083556592464,
+      "scopedCapShortfallByObstacleMm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rawDeficitByObstacleMm": [
+        0.0,
+        0.720971,
+        0.0,
+        0.0,
+        1.280808,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "addedEdgeChangeAbsPercentP95P99Max": [
+        1.895299,
+        7.128582,
+        16.488711
+      ],
+      "addedOpposingWallDistanceChangeMmP95P99Max": [
+        0.845461,
+        1.411428,
+        1.847265
+      ]
+    },
+    {
+      "poseDeg": [
+        -30.0,
+        -25.0,
+        -30.0
+      ],
+      "displacementMmP50P90P99Max": [
+        0.0,
+        12.959488,
+        19.118963,
+        20.798146
+      ],
+      "proximalPinMaxMm": 0.0,
+      "distalSectionMaxMm": 0.0,
+      "protectedMedialLayerMaxMm": 0.0,
+      "correctableConstraintMaxDeficitMm": 7.444809768664129e-07,
+      "scopedCapShortfallMm": 2.9818086165592783,
+      "rawDeficitIncludingEmbeddedCornersMm": 3.0701966024935246,
+      "scopedCapShortfallByObstacleMm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.981809,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rawDeficitByObstacleMm": [
+        0.0,
+        0.618743,
+        0.0,
+        0.0,
+        3.070197,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "addedEdgeChangeAbsPercentP95P99Max": [
+        13.212281,
+        20.093566,
+        25.044184
+      ],
+      "addedOpposingWallDistanceChangeMmP95P99Max": [
+        0.633674,
+        0.930261,
+        1.007651
+      ]
+    },
+    {
+      "poseDeg": [
+        75.0,
+        30.0,
+        30.0
+      ],
+      "displacementMmP50P90P99Max": [
+        0.0,
+        0.853841,
+        3.839623,
+        4.967992
+      ],
+      "proximalPinMaxMm": 0.0,
+      "distalSectionMaxMm": 0.0,
+      "protectedMedialLayerMaxMm": 0.0,
+      "correctableConstraintMaxDeficitMm": 4.3368086899420177e-16,
+      "scopedCapShortfallMm": 4.3368086899420177e-16,
+      "rawDeficitIncludingEmbeddedCornersMm": 1.56016752589494,
+      "scopedCapShortfallByObstacleMm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rawDeficitByObstacleMm": [
+        0.0,
+        0.706032,
+        0.0,
+        0.0,
+        1.560168,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "addedEdgeChangeAbsPercentP95P99Max": [
+        3.281996,
+        13.366625,
+        25.227367
+      ],
+      "addedOpposingWallDistanceChangeMmP95P99Max": [
+        0.593428,
+        1.037641,
+        1.230541
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "clip": "bertaux-hoa001",
+      "frames": {
+        "n": 101,
+        "maxFeasibleResidualMm": 5.421010862427522e-16,
+        "maxCapShortfallMm": 2.595027056135969e-08,
+        "posesExceedingScopedClearanceByOneMicron": 0,
+        "maxRawDeficitIncludingEmbeddedCornersMm": 1.6868901439011097,
+        "maxCapShortfallByObstacleMm": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "maxRawDeficitByObstacleMm": [
+          0.0,
+          0.743557,
+          0.0,
+          0.0,
+          1.68689,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "betweenFrames": {
+        "n": 900,
+        "maxFeasibleResidualMm": 6.505213034913027e-16,
+        "maxCapShortfallMm": 2.6071624791048774e-08,
+        "posesExceedingScopedClearanceByOneMicron": 0,
+        "maxRawDeficitIncludingEmbeddedCornersMm": 1.6868885140866041,
+        "maxCapShortfallByObstacleMm": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "maxRawDeficitByObstacleMm": [
+          0.0,
+          0.743556,
+          0.0,
+          0.0,
+          1.686889,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "correctionsMmP50P90P99Max": [
+        0.0,
+        0.514628,
+        2.116391,
+        3.106007
+      ],
+      "fractionUnmoved": 0.8341708542713567,
+      "proximalPinMaxMm": 0.0,
+      "distalSectionMaxMm": 0.0,
+      "protectedMedialLayerMaxMm": 0.0,
+      "addedEdgeChangeAbsPercentP95P99Max": [
+        1.930849,
+        6.576416,
+        15.92163
+      ],
+      "addedOpposingWallDistanceChangeMmP95P99Max": [
+        0.822436,
+        1.586206,
+        2.308793
+      ],
+      "adjacentFrameCorrectionChangeMmP95P99Max": [
+        0.021186,
+        0.051137,
+        0.157727
+      ],
+      "tenthFrameCorrectionChangeMmP95P99Max": [
+        0.002121,
+        0.005079,
+        0.015964
+      ],
+      "nativeCallMedianMs": 0.9142079998127883
+    },
+    {
+      "clip": "h1l-walk",
+      "frames": {
+        "n": 101,
+        "maxFeasibleResidualMm": 4.3368086899420177e-16,
+        "maxCapShortfallMm": 1.9737064435234927e-08,
+        "posesExceedingScopedClearanceByOneMicron": 0,
+        "maxRawDeficitIncludingEmbeddedCornersMm": 1.6264450969174504,
+        "maxCapShortfallByObstacleMm": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "maxRawDeficitByObstacleMm": [
+          0.0,
+          0.69416,
+          0.0,
+          0.0,
+          1.626445,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "betweenFrames": {
+        "n": 900,
+        "maxFeasibleResidualMm": 6.505213034913027e-16,
+        "maxCapShortfallMm": 1.9732497470816723e-08,
+        "posesExceedingScopedClearanceByOneMicron": 0,
+        "maxRawDeficitIncludingEmbeddedCornersMm": 1.626427168957889,
+        "maxCapShortfallByObstacleMm": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "maxRawDeficitByObstacleMm": [
+          0.0,
+          0.694155,
+          0.0,
+          0.0,
+          1.626427,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "correctionsMmP50P90P99Max": [
+        0.0,
+        0.157316,
+        1.805095,
+        3.600706
+      ],
+      "fractionUnmoved": 0.8801184138514354,
+      "proximalPinMaxMm": 0.0,
+      "distalSectionMaxMm": 0.0,
+      "protectedMedialLayerMaxMm": 0.0,
+      "addedEdgeChangeAbsPercentP95P99Max": [
+        1.305508,
+        4.551786,
+        14.480255
+      ],
+      "addedOpposingWallDistanceChangeMmP95P99Max": [
+        0.492102,
+        0.846983,
+        1.079584
+      ],
+      "adjacentFrameCorrectionChangeMmP95P99Max": [
+        0.015337,
+        0.047277,
+        0.149738
+      ],
+      "tenthFrameCorrectionChangeMmP95P99Max": [
+        0.001531,
+        0.004757,
+        0.015921
+      ],
+      "nativeCallMedianMs": 0.9933749988704221
+    },
+    {
+      "clip": "h1l-stand",
+      "frames": {
+        "n": 101,
+        "maxFeasibleResidualMm": 4.3368086899420177e-16,
+        "maxCapShortfallMm": 1.4217984530716289e-08,
+        "posesExceedingScopedClearanceByOneMicron": 0,
+        "maxRawDeficitIncludingEmbeddedCornersMm": 1.5909195644780993,
+        "maxCapShortfallByObstacleMm": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "maxRawDeficitByObstacleMm": [
+          0.0,
+          0.668007,
+          0.0,
+          0.0,
+          1.59092,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "betweenFrames": {
+        "n": 900,
+        "maxFeasibleResidualMm": 6.505213034913027e-16,
+        "maxCapShortfallMm": 1.4052420169236907e-08,
+        "posesExceedingScopedClearanceByOneMicron": 0,
+        "maxRawDeficitIncludingEmbeddedCornersMm": 1.5908118803054094,
+        "maxCapShortfallByObstacleMm": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "maxRawDeficitByObstacleMm": [
+          0.0,
+          0.667929,
+          0.0,
+          0.0,
+          1.590812,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "correctionsMmP50P90P99Max": [
+        0.0,
+        0.780074,
+        3.725511,
+        5.181043
+      ],
+      "fractionUnmoved": 0.7844668888999453,
+      "proximalPinMaxMm": 0.0,
+      "distalSectionMaxMm": 0.0,
+      "protectedMedialLayerMaxMm": 0.0,
+      "addedEdgeChangeAbsPercentP95P99Max": [
+        2.608039,
+        6.090498,
+        11.038357
+      ],
+      "addedOpposingWallDistanceChangeMmP95P99Max": [
+        0.607838,
+        1.082961,
+        1.392186
+      ],
+      "adjacentFrameCorrectionChangeMmP95P99Max": [
+        0.030183,
+        0.110905,
+        0.378239
+      ],
+      "tenthFrameCorrectionChangeMmP95P99Max": [
+        0.003022,
+        0.011087,
+        0.038284
+      ],
+      "nativeCallMedianMs": 1.1294169999018777
+    },
+    {
+      "clip": "predsim-hip-0",
+      "frames": {
+        "n": 101,
+        "maxFeasibleResidualMm": 4.3368086899420177e-16,
+        "maxCapShortfallMm": 2.0908707025233063e-08,
+        "posesExceedingScopedClearanceByOneMicron": 0,
+        "maxRawDeficitIncludingEmbeddedCornersMm": 1.6146264970302582,
+        "maxCapShortfallByObstacleMm": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "maxRawDeficitByObstacleMm": [
+          0.0,
+          0.720082,
+          0.0,
+          0.0,
+          1.614626,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "betweenFrames": {
+        "n": 900,
+        "maxFeasibleResidualMm": 6.505213034913027e-16,
+        "maxCapShortfallMm": 2.0911399570936208e-08,
+        "posesExceedingScopedClearanceByOneMicron": 0,
+        "maxRawDeficitIncludingEmbeddedCornersMm": 1.6146136913448572,
+        "maxCapShortfallByObstacleMm": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "maxRawDeficitByObstacleMm": [
+          0.0,
+          0.720081,
+          0.0,
+          0.0,
+          1.614614,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "correctionsMmP50P90P99Max": [
+        0.0,
+        0.257746,
+        1.986422,
+        3.907933
+      ],
+      "fractionUnmoved": 0.8504900741330415,
+      "proximalPinMaxMm": 0.0,
+      "distalSectionMaxMm": 0.0,
+      "protectedMedialLayerMaxMm": 0.0,
+      "addedEdgeChangeAbsPercentP95P99Max": [
+        1.593719,
+        4.871721,
+        14.862631
+      ],
+      "addedOpposingWallDistanceChangeMmP95P99Max": [
+        0.620079,
+        0.983546,
+        1.994476
+      ],
+      "adjacentFrameCorrectionChangeMmP95P99Max": [
+        0.036551,
+        0.108475,
+        0.347627
+      ],
+      "tenthFrameCorrectionChangeMmP95P99Max": [
+        0.003628,
+        0.011035,
+        0.298951
+      ],
+      "nativeCallMedianMs": 1.014333000057377
+    },
+    {
+      "clip": "predsim-hip-50",
+      "frames": {
+        "n": 101,
+        "maxFeasibleResidualMm": 4.3368086899420177e-16,
+        "maxCapShortfallMm": 2.1202232415953288e-08,
+        "posesExceedingScopedClearanceByOneMicron": 0,
+        "maxRawDeficitIncludingEmbeddedCornersMm": 1.6750862123444676,
+        "maxCapShortfallByObstacleMm": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "maxRawDeficitByObstacleMm": [
+          0.0,
+          0.708266,
+          0.0,
+          0.0,
+          1.675086,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "betweenFrames": {
+        "n": 900,
+        "maxFeasibleResidualMm": 8.673617379884035e-16,
+        "maxCapShortfallMm": 2.120077866462004e-08,
+        "posesExceedingScopedClearanceByOneMicron": 0,
+        "maxRawDeficitIncludingEmbeddedCornersMm": 1.675059786066413,
+        "maxCapShortfallByObstacleMm": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "maxRawDeficitByObstacleMm": [
+          0.0,
+          0.708264,
+          0.0,
+          0.0,
+          1.67506,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "correctionsMmP50P90P99Max": [
+        0.0,
+        0.257009,
+        1.929671,
+        3.808687
+      ],
+      "fractionUnmoved": 0.8554903229016368,
+      "proximalPinMaxMm": 0.0,
+      "distalSectionMaxMm": 0.0,
+      "protectedMedialLayerMaxMm": 0.0,
+      "addedEdgeChangeAbsPercentP95P99Max": [
+        1.600677,
+        4.946134,
+        14.875741
+      ],
+      "addedOpposingWallDistanceChangeMmP95P99Max": [
+        0.590643,
+        0.914653,
+        1.488552
+      ],
+      "adjacentFrameCorrectionChangeMmP95P99Max": [
+        0.03498,
+        0.111238,
+        0.305928
+      ],
+      "tenthFrameCorrectionChangeMmP95P99Max": [
+        0.003491,
+        0.011333,
+        0.048293
+      ],
+      "nativeCallMedianMs": 1.052457999321632
+    },
+    {
+      "clip": "predsim-hip-75",
+      "frames": {
+        "n": 101,
+        "maxFeasibleResidualMm": 8.673617379884035e-16,
+        "maxCapShortfallMm": 2.125515834323182e-08,
+        "posesExceedingScopedClearanceByOneMicron": 0,
+        "maxRawDeficitIncludingEmbeddedCornersMm": 1.6865248326212168,
+        "maxCapShortfallByObstacleMm": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "maxRawDeficitByObstacleMm": [
+          0.0,
+          0.701585,
+          0.0,
+          0.0,
+          1.686525,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "betweenFrames": {
+        "n": 900,
+        "maxFeasibleResidualMm": 2.373638551205437e-09,
+        "maxCapShortfallMm": 2.1236203472716092e-08,
+        "posesExceedingScopedClearanceByOneMicron": 0,
+        "maxRawDeficitIncludingEmbeddedCornersMm": 1.6865140059962869,
+        "maxCapShortfallByObstacleMm": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "maxRawDeficitByObstacleMm": [
+          0.0,
+          0.701578,
+          0.0,
+          0.0,
+          1.686514,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "correctionsMmP50P90P99Max": [
+        0.0,
+        0.527582,
+        2.972602,
+        5.098284
+      ],
+      "fractionUnmoved": 0.8099905467933728,
+      "proximalPinMaxMm": 0.0,
+      "distalSectionMaxMm": 0.0,
+      "protectedMedialLayerMaxMm": 0.0,
+      "addedEdgeChangeAbsPercentP95P99Max": [
+        2.090792,
+        6.58824,
+        21.180508
+      ],
+      "addedOpposingWallDistanceChangeMmP95P99Max": [
+        0.624766,
+        1.065393,
+        1.744061
+      ],
+      "adjacentFrameCorrectionChangeMmP95P99Max": [
+        0.063333,
+        0.16267,
+        0.706587
+      ],
+      "tenthFrameCorrectionChangeMmP95P99Max": [
+        0.006302,
+        0.016462,
+        0.707165
+      ],
+      "nativeCallMedianMs": 1.1539169991010567
+    },
+    {
+      "clip": "predsim-hip-90",
+      "frames": {
+        "n": 101,
+        "maxFeasibleResidualMm": 1.0556644533514256e-08,
+        "maxCapShortfallMm": 2.1192258682992158e-08,
+        "posesExceedingScopedClearanceByOneMicron": 0,
+        "maxRawDeficitIncludingEmbeddedCornersMm": 1.6811726382002234,
+        "maxCapShortfallByObstacleMm": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "maxRawDeficitByObstacleMm": [
+          0.0,
+          0.711846,
+          0.0,
+          0.0,
+          1.681173,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "betweenFrames": {
+        "n": 900,
+        "maxFeasibleResidualMm": 1.0570930899548734e-08,
+        "maxCapShortfallMm": 2.1526374222506903e-08,
+        "posesExceedingScopedClearanceByOneMicron": 0,
+        "maxRawDeficitIncludingEmbeddedCornersMm": 1.6811320092529058,
+        "maxCapShortfallByObstacleMm": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "maxRawDeficitByObstacleMm": [
+          0.0,
+          0.711837,
+          0.0,
+          0.0,
+          1.681132,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "correctionsMmP50P90P99Max": [
+        0.0,
+        0.76539,
+        4.098847,
+        6.619548
+      ],
+      "fractionUnmoved": 0.7754863426041096,
+      "proximalPinMaxMm": 0.0,
+      "distalSectionMaxMm": 0.0,
+      "protectedMedialLayerMaxMm": 0.0,
+      "addedEdgeChangeAbsPercentP95P99Max": [
+        2.930685,
+        8.622662,
+        20.739621
+      ],
+      "addedOpposingWallDistanceChangeMmP95P99Max": [
+        0.6669,
+        1.157323,
+        1.797245
+      ],
+      "adjacentFrameCorrectionChangeMmP95P99Max": [
+        0.104334,
+        0.231087,
+        0.509264
+      ],
+      "tenthFrameCorrectionChangeMmP95P99Max": [
+        0.010563,
+        0.02357,
+        0.103083
+      ],
+      "nativeCallMedianMs": 1.154417001089314
+    }
+  ],
+  "localizedContinuityChecks": [
+    {
+      "clip": "predsim-hip-75",
+      "phase": 0.6783752274,
+      "phaseDelta": 1e-09,
+      "maxMaterialStepMm": 4.575712449247518e-07
+    },
+    {
+      "clip": "h1l-walk",
+      "phase": 0.996792016,
+      "phaseDelta": 1e-09,
+      "maxMaterialStepMm": 2.6596452052819854e-07
+    }
+  ]
+}

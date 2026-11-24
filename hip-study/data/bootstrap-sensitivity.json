@@ -1,0 +1,245 @@
+{
+  "method": "Sweep the signed frontal lever arm by a common offset across participants, M' = M + Fz * offset. At each offset calibrate every participant bootstrap and project onto the same held-out walking record. The offset range is a sensitivity assumption.",
+  "seed": 20261122,
+  "subjects": [
+    "H1L",
+    "H2R",
+    "H3L",
+    "H4L",
+    "H5L",
+    "H6R"
+  ],
+  "candidates": 1048576,
+  "resamples": 462,
+  "candidateResampleOffsetCombinations": 6297747456,
+  "winnerAgreement": 6006,
+  "heldOutTrialId": "H10R_300114_1_82",
+  "heldOutPhase": 0.77,
+  "measuredBw": 2.1070809364318848,
+  "cases": [
+    {
+      "offsetMm": -15.0,
+      "distinctWinners": 75,
+      "probabilitySameWinner": 0.0,
+      "jointForceBwQuantiles": [
+        2.8703291890823954,
+        3.085921521082565,
+        3.313845644320256
+      ],
+      "glutealTensionBwQuantiles": [
+        1.2347367618239073,
+        1.3441486147430166,
+        1.768679319730804
+      ]
+    },
+    {
+      "offsetMm": -12.5,
+      "distinctWinners": 72,
+      "probabilitySameWinner": 0.0,
+      "jointForceBwQuantiles": [
+        2.889248627973019,
+        3.072555608446926,
+        3.284176722481717
+      ],
+      "glutealTensionBwQuantiles": [
+        1.228368022606246,
+        1.3733930647519315,
+        1.8108704249133671
+      ]
+    },
+    {
+      "offsetMm": -10.0,
+      "distinctWinners": 75,
+      "probabilitySameWinner": 0.0,
+      "jointForceBwQuantiles": [
+        2.917134837047483,
+        3.0828611618903077,
+        3.321782572955748
+      ],
+      "glutealTensionBwQuantiles": [
+        1.2455580725164643,
+        1.3247779086520035,
+        1.822082426322471
+      ]
+    },
+    {
+      "offsetMm": -7.5,
+      "distinctWinners": 67,
+      "probabilitySameWinner": 0.0003215020576131687,
+      "jointForceBwQuantiles": [
+        2.8800854596180194,
+        3.0979308541669988,
+        3.2923700256861763
+      ],
+      "glutealTensionBwQuantiles": [
+        1.2272524186560136,
+        1.3564194893392025,
+        1.7970376989345849
+      ]
+    },
+    {
+      "offsetMm": -5.0,
+      "distinctWinners": 65,
+      "probabilitySameWinner": 0.05626286008230453,
+      "jointForceBwQuantiles": [
+        2.9245108080793467,
+        3.108639427873745,
+        3.306314426495929
+      ],
+      "glutealTensionBwQuantiles": [
+        1.2575682290755574,
+        1.3838001682163412,
+        1.8590617415351915
+      ]
+    },
+    {
+      "offsetMm": -2.5,
+      "distinctWinners": 62,
+      "probabilitySameWinner": 0.27674897119341557,
+      "jointForceBwQuantiles": [
+        2.945029239546468,
+        3.071674292571658,
+        3.309338910760552
+      ],
+      "glutealTensionBwQuantiles": [
+        1.2818163080101808,
+        1.4038792019857051,
+        1.8575810897276945
+      ]
+    },
+    {
+      "offsetMm": 0.0,
+      "distinctWinners": 53,
+      "probabilitySameWinner": 1.0,
+      "jointForceBwQuantiles": [
+        2.9895978288540888,
+        3.0949755064712927,
+        3.296316174272989
+      ],
+      "glutealTensionBwQuantiles": [
+        1.3121391642875315,
+        1.3697779777120558,
+        1.8853158462677446
+      ]
+    },
+    {
+      "offsetMm": 2.5,
+      "distinctWinners": 54,
+      "probabilitySameWinner": 0.25503686556927296,
+      "jointForceBwQuantiles": [
+        3.0341758949855744,
+        3.0578444329078516,
+        3.306811361337908
+      ],
+      "glutealTensionBwQuantiles": [
+        1.3424620205648825,
+        1.3485155770196977,
+        1.9288157135917166
+      ]
+    },
+    {
+      "offsetMm": 5.0,
+      "distinctWinners": 42,
+      "probabilitySameWinner": 0.1732467421124828,
+      "jointForceBwQuantiles": [
+        3.0787629037427897,
+        3.102306749140933,
+        3.322382611745194
+      ],
+      "glutealTensionBwQuantiles": [
+        1.3727847935083788,
+        1.3788313041247506,
+        1.9375232757665102
+      ]
+    },
+    {
+      "offsetMm": 7.5,
+      "distinctWinners": 38,
+      "probabilitySameWinner": 0.1427683470507544,
+      "jointForceBwQuantiles": [
+        3.1233587119706896,
+        3.1233587119706896,
+        3.333202510010915
+      ],
+      "glutealTensionBwQuantiles": [
+        1.4031076497857298,
+        1.4031076497857298,
+        1.9795824728305431
+      ]
+    },
+    {
+      "offsetMm": 10.0,
+      "distinctWinners": 32,
+      "probabilitySameWinner": 0.1389103223593964,
+      "jointForceBwQuantiles": [
+        3.1679628307069305,
+        3.1679628307069305,
+        3.3101848903436673
+      ],
+      "glutealTensionBwQuantiles": [
+        1.4334305060630805,
+        1.4334305060630805,
+        2.01367284024005
+      ]
+    },
+    {
+      "offsetMm": 12.5,
+      "distinctWinners": 25,
+      "probabilitySameWinner": 0.1389103223593964,
+      "jointForceBwQuantiles": [
+        3.2125749137965847,
+        3.2125749137965847,
+        3.334881507462175
+      ],
+      "glutealTensionBwQuantiles": [
+        1.4637533623404313,
+        1.4637533623404313,
+        2.063700866958609
+      ]
+    },
+    {
+      "offsetMm": 15.0,
+      "distinctWinners": 22,
+      "probabilitySameWinner": 0.13824588477366256,
+      "jointForceBwQuantiles": [
+        3.2571943887190247,
+        3.2571943887190247,
+        3.291873422752738
+      ],
+      "glutealTensionBwQuantiles": [
+        1.4940760519500733,
+        1.4940760519500733,
+        1.5552515966583713
+      ]
+    }
+  ],
+  "timing": {
+    "cpu": "Apple M4",
+    "cpuThreads": 10,
+    "hardware": {
+      "device": "NVIDIA H100 80GB HBM3",
+      "gpuMemoryBytes": 85031190528,
+      "multiprocessors": 132,
+      "computeCapability": "90",
+      "cudaRuntime": 12090,
+      "cupy": "13.6.0",
+      "driverVersion": "620.70.06"
+    },
+    "modalAppId": "ap-eCG4CRJ4UwEHI19FaqHyOk",
+    "cpuSamplesSeconds": [
+      18.14275620799981,
+      18.12175633300012,
+      17.90006649999941
+    ],
+    "warmCloudSamplesSeconds": [
+      1.3506539170002725,
+      1.2718557919997693,
+      1.213038625000081
+    ],
+    "warmRpcSpeedup": 14.248279126446285,
+    "scope": "Same 13 offsets and 462 resamples per search. From preprocessed clinical features to all winning indices. Laptop includes local parameter generation and fitting. Cloud includes request packing/transport by Modal, regenerating and uploading parameters, computing, and receiving all winners. First-job comparison additionally includes local C++ compilation or Modal app initialization and first request with the prebuilt image. Python startup, clinical feature preparation, and reporting are outside both timings; the host image cache state was uncontrolled.",
+    "firstLocalSeconds": 19.105796249999912,
+    "firstCloudAppSeconds": 10.172834584000157,
+    "firstAppSpeedup": 1.8781192294279045
+  }
+}

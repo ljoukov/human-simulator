@@ -1,0 +1,202 @@
+.int-host {
+  --iv-ink: #243031;
+  --iv-muted: #556464;
+  --iv-line: #bbc6c3;
+  --iv-base: #365e79;
+  --iv-alt: #9e5138;
+  width:100%;
+  min-width:0;
+  min-height:0;
+  color:var(--iv-ink);
+  color-scheme:light;
+  font-family:inherit;
+  font-variant-numeric:tabular-nums;
+}
+.iv-room, .iv-room * {box-sizing:border-box}
+.iv-room {
+  height:100%;
+  flex:1;
+  display:grid;
+  grid-template-columns:minmax(0,1.63fr) minmax(284px,1fr);
+  gap:clamp(14px,2.3vw,36px);
+  text-align:left;
+  color:var(--iv-ink);
+}
+.iv-visual {
+  display:grid;
+  grid-template-rows:auto minmax(0,1fr) auto;
+  position:relative;
+  min-width:0;
+  min-height:330px;
+  border:1px solid var(--iv-line);
+  border-radius:10px;
+  background:#f3f1e9;
+  overflow:hidden;
+}
+.iv-tools {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+  padding:8px 12px;
+  background:#f3f1e9;
+  border-bottom:1px solid var(--iv-line);
+}
+.iv-room label, .iv-room p, .iv-room output {margin:0}
+.iv-room select, .iv-room button {font:inherit; letter-spacing:normal; color:inherit; line-height:1.25; text-transform:none}
+.iv-room select {color-scheme:light}
+.iv-tools label {
+  display:flex;
+  align-items:center;
+  gap:5px;
+  color:var(--iv-muted);
+  font-size:13px;
+}
+.iv-tools select, .iv-transport select, .iv-plothead select {
+  background:#faf9f4;
+  color:var(--iv-ink);
+  border:1px solid var(--iv-line);
+  border-radius:4px;
+  padding:4px 5px;
+  font-size:14px;
+}
+.iv-stage {
+  position:relative;
+  min-height:0;
+  overflow:hidden;
+  background:#283339;
+}
+.iv-canvas {position:absolute;inset:0}
+.iv-status {
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:max-content;max-width:90%;font-size:13px;color:#e4e8e3;
+  text-align:center;pointer-events:none;
+}
+.iv-status[hidden]{display:none}
+.iv-transport {
+  display:grid;
+  grid-template-columns:34px minmax(60px,1fr) auto;
+  align-items:center;
+  gap:12px;
+  min-height:51px;
+  border-top:1px solid var(--iv-line);
+  padding:5px 12px 7px;
+}
+.iv-play {
+  display:grid; place-items:center;
+  height:30px;min-width:32px;
+  background:#e2e7e5;
+  border:1px solid #a6b6b5;
+  border-radius:5px;
+  cursor:pointer;
+}
+.iv-transport .iv-phase {
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:center;
+  gap:0 8px;
+  color:var(--iv-muted); font-size:13px;
+}
+.iv-phase output{color:var(--iv-ink)}
+.iv-room input[type=range] {
+  width:100%;min-width:0;
+  margin:0;
+  padding:0;
+  accent-color:var(--iv-alt);
+  cursor:pointer;
+}
+.iv-transport input[type=range]{grid-column:1/-1;accent-color:var(--iv-base);height:14px}
+.iv-controls {
+  display:flex;
+  flex-direction:column;
+  justify-content:safe center;
+  min-width:0;min-height:0;
+  overflow:auto;
+  scrollbar-color:#9bafaf transparent;
+  gap:clamp(10px,1.6vh,19px);
+  padding:2px 5px 3px 0;
+}
+.iv-config {display:flex;flex-direction:column;gap:8px}
+.iv-profile {display:grid;grid-template-columns:auto minmax(100px,1fr);align-items:center;gap:3px 12px}
+.iv-profile label, .iv-strategy {font-size:14px;color:var(--iv-muted)}
+.iv-strategy {display:grid;grid-template-columns:auto 1fr 1fr;align-items:center;gap:5px}
+.iv-strategy button {padding:4px 6px;min-height:30px;border:1px solid var(--iv-line);background:#f9f8f3;border-radius:4px;color:var(--iv-muted);font-size:12px;line-height:1.15}
+.iv-strategy button[aria-pressed=true]{background:#d9e3e8;border-color:#718e9e;color:#264e67}
+.iv-profile select {
+  width:100%;min-width:0;
+  font-size:14px;padding:6px 8px;
+  background:#fbfaf5;
+  border:1px solid var(--iv-line);
+  border-radius:4px;
+  color:var(--iv-ink);
+}
+.iv-profile-meta{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:8px;position:relative;font-size:13px;color:var(--iv-muted)}
+.iv-methods summary{cursor:pointer;color:var(--iv-base);text-decoration:underline;text-underline-offset:3px}
+.iv-methods>div{position:absolute;top:calc(100% + 5px);left:0;right:0;z-index:2;padding:12px 14px;border:1px solid #acb9b3;border-radius:5px;background:#f9f7f0;line-height:1.45;color:var(--iv-ink)}
+.iv-tasks {display:flex;gap:3px;border:1px solid var(--iv-line);border-radius:5px;background:#e5e9e4;padding:2px}
+.iv-tasks button {
+  flex:1;border:0;background:transparent; border-radius:3px;color:var(--iv-muted);
+  padding:5px 8px;cursor:pointer;font-size:14px;
+}
+.iv-tasks button[aria-pressed=true] {background:#365e79;color:#ffffff}
+.iv-settings {display:grid;gap:8px;padding:11px 0;border-top:1px solid var(--iv-line);border-bottom:1px solid var(--iv-line)}
+.iv-slider {
+  display:grid;grid-template-columns:1fr auto;align-items:center;gap:1px 8px;
+  font-size:clamp(14px,1.2vw,17px);
+}
+.iv-slider output {font-size:13px;color:var(--iv-alt)}
+.iv-slider input {grid-column:1/-1;height:18px}
+.iv-presets {display:flex;flex-wrap:wrap;gap:4px}
+.iv-presets button {
+  padding:4px 7px;border:1px solid #a8b5b2;border-radius:4px;background:transparent;
+  cursor:pointer;color:var(--iv-muted);font-size:13px;
+}
+.iv-presets button[aria-pressed=true]{background:#f1e1d8;border-color:#ad765e;color:#783e2a}
+.iv-plot {min-width:0}
+.iv-room .iv-strength-note{color:var(--iv-muted);font-size:13px;margin:4px 0 2px;line-height:1.25}
+.iv-effects>span {display:block;color:var(--iv-muted);font-size:13px;margin-bottom:4px}
+.iv-effects>div {display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.iv-effects button {display:flex;align-items:center;justify-content:space-between;gap:5px;padding:6px 7px;background:#edf0eb;border:1px solid var(--iv-line);border-radius:4px;font-size:13px}
+.iv-effects strong {font-size:16px;font-weight:600;color:var(--iv-alt);white-space:nowrap}
+.iv-plothead {display:flex;gap:6px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.iv-plothead select{font-weight:600;max-width:100%;background:#f7f7f1}
+.iv-plothead button {
+  padding:4px 0;border:0;background:transparent;color:var(--iv-muted);
+  font-size:12px;cursor:pointer;text-decoration:underline;text-underline-offset:3px;
+}
+.iv-plothead button:disabled{opacity:.45;cursor:default}
+.iv-values {display:flex;gap:clamp(16px,3vw,45px);margin:7px 0 1px}
+.iv-values>div{display:flex;align-items:baseline;gap:7px;color:var(--iv-base)}
+.iv-values>div+div{color:var(--iv-alt)}
+.iv-values span {font-size:13px}
+.iv-values strong{font-size:clamp(16px,1.7vw,23px);line-height:1.1;font-weight:550}
+.iv-chart{width:100%;height:clamp(57px,9.5vh,95px);display:block;overflow:visible}
+.iv-chart [data-guides] line{stroke:#c1ceca;stroke-width:.75}
+.iv-chart [data-guides] text {font-family:inherit;fill:#586b69;font-size:11px}
+.iv-chart path {fill:none;stroke-width:2;vector-effect:non-scaling-stroke}
+.iv-baseline{stroke:var(--iv-base);stroke-dasharray:4 3}
+.iv-changed{stroke:var(--iv-alt)}
+.iv-cursor{stroke:#354343;stroke-width:1;stroke-opacity:.75}
+.iv-room button:hover:not(:disabled){filter:brightness(.94)}
+.iv-room :focus-visible{outline:2px solid var(--iv-base);outline-offset:2px}
+@media(max-height:775px) and (min-width:761px){
+  .iv-controls{gap:7px;justify-content:flex-start}.iv-settings{padding:7px 0;gap:4px}
+  .iv-config{gap:5px}.iv-tools{padding:5px 10px}.iv-values{margin:4px 0 0}
+  .iv-presets button{font-size:12px;padding:3px 5px}
+  .iv-effects button{padding:4px 6px}
+}
+@media(max-width:760px){
+  .iv-room{grid-template-columns:1fr;grid-template-rows:auto auto;height:auto;gap:15px}
+  .iv-visual{height:clamp(285px,42svh,455px);min-height:0}
+  .iv-controls{overflow:visible;padding:0;gap:12px}
+  .iv-config{gap:7px}.iv-profile label{font-size:13px}
+  .iv-room select{max-width:100%}.iv-slider{font-size:14px}
+  .iv-tasks button{padding:8px}.iv-settings{gap:9px;padding:10px 0}
+  .iv-presets button{padding:7px 9px}.iv-chart{height:80px}
+  .iv-values strong{font-size:20px}
+}
+@media(max-width:400px){
+  .iv-tools{padding:5px 6px;gap:4px}
+  .iv-tools label{font-size:0;gap:0}
+  .iv-tools select{font-size:14px}
+}

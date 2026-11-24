@@ -1,0 +1,104 @@
+{
+  "source": {
+    "url": "https://raw.githubusercontent.com/johnjdavisiv/it-band-model/2df50ea795bc2eddb3405854bddaa9e7427c77e8/models/Davis2026.osim",
+    "sha256": "c6c6cf5a3e4ee3d2e04a6aa13d755d21f5412e1c6fec5cfe7977618a887ef386"
+  },
+  "reference": "https://doi.org/10.51224/SportRxiv.1017",
+  "openSimVersion": "version 4.6-2026-06-22-85aaf64",
+  "definition": "Effective length is the maximum-isometric-force-weighted mean of three right muscle-tendon paths routed through the iliotibial band. Other joint coordinates are held at their model defaults.",
+  "names": [
+    "glmax12_ITB_r",
+    "glmax34_ITB_r",
+    "tfl12_ITB_r"
+  ],
+  "weights": [
+    0.3799435486994505,
+    0.43283071442896587,
+    0.18722573687158367
+  ],
+  "coordinates": [
+    "hip_flexion_r",
+    "hip_adduction_r",
+    "knee_angle_r"
+  ],
+  "coordinateRangesDeg": [
+    [
+      -25,
+      50
+    ],
+    [
+      -18,
+      22
+    ],
+    [
+      0,
+      85
+    ]
+  ],
+  "centersDeg": [
+    12.5,
+    2.0,
+    42.5
+  ],
+  "halfRangesDeg": [
+    37.5,
+    20.0,
+    42.5
+  ],
+  "polynomial": "Normalize each angle by subtracting its center and dividing by its half range. Sum hipCoefficientsM[i][j] times flexion^i times adduction^j, plus kneeCoefficientsM[k] times knee flexion^k.",
+  "hipCoefficientsM": [
+    [
+      0.5626998638360498,
+      0.002391689982569896,
+      -0.001355221131034987,
+      8.609422194228765e-05,
+      2.408819793519093e-05
+    ],
+    [
+      0.02700035936255353,
+      0.0025901332466202083,
+      -0.0007198148349216917,
+      -0.00020551993421027862
+    ],
+    [
+      -0.004845588211959243,
+      -0.001968645557667889,
+      0.000500782158930804
+    ],
+    [
+      -0.001384770217761104,
+      0.000794347026955758
+    ],
+    [
+      0.0005387262454959295
+    ]
+  ],
+  "kneeCoefficientsM": [
+    0.0,
+    -0.0028294800271207623,
+    -0.001482175097097587,
+    -0.0002507466605940199,
+    0.0005697284463620762
+  ],
+  "directNeutralLengthM": 0.5552458325191195,
+  "validation": {
+    "gridSamples": 2002,
+    "independentPoses": 512,
+    "seed": 20261122,
+    "lengthMaeMm": 0.012789703200738987,
+    "lengthMaxErrorMm": 0.05255983016183574,
+    "gradientMaeMmPerRad": [
+      0.11471502205264558,
+      0.15223772013040995,
+      0.05154756708171993
+    ],
+    "gradientMaxErrorMmPerRad": [
+      0.9049959798878305,
+      0.701662959428636,
+      0.27552274488813366
+    ]
+  },
+  "stiffnessNPerMm": 17,
+  "stiffnessReference": "https://pubmed.ncbi.nlm.nih.gov/15378277/",
+  "interpretation": "The cable uses an assumed slack length and a cadaver-derived whole-tract stiffness scale. The three musculotendon paths also include muscle excursion. Numerical agreement is with the source geometry and does not measure in-vivo tissue force."
+}

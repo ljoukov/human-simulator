@@ -1,0 +1,114 @@
+{
+  "study": "Exploratory same-person walking kinematics and point-in-time hip pain in women with GTPS",
+  "sources": {
+    "dataset": "https://doi.org/10.17632/66mcwyk854.1",
+    "paper": "https://doi.org/10.1016/j.gaitpost.2019.02.031",
+    "gaitWorkbook": {
+      "fileId": "b26da87d-3bca-49a9-b7e2-b3655f3dff71",
+      "sha256": "95f2b5fa6ac78367eddc4ce294c235e62f49a21169df70a9f8e2bed35a5470d6"
+    },
+    "painWorkbook": {
+      "fileId": "3568f447-3fc5-469a-b915-61b5baa3366b",
+      "sha256": "061deeaede08f825e014d95abfc76bfc5b21d1daeb0e42cbeaee5b3293642f0f"
+    }
+  },
+  "methods": [
+    "Join each gait worksheet's numeric participant headers to part_ID in the pain worksheet's first block.",
+    "Optical affected-foot walking stance. For hip adduction/abduction and trunk lateral flexion, take maximum minus minimum in degrees from 20% through 80% inclusive. A complete 101-point curve is required.",
+    "Hip pain was rated at baseline and immediately after each taped walk on a 0\u201310 scale. Keep numeric responses, including zero. Exclude missing values and an interval-valued post-sham response.",
+    "Fit a training mean, linear regression on hip excursion, and linear regression on hip and trunk excursions with an intercept. Hold out one person and refit on every fold. Keep predictions continuous and unclipped.",
+    "Spearman rank correlations use average ranks for ties. Percentile intervals resample participant IDs 5,000 times (seed 20261122) and recalculate ranks in each resample.",
+    "Sensitivity analysis subtracts each person's sham values from their active values for both excursions and pain. The pain sheet identifies Tape A as active and Tape B as sham for every ID. Crossover order was randomized."
+  ],
+  "audit": {
+    "randomizedPeopleInPaper": 50,
+    "uniqueMatchingBaselineIdsInWorkbooks": 51,
+    "missingBaselinePain": 3,
+    "bothNumericPostTapePainRatings": 41,
+    "allThreeNumericPainRatings": 41,
+    "numericPainPairsMissingOneOrMoreGaitFeatures": 1
+  },
+  "baselineWalking": {
+    "people": 48,
+    "meanPainPoints": 3.6354166666666665,
+    "rangePainPoints": [
+      0.0,
+      7.0
+    ],
+    "spearman": {
+      "RHipAddAbd": {
+        "rho": 0.08335744767104228,
+        "bootstrap95": [
+          -0.19834428894684492,
+          0.35658663113495886
+        ]
+      },
+      "ThorLatFlex": {
+        "rho": 0.08166518776416454,
+        "bootstrap95": [
+          -0.19670948320775833,
+          0.34787180969085985
+        ]
+      }
+    },
+    "leaveOnePersonOut": {
+      "meanOnly": {
+        "maePainPoints": 1.8984929078014183,
+        "rmsePainPoints": 2.2300623104648687
+      },
+      "hip": {
+        "maePainPoints": 1.9285205677114146,
+        "rmsePainPoints": 2.287516460792841
+      },
+      "hipAndTrunk": {
+        "maePainPoints": 1.9661185756534598,
+        "rmsePainPoints": 2.316205502366042
+      }
+    }
+  },
+  "activeMinusShamSensitivity": {
+    "people": 40,
+    "meanPainPoints": -0.445,
+    "rangePainPoints": [
+      -4.0,
+      6.0
+    ],
+    "spearman": {
+      "RHipAddAbd": {
+        "rho": -0.11046910992980488,
+        "bootstrap95": [
+          -0.4072289015181278,
+          0.21997505444108478
+        ]
+      },
+      "ThorLatFlex": {
+        "rho": -0.1456966943788241,
+        "bootstrap95": [
+          -0.45812291075734485,
+          0.19091735196121598
+        ]
+      }
+    },
+    "leaveOnePersonOut": {
+      "meanOnly": {
+        "maePainPoints": 1.1105128205128203,
+        "rmsePainPoints": 1.6924553160165525
+      },
+      "hip": {
+        "maePainPoints": 1.155198270401008,
+        "rmsePainPoints": 1.7260258038381053
+      },
+      "hipAndTrunk": {
+        "maePainPoints": 1.2194421902171015,
+        "rmsePainPoints": 1.7944711880213216
+      }
+    }
+  },
+  "interpretation": "In this cohort, adding trunk excursion to a linear model of hip excursion did not improve held-out baseline pain error. The paired crossover change analysis also favored the training mean.",
+  "limitations": [
+    "The deposit contains 51 participant IDs while the paper reports 50 randomized. The reason is unknown.",
+    "Pain refers to the recording condition. It has no within-stride timing. Only walking was measured, and the data contain one clinical group.",
+    "The analysis uses two optical angular excursions. It does not test the loaded-stance mechanism classifier, direct tissue force, or symptoms in another population. Correlations do not establish a cause of pain.",
+    "The crossover comparison uses complete pairs. Tape can affect pain through several mechanisms. No adjustment for period or carryover was possible in these workbooks."
+  ]
+}

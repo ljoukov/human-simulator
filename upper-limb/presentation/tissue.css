@@ -1,0 +1,97 @@
+.tissue-lab {
+  --tissue-accent: #365e79;
+  --tissue-sub: #536260;
+  --tissue-rule: rgba(63, 83, 79, .24);
+  color-scheme: light;
+  background: #f5f2eb;
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(16rem, .88fr);
+  gap: clamp(18px, 3.2vw, 52px);
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  color: #243031;
+  font-variant-numeric: tabular-nums;
+}
+.tissue-lab figure, .tissue-lab p { margin: 0; }
+.tl-stage {
+  position: relative;
+  isolation: isolate;
+  min-width: 0;
+  min-height: 255px;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 46% 44%, #293947 0%, #192934 65%, #12212b 100%);
+  border: 1px solid var(--tissue-rule);
+  border-radius: 12px;
+}
+.tl-canvas { position: absolute; inset: 0; }
+.tl-projection { display: block; width: 100%; height: 100%; }
+.tl-tag, .tl-orbit, .tl-layers {
+  position: absolute;
+  z-index: 2;
+  font-size: 12px;
+}
+.tl-tag {
+  top: 18px; left: 18px;
+  display: flex; align-items: center; gap: 8px;
+  padding: 4px 8px;
+  color: #e3e8e4;
+  background: #15252ed9;
+  border-radius: 99px;
+  pointer-events: none;
+}
+.tl-marker { width: 6px; height: 6px; border-radius: 50%; background: #98b9c9; }
+.tl-orbit { right: 16px; bottom: 18px; color: #cad4d6; pointer-events: none; }
+.tl-layers {
+  left: 16px; bottom: 14px; display: inline-flex; gap: 2px;
+  padding: 3px; background: #f8f6eff2; border: 1px solid var(--tissue-rule); border-radius: 6px;
+}
+.tl-layers button, .tl-neutral {
+  appearance: none; margin: 0; padding: 6px 10px; border: 0; border-radius: 3px;
+  background: transparent; color: #293a3e; cursor: pointer; font: inherit; line-height: 1.25;
+}
+.tl-layers button[aria-pressed=true] { background: #365e79; color: #ffffff; }
+.tl-layers button:hover, .tl-neutral:hover { color: #233e54; }
+.tl-layers button[aria-pressed=true]:hover { color: white; background: #29495f; }
+.tl-canvas .hip-atlas-annotations > div:has(span) { color:#f2f4ef !important; background:#14232de8 !important; font-size:12px !important; }
+.tissue-lab button:focus-visible, .tissue-lab input:focus-visible, .tissue-lab summary:focus-visible {
+  outline: 2px solid #9e5138; outline-offset: 3px;
+}
+.tissue-lab button:disabled { opacity: .48; cursor: default; }
+.tl-render-status { position: absolute; top: 52%; width: 100%; text-align: center; color: #d9e4e1; font-size: 13px; pointer-events: none; }
+.tl-render-status[hidden] { display: none; }
+.tl-controls { min-width: 0; align-self: center; max-height: 100%; overflow: auto; padding: 3px 8px 8px 0; scrollbar-width: thin; }
+.tl-label { font-size: 14px; font-weight: 600; color: #243031; }
+.tl-value { display: flex; align-items: baseline; gap: 9px; color: #365e79; font-size: 18px; line-height: 1; }
+.tl-value output {
+  font-size: clamp(40px, 4.6vw, 70px); letter-spacing: -.075em; font-weight: 490; padding: 5px 0;
+}
+.tl-measure p, .tl-method p { max-width: 43ch; color: var(--tissue-sub); font-size: 13px; line-height: 1.45; }
+.tl-inputs { padding: clamp(9px, 1.7vh, 18px) 0 7px; }
+.tl-inputs label { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 3px 10px; font-size: 14px; }
+.tl-inputs label + label { margin-top: 8px; }
+.tl-inputs output { color: var(--tissue-accent); font-size: 14px; }
+.tl-inputs input { display: block; width: 100%; grid-column: 1/-1; accent-color: #365e79; min-height: 21px; margin: 0; padding: 0; cursor: pointer; }
+.tl-neutral { margin-top: 4px; padding: 4px 0; color: #365e79; font-size: 12px; text-decoration: underline; text-underline-offset: 3px; }
+.tl-footprint { border-block: 1px solid var(--tissue-rule); padding: 8px 0; }
+.tl-footprint svg { display: block; width: 100%; height: clamp(65px, 13.5vh, 120px); }
+.tl-footprint figcaption { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; color: #4c5c5e; font-size: 11px; }
+.tl-footprint figcaption span { display: inline-flex; align-items: center; gap: 5px; }
+.tl-footprint figcaption i { width: 6px; height: 6px; border-radius: 50%; background: #9e5138; }
+.tl-footprint figcaption span + span i { background: #365e79; }
+.tl-method { padding-top: 8px; }
+.tl-method summary { cursor: pointer; color: #354e59; font-size: 12px; }
+.tl-method p { margin: 6px 0 0; }
+.tl-map-only .tl-orbit { display: none; }
+@media(max-width: 740px) {
+  .tissue-lab { height: auto; grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .tl-stage { min-height: 250px; height: min(43vh, 400px); }
+  .tl-controls { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 16px; max-height: none; overflow: visible; padding: 0; }
+  .tl-measure p { font-size: 12px; }
+  .tl-inputs { padding: 0; }
+  .tl-footprint { grid-column: 1/-1; display: grid; grid-template-columns: minmax(110px, 1fr) 1.4fr; align-items:center; }
+  .tl-footprint svg { height: 80px; grid-column: 2; grid-row: 1 / 3; }
+  .tl-footprint figcaption { justify-content: start; align-self:start; }
+  .tl-method { grid-column: 1/-1; padding: 0; }
+  .tl-tag { top: 10px; left: 10px; }
+}

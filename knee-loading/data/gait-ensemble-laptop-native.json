@@ -1,0 +1,471 @@
+{
+  "createdAt": "2026-11-22T12:03:37.206Z",
+  "hardware": {
+    "runtime": "v24.13.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "cpu": "Apple M4",
+    "logicalCores": 10
+  },
+  "workload": {
+    "mode": "quasi-static knee contact calibration",
+    "source": "https://github.com/gilserrancoli/ReducePoly_forMSK/tree/00b6f94ee8bd2f60ae5b6f07a114f1aade089cb8/ExampleTrackingSimulations/OpenSimModel/subject_GC",
+    "subject": "GC4-JW",
+    "training": "ngait_og5-stance-1",
+    "frames": 91,
+    "seed": 4176125571,
+    "poolSize": 1048576,
+    "retainedCount": 256,
+    "holdout": [
+      "ngait_og5-stance-2",
+      "bouncy7-stance-1",
+      "bouncy7-stance-2",
+      "mtpgait3-stance-1",
+      "mtpgait3-stance-2",
+      "ngait_tm_fast1-stance-1"
+    ],
+    "holdoutFrames": 546,
+    "frameInputsSha256": "1e1ce154d2fa08fb48e090667a0b1659f478d157588d13a7d6f76db25c8ea349"
+  },
+  "repeats": 7,
+  "absTolerance": 0.00002,
+  "relTolerance": 0.00001,
+  "rows": [
+    {
+      "scenarios": 1024,
+      "frameSolves": 93184,
+      "parametersSha256": "993627d62dcf67882615e68b29b2ef8ebdc77705ec15b7e82f961ac51d650ba3",
+      "calibration": {
+        "bestScore": 7.189942359924316,
+        "bestScenario": 508,
+        "medialRmseBw": 0.32838943675441074,
+        "lateralRmseBw": 0.5522888460441621
+      },
+      "nativeCpu": [
+        {
+          "backend": "native-cpu",
+          "workers": 1,
+          "batchMs": 0.456833,
+          "setupMs": 0.000375,
+          "batchSamplesMs": [
+            0.446583,
+            0.446375,
+            0.472792,
+            0.456833,
+            0.455333,
+            0.502417,
+            0.46625
+          ],
+          "processMs": 6.258041999999932,
+          "agreement": {
+            "maxAbsError": 0.00000762939453125,
+            "mismatchCount": 0,
+            "topCandidateAgreement": {
+              "size": 256,
+              "shared": 256
+            }
+          }
+        },
+        {
+          "backend": "native-cpu",
+          "workers": 4,
+          "batchMs": 0.144792,
+          "setupMs": 0.022125,
+          "batchSamplesMs": [
+            0.133042,
+            0.235167,
+            0.233167,
+            0.174333,
+            0.142166,
+            0.144792,
+            0.134333
+          ],
+          "processMs": 3.0523749999999836,
+          "agreement": {
+            "maxAbsError": 0.00000762939453125,
+            "mismatchCount": 0,
+            "topCandidateAgreement": {
+              "size": 256,
+              "shared": 256
+            }
+          }
+        },
+        {
+          "backend": "native-cpu",
+          "workers": 8,
+          "batchMs": 0.132334,
+          "setupMs": 0.040792,
+          "batchSamplesMs": [
+            0.12925,
+            0.134458,
+            0.134333,
+            0.130834,
+            0.132334,
+            0.144041,
+            0.132292
+          ],
+          "processMs": 2.78066600000011,
+          "agreement": {
+            "maxAbsError": 0.00000762939453125,
+            "mismatchCount": 0,
+            "topCandidateAgreement": {
+              "size": 256,
+              "shared": 256
+            }
+          }
+        },
+        {
+          "backend": "native-cpu",
+          "workers": 10,
+          "batchMs": 0.169083,
+          "setupMs": 0.045541,
+          "batchSamplesMs": [
+            0.167,
+            0.16775,
+            0.169083,
+            0.184792,
+            0.174833,
+            0.156458,
+            0.183875
+          ],
+          "processMs": 3.013249999999971,
+          "agreement": {
+            "maxAbsError": 0.00000762939453125,
+            "mismatchCount": 0,
+            "topCandidateAgreement": {
+              "size": 256,
+              "shared": 256
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenarios": 32768,
+      "frameSolves": 2981888,
+      "parametersSha256": "4fdbc12c4a01efc3e60a76522e97566bfb530abf6bed7ee4c57fccd586cf5b0e",
+      "calibration": {
+        "bestScore": 5.972273349761963,
+        "bestScenario": 6630,
+        "medialRmseBw": 0.30520130745792395,
+        "lateralRmseBw": 0.5074304761028339
+      },
+      "nativeCpu": [
+        {
+          "backend": "native-cpu",
+          "workers": 1,
+          "batchMs": 15.256958,
+          "setupMs": 0.008458,
+          "batchSamplesMs": [
+            15.118875,
+            15.546458,
+            14.939167,
+            15.42175,
+            15.051417,
+            15.256958,
+            15.620625
+          ],
+          "processMs": 124.8829169999999,
+          "agreement": {
+            "maxAbsError": 0.00000762939453125,
+            "mismatchCount": 0,
+            "topCandidateAgreement": {
+              "size": 256,
+              "shared": 256
+            }
+          }
+        },
+        {
+          "backend": "native-cpu",
+          "workers": 4,
+          "batchMs": 5.227375,
+          "setupMs": 0.02925,
+          "batchSamplesMs": [
+            4.114167,
+            4.103333,
+            5.227375,
+            4.615042,
+            6.916833,
+            5.905083,
+            7.094084
+          ],
+          "processMs": 44.72908300000017,
+          "agreement": {
+            "maxAbsError": 0.00000762939453125,
+            "mismatchCount": 0,
+            "topCandidateAgreement": {
+              "size": 256,
+              "shared": 256
+            }
+          }
+        },
+        {
+          "backend": "native-cpu",
+          "workers": 8,
+          "batchMs": 4.541917,
+          "setupMs": 0.048166,
+          "batchSamplesMs": [
+            4.709583,
+            4.525041,
+            4.528583,
+            4.518875,
+            4.541917,
+            4.581458,
+            4.781958
+          ],
+          "processMs": 39.417917000000216,
+          "agreement": {
+            "maxAbsError": 0.00000762939453125,
+            "mismatchCount": 0,
+            "topCandidateAgreement": {
+              "size": 256,
+              "shared": 256
+            }
+          }
+        },
+        {
+          "backend": "native-cpu",
+          "workers": 10,
+          "batchMs": 3.999625,
+          "setupMs": 0.074417,
+          "batchSamplesMs": [
+            3.999625,
+            3.981459,
+            3.930584,
+            3.831625,
+            4.569916,
+            5.157833,
+            4.532542
+          ],
+          "processMs": 36.544708999999784,
+          "agreement": {
+            "maxAbsError": 0.00000762939453125,
+            "mismatchCount": 0,
+            "topCandidateAgreement": {
+              "size": 256,
+              "shared": 256
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenarios": 262144,
+      "frameSolves": 23855104,
+      "parametersSha256": "5848754c98647af804512ffd4b4a6b42d739258547e1b9d40ebd68aae10eb8a9",
+      "calibration": {
+        "bestScore": 5.784594535827637,
+        "bestScenario": 140788,
+        "medialRmseBw": 0.29646111399289776,
+        "lateralRmseBw": 0.4912157855719366
+      },
+      "nativeCpu": [
+        {
+          "backend": "native-cpu",
+          "workers": 1,
+          "batchMs": 125.390208,
+          "setupMs": 0.119083,
+          "batchSamplesMs": [
+            129.691583,
+            125.714916,
+            123.956375,
+            126.083583,
+            123.834333,
+            125.390208,
+            125.067417
+          ],
+          "processMs": 1017.5259999999998,
+          "agreement": {
+            "maxAbsError": 0.0000152587890625,
+            "mismatchCount": 0,
+            "topCandidateAgreement": {
+              "size": 256,
+              "shared": 256
+            }
+          }
+        },
+        {
+          "backend": "native-cpu",
+          "workers": 4,
+          "batchMs": 35.48075,
+          "setupMs": 0.104167,
+          "batchSamplesMs": [
+            38.01325,
+            35.353375,
+            34.951209,
+            39.583834,
+            32.901416,
+            35.48075,
+            35.608875
+          ],
+          "processMs": 290.6365830000004,
+          "agreement": {
+            "maxAbsError": 0.0000152587890625,
+            "mismatchCount": 0,
+            "topCandidateAgreement": {
+              "size": 256,
+              "shared": 256
+            }
+          }
+        },
+        {
+          "backend": "native-cpu",
+          "workers": 8,
+          "batchMs": 29.65475,
+          "setupMs": 0.105083,
+          "batchSamplesMs": [
+            29.217375,
+            29.203708,
+            29.650625,
+            31.643334,
+            30.613166,
+            31.525,
+            29.65475
+          ],
+          "processMs": 247.9725830000002,
+          "agreement": {
+            "maxAbsError": 0.0000152587890625,
+            "mismatchCount": 0,
+            "topCandidateAgreement": {
+              "size": 256,
+              "shared": 256
+            }
+          }
+        },
+        {
+          "backend": "native-cpu",
+          "workers": 10,
+          "batchMs": 27.240875,
+          "setupMs": 0.149209,
+          "batchSamplesMs": [
+            27.366416,
+            27.240875,
+            29.244583,
+            28.09525,
+            25.947458,
+            27.210333,
+            26.768375
+          ],
+          "processMs": 231.65691700000025,
+          "agreement": {
+            "maxAbsError": 0.0000152587890625,
+            "mismatchCount": 0,
+            "topCandidateAgreement": {
+              "size": 256,
+              "shared": 256
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenarios": 1048576,
+      "frameSolves": 95420416,
+      "parametersSha256": "b924d7a3833c4ded39df48ab62cd0e3e3130c4c0bff82035b29ffb5298f6c4f4",
+      "calibration": {
+        "bestScore": 5.784594535827637,
+        "bestScenario": 140788,
+        "medialRmseBw": 0.29310777458133014,
+        "lateralRmseBw": 0.48071886096945693
+      },
+      "nativeCpu": [
+        {
+          "backend": "native-cpu",
+          "workers": 1,
+          "batchMs": 510.765,
+          "setupMs": 0.268166,
+          "batchSamplesMs": [
+            510.765,
+            505.913959,
+            505.963959,
+            516.492542,
+            510.392708,
+            515.6815,
+            516.889625
+          ],
+          "processMs": 4140.469875,
+          "agreement": {
+            "maxAbsError": 0.0000152587890625,
+            "mismatchCount": 0,
+            "topCandidateAgreement": {
+              "size": 256,
+              "shared": 256
+            }
+          }
+        },
+        {
+          "backend": "native-cpu",
+          "workers": 4,
+          "batchMs": 162.193917,
+          "setupMs": 0.311334,
+          "batchSamplesMs": [
+            160.687084,
+            168.733625,
+            175.156375,
+            168.166125,
+            143.07525,
+            162.193917,
+            154.564875
+          ],
+          "processMs": 1319.2964580000007,
+          "agreement": {
+            "maxAbsError": 0.0000152587890625,
+            "mismatchCount": 0,
+            "topCandidateAgreement": {
+              "size": 256,
+              "shared": 256
+            }
+          }
+        },
+        {
+          "backend": "native-cpu",
+          "workers": 8,
+          "batchMs": 116.352625,
+          "setupMs": 0.326125,
+          "batchSamplesMs": [
+            124.083,
+            112.88025,
+            132.662667,
+            127.316041,
+            110.007125,
+            110.97475,
+            116.352625
+          ],
+          "processMs": 972.3666670000002,
+          "agreement": {
+            "maxAbsError": 0.0000152587890625,
+            "mismatchCount": 0,
+            "topCandidateAgreement": {
+              "size": 256,
+              "shared": 256
+            }
+          }
+        },
+        {
+          "backend": "native-cpu",
+          "workers": 10,
+          "batchMs": 119.321625,
+          "setupMs": 0.305875,
+          "batchSamplesMs": [
+            118.933875,
+            121.977709,
+            104.428584,
+            119.321625,
+            108.992041,
+            122.138583,
+            130.625083
+          ],
+          "processMs": 965.6204170000001,
+          "agreement": {
+            "maxAbsError": 0.0000152587890625,
+            "mismatchCount": 0,
+            "topCandidateAgreement": {
+              "size": 256,
+              "shared": 256
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

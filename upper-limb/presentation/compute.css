@@ -1,0 +1,24 @@
+.compute-page { width: 100%; max-width: 1450px; margin: auto; padding-block: clamp(8px, 2.3vh, 28px); }
+.compute-methods { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: clamp(18px, 5vh, 45px); }
+.compute-methods button { padding: 7px 14px; border: 1px solid var(--line); border-radius: 4px; background: transparent; color: var(--ink); font-weight: 600; }
+.compute-methods button[aria-pressed=true] { background: var(--blue); color: white; border-color: var(--blue); }
+.compute-result { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(30px, 6vw, 105px); align-items: center; }
+.compute-result h2 { color: var(--ink); margin: 0; font: normal clamp(22px, 2.1vw, 32px)/1.15 Georgia, serif; letter-spacing: -.025em; }
+.compute-result p:not(.compute-number), .compute-footnote { color: var(--muted); line-height: 1.45; font-size: clamp(14px, 1.2vw, 18px); }
+.compute-summary { padding-left: clamp(14px, 1.7vw, 28px); border-left: 3px solid var(--blue); }
+.compute-summary p, .compute-chart p { margin: 8px 0 0; }
+.compute-number { color: var(--blue); font: normal clamp(68px, 7vw, 115px)/1.05 Georgia, serif; letter-spacing: -.06em; font-variant-numeric: lining-nums tabular-nums; }
+.compute-number span { font-size: .59em; margin-left: .04em; }
+.compute-chart dl { display: grid; gap: 16px; margin: 20px 0; }
+.compute-row dt { font-size: clamp(14px, 1.1vw, 17px); margin-bottom: 3px; }
+.compute-row dd { display: grid; grid-template-columns: minmax(0, 1fr) 6ch; gap: 12px; align-items: center; margin: 0; }
+.compute-track { background: var(--wash); height: 13px; }
+.compute-track span { display: block; height: 100%; }
+.compute-row strong { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.compute-footnote { margin: clamp(20px, 5vh, 52px) 0 0; border-top: 1px solid var(--line); padding-top: 14px; }
+.compute-footnote a { display: inline-block; text-underline-offset: .17em; }
+@media(max-width: 730px) {
+  .compute-result { grid-template-columns: 1fr; gap: 25px; }
+  .compute-methods button { padding: 6px 9px; font-size: 14px; }
+  .compute-chart dl { margin: 12px 0; gap: 9px; }
+}

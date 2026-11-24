@@ -1,0 +1,185 @@
+{
+  "provenance": {
+    "atlasSha256": "129e2cce9be7d132a25e27294c18187ab70552cb4fb8c336b65a76a306230a97",
+    "attachmentsSha256": "0d356d4f354d0c5baba87cce52c8a8f468cb1ee3c77f61331cf0e62266c62dd5",
+    "solverSourceSha256": "73f73809b0551ace42a70ed2659ef82476b6f8d485f8012609bd3192e0339d7c",
+    "contactInputSha256": "e528c29c531679153a8a983a65d0ffeb3cfbe31e30619f3ae5265593f582f513",
+    "wasmSha256": "aacc909314e9f0c3e4f0022120104f1b17e38f9e89ab712204ccc15e1aeffa5f",
+    "legacyAttachmentsSha256": "e036c764d32e8a593450f8c5f99bece84219f3f596f8c65c5889d3c080a026ea",
+    "motionSha256": "6e9c20bead364cadbb988b08c3e02ff548cfd0003e5aac7112bc8f2500074010",
+    "auditSourceSha256": "e092d298db2ccbf3d40b74c229ec7e64752a77b114a1b58346d70e660096fd0b"
+  },
+  "camera": {
+    "viewportPx": [
+      800,
+      550
+    ],
+    "halfHeightM": 0.171,
+    "targetM": [
+      0.003,
+      -0.004,
+      -0.021
+    ],
+    "yawFromLateralTowardAnteriorDeg": 26,
+    "elevationDeg": 10
+  },
+  "raySet": {
+    "referenceClip": "bertaux-hoa001",
+    "referenceFrame": 51,
+    "definition": "Four-connected components of pixels in the original OA frame where the TFL surface lies closer to the camera than the tract. Each component contains one marked pixel and is fully inside the search rectangle. The same screen rays are retained for every condition and the contrast frame.",
+    "topLeftOriginPixelIndices": [
+      [
+        422,
+        251
+      ],
+      [
+        422,
+        269
+      ],
+      [
+        433,
+        299
+      ]
+    ],
+    "sampleAt": "pixel centre (x+0.5, y+0.5)",
+    "componentPixelCounts": [
+      208,
+      90,
+      64
+    ],
+    "totalRays": 362,
+    "pixelSetSha256": "6deb2c4bb035019586c8a63092ab0c785e0194a640bf3eb03ad8250f6985e637"
+  },
+  "metric": "Signed orthographic distance along the camera ray, in mm. A positive value places the tract ahead of TFL. Both surfaces are tested independently on the atlas triangles with welded coordinates rounded to 1 micrometre. These screen-ray distances differ from clearance along the solver axis.",
+  "clearancesMm": [
+    0.125,
+    0.25,
+    0.5
+  ],
+  "frames": [
+    {
+      "clip": "bertaux-hoa001",
+      "frame": 51,
+      "phase": 0.51,
+      "conditions": [
+        {
+          "condition": "original",
+          "clearanceMm": null,
+          "centersBandAheadMm": [
+            -0.2069,
+            -0.11821,
+            -0.23875
+          ],
+          "minBandAheadMm": -0.31939,
+          "tflAheadRayCount": 362
+        },
+        {
+          "condition": "revisedAttachmentOnly",
+          "clearanceMm": null,
+          "centersBandAheadMm": [
+            0.61343,
+            0.75301,
+            0.08049
+          ],
+          "minBandAheadMm": -0.0212,
+          "tflAheadRayCount": 3
+        },
+        {
+          "condition": "revisedAttachmentAndContact",
+          "clearanceMm": 0.125,
+          "centersBandAheadMm": [
+            0.61343,
+            0.80144,
+            0.22863
+          ],
+          "minBandAheadMm": 0.12694,
+          "tflAheadRayCount": 0
+        },
+        {
+          "condition": "revisedAttachmentAndContact",
+          "clearanceMm": 0.25,
+          "centersBandAheadMm": [
+            0.61343,
+            0.83717,
+            0.33851
+          ],
+          "minBandAheadMm": 0.23681,
+          "tflAheadRayCount": 0
+        },
+        {
+          "condition": "revisedAttachmentAndContact",
+          "clearanceMm": 0.5,
+          "centersBandAheadMm": [
+            0.6446,
+            0.90817,
+            0.55826
+          ],
+          "minBandAheadMm": 0.45657,
+          "tflAheadRayCount": 0
+        }
+      ]
+    },
+    {
+      "clip": "predsim-hip-50",
+      "frame": 20,
+      "phase": 0.2,
+      "conditions": [
+        {
+          "condition": "original",
+          "clearanceMm": null,
+          "centersBandAheadMm": [
+            1.15526,
+            1.35007,
+            1.678
+          ],
+          "minBandAheadMm": 0.93877,
+          "tflAheadRayCount": 0
+        },
+        {
+          "condition": "revisedAttachmentOnly",
+          "clearanceMm": null,
+          "centersBandAheadMm": [
+            0.89663,
+            0.79593,
+            0.72283
+          ],
+          "minBandAheadMm": 0.45757,
+          "tflAheadRayCount": 0
+        },
+        {
+          "condition": "revisedAttachmentAndContact",
+          "clearanceMm": 0.125,
+          "centersBandAheadMm": [
+            0.89663,
+            0.81166,
+            0.74992
+          ],
+          "minBandAheadMm": 0.48467,
+          "tflAheadRayCount": 0
+        },
+        {
+          "condition": "revisedAttachmentAndContact",
+          "clearanceMm": 0.25,
+          "centersBandAheadMm": [
+            0.89663,
+            0.8757,
+            0.86045
+          ],
+          "minBandAheadMm": 0.5952,
+          "tflAheadRayCount": 0
+        },
+        {
+          "condition": "revisedAttachmentAndContact",
+          "clearanceMm": 0.5,
+          "centersBandAheadMm": [
+            0.91396,
+            1.00312,
+            1.08151
+          ],
+          "minBandAheadMm": 0.78234,
+          "tflAheadRayCount": 0
+        }
+      ]
+    }
+  ]
+}

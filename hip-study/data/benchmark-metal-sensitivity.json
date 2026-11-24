@@ -1,0 +1,140 @@
+{
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "numpy": "2.5.5",
+  "subjects": [
+    "H1L",
+    "H2R",
+    "H3L",
+    "H4L",
+    "H5L",
+    "H6R"
+  ],
+  "candidates": 1048576,
+  "offsetsMm": [
+    -15.0,
+    -12.5,
+    -10.0,
+    -7.5,
+    -5.0,
+    -2.5,
+    0.0,
+    2.5,
+    5.0,
+    7.5,
+    10.0,
+    12.5,
+    15.0
+  ],
+  "resamples": 462,
+  "countVectorsSha256": "3e0bfc853b2a17bcf83926e421cf72e1ea1b0717df38ac2e90c9d90db0306908",
+  "frameCount": 1212,
+  "seed": 20261122,
+  "threadgroupSize": 128,
+  "anchorPilotSize": 4096,
+  "anchorMixtures": 52,
+  "sourceSha256": {
+    "compute/search.cu": "3e3ee3d1c8f1059e8339f1b037406112a60df34c5df80372597f412d26e64afb",
+    "compute/study.py": "0bf8fdc206623bbc281aeec5268cb1d45ad432f9a9c1841227f6951f977d654f",
+    "compute/bootstrap.py": "49642f4ae31eff7471c9c3163e21a830b9e6bea18fcafa300feb35ac47acf9fd",
+    "compute/modal_benchmark.py": "f7f9d20ae31b2c1db0b52f8b070a22c89aa4ae8f558ab21ccde91482596ebaed",
+    "metal/benchmark.py": "f15b4a5952ad30f3e4c9d19acea62188504f4df05cf18b8aa8e9b7cac9c042a3",
+    "metal/sensitivity.py": "bdfb58477df931e62d7a2b8f44f5c134bb0aa2ea3b43326d59132c762fb42b3d",
+    "metal/sensitivity.metal": "77d661922126a4ad155236e0d7512c09b8fb339cf409401aeb3f7f97d52e1662",
+    "metal/sensitivity.mm": "2b8cbbdf97abe22ddeb7fa45aaa0027009db30ce2596fa1728554720c986de20",
+    "data/geometry.json": "5d4d6e39f9a3c9c5cb998a0954b1c2e15a694b44f91a1d4672c0d425fdb6e9b4",
+    "data/implants.json": "8dd85435ef4ab5f1897f848efa6b2c388cef3cff55a048f8e739e01c4ce2bb25"
+  },
+  "referenceWinnersInt64LeSha256": "7e184eef8ba5c56017550c49d1e16d2ca8930f5e774b5a74d425dfe22f56a636",
+  "device": "Apple M4",
+  "compileHostSeconds": 0.42329720800080395,
+  "initializeMetalSeconds": 0.049057790999540885,
+  "effectiveMslSha256": "f7c14244bfeab119304f58aad11875ad275c69e504d82ab5ab95a7f93b6514a5",
+  "firstLocalSeconds": 1.499439500000335,
+  "parameterSha256": "b89ee48884f724a4345b8f7ccbd0c501f91700e76f35a872bfc2a1b9655f3b50",
+  "pareto": {
+    "warmEndToEndSamplesSeconds": [
+      0.6871425420004016,
+      0.6949119579994658,
+      0.644499915999404,
+      0.6360504580006818,
+      0.6337761250006224
+    ],
+    "warmEndToEndSeconds": 0.644499915999404,
+    "deviceSamplesSeconds": [
+      0.5355507083331759,
+      0.5356152499998643,
+      0.481776083333898,
+      0.48157304166670656,
+      0.48149770833333605
+    ],
+    "deviceSeconds": 0.481776083333898,
+    "dispatchAndWaitSamplesSeconds": [
+      0.5372160409970093,
+      0.537338041998737,
+      0.48338304099888774,
+      0.4829278749966761,
+      0.48344550000183517
+    ],
+    "dispatchAndWaitSeconds": 0.48344550000183517,
+    "firstExecutionSeconds": 0.6644880409994585,
+    "candidatesRetainedPerOffset": [
+      81970,
+      76733,
+      91494,
+      75087,
+      57045,
+      50890,
+      40079,
+      43401,
+      24463,
+      19925,
+      15656,
+      13133,
+      9092
+    ],
+    "winnerAgreement": 6006,
+    "weightedFitsEvaluated": 276723216,
+    "allCandidateOffsetResamples": 6297747456
+  },
+  "exhaustive": {
+    "warmEndToEndSamplesSeconds": [
+      1.2500986670002021,
+      1.1556367499997577,
+      1.1548405000003186
+    ],
+    "warmEndToEndSeconds": 1.1556367499997577,
+    "deviceSamplesSeconds": [
+      1.086171750000176,
+      1.0011395416668165,
+      1.0010379999994257
+    ],
+    "deviceSeconds": 1.0011395416668165,
+    "dispatchAndWaitSamplesSeconds": [
+      1.087559624997084,
+      1.0025885840004776,
+      1.0030225829978008
+    ],
+    "dispatchAndWaitSeconds": 1.0030225829978008,
+    "firstExecutionSeconds": 1.215325333000692,
+    "candidatesRetainedPerOffset": [
+      1048576,
+      1048576,
+      1048576,
+      1048576,
+      1048576,
+      1048576,
+      1048576,
+      1048576,
+      1048576,
+      1048576,
+      1048576,
+      1048576,
+      1048576
+    ],
+    "winnerAgreement": 6006,
+    "weightedFitsEvaluated": 6297747456,
+    "allCandidateOffsetResamples": 6297747456
+  },
+  "method": "Score all anatomies in six participants for each assumed lever offset. Pareto mode drops an anatomy only if a pilot anatomy has strictly lower losses in all six participants. Every resample has nonnegative weights summing to six, hence every discarded candidate has a strictly worse fit for every resample. Exhaustive mode retains all candidates. Both modes take exact weighted sums on a verified 2^-34 fixed-point lattice and resolve ties by smallest candidate ID. A runtime check verifies every participant loss converts exactly and every sum fits in the 53-bit significand of the CPU/H100 FP64 reference. All returned IDs were independently checked.",
+  "timingScope": "Warm wall starts before regenerating the population and applying offsets to preprocessed frames. Includes all temporary allocations, transfers into Metal buffers, encoding, execution, synchronization and copying 6,006 winning indices back into NumPy. One untimed execution per mode. Warm runs reuse the compiled pipelines. The first local time includes native host compilation, library loading, Metal initialization, pipeline compilation and the first full Pareto execution. Python startup, clinical feature preparation, bootstrap enumeration, CPU oracle, checks and reporting are outside all timers. OS shader cache state is uncontrolled. Device time uses Metal command-buffer timestamps."
+}

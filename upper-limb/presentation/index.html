@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f7f5ef">
+  <link rel="icon" href="data:,">
+  <title>Human Simulator · The walking body</title>
+  <link rel="stylesheet" href="./shell.css">
+</head>
+<body>
+<div class="deck" id="deck">
+  <header class="deck-head">
+    <a href="#start" class="deck-brand" aria-label="Human Simulator start">
+      <svg aria-hidden="true" width="34" height="34" viewBox="0 0 32 32" fill="none"><g stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M5 23L12 16L10 9L16 4L21 11L17 17L25 26M12 16L17 17L26 11"/><circle cx="16" cy="4" r="2.2"/><circle cx="12" cy="16" r="2.4"/><circle cx="17" cy="17" r="2.2"/></g></svg>
+      <span>Human Simulator</span>
+    </a>
+    <div class="deck-tools">
+      <button id="chapters" aria-haspopup="dialog" title="All chapters"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4h3v3H3zm6 1h8M3 12h3v3H3zm6 1h8"/></svg><span>Chapters</span></button>
+      <button id="screen" title="Enter full screen" aria-label="Enter full screen"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 7V3h4m6 0h4v4m0 6v4h-4m-6 0H3v-4"/></svg></button>
+    </div>
+  </header>
+  <main class="deck-main" id="deck-main" tabindex="-1">
+    <header class="panel-heading" id="heading"><div><h1 id="headline"></h1><p id="intro"></p></div></header>
+    <section id="scene" aria-label="Interactive chapter"></section>
+  </main>
+  <footer class="deck-foot">
+    <button id="previous" class="step-arrow" aria-label="Previous chapter" title="Previous chapter (left arrow)">&#8592;</button>
+    <span class="position" id="position"></span>
+    <nav id="progress" aria-label="Chapter navigation"></nav>
+    <button class="step-next" id="next"><span id="next-name">Continue</span><span aria-hidden="true">&#8594;</span></button>
+  </footer>
+</div>
+<dialog id="index-dialog" aria-labelledby="index-title"><div class="dialog-top"><h2 id="index-title">Chapters</h2><button id="close-index" aria-label="Close chapters">×</button></div><nav id="index-list" aria-label="All chapters"></nav></dialog>
+<script type="module" src="./deck.js"></script>
+</body>
+</html>

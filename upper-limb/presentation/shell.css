@@ -1,0 +1,100 @@
+:root {
+  color-scheme: light;
+  --page: #f7f5ef;
+  --ink: #25322f;
+  --muted: #516062;
+  --blue: #365f79;
+  --line: #cdcfc5;
+  --wash: #e9e8e0;
+  --edge: clamp(18px, 3.2vw, 64px);
+  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  background: var(--page);
+  color: var(--ink);
+}
+* { box-sizing: border-box }
+body { margin: 0 }
+button, input, select { font: inherit }
+button, a, input, select { touch-action: manipulation }
+button { cursor: pointer }
+button:disabled { cursor: default }
+a { color: var(--blue) }
+:focus-visible { outline: 2px solid #a3502f; outline-offset: 3px }
+[hidden] { display: none !important }
+.deck { height: 100vh; height: 100dvh; display: flex; flex-direction: column; background: var(--page); overflow: hidden }
+.deck-head, .deck-foot {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: var(--edge);
+  z-index: 3;
+  background: var(--page);
+}
+.deck-head { height: 54px; border-bottom: 1px solid var(--line) }
+.deck-brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); font-weight: 650; letter-spacing: -.035em; text-decoration: none; font-size: 20px }
+.deck-brand svg { color: var(--blue); width: 29px }
+.deck-tools { display: flex; align-items: center; gap: 10px }
+.deck-tools button, .step-arrow, .dialog-top button {
+  border: 1px solid transparent;
+  color: var(--ink);
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+.deck-tools button:hover, .step-arrow:hover:enabled, .dialog-top button:hover { background: var(--wash); border-color: var(--line) }
+.deck-tools svg { height: 19px; width: 19px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round }
+.deck-main { flex: 1; min-height: 0; display: flex; flex-direction: column; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #aaa99f var(--page); outline: none }
+.panel-heading { padding: clamp(12px, 2.6vh, 28px) var(--edge) 14px; flex: none }
+.panel-heading h1 { font: normal clamp(29px, 3.2vw, 48px)/1.05 Georgia, "Times New Roman", serif; letter-spacing: -.04em; margin: 0 0 6px; color: var(--ink) }
+.panel-heading p { color: var(--muted); font-size: clamp(13px, 1.16vw, 17px); max-width: 110ch; line-height: 1.45; margin: 0 }
+#scene { flex: 1 0 auto; position: relative; display: flex; flex-direction: column; min-height: 0; padding: 0 var(--edge) clamp(10px, 1.8vh, 22px) }
+.view-slot { flex: 1; min-height: 0; min-width: 0; position: relative; display: flex; flex-direction: column }
+.deck[data-scene=start] #scene { padding: 0 }
+.panel-status { margin: auto; color: var(--muted); padding: 40px; text-align: center }
+.panel-status button { background: #fffdf8; border: 1px solid var(--line); color: var(--ink); padding: 7px 12px; border-radius: 4px }
+.deck-foot { height: 47px; border-top: 1px solid var(--line); gap: 13px }
+.step-arrow { font-size: 20px; min-width: 32px; padding: 3px 6px }
+.step-arrow:disabled { opacity: .32 }
+.position { font: 12px ui-monospace, Menlo, monospace; color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums }
+.step-next { border: 0; background: transparent; color: var(--blue); font-size: 13px; font-weight: 650; display: flex; align-items: center; gap: 12px; padding: 8px 0 8px 8px }
+.step-next:hover { text-decoration: underline; text-underline-offset: 3px }
+.step-next span:last-child { font-size: 20px }
+.deck-foot nav { display: flex; align-items: center; flex: 1; max-width: 460px; margin: 0 auto; gap: 5px }
+.deck-foot nav a { flex: 1; border: 0; display: block; padding: 14px 0; text-decoration: none }
+.deck-foot nav a::after { content: ""; height: 3px; display: block; background: #d6d7cc; border-radius: 2px }
+.deck-foot nav a[aria-current=step]::after { background: var(--blue) }
+.deck-foot nav a:hover::after { background: #798c95 }
+#index-dialog { width: min(450px, calc(100vw - 30px)); max-height: 85dvh; overflow: auto; overscroll-behavior: contain; padding: 20px; color: var(--ink); background: #faf9f3; border: 1px solid #b6b8ae; border-radius: 8px; box-shadow: 0 16px 60px #24312c33 }
+#index-dialog::backdrop { background: #1e292b78 }
+.dialog-top { display: flex; align-items: center; justify-content: space-between }
+.dialog-top h2 { font: normal 32px Georgia, serif; margin: 0 0 8px }
+.dialog-top button { font-size: 25px }
+.dialog-top + nav { display: grid }
+.dialog-top + nav a { display: flex; align-items: baseline; gap: 16px; color: var(--ink); border-top: 1px solid var(--line); text-decoration: none; padding: 10px 6px; font-size: 15px }
+.dialog-top + nav a span { font: 12px ui-monospace, Menlo, monospace; color: var(--muted) }
+.dialog-top + nav a[aria-current=step], .dialog-top + nav a:hover { color: var(--blue); background: var(--wash) }
+@media (min-width: 1700px) { .deck-main { padding-inline: max(0px, calc((100vw - 1780px) / 2)) } }
+@media (max-width: 700px) {
+  .deck-head { height: 46px }
+  .deck-brand { font-size: 17px }
+  .deck-tools { gap: 2px }
+  .deck-tools button { padding: 5px 6px }
+  .deck-tools svg { height: 17px }
+  .deck-foot { height: calc(46px + env(safe-area-inset-bottom, 0px)); padding-bottom: env(safe-area-inset-bottom, 0px); gap: 8px }
+  .deck-foot nav { max-width: 130px; gap: 3px }
+  .step-next { font-size: 12px; gap: 6px; max-width: 42vw }
+  .panel-heading { padding: 16px 16px 12px }
+  #scene { padding: 0 16px 18px }
+  .panel-heading p { font-size: 13px }
+  .position { font-size: 11px }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .view-slot { animation: arrive .2s ease-out }
+  @keyframes arrive { from { opacity: .7 } to { opacity: 1 } }
+}

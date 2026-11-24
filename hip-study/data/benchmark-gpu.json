@@ -1,0 +1,128 @@
+{
+  "hardware": {
+    "device": "NVIDIA H100 80GB HBM3",
+    "gpuMemoryBytes": 85031190528,
+    "multiprocessors": 132,
+    "computeCapability": "90",
+    "cudaRuntime": 12090,
+    "cupy": "13.6.0",
+    "driverVersion": "620.70.06"
+  },
+  "compileMs": 131.12309999999994,
+  "runs": [
+    {
+      "candidates": 4096,
+      "frames": 1212,
+      "blockThreads": 128,
+      "kernelMs": 0.26528000831604004,
+      "kernelSamplesMs": [
+        0.27375999093055725,
+        0.2680639922618866,
+        0.26528000831604004,
+        0.26345598697662354,
+        0.26716798543930054,
+        0.26476800441741943,
+        0.26396799087524414
+      ],
+      "uploadAndAllocateMs": 2.54364099999993,
+      "downloadMs": 0.06665399999983279,
+      "candidateFramesPerSecond": 18713630293.941124,
+      "maxAbsoluteError": 0.0,
+      "topK": 256,
+      "topKAgreement": 256,
+      "winningCandidate": 407,
+      "winningCpuCandidate": 407,
+      "allClose": true
+    },
+    {
+      "candidates": 65536,
+      "frames": 1212,
+      "blockThreads": 128,
+      "kernelMs": 0.28492799401283264,
+      "kernelSamplesMs": [
+        0.2861120104789734,
+        0.28787198662757874,
+        0.28492799401283264,
+        0.2826240062713623,
+        0.28518399596214294,
+        0.28147199749946594,
+        0.2823359966278076
+      ],
+      "uploadAndAllocateMs": 1.4118739999999796,
+      "downloadMs": 0.12363600000009356,
+      "candidateFramesPerSecond": 278770895345.6593,
+      "maxAbsoluteError": 0.0,
+      "topK": 256,
+      "topKAgreement": 256,
+      "winningCandidate": 18127,
+      "winningCpuCandidate": 18127,
+      "allClose": true
+    },
+    {
+      "candidates": 262144,
+      "frames": 1212,
+      "blockThreads": 128,
+      "kernelMs": 0.5270079970359802,
+      "kernelSamplesMs": [
+        0.5297279953956604,
+        0.5281919836997986,
+        0.5246719717979431,
+        0.5270079970359802,
+        0.5240319967269897,
+        0.5289279818534851,
+        0.5239359736442566
+      ],
+      "uploadAndAllocateMs": 8.85977899999979,
+      "downloadMs": 0.248462999999699,
+      "candidateFramesPerSecond": 602872308934.4478,
+      "maxAbsoluteError": 0.0,
+      "topK": 256,
+      "topKAgreement": 256,
+      "winningCandidate": 94425,
+      "winningCpuCandidate": 94425,
+      "allClose": true
+    },
+    {
+      "candidates": 1048576,
+      "frames": 1212,
+      "blockThreads": 128,
+      "kernelMs": 1.9300800561904907,
+      "kernelSamplesMs": [
+        1.9338239431381226,
+        1.9309760332107544,
+        1.9304319620132446,
+        1.928447961807251,
+        1.9300800561904907,
+        1.9282560348510742,
+        1.929535984992981
+      ],
+      "uploadAndAllocateMs": 45.65902399999988,
+      "downloadMs": 2.993283999999985,
+      "candidateFramesPerSecond": 658456683143.1836,
+      "maxAbsoluteError": 0.0,
+      "topK": 256,
+      "topKAgreement": 256,
+      "winningCandidate": 94425,
+      "winningCpuCandidate": 94425,
+      "allClose": true
+    }
+  ],
+  "rpcWallSeconds": 67.31644783299998,
+  "singlePassRpcSeconds": 7.820965999999316,
+  "singlePassKernelMs": 1.9744960069656372,
+  "compact": {
+    "seed": 20261122,
+    "candidates": 1048576,
+    "rpcSeconds": 1.1455626659999325,
+    "requestArrayBytes": 39050,
+    "topKAgreement": 256,
+    "parametersSha256": "b89ee48884f724a4345b8f7ccbd0c501f91700e76f35a872bfc2a1b9655f3b50",
+    "samplingMs": 383.6286290000004,
+    "kernelMs": 1.983232021331787
+  },
+  "modalAppId": "ap-uioIyPm0SsheyGRCc6DQOt",
+  "created": "2026-11-22T12:07:06.009833+00:00",
+  "kernelSha256": "3e3ee3d1c8f1059e8339f1b037406112a60df34c5df80372597f412d26e64afb",
+  "payloadSha256": "e36e39433b97438530ccc57fc28fb78fc141bddcfb84b370bb357a99b23ec300",
+  "notes": "Kernel time uses CUDA events after warm-up. RPC wall time includes scheduling, startup, network, compilation, and all repetitions, excluding app initialization."
+}

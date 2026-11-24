@@ -1,0 +1,35 @@
+.pressure-card { margin-top: 14px; overflow: hidden; }
+.pressure-head { display: flex; align-items: end; justify-content: space-between; flex-wrap: wrap; gap: 11px 18px; padding: clamp(14px, 2vw, 23px); }
+.pressure-head p { margin-top: 3px; font-size: 13px; }
+.pressure-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(245px, 29%); }
+.pressure-stage { position: relative; display: grid; place-items: center; min-width: 0; min-height: 310px; background: #122726; color: #e0e7d6; }
+.pressure-stage canvas[data-pressure-scene] { display: block; position: absolute; inset: 0; width: 100%; height: 100%; touch-action: none; cursor: grab; }
+.pressure-stage canvas[data-pressure-scene]:active { cursor: grabbing; }
+.pressure-stage canvas[data-pressure-map] { width: min(76%, 245px); display: block; image-rendering: pixelated; cursor: crosshair; }
+.pressure-stage-caption { position: absolute; top: 12px; left: clamp(11px, 2vw, 23px); right: clamp(11px, 2vw, 23px); display: flex; align-items: center; justify-content: space-between; gap: 8px; pointer-events: none; }
+.pressure-stage-caption span, .pressure-probe { color: #e0e7d6; text-shadow: 0 1px 2px #122726; font: 500 11px/1.3 var(--mono); }
+.pressure-probe { position: absolute; bottom: 12px; left: clamp(11px, 2vw, 23px); pointer-events: none; background: #122726e8; padding: 4px 6px; border-radius: 3px; }
+.pressure-stage-caption button { min-height: 31px; padding: 4px 8px; border: 1px solid #aac0a577; border-radius: 4px; background: #122726e8; color: inherit; font-size: 11px; pointer-events: auto; }
+.pressure-controls { display: flex; flex-direction: column; gap: 10px; padding: clamp(14px, 2vw, 22px); background: #edf0e8; }
+.pressure-controls .muted { font-size: 12px; }
+.pressure-controls a { margin-top: auto; font-size: 11px; }
+.pressure-filters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.pressure-filters label { display: grid; gap: 3px; color: var(--muted); font-size: 11px; font-weight: 650; }
+.pressure-filters select { width: 100%; min-height: 34px; padding: 4px 6px; border: 1px solid #afbab0; border-radius: 4px; background: var(--surface); color: var(--ink); font-size: 12px; }
+.pressure-controls dl { border-top: 1px solid var(--line); padding-top: 9px; }
+.pressure-controls dt { color: var(--muted); font-size: 11px; }
+.pressure-controls dd { font: 500 clamp(27px, 3.2vw, 37px)/1.12 var(--display); font-variant-numeric: tabular-nums; }
+.pressure-switch { display: inline-flex; padding: 3px; gap: 3px; border: 1px solid var(--line); border-radius: 5px; background: #edf0e7; }
+.pressure-switch button { min-height: 34px; padding: 5px 11px; border: 1px solid transparent; border-radius: 3px; background: none; color: var(--muted); font-size: 12px; font-weight: 650; }
+.pressure-switch button[aria-pressed="true"] { border-color: var(--line); background: var(--surface); color: var(--ink); }
+.pressure-switch button:disabled { opacity: .55; cursor: default; }
+.pressure-legend { display: flex; align-items: center; gap: 6px; color: var(--muted); font: 500 10px/1.4 var(--mono); white-space: nowrap; }
+.pressure-legend i { flex: 1; height: 7px; border-radius: 3px; }
+.pressure-error { padding: 18px; color: var(--muted); }
+@media (max-width: 650px) {
+  .pressure-layout { grid-template-columns: minmax(0, 1fr); }
+  .pressure-stage { min-height: clamp(275px, 75vw, 350px); }
+}
+@media (pointer: coarse) {
+  .pressure-stage canvas[data-pressure-scene] { touch-action: pan-y !important; }
+}

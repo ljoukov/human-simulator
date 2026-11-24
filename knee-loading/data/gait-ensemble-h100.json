@@ -1,0 +1,219 @@
+{
+  "createdAt": "2026-11-22T12:06:44.395Z",
+  "hardware": {
+    "runtime": "v24.13.0",
+    "platform": "linux",
+    "arch": "x64",
+    "cpu": "unknown",
+    "logicalCores": 18
+  },
+  "workload": {
+    "mode": "quasi-static knee contact calibration",
+    "source": "https://github.com/gilserrancoli/ReducePoly_forMSK/tree/00b6f94ee8bd2f60ae5b6f07a114f1aade089cb8/ExampleTrackingSimulations/OpenSimModel/subject_GC",
+    "subject": "GC4-JW",
+    "training": "ngait_og5-stance-1",
+    "frames": 91,
+    "seed": 4176125571,
+    "poolSize": 1048576,
+    "retainedCount": 256,
+    "holdout": [
+      "ngait_og5-stance-2",
+      "bouncy7-stance-1",
+      "bouncy7-stance-2",
+      "mtpgait3-stance-1",
+      "mtpgait3-stance-2",
+      "ngait_tm_fast1-stance-1"
+    ],
+    "holdoutFrames": 546,
+    "frameInputsSha256": "1e1ce154d2fa08fb48e090667a0b1659f478d157588d13a7d6f76db25c8ea349"
+  },
+  "repeats": 7,
+  "absTolerance": 2e-05,
+  "relTolerance": 1e-05,
+  "rows": [
+    {
+      "scenarios": 1024,
+      "frameSolves": 93184,
+      "parametersSha256": "993627d62dcf67882615e68b29b2ef8ebdc77705ec15b7e82f961ac51d650ba3",
+      "calibration": {
+        "bestScore": 7.189942359924316,
+        "bestScenario": 508,
+        "medialRmseBw": 0.32838943675441074,
+        "lateralRmseBw": 0.5522888460441621
+      },
+      "cuda": {
+        "device": "NVIDIA H100 80GB HBM3",
+        "computeCapability": "9.0",
+        "smCount": 132,
+        "runtimeVersion": 12080,
+        "driverVersion": 13050,
+        "frames": 91,
+        "scenarios": 1024,
+        "repeats": 7,
+        "gpuSetupMs": 397.836509,
+        "optimized": {
+          "kernelMs": 0.0114559997,
+          "batchMs": 0.032561
+        },
+        "blockBaseline": {
+          "kernelMs": 0.0113279996,
+          "batchMs": 0.033012
+        },
+        "baselineAgreement": {
+          "maxAbsoluteError": 3.81469727e-06,
+          "maxRelativeError": 2.16420142e-07,
+          "outOfTolerance": 0
+        },
+        "processMs": 514.3303099999994,
+        "agreement": {
+          "maxAbsError": 7.62939453125e-06,
+          "mismatchCount": 0,
+          "topCandidateAgreement": {
+            "size": 256,
+            "shared": 256
+          }
+        }
+      }
+    },
+    {
+      "scenarios": 32768,
+      "frameSolves": 2981888,
+      "parametersSha256": "4fdbc12c4a01efc3e60a76522e97566bfb530abf6bed7ee4c57fccd586cf5b0e",
+      "calibration": {
+        "bestScore": 5.972273349761963,
+        "bestScenario": 6630,
+        "medialRmseBw": 0.30520130745792395,
+        "lateralRmseBw": 0.5074304761028339
+      },
+      "cuda": {
+        "device": "NVIDIA H100 80GB HBM3",
+        "computeCapability": "9.0",
+        "smCount": 132,
+        "runtimeVersion": 12080,
+        "driverVersion": 13050,
+        "frames": 91,
+        "scenarios": 32768,
+        "repeats": 7,
+        "gpuSetupMs": 261.580986,
+        "optimized": {
+          "kernelMs": 0.0329920016,
+          "batchMs": 0.221241
+        },
+        "blockBaseline": {
+          "kernelMs": 0.0483839996,
+          "batchMs": 0.231452
+        },
+        "baselineAgreement": {
+          "maxAbsoluteError": 1.52587891e-05,
+          "maxRelativeError": 2.36816037e-07,
+          "outOfTolerance": 0
+        },
+        "processMs": 395.3314129999999,
+        "agreement": {
+          "maxAbsError": 7.62939453125e-06,
+          "mismatchCount": 0,
+          "topCandidateAgreement": {
+            "size": 256,
+            "shared": 256
+          }
+        }
+      }
+    },
+    {
+      "scenarios": 262144,
+      "frameSolves": 23855104,
+      "parametersSha256": "5848754c98647af804512ffd4b4a6b42d739258547e1b9d40ebd68aae10eb8a9",
+      "calibration": {
+        "bestScore": 5.784594535827637,
+        "bestScenario": 140788,
+        "medialRmseBw": 0.29646111399289776,
+        "lateralRmseBw": 0.4912157855719366
+      },
+      "cuda": {
+        "device": "NVIDIA H100 80GB HBM3",
+        "computeCapability": "9.0",
+        "smCount": 132,
+        "runtimeVersion": 12080,
+        "driverVersion": 13050,
+        "frames": 91,
+        "scenarios": 262144,
+        "repeats": 7,
+        "gpuSetupMs": 328.724298,
+        "optimized": {
+          "kernelMs": 0.164256006,
+          "batchMs": 1.204182
+        },
+        "blockBaseline": {
+          "kernelMs": 0.281823993,
+          "batchMs": 1.317839
+        },
+        "baselineAgreement": {
+          "maxAbsoluteError": 1.52587891e-05,
+          "maxRelativeError": 2.36816037e-07,
+          "outOfTolerance": 0
+        },
+        "processMs": 517.1859849999992,
+        "agreement": {
+          "maxAbsError": 1.52587890625e-05,
+          "mismatchCount": 0,
+          "topCandidateAgreement": {
+            "size": 256,
+            "shared": 256
+          }
+        }
+      }
+    },
+    {
+      "scenarios": 1048576,
+      "frameSolves": 95420416,
+      "parametersSha256": "b924d7a3833c4ded39df48ab62cd0e3e3130c4c0bff82035b29ffb5298f6c4f4",
+      "calibration": {
+        "bestScore": 5.784594535827637,
+        "bestScenario": 140788,
+        "medialRmseBw": 0.29310777458133014,
+        "lateralRmseBw": 0.48071886096945693
+      },
+      "cuda": {
+        "device": "NVIDIA H100 80GB HBM3",
+        "computeCapability": "9.0",
+        "smCount": 132,
+        "runtimeVersion": 12080,
+        "driverVersion": 13050,
+        "frames": 91,
+        "scenarios": 1048576,
+        "repeats": 7,
+        "gpuSetupMs": 712.520326,
+        "optimized": {
+          "kernelMs": 0.627776027,
+          "batchMs": 4.733315
+        },
+        "blockBaseline": {
+          "kernelMs": 1.13753605,
+          "batchMs": 5.242772
+        },
+        "baselineAgreement": {
+          "maxAbsoluteError": 1.52587891e-05,
+          "maxRelativeError": 2.38317498e-07,
+          "outOfTolerance": 0
+        },
+        "processMs": 921.1225729999996,
+        "agreement": {
+          "maxAbsError": 1.52587890625e-05,
+          "mismatchCount": 0,
+          "topCandidateAgreement": {
+            "size": 256,
+            "shared": 256
+          }
+        }
+      }
+    }
+  ],
+  "modal": {
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "gpuMemoryMiB": 81559,
+    "driverVersion": "620.70.06",
+    "compileSeconds": 3.3434980000000003,
+    "runnerSeconds": 7.796636969,
+    "remoteCallSeconds": 45.94369974999972
+  }
+}

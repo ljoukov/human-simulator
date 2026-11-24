@@ -1,0 +1,164 @@
+{
+  "createdAt": "2026-11-22T12:06:09.358Z",
+  "hardware": {
+    "runtime": "v26.3.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "cpu": "Apple M4",
+    "logicalCores": 10
+  },
+  "workload": {
+    "mode": "quasi-static knee contact calibration",
+    "source": "https://github.com/gilserrancoli/ReducePoly_forMSK/tree/00b6f94ee8bd2f60ae5b6f07a114f1aade089cb8/ExampleTrackingSimulations/OpenSimModel/subject_GC",
+    "subject": "GC4-JW",
+    "training": "ngait_og5-stance-1",
+    "frames": 91,
+    "seed": 4176125571,
+    "poolSize": 1048576,
+    "retainedCount": 256,
+    "holdout": [
+      "ngait_og5-stance-2",
+      "bouncy7-stance-1",
+      "bouncy7-stance-2",
+      "mtpgait3-stance-1",
+      "mtpgait3-stance-2",
+      "ngait_tm_fast1-stance-1"
+    ],
+    "holdoutFrames": 546,
+    "frameInputsSha256": "1e1ce154d2fa08fb48e090667a0b1659f478d157588d13a7d6f76db25c8ea349"
+  },
+  "repeats": 7,
+  "absTolerance": 0.00002,
+  "relTolerance": 0.00001,
+  "rows": [
+    {
+      "scenarios": 1024,
+      "frameSolves": 93184,
+      "parametersSha256": "993627d62dcf67882615e68b29b2ef8ebdc77705ec15b7e82f961ac51d650ba3",
+      "calibration": {
+        "bestScore": 7.189942359924316,
+        "bestScenario": 508,
+        "medialRmseBw": 0.32838943675441074,
+        "lateralRmseBw": 0.5522888460441621
+      },
+      "webGpu": {
+        "adapter": "Apple M4",
+        "batchMs": 13.608041999999841,
+        "batchSamplesMs": [
+          13.657625000000053,
+          12.778999999999996,
+          13.608041999999841,
+          12.649834000000283,
+          13.651124999999865,
+          13.62658300000021,
+          12.462375000000065
+        ],
+        "agreement": {
+          "maxAbsError": 0.00002288818359375,
+          "mismatchCount": 0,
+          "topCandidateAgreement": {
+            "size": 256,
+            "shared": 256
+          }
+        }
+      }
+    },
+    {
+      "scenarios": 32768,
+      "frameSolves": 2981888,
+      "parametersSha256": "4fdbc12c4a01efc3e60a76522e97566bfb530abf6bed7ee4c57fccd586cf5b0e",
+      "calibration": {
+        "bestScore": 5.972273349761963,
+        "bestScenario": 6630,
+        "medialRmseBw": 0.30520130745792395,
+        "lateralRmseBw": 0.5074304761028339
+      },
+      "webGpu": {
+        "adapter": "Apple M4",
+        "batchMs": 16.28604200000018,
+        "batchSamplesMs": [
+          17.64412500000003,
+          15.027458000000024,
+          15.210665999999947,
+          16.351667000000134,
+          16.32079200000021,
+          16.28604200000018,
+          15.316082999999708
+        ],
+        "agreement": {
+          "maxAbsError": 0.000030517578125,
+          "mismatchCount": 0,
+          "topCandidateAgreement": {
+            "size": 256,
+            "shared": 256
+          }
+        }
+      }
+    },
+    {
+      "scenarios": 262144,
+      "frameSolves": 23855104,
+      "parametersSha256": "5848754c98647af804512ffd4b4a6b42d739258547e1b9d40ebd68aae10eb8a9",
+      "calibration": {
+        "bestScore": 5.784594535827637,
+        "bestScenario": 140788,
+        "medialRmseBw": 0.29646111399289776,
+        "lateralRmseBw": 0.4912157855719366
+      },
+      "webGpu": {
+        "adapter": "Apple M4",
+        "batchMs": 32.1211659999999,
+        "batchSamplesMs": [
+          31.724291999999878,
+          36.92195899999979,
+          30.964709000000084,
+          28.27150000000006,
+          32.21374999999989,
+          32.69954200000029,
+          32.1211659999999
+        ],
+        "agreement": {
+          "maxAbsError": 0.000030517578125,
+          "mismatchCount": 0,
+          "topCandidateAgreement": {
+            "size": 256,
+            "shared": 256
+          }
+        }
+      }
+    },
+    {
+      "scenarios": 1048576,
+      "frameSolves": 95420416,
+      "parametersSha256": "b924d7a3833c4ded39df48ab62cd0e3e3130c4c0bff82035b29ffb5298f6c4f4",
+      "calibration": {
+        "bestScore": 5.784594535827637,
+        "bestScenario": 140788,
+        "medialRmseBw": 0.29310777458133014,
+        "lateralRmseBw": 0.48071886096945693
+      },
+      "webGpu": {
+        "adapter": "Apple M4",
+        "batchMs": 58.10570900000039,
+        "batchSamplesMs": [
+          67.03154200000017,
+          64.85429199999999,
+          59.119500000000244,
+          54.563040999999885,
+          58.10570900000039,
+          53.738124999999854,
+          56.02820799999972
+        ],
+        "agreement": {
+          "maxAbsError": 0.0000457763671875,
+          "mismatchCount": 0,
+          "topCandidateAgreement": {
+            "size": 256,
+            "shared": 256
+          }
+        }
+      }
+    }
+  ],
+  "webGpuSetupMs": 31.422375000000102
+}

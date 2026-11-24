@@ -1,0 +1,169 @@
+{
+  "source": {
+    "file": "gait.json",
+    "upstream": "https://github.com/gilserrancoli/ReducePoly_forMSK/tree/00b6f94ee8bd2f60ae5b6f07a114f1aade089cb8/ExampleTrackingSimulations/OpenSimModel/subject_GC",
+    "participant": "GC4-JW"
+  },
+  "outcome": "Peak medial implant force measured in body weights (BW)",
+  "earlyStanceWindowPctInclusive": [
+    5,
+    45
+  ],
+  "comparison": "Mean of the individual modified-stance peaks minus the selected ordinary-stance peak. Negative values indicate lower measured load.",
+  "references": "The full-stride replay uses the ordinary calibration stance. The formal gait comparison uses the ordinary evaluation stance. Both came from the same pass.",
+  "scope": "All stances come from one implant recipient. Repeated overground stances share a recording. Fast treadmill walking changed both speed and surface.",
+  "ordinaryPeakSpreadBw": 0.267507,
+  "stances": [
+    {
+      "id": "ngait_og5-stance-1",
+      "condition": "normal",
+      "role": "calibration",
+      "earlyMedialPeakBw": 1.657664,
+      "peakStancePct": 33
+    },
+    {
+      "id": "ngait_og5-stance-2",
+      "condition": "normal",
+      "role": "evaluation",
+      "earlyMedialPeakBw": 1.390157,
+      "peakStancePct": 28
+    },
+    {
+      "id": "bouncy7-stance-1",
+      "condition": "bouncy",
+      "role": "evaluation",
+      "earlyMedialPeakBw": 1.59493,
+      "peakStancePct": 34
+    },
+    {
+      "id": "bouncy7-stance-2",
+      "condition": "bouncy",
+      "role": "evaluation",
+      "earlyMedialPeakBw": 1.436901,
+      "peakStancePct": 31
+    },
+    {
+      "id": "mtpgait3-stance-1",
+      "condition": "forefoot_strike",
+      "role": "evaluation",
+      "earlyMedialPeakBw": 1.596964,
+      "peakStancePct": 29
+    },
+    {
+      "id": "mtpgait3-stance-2",
+      "condition": "forefoot_strike",
+      "role": "evaluation",
+      "earlyMedialPeakBw": 1.531409,
+      "peakStancePct": 30
+    },
+    {
+      "id": "ngait_tm_fast1-stance-1",
+      "condition": "fast_treadmill",
+      "role": "evaluation",
+      "earlyMedialPeakBw": 1.363791,
+      "peakStancePct": 28
+    }
+  ],
+  "comparisons": [
+    {
+      "condition": "bouncy",
+      "meanEarlyMedialPeakBw": 1.5159155,
+      "byReference": [
+        {
+          "ordinaryStance": "ngait_og5-stance-1",
+          "role": "calibration",
+          "meanDeltaBw": -0.1417485,
+          "individualDeltas": [
+            {
+              "id": "bouncy7-stance-1",
+              "deltaBw": -0.062734
+            },
+            {
+              "id": "bouncy7-stance-2",
+              "deltaBw": -0.220763
+            }
+          ]
+        },
+        {
+          "ordinaryStance": "ngait_og5-stance-2",
+          "role": "evaluation",
+          "meanDeltaBw": 0.1257585,
+          "individualDeltas": [
+            {
+              "id": "bouncy7-stance-1",
+              "deltaBw": 0.204773
+            },
+            {
+              "id": "bouncy7-stance-2",
+              "deltaBw": 0.046744
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "condition": "forefoot_strike",
+      "meanEarlyMedialPeakBw": 1.5641865,
+      "byReference": [
+        {
+          "ordinaryStance": "ngait_og5-stance-1",
+          "role": "calibration",
+          "meanDeltaBw": -0.0934775,
+          "individualDeltas": [
+            {
+              "id": "mtpgait3-stance-1",
+              "deltaBw": -0.0607
+            },
+            {
+              "id": "mtpgait3-stance-2",
+              "deltaBw": -0.126255
+            }
+          ]
+        },
+        {
+          "ordinaryStance": "ngait_og5-stance-2",
+          "role": "evaluation",
+          "meanDeltaBw": 0.1740295,
+          "individualDeltas": [
+            {
+              "id": "mtpgait3-stance-1",
+              "deltaBw": 0.206807
+            },
+            {
+              "id": "mtpgait3-stance-2",
+              "deltaBw": 0.141252
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "condition": "fast_treadmill",
+      "meanEarlyMedialPeakBw": 1.363791,
+      "byReference": [
+        {
+          "ordinaryStance": "ngait_og5-stance-1",
+          "role": "calibration",
+          "meanDeltaBw": -0.293873,
+          "individualDeltas": [
+            {
+              "id": "ngait_tm_fast1-stance-1",
+              "deltaBw": -0.293873
+            }
+          ]
+        },
+        {
+          "ordinaryStance": "ngait_og5-stance-2",
+          "role": "evaluation",
+          "meanDeltaBw": -0.026366,
+          "individualDeltas": [
+            {
+              "id": "ngait_tm_fast1-stance-1",
+              "deltaBw": -0.026366
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

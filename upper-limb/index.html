@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f7f6f1">
   <title>Upper limb · Anatomy Atlas</title>
+  <script>
+    if (location.protocol !== 'file:' && /\/(?:index\.html)?$/.test(location.pathname) && !new URLSearchParams(location.search).has('region')) {
+      location.replace('./presentation/' + location.hash);
+    }
+  </script>
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
@@ -21,8 +26,11 @@
         <span>Anatomy <i>Atlas</i></span>
       </div>
       <nav class="region-nav" aria-label="Body region">
+        <a id="presentation-link" href="./presentation/">Human Simulator</a>
         <a id="region-arm" href="?region=arm" aria-current="page">Arm</a>
         <a id="region-leg" href="?region=legs">Legs</a>
+        <a id="knee-loading-link" href="./knee-loading/">Knee loads</a>
+        <a id="hip-study-link" href="./hip-study/">Hip loads</a>
       </nav>
       <a id="download-model" class="download" href="assets/upper-limb.glb" download="upper-limb.glb" aria-label="Download 3D model" title="Download 3D model">
         <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2.7v9.1m-3.2-3 3.2 3.2 3.2-3.2M4 12.8v3.7h12v-3.7"/></svg>

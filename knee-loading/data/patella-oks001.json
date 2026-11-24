@@ -1,0 +1,1000 @@
+{
+  "specimen": "oks001",
+  "side": "right",
+  "source": {
+    "dataset": "Open Knee(s), Cleveland Clinic",
+    "datasetDoi": "https://doi.org/10.18735/4e78-1311",
+    "protocolDoi": "https://doi.org/10.1016/j.dib.2021.106824",
+    "archive": "http://archive.simtk.org/oks/MRI_JointMech/joint_mechanics/joint_mechanics-oks001.zip",
+    "license": "CC BY 4.0",
+    "coordinateConvention": "http://archive.simtk.org/oks/MRI_JointMech/doc/Knee%20Coordinate%20Systems.pdf",
+    "channelConvention": "http://archive.simtk.org/oks/MRI_JointMech/doc/2013CB-031-002.B%20simVITRO%20Data%20File%20Contents_Open%20Knee.pdf"
+  },
+  "modelInputs": {
+    "lower-limb/data/knee-motion.json": "4e98949368f160f1972b0048994b83dd5d6ab5c5b02f852a0264579a6845004d",
+    "lower-limb/assets/lower-limb.glb": "4c807a0ee9827b38a448f95372e7d1667d2a2245078047c7d2bd0c1daeb94be4"
+  },
+  "scope": [
+    "One cadaver specimen. The rotation-magnitude comparison is geometric and does not establish equivalent loading or subject-specific prediction.",
+    "The model and specimen patella origins denote different landmarks. Absolute position errors and axis-specific rotational errors require registration to common anatomical landmarks.",
+    "The exported model retains Rajagopal's prescribed patella rotation and changes translation for atlas fit. Neither model predicts joint response to applied quadriceps loads."
+  ],
+  "passive": {
+    "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/006_Passive Flexion 0-60, optimized/Data/006_Passive Flexion 0-60, optimized_main_processed.tdms",
+    "sha256": "66f37681ce4c17e43e6fe32d663420159bd5ef545af3d9da48f006c7a3f38fc8",
+    "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/006_Passive Flexion 0-60, optimized/Configuration/Project.sVprj",
+    "configurationSha256": "f461bcddead2790a9c19f7b8922852d404f1f17a285aacf6a4c9deb166cb4337",
+    "acquiredSamples": 18503,
+    "measuredPeakKneeFlexionDeg": 57.7764,
+    "measuredKneeFlexionRangeDeg": [
+      5,
+      55
+    ],
+    "method": "Increasing flexion up to the optical maximum. Take medians of samples within 0.25\u00b0 of each target, then measure the 3D angle from the 5\u00b0 reference rotation. Match each model by its tibiofemoral flexion component around the femoral mediolateral axis.",
+    "rawRotationMagnitudeRmseDeg": 11.4937,
+    "glbRotationMagnitudeRmseDeg": 11.0108,
+    "samples": [
+      {
+        "targetKneeFlexionDeg": 5,
+        "measuredKneeFlexionDeg": 4.9727,
+        "samples": 83,
+        "measuredPatellaOriginInFemurMm": [
+          16.8528,
+          -27.2209,
+          -27.7333
+        ],
+        "modelKneeInputDeg": 4.8646,
+        "measuredPatellaRotationChangeDeg": 0.0,
+        "rajagopalPatellaRotationChangeDeg": 0.0,
+        "glbPatellaRotationChangeDeg": 0.0
+      },
+      {
+        "targetKneeFlexionDeg": 10,
+        "measuredKneeFlexionDeg": 10.0307,
+        "samples": 73,
+        "measuredPatellaOriginInFemurMm": [
+          16.079,
+          -24.7045,
+          -30.8178
+        ],
+        "modelKneeInputDeg": 9.8298,
+        "measuredPatellaRotationChangeDeg": 3.7603,
+        "rajagopalPatellaRotationChangeDeg": 0.973,
+        "glbPatellaRotationChangeDeg": 0.2113
+      },
+      {
+        "targetKneeFlexionDeg": 15,
+        "measuredKneeFlexionDeg": 15.0854,
+        "samples": 86,
+        "measuredPatellaOriginInFemurMm": [
+          14.9954,
+          -21.8382,
+          -33.451
+        ],
+        "modelKneeInputDeg": 14.8073,
+        "measuredPatellaRotationChangeDeg": 6.7943,
+        "rajagopalPatellaRotationChangeDeg": 3.2603,
+        "glbPatellaRotationChangeDeg": 2.9534
+      },
+      {
+        "targetKneeFlexionDeg": 20,
+        "measuredKneeFlexionDeg": 19.9467,
+        "samples": 65,
+        "measuredPatellaOriginInFemurMm": [
+          13.7069,
+          -19.0446,
+          -35.5898
+        ],
+        "modelKneeInputDeg": 19.6074,
+        "measuredPatellaRotationChangeDeg": 9.1373,
+        "rajagopalPatellaRotationChangeDeg": 6.4276,
+        "glbPatellaRotationChangeDeg": 5.6841
+      },
+      {
+        "targetKneeFlexionDeg": 25,
+        "measuredKneeFlexionDeg": 25.0501,
+        "samples": 89,
+        "measuredPatellaOriginInFemurMm": [
+          12.1944,
+          -16.1616,
+          -37.2627
+        ],
+        "modelKneeInputDeg": 24.6584,
+        "measuredPatellaRotationChangeDeg": 10.0902,
+        "rajagopalPatellaRotationChangeDeg": 10.474,
+        "glbPatellaRotationChangeDeg": 9.8604
+      },
+      {
+        "targetKneeFlexionDeg": 30,
+        "measuredKneeFlexionDeg": 29.9456,
+        "samples": 73,
+        "measuredPatellaOriginInFemurMm": [
+          11.0369,
+          -14.0096,
+          -38.2277
+        ],
+        "modelKneeInputDeg": 29.5135,
+        "measuredPatellaRotationChangeDeg": 11.6743,
+        "rajagopalPatellaRotationChangeDeg": 14.7623,
+        "glbPatellaRotationChangeDeg": 13.9802
+      },
+      {
+        "targetKneeFlexionDeg": 35,
+        "measuredKneeFlexionDeg": 35.0195,
+        "samples": 72,
+        "measuredPatellaOriginInFemurMm": [
+          10.4451,
+          -12.8439,
+          -38.5916
+        ],
+        "modelKneeInputDeg": 34.554,
+        "measuredPatellaRotationChangeDeg": 12.2814,
+        "rajagopalPatellaRotationChangeDeg": 19.3576,
+        "glbPatellaRotationChangeDeg": 18.5825
+      },
+      {
+        "targetKneeFlexionDeg": 40,
+        "measuredKneeFlexionDeg": 39.9691,
+        "samples": 63,
+        "measuredPatellaOriginInFemurMm": [
+          10.0335,
+          -11.8596,
+          -38.7935
+        ],
+        "modelKneeInputDeg": 39.4778,
+        "measuredPatellaRotationChangeDeg": 12.714,
+        "rajagopalPatellaRotationChangeDeg": 23.9148,
+        "glbPatellaRotationChangeDeg": 23.1122
+      },
+      {
+        "targetKneeFlexionDeg": 45,
+        "measuredKneeFlexionDeg": 44.9897,
+        "samples": 64,
+        "measuredPatellaOriginInFemurMm": [
+          9.5402,
+          -10.8927,
+          -38.8272
+        ],
+        "modelKneeInputDeg": 44.4777,
+        "measuredPatellaRotationChangeDeg": 13.2826,
+        "rajagopalPatellaRotationChangeDeg": 28.6029,
+        "glbPatellaRotationChangeDeg": 27.8206
+      },
+      {
+        "targetKneeFlexionDeg": 50,
+        "measuredKneeFlexionDeg": 50.0248,
+        "samples": 80,
+        "measuredPatellaOriginInFemurMm": [
+          9.465,
+          -9.5915,
+          -38.8179
+        ],
+        "modelKneeInputDeg": 49.4962,
+        "measuredPatellaRotationChangeDeg": 14.2901,
+        "rajagopalPatellaRotationChangeDeg": 33.3634,
+        "glbPatellaRotationChangeDeg": 32.5593
+      },
+      {
+        "targetKneeFlexionDeg": 55,
+        "measuredKneeFlexionDeg": 55.0529,
+        "samples": 80,
+        "measuredPatellaOriginInFemurMm": [
+          9.1598,
+          -7.8605,
+          -38.623
+        ],
+        "modelKneeInputDeg": 54.5108,
+        "measuredPatellaRotationChangeDeg": 15.5925,
+        "rajagopalPatellaRotationChangeDeg": 38.1698,
+        "glbPatellaRotationChangeDeg": 37.382
+      }
+    ]
+  },
+  "controlledLoads": {
+    "method": "Medians of all synchronized optical samples from each separately recorded held-load trial. Compare the 20 N and other trials at each fixed commanded knee angle. Loads are nominal actuator targets carried by the archive trial names.",
+    "translationAxisOrder": [
+      "medial",
+      "posterior",
+      "superior"
+    ],
+    "changeFrom20To600N": [
+      {
+        "targetKneeFlexionDeg": 0,
+        "translationMm": 3.8048,
+        "rotationDeg": 3.7436
+      },
+      {
+        "targetKneeFlexionDeg": 15,
+        "translationMm": 3.1071,
+        "rotationDeg": 1.5885
+      },
+      {
+        "targetKneeFlexionDeg": 30,
+        "translationMm": 1.7871,
+        "rotationDeg": 2.4751
+      },
+      {
+        "targetKneeFlexionDeg": 45,
+        "translationMm": 1.4664,
+        "rotationDeg": 3.274
+      },
+      {
+        "targetKneeFlexionDeg": 60,
+        "translationMm": 1.5839,
+        "rotationDeg": 2.9776
+      }
+    ],
+    "trials": [
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/007_0flex_20N/Data/007_0flex_20N_main_processed.tdms",
+        "sha256": "dcaf7aa76ad833c032a56bb8e8fe41647b8a7eeb2a1d79e3bdb5d74404272702",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/007_0flex_20N/Configuration/Project.sVprj",
+        "configurationSha256": "5f2d291a5056f8f69df382c367c93feb9ef165e54a22617cce61c048bdff7a7a",
+        "targetKneeFlexionDeg": 0,
+        "measuredKneeFlexionDeg": 0.0083,
+        "nominalQuadricepsLoadN": 20,
+        "samples": 1089,
+        "patellaOriginInFemurMm": [
+          14.663,
+          -34.5348,
+          1.9984
+        ],
+        "patellaTranslationFrom20NMm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 0.0,
+        "patellaRotationFrom20NDeg": 0.0
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/008_0flex_100N/Data/008_0flex_100N_main_processed.tdms",
+        "sha256": "17ae1d6048ea8584f70fb7c8de1ad0eee7e223d9ab9d2f7974fc59f7e2cee826",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/008_0flex_100N/Configuration/Project.sVprj",
+        "configurationSha256": "28ba3e9f04c89a7252b7ab8f2cb632531d039b87b54a5f766342eacda3cbbd74",
+        "targetKneeFlexionDeg": 0,
+        "measuredKneeFlexionDeg": -0.0031,
+        "nominalQuadricepsLoadN": 100,
+        "samples": 1086,
+        "patellaOriginInFemurMm": [
+          14.4485,
+          -34.0952,
+          3.2566
+        ],
+        "patellaTranslationFrom20NMm": [
+          -0.2145,
+          0.4397,
+          1.2582
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 1.3499,
+        "patellaRotationFrom20NDeg": 1.8189
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/009_0flex_200N/Data/009_0flex_200N_main_processed.tdms",
+        "sha256": "81290e0763fbd4b0a1388aadff4ba4e605858979d46eff59e8f55264aa1bd775",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/009_0flex_200N/Configuration/Project.sVprj",
+        "configurationSha256": "9005135e17aba912ab650421815a2bb1066b7b249875377ee87f81e3d6eb6162",
+        "targetKneeFlexionDeg": 0,
+        "measuredKneeFlexionDeg": -0.005,
+        "nominalQuadricepsLoadN": 200,
+        "samples": 1093,
+        "patellaOriginInFemurMm": [
+          14.069,
+          -33.9403,
+          3.8557
+        ],
+        "patellaTranslationFrom20NMm": [
+          -0.594,
+          0.5945,
+          1.8573
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 2.0386,
+        "patellaRotationFrom20NDeg": 2.5583
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/010_0flex_300N/Data/010_0flex_300N_main_processed.tdms",
+        "sha256": "1c0422f0e36bc4fc7bff91a0ebe3234b27955d798145919215c326318f80903b",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/010_0flex_300N/Configuration/Project.sVprj",
+        "configurationSha256": "ffcaa4d2b5cb957f41e7c2ce9f3a6e0c34da9fde5aa933fc439d5221f7767ca2",
+        "targetKneeFlexionDeg": 0,
+        "measuredKneeFlexionDeg": -0.0074,
+        "nominalQuadricepsLoadN": 300,
+        "samples": 1087,
+        "patellaOriginInFemurMm": [
+          13.7139,
+          -33.9291,
+          4.3535
+        ],
+        "patellaTranslationFrom20NMm": [
+          -0.9491,
+          0.6057,
+          2.3551
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 2.6104,
+        "patellaRotationFrom20NDeg": 3.1112
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/011_0flex_400N/Data/011_0flex_400N_main_processed.tdms",
+        "sha256": "11f72664c547d1d94f3d3c09008a1299dea6991ccbcc55e448ceae013865a680",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/011_0flex_400N/Configuration/Project.sVprj",
+        "configurationSha256": "e6e526e5f321953dcfc85f49c3e887b4e8699a3a2fda9f6a74c364e70fd8ffea",
+        "targetKneeFlexionDeg": 0,
+        "measuredKneeFlexionDeg": -0.0101,
+        "nominalQuadricepsLoadN": 400,
+        "samples": 1289,
+        "patellaOriginInFemurMm": [
+          13.3957,
+          -33.8181,
+          4.6431
+        ],
+        "patellaTranslationFrom20NMm": [
+          -1.2673,
+          0.7168,
+          2.6447
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 3.019,
+        "patellaRotationFrom20NDeg": 3.309
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/012_0flex_500N/Data/012_0flex_500N_main_processed.tdms",
+        "sha256": "c52c75520757b74b1d9925ed52f025ec291883d9332ba140a24c50a29a746db0",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/012_0flex_500N/Configuration/Project.sVprj",
+        "configurationSha256": "cfae331b93e0ddd90ae05a18c2e51b9c07a81a7a9d8b0770aa2908fd5c72aa48",
+        "targetKneeFlexionDeg": 0,
+        "measuredKneeFlexionDeg": -0.0382,
+        "nominalQuadricepsLoadN": 500,
+        "samples": 1098,
+        "patellaOriginInFemurMm": [
+          13.1168,
+          -33.9058,
+          5.1209
+        ],
+        "patellaTranslationFrom20NMm": [
+          -1.5462,
+          0.6291,
+          3.1225
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 3.5407,
+        "patellaRotationFrom20NDeg": 3.7177
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/013_0flex_600N/Data/013_0flex_600N_main_processed.tdms",
+        "sha256": "3bccac57fc8ee2927ffdd80b3c4e2ac44a3fc8c8f5d543b8b71676fdec75d2eb",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/013_0flex_600N/Configuration/Project.sVprj",
+        "configurationSha256": "b0c5ebfd352d6e383c31eb3c4e341b6e0abb51cac3838b2c2f0723dfe35a9a73",
+        "targetKneeFlexionDeg": 0,
+        "measuredKneeFlexionDeg": -0.0297,
+        "nominalQuadricepsLoadN": 600,
+        "samples": 1289,
+        "patellaOriginInFemurMm": [
+          12.8839,
+          -33.8029,
+          5.2811
+        ],
+        "patellaTranslationFrom20NMm": [
+          -1.7791,
+          0.732,
+          3.2827
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 3.8048,
+        "patellaRotationFrom20NDeg": 3.7436
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/014_15flex_20N/Data/014_15flex_20N_main_processed.tdms",
+        "sha256": "50cea0f5b1652bb963409aeea31f498e533b022153512a1ddcedf61dbd103017",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/014_15flex_20N/Configuration/Project.sVprj",
+        "configurationSha256": "2b49c42b510c12525e3cc413385412c51b4ee8a50e4d04e07b13812be949c2c1",
+        "targetKneeFlexionDeg": 15,
+        "measuredKneeFlexionDeg": 14.2004,
+        "nominalQuadricepsLoadN": 20,
+        "samples": 1095,
+        "patellaOriginInFemurMm": [
+          15.8493,
+          -31.2802,
+          -9.7343
+        ],
+        "patellaTranslationFrom20NMm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 0.0,
+        "patellaRotationFrom20NDeg": 0.0
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/015_15flex_100N/Data/015_15flex_100N_main_processed.tdms",
+        "sha256": "205c863fc2f696635be8c4c49c39e0cb11b069de4e0251f8498c198021dbc253",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/015_15flex_100N/Configuration/Project.sVprj",
+        "configurationSha256": "ea8e2f95f457b249d07d9193af067fd3d89aea3b9f98a166ce0959bd103f84b4",
+        "targetKneeFlexionDeg": 15,
+        "measuredKneeFlexionDeg": 14.1821,
+        "nominalQuadricepsLoadN": 100,
+        "samples": 1281,
+        "patellaOriginInFemurMm": [
+          15.2488,
+          -31.483,
+          -8.9119
+        ],
+        "patellaTranslationFrom20NMm": [
+          -0.6005,
+          -0.2028,
+          0.8224
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 1.0383,
+        "patellaRotationFrom20NDeg": 0.766
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/016_15flex_200N/Data/016_15flex_200N_main_processed.tdms",
+        "sha256": "fef088bfc786b64c14cdc7dcfd6cc207f081e5b37f75383952cd322dcfac6394",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/016_15flex_200N/Configuration/Project.sVprj",
+        "configurationSha256": "57e41c67b916683f268625513c7524f19d23dafda49ae47b5a30bba41bac3188",
+        "targetKneeFlexionDeg": 15,
+        "measuredKneeFlexionDeg": 14.1734,
+        "nominalQuadricepsLoadN": 200,
+        "samples": 1085,
+        "patellaOriginInFemurMm": [
+          14.8387,
+          -31.6258,
+          -8.4759
+        ],
+        "patellaTranslationFrom20NMm": [
+          -1.0106,
+          -0.3456,
+          1.2584
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 1.6505,
+        "patellaRotationFrom20NDeg": 1.061
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/017_15flex_300N/Data/017_15flex_300N_main_processed.tdms",
+        "sha256": "477fc0622f474c6e69adac3e7cf207c63e5b66be52921edc9deb7d62a6453f2c",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/017_15flex_300N/Configuration/Project.sVprj",
+        "configurationSha256": "f67bdf98abe768ad41398d577c0a9013a408240b9dde7fd4c8bd99f0348522ff",
+        "targetKneeFlexionDeg": 15,
+        "measuredKneeFlexionDeg": 14.1461,
+        "nominalQuadricepsLoadN": 300,
+        "samples": 1285,
+        "patellaOriginInFemurMm": [
+          14.5443,
+          -31.7811,
+          -8.1245
+        ],
+        "patellaTranslationFrom20NMm": [
+          -1.305,
+          -0.5009,
+          1.6098
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 2.132,
+        "patellaRotationFrom20NDeg": 1.2123
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/018_15flex_400N/Data/018_15flex_400N_main_processed.tdms",
+        "sha256": "404c67f224c9be5212cc054d798c799c5407e1bffa11cb4f253d546b7ace0baa",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/018_15flex_400N/Configuration/Project.sVprj",
+        "configurationSha256": "04f4ec5a5534ddc6bd83d1c9d895d7c85a7cc8ccbe6eacedfd1ec36dcc92dafc",
+        "targetKneeFlexionDeg": 15,
+        "measuredKneeFlexionDeg": 14.1197,
+        "nominalQuadricepsLoadN": 400,
+        "samples": 1095,
+        "patellaOriginInFemurMm": [
+          14.311,
+          -31.9197,
+          -7.7999
+        ],
+        "patellaTranslationFrom20NMm": [
+          -1.5383,
+          -0.6395,
+          1.9344
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 2.5529,
+        "patellaRotationFrom20NDeg": 1.3143
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/019_15flex_500N/Data/019_15flex_500N_main_processed.tdms",
+        "sha256": "87aa6062070569538c1584012fdf0c84d91619ecb1d7d6eb769e85e38720ef78",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/019_15flex_500N/Configuration/Project.sVprj",
+        "configurationSha256": "199796aee54854f31cb5f274e5c8777954dc71767faea7fb2e7499fb30cfd99a",
+        "targetKneeFlexionDeg": 15,
+        "measuredKneeFlexionDeg": 14.1047,
+        "nominalQuadricepsLoadN": 500,
+        "samples": 1279,
+        "patellaOriginInFemurMm": [
+          14.1348,
+          -31.9282,
+          -7.5771
+        ],
+        "patellaTranslationFrom20NMm": [
+          -1.7145,
+          -0.648,
+          2.1572
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 2.8307,
+        "patellaRotationFrom20NDeg": 1.4466
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/020_15flex_600N/Data/020_15flex_600N_main_processed.tdms",
+        "sha256": "7a2aa929b3beb4e6934f98c762e9f3a0fb12c899d37e9dc2962796062e272041",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/020_15flex_600N/Configuration/Project.sVprj",
+        "configurationSha256": "fd4232a1ccd60a211484af7cb0140c26737c82c1d523e487b68417e1d970efa5",
+        "targetKneeFlexionDeg": 15,
+        "measuredKneeFlexionDeg": 14.0751,
+        "nominalQuadricepsLoadN": 600,
+        "samples": 1277,
+        "patellaOriginInFemurMm": [
+          13.9803,
+          -31.9242,
+          -7.3372
+        ],
+        "patellaTranslationFrom20NMm": [
+          -1.8689,
+          -0.644,
+          2.3971
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 3.1071,
+        "patellaRotationFrom20NDeg": 1.5885
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/024_30flex_20N/Data/024_30flex_20N_main_processed.tdms",
+        "sha256": "64fe65eef08033a1f15c433f9467a7a22d01bb5ea615cb7a47b84a39977ecdbf",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/024_30flex_20N/Configuration/Project.sVprj",
+        "configurationSha256": "be7b3ee919f0bc1e58ce36cd54be90ce84cd2ae1dea8e957126afdb423cd029b",
+        "targetKneeFlexionDeg": 30,
+        "measuredKneeFlexionDeg": 28.5426,
+        "nominalQuadricepsLoadN": 20,
+        "samples": 1280,
+        "patellaOriginInFemurMm": [
+          13.2446,
+          -25.415,
+          -19.3027
+        ],
+        "patellaTranslationFrom20NMm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 0.0,
+        "patellaRotationFrom20NDeg": 0.0
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/025_30flex_100N/Data/025_30flex_100N_main_processed.tdms",
+        "sha256": "0ee0dda3bc2dd5eef91b9823760bd6f09537ba3fd6c79d82bf6611fe500c7781",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/025_30flex_100N/Configuration/Project.sVprj",
+        "configurationSha256": "203d2f38c8e2bbba03ad24bc8165e8b7137c1f3158961d5fb14dbc2efc63dd5a",
+        "targetKneeFlexionDeg": 30,
+        "measuredKneeFlexionDeg": 28.5269,
+        "nominalQuadricepsLoadN": 100,
+        "samples": 1279,
+        "patellaOriginInFemurMm": [
+          13.2308,
+          -25.5759,
+          -18.9903
+        ],
+        "patellaTranslationFrom20NMm": [
+          -0.0138,
+          -0.1609,
+          0.3123
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 0.3516,
+        "patellaRotationFrom20NDeg": 0.8309
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/026_30flex_200N/Data/026_30flex_200N_main_processed.tdms",
+        "sha256": "e24037285788e925d6f8ac9176aa438e94a990a1734b8ed27000c6e44c76c885",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/026_30flex_200N/Configuration/Project.sVprj",
+        "configurationSha256": "79d0c0e583fa4b43160078039b817bca1c1c3793cfa28765c794ef7aa5302443",
+        "targetKneeFlexionDeg": 30,
+        "measuredKneeFlexionDeg": 28.5046,
+        "nominalQuadricepsLoadN": 200,
+        "samples": 1092,
+        "patellaOriginInFemurMm": [
+          13.1139,
+          -25.8533,
+          -18.6622
+        ],
+        "patellaTranslationFrom20NMm": [
+          -0.1307,
+          -0.4382,
+          0.6405
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 0.787,
+        "patellaRotationFrom20NDeg": 1.2445
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/027_30flex_300N/Data/027_30flex_300N_main_processed.tdms",
+        "sha256": "303bc40d83dcd2bb84224db2421de22912290e045c7b3f412c72a3641f116139",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/027_30flex_300N/Configuration/Project.sVprj",
+        "configurationSha256": "cd2171b576de38ce7a598a5dda9d0881c96033203419283af3895ce4dd0b94ed",
+        "targetKneeFlexionDeg": 30,
+        "measuredKneeFlexionDeg": 28.4707,
+        "nominalQuadricepsLoadN": 300,
+        "samples": 1097,
+        "patellaOriginInFemurMm": [
+          13.0132,
+          -26.0212,
+          -18.3841
+        ],
+        "patellaTranslationFrom20NMm": [
+          -0.2314,
+          -0.6062,
+          0.9185
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 1.1246,
+        "patellaRotationFrom20NDeg": 1.5958
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/028_30flex_400N/Data/028_30flex_400N_main_processed.tdms",
+        "sha256": "a1bbd38f38b8571c6bdffe3927149ae80b675f33ffc6705b40e842f614479bdf",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/028_30flex_400N/Configuration/Project.sVprj",
+        "configurationSha256": "b80086876696ba01947df32e4d9dce50eab546b3a82278ebd0177341a23d4be8",
+        "targetKneeFlexionDeg": 30,
+        "measuredKneeFlexionDeg": 28.4442,
+        "nominalQuadricepsLoadN": 400,
+        "samples": 1289,
+        "patellaOriginInFemurMm": [
+          12.9137,
+          -26.0448,
+          -18.1831
+        ],
+        "patellaTranslationFrom20NMm": [
+          -0.331,
+          -0.6298,
+          1.1195
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 1.3265,
+        "patellaRotationFrom20NDeg": 1.908
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/029_30flex_500N/Data/029_30flex_500N_main_processed.tdms",
+        "sha256": "457fd6ed3a3ee17aa7c500832198c4e4e6ccfcce75e91fda0f0d58796aeba878",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/029_30flex_500N/Configuration/Project.sVprj",
+        "configurationSha256": "ea9b43210eccdf4b2b4b1be1e99dbb776d1f0bb0276619dddaa3c70a38962f87",
+        "targetKneeFlexionDeg": 30,
+        "measuredKneeFlexionDeg": 28.4145,
+        "nominalQuadricepsLoadN": 500,
+        "samples": 1089,
+        "patellaOriginInFemurMm": [
+          12.8499,
+          -26.1108,
+          -17.954
+        ],
+        "patellaTranslationFrom20NMm": [
+          -0.3947,
+          -0.6957,
+          1.3487
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 1.5681,
+        "patellaRotationFrom20NDeg": 2.177
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/030_30flex_600N/Data/030_30flex_600N_main_processed.tdms",
+        "sha256": "33cdfec263c67e815237f3ec5ab56af2c129b05370ca1fbf19ea8099817c1289",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/030_30flex_600N/Configuration/Project.sVprj",
+        "configurationSha256": "7c543678f1a3e131b2669fbaedc6ebe39d6e656ed26d8a2699eea65da9fd7177",
+        "targetKneeFlexionDeg": 30,
+        "measuredKneeFlexionDeg": 28.383,
+        "nominalQuadricepsLoadN": 600,
+        "samples": 1285,
+        "patellaOriginInFemurMm": [
+          12.772,
+          -26.1751,
+          -17.7558
+        ],
+        "patellaTranslationFrom20NMm": [
+          -0.4726,
+          -0.76,
+          1.5468
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 1.7871,
+        "patellaRotationFrom20NDeg": 2.4751
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/031_45flex_20N/Data/031_45flex_20N_main_processed.tdms",
+        "sha256": "554b2c44dc5d915588cbd3d38d5293ab6e9c1aa37419fd543e87e92c5864185b",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/031_45flex_20N/Configuration/Project.sVprj",
+        "configurationSha256": "8917c1a9b32dc88da122b2b0ac75731928e987710e2879abc2d28a938ebbe5f9",
+        "targetKneeFlexionDeg": 45,
+        "measuredKneeFlexionDeg": 42.9699,
+        "nominalQuadricepsLoadN": 20,
+        "samples": 1281,
+        "patellaOriginInFemurMm": [
+          10.5767,
+          -17.6453,
+          -26.8781
+        ],
+        "patellaTranslationFrom20NMm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 0.0,
+        "patellaRotationFrom20NDeg": 0.0
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/032_45flex_100N/Data/032_45flex_100N_main_processed.tdms",
+        "sha256": "9c81ffa1fff8444c9a66d7857f5f4ccc0f239a0dc0e873a365b11d49366726b1",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/032_45flex_100N/Configuration/Project.sVprj",
+        "configurationSha256": "4feeffe86dfa3d213f874ff976ae2ccee7f54cf448c8fcbc9fc8cbfcd370cf1d",
+        "targetKneeFlexionDeg": 45,
+        "measuredKneeFlexionDeg": 42.9549,
+        "nominalQuadricepsLoadN": 100,
+        "samples": 1283,
+        "patellaOriginInFemurMm": [
+          10.5813,
+          -17.6718,
+          -26.6254
+        ],
+        "patellaTranslationFrom20NMm": [
+          0.0046,
+          -0.0264,
+          0.2527
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 0.2541,
+        "patellaRotationFrom20NDeg": 0.9956
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/033_45flex_200N/Data/033_45flex_200N_main_processed.tdms",
+        "sha256": "3d0cd63e0b069fac70ba5dd9be3bd751778f1deee99abe802a15948c6de4d48d",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/033_45flex_200N/Configuration/Project.sVprj",
+        "configurationSha256": "5893c0e5882b5eb04e6fc1d64dd6b61e055562e72da657443ac772c1a7263f56",
+        "targetKneeFlexionDeg": 45,
+        "measuredKneeFlexionDeg": 42.9275,
+        "nominalQuadricepsLoadN": 200,
+        "samples": 1088,
+        "patellaOriginInFemurMm": [
+          10.5228,
+          -17.9319,
+          -26.3672
+        ],
+        "patellaTranslationFrom20NMm": [
+          -0.054,
+          -0.2866,
+          0.511
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 0.5883,
+        "patellaRotationFrom20NDeg": 1.6008
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/034_45flex_300N/Data/034_45flex_300N_main_processed.tdms",
+        "sha256": "542f145d91ac2d89fcc42e152e104f0d8f717058ef19c3438772044c39e27115",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/034_45flex_300N/Configuration/Project.sVprj",
+        "configurationSha256": "fc36c596906974f5827760b0b2ac95abedc0f9e059a7c215c52cb5b2395360a8",
+        "targetKneeFlexionDeg": 45,
+        "measuredKneeFlexionDeg": 42.8792,
+        "nominalQuadricepsLoadN": 300,
+        "samples": 1089,
+        "patellaOriginInFemurMm": [
+          10.4776,
+          -17.955,
+          -26.1809
+        ],
+        "patellaTranslationFrom20NMm": [
+          -0.0991,
+          -0.3096,
+          0.6972
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 0.7693,
+        "patellaRotationFrom20NDeg": 2.2445
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/035_45flex_400N/Data/035_45flex_400N_main_processed.tdms",
+        "sha256": "d19fa77d9d1b16973a55894cec346ade90959fddc16d279f726fc5482f7f123c",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/035_45flex_400N/Configuration/Project.sVprj",
+        "configurationSha256": "68abdd4c70989e2427b3063d090746047972fe7b87047b30c1e7dbf90c8156fa",
+        "targetKneeFlexionDeg": 45,
+        "measuredKneeFlexionDeg": 42.8505,
+        "nominalQuadricepsLoadN": 400,
+        "samples": 1265,
+        "patellaOriginInFemurMm": [
+          10.4597,
+          -18.198,
+          -25.9506
+        ],
+        "patellaTranslationFrom20NMm": [
+          -0.117,
+          -0.5526,
+          0.9275
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 1.086,
+        "patellaRotationFrom20NDeg": 2.6005
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/036_45flex_500N/Data/036_45flex_500N_main_processed.tdms",
+        "sha256": "971cf16bbeaa1e294af0968dacc8c01d43d509cbc14945caa59ac37c8fb68d06",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/036_45flex_500N/Configuration/Project.sVprj",
+        "configurationSha256": "0c259309a8f6dceb7277b018c5e2090e6ee2408fb8fac62890835752bcd3fca7",
+        "targetKneeFlexionDeg": 45,
+        "measuredKneeFlexionDeg": 42.8314,
+        "nominalQuadricepsLoadN": 500,
+        "samples": 1283,
+        "patellaOriginInFemurMm": [
+          10.4229,
+          -18.2806,
+          -25.7675
+        ],
+        "patellaTranslationFrom20NMm": [
+          -0.1538,
+          -0.6353,
+          1.1106
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 1.2887,
+        "patellaRotationFrom20NDeg": 3.016
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/037_45flex_600N/Data/037_45flex_600N_main_processed.tdms",
+        "sha256": "83ceb22cebdd6d2ee777ec639898af38c6c3e76ef10eba716c0fb25e17bc0db4",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/037_45flex_600N/Configuration/Project.sVprj",
+        "configurationSha256": "3decee3ebd2b76c17f9c95773cf1c5ad43a9740b16725a0db9267ace00977b02",
+        "targetKneeFlexionDeg": 45,
+        "measuredKneeFlexionDeg": 42.7984,
+        "nominalQuadricepsLoadN": 600,
+        "samples": 1282,
+        "patellaOriginInFemurMm": [
+          10.4079,
+          -18.3398,
+          -25.5976
+        ],
+        "patellaTranslationFrom20NMm": [
+          -0.1688,
+          -0.6944,
+          1.2805
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 1.4664,
+        "patellaRotationFrom20NDeg": 3.274
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/038_60flex_20N/Data/038_60flex_20N_main_processed.tdms",
+        "sha256": "c8269600021ed9df3fb12e3b75ee7d21363f39472c6c8e7db328d1efbb22f617",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/038_60flex_20N/Configuration/Project.sVprj",
+        "configurationSha256": "61b83c7da26163792be7a48c8bae4da22d583a5b51c2b7b00a2c0b57863155df",
+        "targetKneeFlexionDeg": 60,
+        "measuredKneeFlexionDeg": 57.8339,
+        "nominalQuadricepsLoadN": 20,
+        "samples": 1094,
+        "patellaOriginInFemurMm": [
+          8.0483,
+          -8.2072,
+          -32.223
+        ],
+        "patellaTranslationFrom20NMm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 0.0,
+        "patellaRotationFrom20NDeg": 0.0
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/039_60flex_100N/Data/039_60flex_100N_main_processed.tdms",
+        "sha256": "9d32ee6c381ac260fc6953abf4fe13c483db4579eb55b1de7345a3442c65ab8b",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/039_60flex_100N/Configuration/Project.sVprj",
+        "configurationSha256": "93ce201b6dbeaf6c6bf3bc3cbeab3748d3fd1b512af1450bbcba1fc23db490bd",
+        "targetKneeFlexionDeg": 60,
+        "measuredKneeFlexionDeg": 57.7931,
+        "nominalQuadricepsLoadN": 100,
+        "samples": 1278,
+        "patellaOriginInFemurMm": [
+          8.0077,
+          -8.5864,
+          -31.6022
+        ],
+        "patellaTranslationFrom20NMm": [
+          -0.0406,
+          -0.3791,
+          0.6208
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 0.7285,
+        "patellaRotationFrom20NDeg": 1.4757
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/040_60flex_200N/Data/040_60flex_200N_main_processed.tdms",
+        "sha256": "85000082dfece29ff1a6fa512bf7ee2b9e3264abdfae1148a671a425d612cab0",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/040_60flex_200N/Configuration/Project.sVprj",
+        "configurationSha256": "6dcd5911d0503fcc1bfbc27e84c5d5689076cf7584cb84ffcd47266e3a0aa0a9",
+        "targetKneeFlexionDeg": 60,
+        "measuredKneeFlexionDeg": 57.783,
+        "nominalQuadricepsLoadN": 200,
+        "samples": 1093,
+        "patellaOriginInFemurMm": [
+          7.8906,
+          -8.8633,
+          -31.4236
+        ],
+        "patellaTranslationFrom20NMm": [
+          -0.1577,
+          -0.6561,
+          0.7994
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 1.0461,
+        "patellaRotationFrom20NDeg": 2.0029
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/041_60flex_300N/Data/041_60flex_300N_main_processed.tdms",
+        "sha256": "61918977dc8f11961a3718f69ffaad20737282c45b44a0453cc9e8a6530451ae",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/041_60flex_300N/Configuration/Project.sVprj",
+        "configurationSha256": "66b28a2cc3843d3608c1abda074871cf90846934a5ca67016ecb1e5256900199",
+        "targetKneeFlexionDeg": 60,
+        "measuredKneeFlexionDeg": 57.7475,
+        "nominalQuadricepsLoadN": 300,
+        "samples": 1282,
+        "patellaOriginInFemurMm": [
+          7.8012,
+          -8.8664,
+          -31.3218
+        ],
+        "patellaTranslationFrom20NMm": [
+          -0.2471,
+          -0.6592,
+          0.9012
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 1.1436,
+        "patellaRotationFrom20NDeg": 2.3899
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/042_60flex_400N/Data/042_60flex_400N_main_processed.tdms",
+        "sha256": "fb67f5a488820dcda328e62eadca2a70802a372fe60975e1c3ecd55a95e7dee1",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/042_60flex_400N/Configuration/Project.sVprj",
+        "configurationSha256": "6522c00b7817b6968c90453042948a1cffedde6f5f5a71e02cab1c2e05ee646c",
+        "targetKneeFlexionDeg": 60,
+        "measuredKneeFlexionDeg": 57.7423,
+        "nominalQuadricepsLoadN": 400,
+        "samples": 1092,
+        "patellaOriginInFemurMm": [
+          7.7463,
+          -8.9473,
+          -31.2272
+        ],
+        "patellaTranslationFrom20NMm": [
+          -0.302,
+          -0.7401,
+          0.9958
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 1.2769,
+        "patellaRotationFrom20NDeg": 2.6549
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/043_60flex_500N/Data/043_60flex_500N_main_processed.tdms",
+        "sha256": "fc9398323b7d32025d5fb6e30b7d97cd37535d3a99441017c46fde3d7fb075da",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/043_60flex_500N/Configuration/Project.sVprj",
+        "configurationSha256": "962a378b8569f4125215c6b6d0ddbe2298f5b2248eef1db03ed51f66f6eb07b2",
+        "targetKneeFlexionDeg": 60,
+        "measuredKneeFlexionDeg": 57.7304,
+        "nominalQuadricepsLoadN": 500,
+        "samples": 1096,
+        "patellaOriginInFemurMm": [
+          7.7226,
+          -9.038,
+          -31.1106
+        ],
+        "patellaTranslationFrom20NMm": [
+          -0.3257,
+          -0.8307,
+          1.1124
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 1.4261,
+        "patellaRotationFrom20NDeg": 2.834
+      },
+      {
+        "archiveMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/044_60flex_600N/Data/044_60flex_600N_main_processed.tdms",
+        "sha256": "7b0d5f9e31e4c368116a3a3cf1a316c7eb2c60e7b98ea3355c146ac0e7d79635",
+        "configurationMember": "joint_mechanics-oks001/PatellofemoralJoint/KinematicsKinetics/044_60flex_600N/Configuration/Project.sVprj",
+        "configurationSha256": "d67262fa4a1b2f7c6cccc6bde5bf0cd93e15c2e56901b8345a065ce57719f280",
+        "targetKneeFlexionDeg": 60,
+        "measuredKneeFlexionDeg": 57.6956,
+        "nominalQuadricepsLoadN": 600,
+        "samples": 1097,
+        "patellaOriginInFemurMm": [
+          7.6984,
+          -9.1449,
+          -30.9954
+        ],
+        "patellaTranslationFrom20NMm": [
+          -0.3499,
+          -0.9377,
+          1.2277
+        ],
+        "patellaTranslationMagnitudeFrom20NMm": 1.5839,
+        "patellaRotationFrom20NDeg": 2.9776
+      }
+    ]
+  }
+}

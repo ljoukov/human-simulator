@@ -1,0 +1,1658 @@
+{
+  "schemaVersion": 1,
+  "auditCodeSha256": "59a19d74f3181943738fe93b71975bebb844066a1dde020ed40991dabae302b8",
+  "atlasSha256": "129e2cce9be7d132a25e27294c18187ab70552cb4fb8c336b65a76a306230a97",
+  "motionSha256": "6e9c20bead364cadbb988b08c3e02ff548cfd0003e5aac7112bc8f2500074010",
+  "interfaceMaskSha256": "a80292bde5aa6bd97ba631dd37661da59d08b4f0eba0cc4ffa45282b50d67c26",
+  "obstacles": [
+    "Femur",
+    "Hip bone",
+    "Gluteus maximus muscle",
+    "Gluteus medius muscle",
+    "Gluteus minimus muscle",
+    "Tensor fasciae latae",
+    "Vastus lateralis muscle",
+    "Trochanteric bursa of gluteus maximus"
+  ],
+  "visibilityToleranceMm": 0.002,
+  "distalCutSourceYM": 0.695,
+  "tflInterface": {
+    "neutralEnclosedPercent": 48.76936736440422,
+    "materialSamples": 1422,
+    "totalSamples": 3042,
+    "pelvicPins": 29,
+    "distalPins": 45
+  },
+  "recordsSha256": {
+    "reboundArc": "349647a2c682ff6dc226217182deb8ec497b22a279158c75e13c691de3d6c13b",
+    "contact": "971de64fe1ac3982a95315a98290ba764687b94bca547e202c557fe5554978b8",
+    "originalArc": "4d2b13985582bda9dd4d7a7ef5559f4e9934215a4d6b838a96634a847f458596"
+  },
+  "weightsSha256": {
+    "originalArc": "e036c764d32e8a593450f8c5f99bece84219f3f596f8c65c5889d3c080a026ea",
+    "reboundArc": "0d356d4f354d0c5baba87cce52c8a8f468cb1ee3c77f61331cf0e62266c62dd5",
+    "contact": "0d356d4f354d0c5baba87cce52c8a8f468cb1ee3c77f61331cf0e62266c62dd5"
+  },
+  "solverSourceSha256": "73f73809b0551ace42a70ed2659ef82476b6f8d485f8012609bd3192e0339d7c",
+  "contactInputSha256": "e528c29c531679153a8a983a65d0ffeb3cfbe31e30619f3ae5265593f582f513",
+  "wasmSha256": "aacc909314e9f0c3e4f0022120104f1b17e38f9e89ab712204ccc15e1aeffa5f",
+  "method": "Exact bidirectional segment/triangle intersections between open triangle interiors, then analytic line-interval occlusion by the complete tract along the femoral lateral axis. Tangency and coplanar contact are excluded. Welded atlas coordinates have 1 \u00b5m resolution.",
+  "interpretation": "Pair-frames count repeated observations across poses. Line length sums exposed intersections at a pose. Penetration depth and sliding distance require separate measurements. Source-height intervals bound the contributing line endpoints relative to the distal material section. These display geometry checks apply to the sampled poses.",
+  "sourcePairs": "Source-existing facet pairs intersect in the undeformed atlas, including its occluded interfaces. A pair first intersecting during motion counts as new.",
+  "masks": "TFL selected faces are the solver\u2019s designated outer cover. Hip-bone selected faces exclude the designated iliac attachment patch. All faces are selected for each remaining obstacle. Counts outside those masks remain in the all-face results.",
+  "attachments": "Fixed-attachment counts require all three band face vertices to have exactly zero femoral interpolation weight (pelvic pins) or exactly unit weight (distal pins). Pin changes are distances from the corresponding arc-only positions. Area retention tracks originally enclosed TFL material with three quadrature points per triangle and two-direction ray parity.",
+  "clips": {
+    "neutral": {
+      "originalArc": {
+        "frames": 1,
+        "framesWithCrossing": 1,
+        "newCrossingByStructure": {},
+        "framesWithNewCrossing": 0,
+        "framesWithNewSelectedCrossing": 0,
+        "crossedPairFrames": 27,
+        "sourceExistingPairFrames": 27,
+        "fixedAttachmentPairFrames": 23,
+        "newSelectedPairFrames": 0,
+        "newUnselectedPairFrames": 0,
+        "maxExposedLineMm": 23.4632,
+        "maxSelectedLineMm": 8.2404,
+        "maxNewSelectedLineMm": 0.0,
+        "tflFramesOnSelectedOuterCover": 0,
+        "tflFramesOutsideSelectedCover": 0,
+        "maxTflLineOnSelectedCoverMm": 0,
+        "maxTflLineOutsideSelectedCoverMm": 0,
+        "retainedNeutralTflAreaPctRange": [
+          100.0,
+          100.0
+        ],
+        "maxPelvicPinChangeMm": 0.0,
+        "maxDistalPinChangeMm": 0.0
+      },
+      "reboundArc": {
+        "frames": 1,
+        "framesWithCrossing": 1,
+        "newCrossingByStructure": {},
+        "framesWithNewCrossing": 0,
+        "framesWithNewSelectedCrossing": 0,
+        "crossedPairFrames": 27,
+        "sourceExistingPairFrames": 27,
+        "fixedAttachmentPairFrames": 23,
+        "newSelectedPairFrames": 0,
+        "newUnselectedPairFrames": 0,
+        "maxExposedLineMm": 23.4632,
+        "maxSelectedLineMm": 8.2404,
+        "maxNewSelectedLineMm": 0.0,
+        "tflFramesOnSelectedOuterCover": 0,
+        "tflFramesOutsideSelectedCover": 0,
+        "maxTflLineOnSelectedCoverMm": 0,
+        "maxTflLineOutsideSelectedCoverMm": 0,
+        "retainedNeutralTflAreaPctRange": [
+          100.0,
+          100.0
+        ],
+        "maxPelvicPinChangeMm": 0.0,
+        "maxDistalPinChangeMm": 0.0
+      },
+      "contact": {
+        "frames": 1,
+        "framesWithCrossing": 1,
+        "newCrossingByStructure": {},
+        "framesWithNewCrossing": 0,
+        "framesWithNewSelectedCrossing": 0,
+        "crossedPairFrames": 26,
+        "sourceExistingPairFrames": 26,
+        "fixedAttachmentPairFrames": 23,
+        "newSelectedPairFrames": 0,
+        "newUnselectedPairFrames": 0,
+        "maxExposedLineMm": 22.3582,
+        "maxSelectedLineMm": 7.1354,
+        "maxNewSelectedLineMm": 0.0,
+        "tflFramesOnSelectedOuterCover": 0,
+        "tflFramesOutsideSelectedCover": 0,
+        "maxTflLineOnSelectedCoverMm": 0,
+        "maxTflLineOutsideSelectedCoverMm": 0,
+        "retainedNeutralTflAreaPctRange": [
+          99.9672,
+          99.9672
+        ],
+        "maxPelvicPinChangeMm": 1e-05,
+        "maxDistalPinChangeMm": 1e-05
+      }
+    },
+    "bertaux-hoa001": {
+      "originalArc": {
+        "frames": 101,
+        "framesWithCrossing": 101,
+        "newCrossingByStructure": {
+          "Gluteus medius muscle": {
+            "frames": 68,
+            "maxNewExposedLineMm": 28.1213,
+            "peakFrame": 14,
+            "peakSourceHeightAboveDistalCutMm": [
+              203.0906,
+              231.9236
+            ]
+          },
+          "Tensor fasciae latae": {
+            "frames": 101,
+            "maxNewExposedLineMm": 107.7146,
+            "peakFrame": 19,
+            "peakSourceHeightAboveDistalCutMm": [
+              124.2099,
+              198.1854
+            ]
+          },
+          "Vastus lateralis muscle": {
+            "frames": 39,
+            "maxNewExposedLineMm": 0.0003,
+            "peakFrame": 100,
+            "peakSourceHeightAboveDistalCutMm": [
+              8.9306,
+              13.9616
+            ]
+          }
+        },
+        "framesWithNewCrossing": 101,
+        "framesWithNewSelectedCrossing": 101,
+        "crossedPairFrames": 8325,
+        "sourceExistingPairFrames": 2590,
+        "fixedAttachmentPairFrames": 2323,
+        "newSelectedPairFrames": 5603,
+        "newUnselectedPairFrames": 132,
+        "maxExposedLineMm": 154.7887,
+        "maxSelectedLineMm": 136.1822,
+        "maxNewSelectedLineMm": 128.8087,
+        "tflFramesOnSelectedOuterCover": 101,
+        "tflFramesOutsideSelectedCover": 50,
+        "maxTflLineOnSelectedCoverMm": 106.2385,
+        "maxTflLineOutsideSelectedCoverMm": 4.3585,
+        "retainedNeutralTflAreaPctRange": [
+          89.2503,
+          98.3595
+        ],
+        "maxPelvicPinChangeMm": 0.0,
+        "maxDistalPinChangeMm": 0.0
+      },
+      "reboundArc": {
+        "frames": 101,
+        "framesWithCrossing": 101,
+        "newCrossingByStructure": {
+          "Gluteus medius muscle": {
+            "frames": 68,
+            "maxNewExposedLineMm": 28.1213,
+            "peakFrame": 14,
+            "peakSourceHeightAboveDistalCutMm": [
+              203.0906,
+              231.9236
+            ]
+          },
+          "Vastus lateralis muscle": {
+            "frames": 39,
+            "maxNewExposedLineMm": 0.0003,
+            "peakFrame": 100,
+            "peakSourceHeightAboveDistalCutMm": [
+              8.9306,
+              13.9616
+            ]
+          },
+          "Tensor fasciae latae": {
+            "frames": 55,
+            "maxNewExposedLineMm": 3.1584,
+            "peakFrame": 47,
+            "peakSourceHeightAboveDistalCutMm": [
+              160.7854,
+              162.1332
+            ]
+          }
+        },
+        "framesWithNewCrossing": 88,
+        "framesWithNewSelectedCrossing": 88,
+        "crossedPairFrames": 3396,
+        "sourceExistingPairFrames": 2590,
+        "fixedAttachmentPairFrames": 2323,
+        "newSelectedPairFrames": 806,
+        "newUnselectedPairFrames": 0,
+        "maxExposedLineMm": 50.3307,
+        "maxSelectedLineMm": 35.1091,
+        "maxNewSelectedLineMm": 28.1216,
+        "tflFramesOnSelectedOuterCover": 55,
+        "tflFramesOutsideSelectedCover": 0,
+        "maxTflLineOnSelectedCoverMm": 3.1584,
+        "maxTflLineOutsideSelectedCoverMm": 0,
+        "retainedNeutralTflAreaPctRange": [
+          99.9191,
+          100.0
+        ],
+        "maxPelvicPinChangeMm": 0.0,
+        "maxDistalPinChangeMm": 0.0
+      },
+      "contact": {
+        "frames": 101,
+        "framesWithCrossing": 101,
+        "newCrossingByStructure": {
+          "Vastus lateralis muscle": {
+            "frames": 39,
+            "maxNewExposedLineMm": 0.0003,
+            "peakFrame": 100,
+            "peakSourceHeightAboveDistalCutMm": [
+              8.9306,
+              13.9617
+            ]
+          }
+        },
+        "framesWithNewCrossing": 39,
+        "framesWithNewSelectedCrossing": 39,
+        "crossedPairFrames": 2587,
+        "sourceExistingPairFrames": 2548,
+        "fixedAttachmentPairFrames": 2323,
+        "newSelectedPairFrames": 39,
+        "newUnselectedPairFrames": 0,
+        "maxExposedLineMm": 22.9321,
+        "maxSelectedLineMm": 7.7101,
+        "maxNewSelectedLineMm": 0.0003,
+        "tflFramesOnSelectedOuterCover": 0,
+        "tflFramesOutsideSelectedCover": 0,
+        "maxTflLineOnSelectedCoverMm": 0,
+        "maxTflLineOutsideSelectedCoverMm": 0,
+        "retainedNeutralTflAreaPctRange": [
+          99.8862,
+          100.0
+        ],
+        "maxPelvicPinChangeMm": 1e-05,
+        "maxDistalPinChangeMm": 1e-05
+      }
+    },
+    "h1l-walk": {
+      "originalArc": {
+        "frames": 101,
+        "framesWithCrossing": 101,
+        "newCrossingByStructure": {
+          "Tensor fasciae latae": {
+            "frames": 97,
+            "maxNewExposedLineMm": 101.4685,
+            "peakFrame": 48,
+            "peakSourceHeightAboveDistalCutMm": [
+              117.1733,
+              147.2302
+            ]
+          },
+          "Vastus lateralis muscle": {
+            "frames": 30,
+            "maxNewExposedLineMm": 0.0188,
+            "peakFrame": 28,
+            "peakSourceHeightAboveDistalCutMm": [
+              14.9552,
+              14.9776
+            ]
+          },
+          "Trochanteric bursa of gluteus maximus": {
+            "frames": 7,
+            "maxNewExposedLineMm": 7.1049,
+            "peakFrame": 99,
+            "peakSourceHeightAboveDistalCutMm": [
+              135.6658,
+              138.7695
+            ]
+          }
+        },
+        "framesWithNewCrossing": 101,
+        "framesWithNewSelectedCrossing": 101,
+        "crossedPairFrames": 7195,
+        "sourceExistingPairFrames": 2661,
+        "fixedAttachmentPairFrames": 2323,
+        "newSelectedPairFrames": 4486,
+        "newUnselectedPairFrames": 48,
+        "maxExposedLineMm": 124.6617,
+        "maxSelectedLineMm": 109.439,
+        "maxNewSelectedLineMm": 101.4685,
+        "tflFramesOnSelectedOuterCover": 97,
+        "tflFramesOutsideSelectedCover": 19,
+        "maxTflLineOnSelectedCoverMm": 101.4685,
+        "maxTflLineOutsideSelectedCoverMm": 6.0676,
+        "retainedNeutralTflAreaPctRange": [
+          80.1559,
+          99.9357
+        ],
+        "maxPelvicPinChangeMm": 0.0,
+        "maxDistalPinChangeMm": 0.0
+      },
+      "reboundArc": {
+        "frames": 101,
+        "framesWithCrossing": 101,
+        "newCrossingByStructure": {
+          "Vastus lateralis muscle": {
+            "frames": 30,
+            "maxNewExposedLineMm": 0.0188,
+            "peakFrame": 28,
+            "peakSourceHeightAboveDistalCutMm": [
+              14.9552,
+              14.9776
+            ]
+          },
+          "Tensor fasciae latae": {
+            "frames": 16,
+            "maxNewExposedLineMm": 0.5806,
+            "peakFrame": 86,
+            "peakSourceHeightAboveDistalCutMm": [
+              161.0854,
+              161.3443
+            ]
+          },
+          "Trochanteric bursa of gluteus maximus": {
+            "frames": 7,
+            "maxNewExposedLineMm": 7.1049,
+            "peakFrame": 99,
+            "peakSourceHeightAboveDistalCutMm": [
+              135.6658,
+              138.7695
+            ]
+          }
+        },
+        "framesWithNewCrossing": 53,
+        "framesWithNewSelectedCrossing": 53,
+        "crossedPairFrames": 2804,
+        "sourceExistingPairFrames": 2661,
+        "fixedAttachmentPairFrames": 2323,
+        "newSelectedPairFrames": 143,
+        "newUnselectedPairFrames": 0,
+        "maxExposedLineMm": 30.5674,
+        "maxSelectedLineMm": 15.3444,
+        "maxNewSelectedLineMm": 7.1049,
+        "tflFramesOnSelectedOuterCover": 16,
+        "tflFramesOutsideSelectedCover": 0,
+        "maxTflLineOnSelectedCoverMm": 0.5806,
+        "maxTflLineOutsideSelectedCoverMm": 0,
+        "retainedNeutralTflAreaPctRange": [
+          99.8994,
+          100.0
+        ],
+        "maxPelvicPinChangeMm": 0.0,
+        "maxDistalPinChangeMm": 0.0
+      },
+      "contact": {
+        "frames": 101,
+        "framesWithCrossing": 101,
+        "newCrossingByStructure": {
+          "Vastus lateralis muscle": {
+            "frames": 30,
+            "maxNewExposedLineMm": 0.0188,
+            "peakFrame": 28,
+            "peakSourceHeightAboveDistalCutMm": [
+              14.9552,
+              14.9776
+            ]
+          }
+        },
+        "framesWithNewCrossing": 30,
+        "framesWithNewSelectedCrossing": 30,
+        "crossedPairFrames": 2636,
+        "sourceExistingPairFrames": 2599,
+        "fixedAttachmentPairFrames": 2323,
+        "newSelectedPairFrames": 37,
+        "newUnselectedPairFrames": 0,
+        "maxExposedLineMm": 23.8942,
+        "maxSelectedLineMm": 8.6715,
+        "maxNewSelectedLineMm": 0.0188,
+        "tflFramesOnSelectedOuterCover": 0,
+        "tflFramesOutsideSelectedCover": 0,
+        "maxTflLineOnSelectedCoverMm": 0,
+        "maxTflLineOutsideSelectedCoverMm": 0,
+        "retainedNeutralTflAreaPctRange": [
+          99.8666,
+          99.9672
+        ],
+        "maxPelvicPinChangeMm": 1e-05,
+        "maxDistalPinChangeMm": 1e-05
+      }
+    },
+    "h1l-stand": {
+      "originalArc": {
+        "frames": 101,
+        "framesWithCrossing": 101,
+        "newCrossingByStructure": {
+          "Tensor fasciae latae": {
+            "frames": 101,
+            "maxNewExposedLineMm": 91.1516,
+            "peakFrame": 0,
+            "peakSourceHeightAboveDistalCutMm": [
+              126.0835,
+              162.1268
+            ]
+          },
+          "Vastus lateralis muscle": {
+            "frames": 101,
+            "maxNewExposedLineMm": 105.2375,
+            "peakFrame": 20,
+            "peakSourceHeightAboveDistalCutMm": [
+              15.5776,
+              96.1538
+            ]
+          },
+          "Trochanteric bursa of gluteus maximus": {
+            "frames": 101,
+            "maxNewExposedLineMm": 52.025,
+            "peakFrame": 77,
+            "peakSourceHeightAboveDistalCutMm": [
+              133.2111,
+              145.6283
+            ]
+          },
+          "Femur": {
+            "frames": 24,
+            "maxNewExposedLineMm": 19.1273,
+            "peakFrame": 20,
+            "peakSourceHeightAboveDistalCutMm": [
+              135.911,
+              142.5502
+            ]
+          },
+          "Gluteus maximus muscle": {
+            "frames": 63,
+            "maxNewExposedLineMm": 9.5331,
+            "peakFrame": 79,
+            "peakSourceHeightAboveDistalCutMm": [
+              87.0827,
+              96.47
+            ]
+          },
+          "Gluteus medius muscle": {
+            "frames": 25,
+            "maxNewExposedLineMm": 11.5995,
+            "peakFrame": 20,
+            "peakSourceHeightAboveDistalCutMm": [
+              134.9477,
+              139.5659
+            ]
+          }
+        },
+        "framesWithNewCrossing": 101,
+        "framesWithNewSelectedCrossing": 101,
+        "crossedPairFrames": 17136,
+        "sourceExistingPairFrames": 2643,
+        "fixedAttachmentPairFrames": 2323,
+        "newSelectedPairFrames": 14493,
+        "newUnselectedPairFrames": 0,
+        "maxExposedLineMm": 293.8489,
+        "maxSelectedLineMm": 278.6253,
+        "maxNewSelectedLineMm": 270.5413,
+        "tflFramesOnSelectedOuterCover": 101,
+        "tflFramesOutsideSelectedCover": 0,
+        "maxTflLineOnSelectedCoverMm": 91.1516,
+        "maxTflLineOutsideSelectedCoverMm": 0.0,
+        "retainedNeutralTflAreaPctRange": [
+          85.2119,
+          87.3137
+        ],
+        "maxPelvicPinChangeMm": 0.0,
+        "maxDistalPinChangeMm": 0.0
+      },
+      "reboundArc": {
+        "frames": 101,
+        "framesWithCrossing": 101,
+        "newCrossingByStructure": {
+          "Vastus lateralis muscle": {
+            "frames": 101,
+            "maxNewExposedLineMm": 105.2375,
+            "peakFrame": 20,
+            "peakSourceHeightAboveDistalCutMm": [
+              15.5776,
+              96.1538
+            ]
+          },
+          "Trochanteric bursa of gluteus maximus": {
+            "frames": 101,
+            "maxNewExposedLineMm": 52.025,
+            "peakFrame": 77,
+            "peakSourceHeightAboveDistalCutMm": [
+              133.2111,
+              145.6283
+            ]
+          },
+          "Femur": {
+            "frames": 24,
+            "maxNewExposedLineMm": 19.1273,
+            "peakFrame": 20,
+            "peakSourceHeightAboveDistalCutMm": [
+              135.911,
+              142.5502
+            ]
+          },
+          "Gluteus maximus muscle": {
+            "frames": 63,
+            "maxNewExposedLineMm": 9.5331,
+            "peakFrame": 79,
+            "peakSourceHeightAboveDistalCutMm": [
+              87.0827,
+              96.47
+            ]
+          },
+          "Gluteus medius muscle": {
+            "frames": 25,
+            "maxNewExposedLineMm": 11.5995,
+            "peakFrame": 20,
+            "peakSourceHeightAboveDistalCutMm": [
+              134.9477,
+              139.5659
+            ]
+          }
+        },
+        "framesWithNewCrossing": 101,
+        "framesWithNewSelectedCrossing": 101,
+        "crossedPairFrames": 10198,
+        "sourceExistingPairFrames": 2643,
+        "fixedAttachmentPairFrames": 2323,
+        "newSelectedPairFrames": 7555,
+        "newUnselectedPairFrames": 0,
+        "maxExposedLineMm": 213.0213,
+        "maxSelectedLineMm": 197.7977,
+        "maxNewSelectedLineMm": 189.7137,
+        "tflFramesOnSelectedOuterCover": 0,
+        "tflFramesOutsideSelectedCover": 0,
+        "maxTflLineOnSelectedCoverMm": 0,
+        "maxTflLineOutsideSelectedCoverMm": 0,
+        "retainedNeutralTflAreaPctRange": [
+          99.8925,
+          99.8994
+        ],
+        "maxPelvicPinChangeMm": 0.0,
+        "maxDistalPinChangeMm": 0.0
+      },
+      "contact": {
+        "frames": 101,
+        "framesWithCrossing": 101,
+        "newCrossingByStructure": {},
+        "framesWithNewCrossing": 0,
+        "framesWithNewSelectedCrossing": 0,
+        "crossedPairFrames": 2626,
+        "sourceExistingPairFrames": 2626,
+        "fixedAttachmentPairFrames": 2323,
+        "newSelectedPairFrames": 0,
+        "newUnselectedPairFrames": 0,
+        "maxExposedLineMm": 22.9509,
+        "maxSelectedLineMm": 7.7277,
+        "maxNewSelectedLineMm": 0.0,
+        "tflFramesOnSelectedOuterCover": 0,
+        "tflFramesOutsideSelectedCover": 0,
+        "maxTflLineOnSelectedCoverMm": 0,
+        "maxTflLineOutsideSelectedCoverMm": 0,
+        "retainedNeutralTflAreaPctRange": [
+          99.8597,
+          99.8666
+        ],
+        "maxPelvicPinChangeMm": 1e-05,
+        "maxDistalPinChangeMm": 1e-05
+      }
+    },
+    "predsim-hip-0": {
+      "originalArc": {
+        "frames": 101,
+        "framesWithCrossing": 101,
+        "newCrossingByStructure": {
+          "Tensor fasciae latae": {
+            "frames": 101,
+            "maxNewExposedLineMm": 226.9807,
+            "peakFrame": 45,
+            "peakSourceHeightAboveDistalCutMm": [
+              138.0633,
+              217.0847
+            ]
+          },
+          "Vastus lateralis muscle": {
+            "frames": 29,
+            "maxNewExposedLineMm": 0.0377,
+            "peakFrame": 77,
+            "peakSourceHeightAboveDistalCutMm": [
+              14.9631,
+              15.0084
+            ]
+          },
+          "Gluteus maximus muscle": {
+            "frames": 23,
+            "maxNewExposedLineMm": 5.9152,
+            "peakFrame": 47,
+            "peakSourceHeightAboveDistalCutMm": [
+              86.4075,
+              92.3962
+            ]
+          },
+          "Trochanteric bursa of gluteus maximus": {
+            "frames": 14,
+            "maxNewExposedLineMm": 16.5848,
+            "peakFrame": 57,
+            "peakSourceHeightAboveDistalCutMm": [
+              133.9209,
+              141.1305
+            ]
+          }
+        },
+        "framesWithNewCrossing": 101,
+        "framesWithNewSelectedCrossing": 101,
+        "crossedPairFrames": 10353,
+        "sourceExistingPairFrames": 2663,
+        "fixedAttachmentPairFrames": 2323,
+        "newSelectedPairFrames": 6851,
+        "newUnselectedPairFrames": 839,
+        "maxExposedLineMm": 256.4755,
+        "maxSelectedLineMm": 218.2413,
+        "maxNewSelectedLineMm": 209.8111,
+        "tflFramesOnSelectedOuterCover": 101,
+        "tflFramesOutsideSelectedCover": 88,
+        "maxTflLineOnSelectedCoverMm": 205.3268,
+        "maxTflLineOutsideSelectedCoverMm": 50.7034,
+        "retainedNeutralTflAreaPctRange": [
+          67.0413,
+          99.5802
+        ],
+        "maxPelvicPinChangeMm": 0.0,
+        "maxDistalPinChangeMm": 0.0
+      },
+      "reboundArc": {
+        "frames": 101,
+        "framesWithCrossing": 101,
+        "newCrossingByStructure": {
+          "Vastus lateralis muscle": {
+            "frames": 29,
+            "maxNewExposedLineMm": 0.0377,
+            "peakFrame": 77,
+            "peakSourceHeightAboveDistalCutMm": [
+              14.9631,
+              15.0084
+            ]
+          },
+          "Gluteus maximus muscle": {
+            "frames": 23,
+            "maxNewExposedLineMm": 5.9152,
+            "peakFrame": 47,
+            "peakSourceHeightAboveDistalCutMm": [
+              86.4075,
+              92.3962
+            ]
+          },
+          "Trochanteric bursa of gluteus maximus": {
+            "frames": 14,
+            "maxNewExposedLineMm": 16.5848,
+            "peakFrame": 57,
+            "peakSourceHeightAboveDistalCutMm": [
+              133.9209,
+              141.1305
+            ]
+          }
+        },
+        "framesWithNewCrossing": 55,
+        "framesWithNewSelectedCrossing": 55,
+        "crossedPairFrames": 2915,
+        "sourceExistingPairFrames": 2663,
+        "fixedAttachmentPairFrames": 2323,
+        "newSelectedPairFrames": 252,
+        "newUnselectedPairFrames": 0,
+        "maxExposedLineMm": 44.5897,
+        "maxSelectedLineMm": 29.3671,
+        "maxNewSelectedLineMm": 20.8561,
+        "tflFramesOnSelectedOuterCover": 0,
+        "tflFramesOutsideSelectedCover": 0,
+        "maxTflLineOnSelectedCoverMm": 0,
+        "maxTflLineOutsideSelectedCoverMm": 0,
+        "retainedNeutralTflAreaPctRange": [
+          99.8988,
+          100.0
+        ],
+        "maxPelvicPinChangeMm": 0.0,
+        "maxDistalPinChangeMm": 0.0
+      },
+      "contact": {
+        "frames": 101,
+        "framesWithCrossing": 101,
+        "newCrossingByStructure": {
+          "Vastus lateralis muscle": {
+            "frames": 45,
+            "maxNewExposedLineMm": 0.0377,
+            "peakFrame": 77,
+            "peakSourceHeightAboveDistalCutMm": [
+              14.9631,
+              15.0084
+            ]
+          }
+        },
+        "framesWithNewCrossing": 45,
+        "framesWithNewSelectedCrossing": 45,
+        "crossedPairFrames": 2611,
+        "sourceExistingPairFrames": 2563,
+        "fixedAttachmentPairFrames": 2323,
+        "newSelectedPairFrames": 48,
+        "newUnselectedPairFrames": 0,
+        "maxExposedLineMm": 23.7232,
+        "maxSelectedLineMm": 8.5006,
+        "maxNewSelectedLineMm": 0.0377,
+        "tflFramesOnSelectedOuterCover": 0,
+        "tflFramesOutsideSelectedCover": 0,
+        "maxTflLineOnSelectedCoverMm": 0,
+        "maxTflLineOutsideSelectedCoverMm": 0,
+        "retainedNeutralTflAreaPctRange": [
+          99.1127,
+          99.9672
+        ],
+        "maxPelvicPinChangeMm": 1e-05,
+        "maxDistalPinChangeMm": 1e-05
+      }
+    },
+    "predsim-hip-50": {
+      "originalArc": {
+        "frames": 101,
+        "framesWithCrossing": 101,
+        "newCrossingByStructure": {
+          "Tensor fasciae latae": {
+            "frames": 101,
+            "maxNewExposedLineMm": 218.263,
+            "peakFrame": 49,
+            "peakSourceHeightAboveDistalCutMm": [
+              142.0583,
+              216.8492
+            ]
+          },
+          "Vastus lateralis muscle": {
+            "frames": 31,
+            "maxNewExposedLineMm": 0.0216,
+            "peakFrame": 11,
+            "peakSourceHeightAboveDistalCutMm": [
+              14.9485,
+              14.9744
+            ]
+          },
+          "Gluteus maximus muscle": {
+            "frames": 27,
+            "maxNewExposedLineMm": 13.5054,
+            "peakFrame": 48,
+            "peakSourceHeightAboveDistalCutMm": [
+              84.9191,
+              98.9577
+            ]
+          },
+          "Trochanteric bursa of gluteus maximus": {
+            "frames": 20,
+            "maxNewExposedLineMm": 22.1378,
+            "peakFrame": 57,
+            "peakSourceHeightAboveDistalCutMm": [
+              133.5122,
+              142.8249
+            ]
+          }
+        },
+        "framesWithNewCrossing": 101,
+        "framesWithNewSelectedCrossing": 101,
+        "crossedPairFrames": 10182,
+        "sourceExistingPairFrames": 2659,
+        "fixedAttachmentPairFrames": 2323,
+        "newSelectedPairFrames": 6826,
+        "newUnselectedPairFrames": 697,
+        "maxExposedLineMm": 273.8435,
+        "maxSelectedLineMm": 222.5367,
+        "maxNewSelectedLineMm": 213.9099,
+        "tflFramesOnSelectedOuterCover": 101,
+        "tflFramesOutsideSelectedCover": 62,
+        "maxTflLineOnSelectedCoverMm": 189.1025,
+        "maxTflLineOutsideSelectedCoverMm": 52.8803,
+        "retainedNeutralTflAreaPctRange": [
+          71.7285,
+          99.7832
+        ],
+        "maxPelvicPinChangeMm": 0.0,
+        "maxDistalPinChangeMm": 0.0
+      },
+      "reboundArc": {
+        "frames": 101,
+        "framesWithCrossing": 101,
+        "newCrossingByStructure": {
+          "Vastus lateralis muscle": {
+            "frames": 31,
+            "maxNewExposedLineMm": 0.0216,
+            "peakFrame": 11,
+            "peakSourceHeightAboveDistalCutMm": [
+              14.9485,
+              14.9744
+            ]
+          },
+          "Gluteus maximus muscle": {
+            "frames": 27,
+            "maxNewExposedLineMm": 13.5054,
+            "peakFrame": 48,
+            "peakSourceHeightAboveDistalCutMm": [
+              84.9191,
+              98.9577
+            ]
+          },
+          "Trochanteric bursa of gluteus maximus": {
+            "frames": 20,
+            "maxNewExposedLineMm": 22.1378,
+            "peakFrame": 57,
+            "peakSourceHeightAboveDistalCutMm": [
+              133.5122,
+              142.8249
+            ]
+          },
+          "Tensor fasciae latae": {
+            "frames": 6,
+            "maxNewExposedLineMm": 0.2701,
+            "peakFrame": 57,
+            "peakSourceHeightAboveDistalCutMm": [
+              161.2093,
+              161.3284
+            ]
+          }
+        },
+        "framesWithNewCrossing": 61,
+        "framesWithNewSelectedCrossing": 61,
+        "crossedPairFrames": 3111,
+        "sourceExistingPairFrames": 2659,
+        "fixedAttachmentPairFrames": 2323,
+        "newSelectedPairFrames": 452,
+        "newUnselectedPairFrames": 0,
+        "maxExposedLineMm": 56.6504,
+        "maxSelectedLineMm": 41.428,
+        "maxNewSelectedLineMm": 32.7709,
+        "tflFramesOnSelectedOuterCover": 6,
+        "tflFramesOutsideSelectedCover": 0,
+        "maxTflLineOnSelectedCoverMm": 0.2701,
+        "maxTflLineOutsideSelectedCoverMm": 0,
+        "retainedNeutralTflAreaPctRange": [
+          99.8994,
+          100.0
+        ],
+        "maxPelvicPinChangeMm": 0.0,
+        "maxDistalPinChangeMm": 0.0
+      },
+      "contact": {
+        "frames": 101,
+        "framesWithCrossing": 101,
+        "newCrossingByStructure": {
+          "Vastus lateralis muscle": {
+            "frames": 41,
+            "maxNewExposedLineMm": 0.0216,
+            "peakFrame": 11,
+            "peakSourceHeightAboveDistalCutMm": [
+              14.9485,
+              14.9744
+            ]
+          }
+        },
+        "framesWithNewCrossing": 41,
+        "framesWithNewSelectedCrossing": 41,
+        "crossedPairFrames": 2622,
+        "sourceExistingPairFrames": 2577,
+        "fixedAttachmentPairFrames": 2323,
+        "newSelectedPairFrames": 45,
+        "newUnselectedPairFrames": 0,
+        "maxExposedLineMm": 23.7968,
+        "maxSelectedLineMm": 8.5742,
+        "maxNewSelectedLineMm": 0.0216,
+        "tflFramesOnSelectedOuterCover": 0,
+        "tflFramesOutsideSelectedCover": 0,
+        "maxTflLineOnSelectedCoverMm": 0,
+        "maxTflLineOutsideSelectedCoverMm": 0,
+        "retainedNeutralTflAreaPctRange": [
+          99.2225,
+          99.9672
+        ],
+        "maxPelvicPinChangeMm": 1e-05,
+        "maxDistalPinChangeMm": 1e-05
+      }
+    },
+    "predsim-hip-75": {
+      "originalArc": {
+        "frames": 101,
+        "framesWithCrossing": 101,
+        "newCrossingByStructure": {
+          "Tensor fasciae latae": {
+            "frames": 101,
+            "maxNewExposedLineMm": 198.6709,
+            "peakFrame": 34,
+            "peakSourceHeightAboveDistalCutMm": [
+              125.7433,
+              184.8642
+            ]
+          },
+          "Vastus lateralis muscle": {
+            "frames": 69,
+            "maxNewExposedLineMm": 107.6931,
+            "peakFrame": 44,
+            "peakSourceHeightAboveDistalCutMm": [
+              50.5792,
+              93.2685
+            ]
+          },
+          "Trochanteric bursa of gluteus maximus": {
+            "frames": 52,
+            "maxNewExposedLineMm": 58.4592,
+            "peakFrame": 57,
+            "peakSourceHeightAboveDistalCutMm": [
+              134.3203,
+              148.0511
+            ]
+          },
+          "Gluteus maximus muscle": {
+            "frames": 43,
+            "maxNewExposedLineMm": 62.0155,
+            "peakFrame": 42,
+            "peakSourceHeightAboveDistalCutMm": [
+              68.5176,
+              135.4147
+            ]
+          },
+          "Gluteus medius muscle": {
+            "frames": 26,
+            "maxNewExposedLineMm": 18.1399,
+            "peakFrame": 44,
+            "peakSourceHeightAboveDistalCutMm": [
+              134.6648,
+              141.7144
+            ]
+          },
+          "Femur": {
+            "frames": 17,
+            "maxNewExposedLineMm": 18.9204,
+            "peakFrame": 40,
+            "peakSourceHeightAboveDistalCutMm": [
+              136.1958,
+              142.8626
+            ]
+          }
+        },
+        "framesWithNewCrossing": 101,
+        "framesWithNewSelectedCrossing": 101,
+        "crossedPairFrames": 13089,
+        "sourceExistingPairFrames": 2652,
+        "fixedAttachmentPairFrames": 2323,
+        "newSelectedPairFrames": 9844,
+        "newUnselectedPairFrames": 593,
+        "maxExposedLineMm": 425.2162,
+        "maxSelectedLineMm": 375.2448,
+        "maxNewSelectedLineMm": 366.6022,
+        "tflFramesOnSelectedOuterCover": 101,
+        "tflFramesOutsideSelectedCover": 46,
+        "maxTflLineOnSelectedCoverMm": 160.9778,
+        "maxTflLineOutsideSelectedCoverMm": 41.8435,
+        "retainedNeutralTflAreaPctRange": [
+          80.9443,
+          99.8165
+        ],
+        "maxPelvicPinChangeMm": 0.0,
+        "maxDistalPinChangeMm": 0.0
+      },
+      "reboundArc": {
+        "frames": 101,
+        "framesWithCrossing": 101,
+        "newCrossingByStructure": {
+          "Vastus lateralis muscle": {
+            "frames": 69,
+            "maxNewExposedLineMm": 107.6931,
+            "peakFrame": 44,
+            "peakSourceHeightAboveDistalCutMm": [
+              50.5792,
+              93.2685
+            ]
+          },
+          "Trochanteric bursa of gluteus maximus": {
+            "frames": 52,
+            "maxNewExposedLineMm": 58.4592,
+            "peakFrame": 57,
+            "peakSourceHeightAboveDistalCutMm": [
+              134.3203,
+              148.0511
+            ]
+          },
+          "Gluteus maximus muscle": {
+            "frames": 43,
+            "maxNewExposedLineMm": 62.0155,
+            "peakFrame": 42,
+            "peakSourceHeightAboveDistalCutMm": [
+              68.5176,
+              135.4147
+            ]
+          },
+          "Gluteus medius muscle": {
+            "frames": 26,
+            "maxNewExposedLineMm": 18.1399,
+            "peakFrame": 44,
+            "peakSourceHeightAboveDistalCutMm": [
+              134.6648,
+              141.7144
+            ]
+          },
+          "Femur": {
+            "frames": 17,
+            "maxNewExposedLineMm": 18.9204,
+            "peakFrame": 40,
+            "peakSourceHeightAboveDistalCutMm": [
+              136.1958,
+              142.8626
+            ]
+          },
+          "Tensor fasciae latae": {
+            "frames": 4,
+            "maxNewExposedLineMm": 0.0987,
+            "peakFrame": 56,
+            "peakSourceHeightAboveDistalCutMm": [
+              161.2158,
+              161.26
+            ]
+          }
+        },
+        "framesWithNewCrossing": 83,
+        "framesWithNewSelectedCrossing": 83,
+        "crossedPairFrames": 7039,
+        "sourceExistingPairFrames": 2652,
+        "fixedAttachmentPairFrames": 2323,
+        "newSelectedPairFrames": 4387,
+        "newUnselectedPairFrames": 0,
+        "maxExposedLineMm": 280.7609,
+        "maxSelectedLineMm": 265.5378,
+        "maxNewSelectedLineMm": 256.6613,
+        "tflFramesOnSelectedOuterCover": 4,
+        "tflFramesOutsideSelectedCover": 0,
+        "maxTflLineOnSelectedCoverMm": 0.0987,
+        "maxTflLineOutsideSelectedCoverMm": 0,
+        "retainedNeutralTflAreaPctRange": [
+          99.8994,
+          100.0
+        ],
+        "maxPelvicPinChangeMm": 0.0,
+        "maxDistalPinChangeMm": 0.0
+      },
+      "contact": {
+        "frames": 101,
+        "framesWithCrossing": 101,
+        "newCrossingByStructure": {
+          "Vastus lateralis muscle": {
+            "frames": 29,
+            "maxNewExposedLineMm": 0.0643,
+            "peakFrame": 6,
+            "peakSourceHeightAboveDistalCutMm": [
+              14.8275,
+              14.9605
+            ]
+          }
+        },
+        "framesWithNewCrossing": 29,
+        "framesWithNewSelectedCrossing": 29,
+        "crossedPairFrames": 2640,
+        "sourceExistingPairFrames": 2593,
+        "fixedAttachmentPairFrames": 2323,
+        "newSelectedPairFrames": 47,
+        "newUnselectedPairFrames": 0,
+        "maxExposedLineMm": 24.1704,
+        "maxSelectedLineMm": 8.9474,
+        "maxNewSelectedLineMm": 0.0643,
+        "tflFramesOnSelectedOuterCover": 0,
+        "tflFramesOutsideSelectedCover": 0,
+        "maxTflLineOnSelectedCoverMm": 0,
+        "maxTflLineOutsideSelectedCoverMm": 0,
+        "retainedNeutralTflAreaPctRange": [
+          99.7673,
+          99.9672
+        ],
+        "maxPelvicPinChangeMm": 1e-05,
+        "maxDistalPinChangeMm": 1e-05
+      }
+    },
+    "predsim-hip-90": {
+      "originalArc": {
+        "frames": 101,
+        "framesWithCrossing": 101,
+        "newCrossingByStructure": {
+          "Tensor fasciae latae": {
+            "frames": 101,
+            "maxNewExposedLineMm": 214.5131,
+            "peakFrame": 37,
+            "peakSourceHeightAboveDistalCutMm": [
+              118.4174,
+              195.1555
+            ]
+          },
+          "Vastus lateralis muscle": {
+            "frames": 71,
+            "maxNewExposedLineMm": 142.623,
+            "peakFrame": 38,
+            "peakSourceHeightAboveDistalCutMm": [
+              43.1686,
+              101.9726
+            ]
+          },
+          "Trochanteric bursa of gluteus maximus": {
+            "frames": 61,
+            "maxNewExposedLineMm": 59.492,
+            "peakFrame": 55,
+            "peakSourceHeightAboveDistalCutMm": [
+              134.6533,
+              148.138
+            ]
+          },
+          "Gluteus medius muscle": {
+            "frames": 45,
+            "maxNewExposedLineMm": 30.6184,
+            "peakFrame": 39,
+            "peakSourceHeightAboveDistalCutMm": [
+              133.6462,
+              147.6217
+            ]
+          },
+          "Femur": {
+            "frames": 42,
+            "maxNewExposedLineMm": 34.3707,
+            "peakFrame": 35,
+            "peakSourceHeightAboveDistalCutMm": [
+              135.617,
+              147.7095
+            ]
+          },
+          "Gluteus maximus muscle": {
+            "frames": 51,
+            "maxNewExposedLineMm": 70.9117,
+            "peakFrame": 42,
+            "peakSourceHeightAboveDistalCutMm": [
+              65.9688,
+              141.49
+            ]
+          }
+        },
+        "framesWithNewCrossing": 101,
+        "framesWithNewSelectedCrossing": 101,
+        "crossedPairFrames": 17950,
+        "sourceExistingPairFrames": 2653,
+        "fixedAttachmentPairFrames": 2323,
+        "newSelectedPairFrames": 14287,
+        "newUnselectedPairFrames": 1010,
+        "maxExposedLineMm": 564.5873,
+        "maxSelectedLineMm": 498.5165,
+        "maxNewSelectedLineMm": 489.6798,
+        "tflFramesOnSelectedOuterCover": 101,
+        "tflFramesOutsideSelectedCover": 64,
+        "maxTflLineOnSelectedCoverMm": 163.6657,
+        "maxTflLineOutsideSelectedCoverMm": 58.1518,
+        "retainedNeutralTflAreaPctRange": [
+          79.6166,
+          97.7238
+        ],
+        "maxPelvicPinChangeMm": 0.0,
+        "maxDistalPinChangeMm": 0.0
+      },
+      "reboundArc": {
+        "frames": 101,
+        "framesWithCrossing": 101,
+        "newCrossingByStructure": {
+          "Vastus lateralis muscle": {
+            "frames": 71,
+            "maxNewExposedLineMm": 142.623,
+            "peakFrame": 38,
+            "peakSourceHeightAboveDistalCutMm": [
+              43.1686,
+              101.9726
+            ]
+          },
+          "Trochanteric bursa of gluteus maximus": {
+            "frames": 61,
+            "maxNewExposedLineMm": 59.492,
+            "peakFrame": 55,
+            "peakSourceHeightAboveDistalCutMm": [
+              134.6533,
+              148.138
+            ]
+          },
+          "Gluteus medius muscle": {
+            "frames": 45,
+            "maxNewExposedLineMm": 30.6184,
+            "peakFrame": 39,
+            "peakSourceHeightAboveDistalCutMm": [
+              133.6462,
+              147.6217
+            ]
+          },
+          "Femur": {
+            "frames": 42,
+            "maxNewExposedLineMm": 34.3707,
+            "peakFrame": 35,
+            "peakSourceHeightAboveDistalCutMm": [
+              135.617,
+              147.7095
+            ]
+          },
+          "Gluteus maximus muscle": {
+            "frames": 51,
+            "maxNewExposedLineMm": 70.9117,
+            "peakFrame": 42,
+            "peakSourceHeightAboveDistalCutMm": [
+              65.9688,
+              141.49
+            ]
+          }
+        },
+        "framesWithNewCrossing": 78,
+        "framesWithNewSelectedCrossing": 78,
+        "crossedPairFrames": 10669,
+        "sourceExistingPairFrames": 2653,
+        "fixedAttachmentPairFrames": 2323,
+        "newSelectedPairFrames": 8016,
+        "newUnselectedPairFrames": 0,
+        "maxExposedLineMm": 350.4977,
+        "maxSelectedLineMm": 335.2744,
+        "maxNewSelectedLineMm": 326.4095,
+        "tflFramesOnSelectedOuterCover": 0,
+        "tflFramesOutsideSelectedCover": 0,
+        "maxTflLineOnSelectedCoverMm": 0,
+        "maxTflLineOutsideSelectedCoverMm": 0,
+        "retainedNeutralTflAreaPctRange": [
+          99.8925,
+          100.0
+        ],
+        "maxPelvicPinChangeMm": 0.0,
+        "maxDistalPinChangeMm": 0.0
+      },
+      "contact": {
+        "frames": 101,
+        "framesWithCrossing": 101,
+        "newCrossingByStructure": {
+          "Vastus lateralis muscle": {
+            "frames": 48,
+            "maxNewExposedLineMm": 0.0762,
+            "peakFrame": 3,
+            "peakSourceHeightAboveDistalCutMm": [
+              14.7721,
+              14.9693
+            ]
+          }
+        },
+        "framesWithNewCrossing": 48,
+        "framesWithNewSelectedCrossing": 48,
+        "crossedPairFrames": 2627,
+        "sourceExistingPairFrames": 2548,
+        "fixedAttachmentPairFrames": 2323,
+        "newSelectedPairFrames": 79,
+        "newUnselectedPairFrames": 0,
+        "maxExposedLineMm": 24.1593,
+        "maxSelectedLineMm": 8.936,
+        "maxNewSelectedLineMm": 0.0762,
+        "tflFramesOnSelectedOuterCover": 0,
+        "tflFramesOutsideSelectedCover": 0,
+        "maxTflLineOnSelectedCoverMm": 0,
+        "maxTflLineOutsideSelectedCoverMm": 0,
+        "retainedNeutralTflAreaPctRange": [
+          99.6568,
+          99.9672
+        ],
+        "maxPelvicPinChangeMm": 1e-05,
+        "maxDistalPinChangeMm": 1e-05
+      }
+    }
+  },
+  "reproduce": [
+    "python hip-study/tools/prepare_hip_deformation.py --uncoupled-tfl --output /tmp/hip-original-weights",
+    "python hip-study/tools/audit_hip_contact.py --attachment-dir /tmp/hip-original-weights --all-clips --output /tmp/hip-original.json",
+    "python hip-study/tools/audit_hip_contact.py --all-clips --output /tmp/hip-arc.json",
+    "python hip-study/tools/audit_hip_contact.py --corrected --all-clips --output /tmp/hip-contact.json",
+    "python hip-study/tools/audit_hip_contact.py --compare /tmp/hip-arc.json /tmp/hip-contact.json --original-records /tmp/hip-original.json --output hip-study/data/contact-audit.json"
+  ],
+  "neutral": {
+    "clip": "neutral",
+    "originalArc": {
+      "frame": 0,
+      "hits": {
+        "Hip bone": {
+          "pairs": 17,
+          "lengthMm": 15.2228,
+          "byBandRegion": {
+            "pelvisPinned": {
+              "pairs": 17,
+              "lengthMm": 15.2228
+            }
+          },
+          "newFacePairs": 0,
+          "newFacePairLengthMm": 0.0,
+          "onSelectedFaces": {
+            "pairs": 0,
+            "lengthMm": 0.0,
+            "newFacePairs": 0,
+            "newFacePairLengthMm": 0.0
+          }
+        },
+        "Gluteus medius muscle": {
+          "pairs": 6,
+          "lengthMm": 0.1503,
+          "byBandRegion": {
+            "pelvisPinned": {
+              "pairs": 6,
+              "lengthMm": 0.1503
+            }
+          },
+          "newFacePairs": 0,
+          "newFacePairLengthMm": 0.0
+        },
+        "Vastus lateralis muscle": {
+          "pairs": 4,
+          "lengthMm": 8.0901,
+          "byBandRegion": {
+            "blended": {
+              "pairs": 4,
+              "lengthMm": 8.0901
+            }
+          },
+          "newFacePairs": 0,
+          "newFacePairLengthMm": 0.0
+        }
+      },
+      "enclosedTflRetainedPct": 100.0,
+      "maxPelvicPinChangeMm": 0.0,
+      "maxDistalPinChangeMm": 0.0
+    },
+    "reboundArc": {
+      "frame": 0,
+      "hits": {
+        "Hip bone": {
+          "pairs": 17,
+          "lengthMm": 15.2228,
+          "byBandRegion": {
+            "pelvisPinned": {
+              "pairs": 17,
+              "lengthMm": 15.2228
+            }
+          },
+          "newFacePairs": 0,
+          "newFacePairLengthMm": 0.0,
+          "onSelectedFaces": {
+            "pairs": 0,
+            "lengthMm": 0.0,
+            "newFacePairs": 0,
+            "newFacePairLengthMm": 0.0
+          }
+        },
+        "Gluteus medius muscle": {
+          "pairs": 6,
+          "lengthMm": 0.1503,
+          "byBandRegion": {
+            "pelvisPinned": {
+              "pairs": 6,
+              "lengthMm": 0.1503
+            }
+          },
+          "newFacePairs": 0,
+          "newFacePairLengthMm": 0.0
+        },
+        "Vastus lateralis muscle": {
+          "pairs": 4,
+          "lengthMm": 8.0901,
+          "byBandRegion": {
+            "blended": {
+              "pairs": 4,
+              "lengthMm": 8.0901
+            }
+          },
+          "newFacePairs": 0,
+          "newFacePairLengthMm": 0.0
+        }
+      },
+      "enclosedTflRetainedPct": 100.0,
+      "maxPelvicPinChangeMm": 0.0,
+      "maxDistalPinChangeMm": 0.0
+    },
+    "contact": {
+      "frame": 0,
+      "hits": {
+        "Hip bone": {
+          "pairs": 17,
+          "lengthMm": 15.2228,
+          "byBandRegion": {
+            "pelvisPinned": {
+              "pairs": 17,
+              "lengthMm": 15.2228
+            }
+          },
+          "newFacePairs": 0,
+          "newFacePairLengthMm": 0.0,
+          "onSelectedFaces": {
+            "pairs": 0,
+            "lengthMm": 0.0,
+            "newFacePairs": 0,
+            "newFacePairLengthMm": 0.0
+          }
+        },
+        "Gluteus medius muscle": {
+          "pairs": 6,
+          "lengthMm": 0.1502,
+          "byBandRegion": {
+            "pelvisPinned": {
+              "pairs": 6,
+              "lengthMm": 0.1502
+            }
+          },
+          "newFacePairs": 0,
+          "newFacePairLengthMm": 0.0
+        },
+        "Vastus lateralis muscle": {
+          "pairs": 3,
+          "lengthMm": 6.9852,
+          "byBandRegion": {
+            "blended": {
+              "pairs": 3,
+              "lengthMm": 6.9852
+            }
+          },
+          "newFacePairs": 0,
+          "newFacePairLengthMm": 0.0
+        }
+      },
+      "enclosedTflRetainedPct": 99.9672,
+      "maxPelvicPinChangeMm": 1e-05,
+      "maxDistalPinChangeMm": 1e-05
+    }
+  },
+  "oa51": {
+    "clip": "bertaux-hoa001",
+    "originalArc": {
+      "frame": 51,
+      "hits": {
+        "Hip bone": {
+          "pairs": 17,
+          "lengthMm": 15.2216,
+          "byBandRegion": {
+            "pelvisPinned": {
+              "pairs": 17,
+              "lengthMm": 15.2216
+            }
+          },
+          "newFacePairs": 0,
+          "newFacePairLengthMm": 0.0,
+          "onSelectedFaces": {
+            "pairs": 0,
+            "lengthMm": 0.0,
+            "newFacePairs": 0,
+            "newFacePairLengthMm": 0.0
+          }
+        },
+        "Gluteus medius muscle": {
+          "pairs": 12,
+          "lengthMm": 8.3657,
+          "byBandRegion": {
+            "blended": {
+              "pairs": 6,
+              "lengthMm": 8.2057
+            },
+            "pelvisPinned": {
+              "pairs": 6,
+              "lengthMm": 0.16
+            }
+          },
+          "newFacePairs": 6,
+          "newFacePairLengthMm": 8.2057,
+          "newLineSourceHeightAboveDistalCutMm": [
+            248.3976,
+            260.9333
+          ]
+        },
+        "Tensor fasciae latae": {
+          "pairs": 49,
+          "lengthMm": 96.628,
+          "byBandRegion": {
+            "blended": {
+              "pairs": 49,
+              "lengthMm": 96.628
+            }
+          },
+          "newFacePairs": 49,
+          "newFacePairLengthMm": 96.628,
+          "newLineSourceHeightAboveDistalCutMm": [
+            159.4474,
+            217.6401
+          ],
+          "onSelectedFaces": {
+            "pairs": 49,
+            "lengthMm": 96.628,
+            "newFacePairs": 49,
+            "newFacePairLengthMm": 96.628
+          }
+        },
+        "Vastus lateralis muscle": {
+          "pairs": 4,
+          "lengthMm": 7.653,
+          "byBandRegion": {
+            "blended": {
+              "pairs": 4,
+              "lengthMm": 7.653
+            }
+          },
+          "newFacePairs": 0,
+          "newFacePairLengthMm": 0.0
+        }
+      },
+      "enclosedTflRetainedPct": 92.4005,
+      "maxPelvicPinChangeMm": 0.0,
+      "maxDistalPinChangeMm": 0.0
+    },
+    "reboundArc": {
+      "frame": 51,
+      "hits": {
+        "Hip bone": {
+          "pairs": 17,
+          "lengthMm": 15.2216,
+          "byBandRegion": {
+            "pelvisPinned": {
+              "pairs": 17,
+              "lengthMm": 15.2216
+            }
+          },
+          "newFacePairs": 0,
+          "newFacePairLengthMm": 0.0,
+          "onSelectedFaces": {
+            "pairs": 0,
+            "lengthMm": 0.0,
+            "newFacePairs": 0,
+            "newFacePairLengthMm": 0.0
+          }
+        },
+        "Gluteus medius muscle": {
+          "pairs": 12,
+          "lengthMm": 8.3657,
+          "byBandRegion": {
+            "blended": {
+              "pairs": 6,
+              "lengthMm": 8.2057
+            },
+            "pelvisPinned": {
+              "pairs": 6,
+              "lengthMm": 0.16
+            }
+          },
+          "newFacePairs": 6,
+          "newFacePairLengthMm": 8.2057,
+          "newLineSourceHeightAboveDistalCutMm": [
+            248.3976,
+            260.9333
+          ]
+        },
+        "Tensor fasciae latae": {
+          "pairs": 4,
+          "lengthMm": 2.9935,
+          "byBandRegion": {
+            "blended": {
+              "pairs": 4,
+              "lengthMm": 2.9935
+            }
+          },
+          "newFacePairs": 4,
+          "newFacePairLengthMm": 2.9935,
+          "newLineSourceHeightAboveDistalCutMm": [
+            160.8002,
+            162.0799
+          ],
+          "onSelectedFaces": {
+            "pairs": 4,
+            "lengthMm": 2.9935,
+            "newFacePairs": 4,
+            "newFacePairLengthMm": 2.9935
+          }
+        },
+        "Vastus lateralis muscle": {
+          "pairs": 4,
+          "lengthMm": 7.653,
+          "byBandRegion": {
+            "blended": {
+              "pairs": 4,
+              "lengthMm": 7.653
+            }
+          },
+          "newFacePairs": 0,
+          "newFacePairLengthMm": 0.0
+        }
+      },
+      "enclosedTflRetainedPct": 99.969,
+      "maxPelvicPinChangeMm": 0.0,
+      "maxDistalPinChangeMm": 0.0
+    },
+    "contact": {
+      "frame": 51,
+      "hits": {
+        "Hip bone": {
+          "pairs": 17,
+          "lengthMm": 15.2216,
+          "byBandRegion": {
+            "pelvisPinned": {
+              "pairs": 17,
+              "lengthMm": 15.2216
+            }
+          },
+          "newFacePairs": 0,
+          "newFacePairLengthMm": 0.0,
+          "onSelectedFaces": {
+            "pairs": 0,
+            "lengthMm": 0.0,
+            "newFacePairs": 0,
+            "newFacePairLengthMm": 0.0
+          }
+        },
+        "Gluteus medius muscle": {
+          "pairs": 6,
+          "lengthMm": 0.16,
+          "byBandRegion": {
+            "pelvisPinned": {
+              "pairs": 6,
+              "lengthMm": 0.16
+            }
+          },
+          "newFacePairs": 0,
+          "newFacePairLengthMm": 0.0
+        },
+        "Vastus lateralis muscle": {
+          "pairs": 3,
+          "lengthMm": 7.1775,
+          "byBandRegion": {
+            "blended": {
+              "pairs": 3,
+              "lengthMm": 7.1775
+            }
+          },
+          "newFacePairs": 0,
+          "newFacePairLengthMm": 0.0
+        }
+      },
+      "enclosedTflRetainedPct": 99.9362,
+      "maxPelvicPinChangeMm": 1e-05,
+      "maxDistalPinChangeMm": 1e-05
+    }
+  }
+}

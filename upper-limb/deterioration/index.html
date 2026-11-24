@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f6f4ee">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./style.css">
+  <title>Deterioration effects · Human Simulator</title>
+</head>
+<body>
+  <header class="masthead">
+    <h1>Deterioration effects</h1>
+    <nav aria-label="Demo tools">
+      <a href="../presentation/#deterioration">Presentation</a>
+      <button type="button" data-fullscreen aria-label="Enter full screen">Full screen</button>
+    </nav>
+  </header>
+
+  <main class="lab">
+    <section class="matrix" aria-label="Synchronized 3D comparisons">
+      <div class="column-heading reference"><span aria-hidden="true"></span>Reference</div>
+      <div class="column-heading adjusted"><span aria-hidden="true"></span>Adjusted</div>
+
+      <figure class="pane reference">
+        <div class="stage" data-body-reference aria-label="Reference whole-body gait"></div>
+        <span class="status" data-body-status role="status">Loading anatomy…</span>
+        <figcaption><span>Whole body</span><div><small data-body-metric>Trunk lean</small><output aria-live="off" data-body-reference-value>…</output></div></figcaption>
+      </figure>
+      <figure class="pane adjusted">
+        <div class="stage" data-body-adjusted aria-label="Adjusted whole-body gait"></div>
+        <figcaption><span>Whole body</span><div><small data-body-metric>Trunk lean</small><output aria-live="off" data-body-adjusted-value>…</output></div></figcaption>
+      </figure>
+      <figure class="pane reference">
+        <div class="stage hip-stage" data-hip-reference aria-label="Reference right hip tissues"></div>
+        <span class="status" data-hip-status role="status">Loading tissues…</span>
+        <figcaption><span>Right hip</span><div><small data-hip-metric>IT band tension</small><output aria-live="off" data-hip-reference-value>…</output></div></figcaption>
+      </figure>
+      <figure class="pane adjusted">
+        <div class="stage hip-stage" data-hip-adjusted aria-label="Adjusted right hip tissues"></div>
+        <figcaption><span>Right hip</span><div><small data-hip-metric>IT band tension</small><output aria-live="off" data-hip-adjusted-value>…</output></div></figcaption>
+      </figure>
+    </section>
+
+    <div class="transport" role="group" aria-label="Synchronized playback">
+      <button type="button" class="play" data-play>Play</button>
+      <label class="phase-label" for="phase">Phase</label>
+      <input id="phase" data-phase type="range" min="0" max="1000" step="1" value="300" aria-label="Movement phase">
+      <output aria-live="off" for="phase" data-phase-value>30%</output>
+      <select data-speed aria-label="Playback speed">
+        <option value="0.25">0.25×</option><option value="0.5" selected>0.5×</option><option value="1">1×</option>
+      </select>
+    </div>
+
+    <aside class="sidebar" aria-label="Simulation controls">
+      <div class="preset-block">
+        <h2>Hip changes</h2>
+        <div class="presets" role="group" aria-label="Hip change presets">
+          <button type="button" data-preset="reference">Reference</button>
+          <button type="button" data-preset="glutes">Glute weakness</button>
+          <button type="button" data-preset="band">Tighter IT band</button>
+          <button type="button" data-preset="combined">Combined</button>
+        </div>
+      </div>
+      <div class="control-block">
+        <div class="impairments">
+          <label class="slider"><span>Right glute strength loss</span><output aria-live="off" data-loss-value>35%</output>
+            <input data-loss type="range" min="0" max="60" step="1" value="35" aria-label="Right glute strength loss">
+          </label>
+          <label class="slider"><span>Right IT band shortening</span><output aria-live="off" data-band-value>3 mm</output>
+            <input data-band type="range" min="0" max="8" step=".5" value="3" aria-label="Right IT band shortening">
+          </label>
+          <button type="button" class="sweep" data-sweep>Sweep severity</button>
+          <button type="button" class="peak" data-jump><span data-peak-text>Go to largest change</span><span aria-hidden="true">↗</span></button>
+        </div>
+        <div class="settings-section">
+          <h2>Walker</h2>
+          <label class="field"><span>Virtual person</span><select data-person></select></label>
+          <small class="profile-size" data-profile-size></small>
+          <label class="field"><span>Movement</span><select data-task><option value="walk">Walking</option><option value="stance">Loaded stance</option></select></label>
+          <label class="field"><span>Compensation</span><select data-strategy><option value="effort">Minimize effort</option><option value="reserve">Use reserve first</option></select></label>
+        </div>
+        <div class="settings-section">
+          <h2>Views</h2>
+          <label class="field"><span>Whole body</span><select data-view><option value="front">Front · trunk lean</option><option value="pelvis">Front · pelvic drop</option><option value="side">Side · hip flexion</option><option value="oblique">Oblique</option></select></label>
+          <label class="field"><span>Right hip</span><select data-tissue><option value="band">Iliotibial band</option><option value="glutes">Gluteal muscles</option></select></label>
+          <div class="tissue-scale" aria-label="Shared tissue color scale">
+            <span data-tint-name>Modeled IT band tension</span>
+            <div class="scale-bar" aria-hidden="true"></div>
+            <div class="scale-bounds"><span data-tint-min>0 N</span><span data-tint-max>≥500 N</span></div>
+          </div>
+          <button type="button" class="reset" data-reset-camera>Reset cameras</button>
+        </div>
+      </div>
+    </aside>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

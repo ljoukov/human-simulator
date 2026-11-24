@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Where does the body compensate? · Gait mechanics</title>
+<style>
+:root{--ink:#162b30;--sub:#435a5c;--paper:#f8f7f3;--rule:#c6cfca;--deep:#14383c;--teal:#00695e;--gold:#e7ba55;--orange:#9a4319;--display:Georgia,'Times New Roman',serif;--sans:'Helvetica Neue',Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.48 var(--sans)}
+button,select{font:inherit}button{cursor:pointer}a{color:var(--teal);text-underline-offset:.17em}
+:focus-visible{outline:3px solid #ad4b13;outline-offset:4px}
+.wrap{max-width:1180px;margin:auto;padding:0 clamp(18px,4vw,64px)}
+header{background:var(--deep);color:white;padding:17px 0 0}
+header .wrap{position:relative}
+header h1{font:normal clamp(32px,4.1vw,56px)/1.04 var(--display);margin:0 0 12px;letter-spacing:-.045em}
+header p{color:#d4e6e1;font-size:clamp(15px,1.8vw,21px);margin:0 0 12px;max-width:980px}
+nav{display:flex;gap:4px}
+nav a{display:block;padding:11px 14px 12px;color:white;text-decoration:none;border-bottom:3px solid transparent;font-weight:600;font-size:15px}
+nav a[aria-current=page]{border-color:var(--gold);background:#214b4d}
+main{padding-bottom:45px}article{padding-top:26px}
+.kicker{margin:0 0 4px;text-transform:uppercase;letter-spacing:.1em;font-size:11px;line-height:1.4;font-weight:750;color:var(--teal)}
+h2{font:normal clamp(28px,3.2vw,45px)/1.1 var(--display);letter-spacing:-.035em;margin:0 0 10px}
+h3{font:normal 25px/1.2 var(--display);letter-spacing:-.025em;margin:0 0 10px}
+.lede{max-width:850px;font-size:17px;margin:0 0 22px}
+.grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(245px,.9fr);align-items:start;gap:clamp(22px,4vw,48px)}
+.grid.hip{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+figure{margin:0}.plate,.sidebar{border-top:2px solid var(--ink);padding-top:14px}
+.panel-head{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.label{font-size:12px;color:var(--sub);font-weight:650}.label.dash:before,.label.dot:before{display:inline-block;content:"";width:13px;height:0;border-top:2px dashed var(--orange);vertical-align:.25em;margin-right:6px}.label.dot:before{width:8px;height:8px;border:0;border-radius:50%;background:var(--teal);vertical-align:0}
+fieldset{margin:14px 0 9px;padding:0;border:0}legend{color:var(--sub);font-size:13px;font-weight:600;margin-bottom:5px;padding:0}
+.pick{position:relative;display:inline-flex;vertical-align:top;margin:0 3px 4px 0}
+.pick input{position:absolute;opacity:0;width:1px;height:1px}
+.pick span,.action{border:1px solid #869b94;color:var(--ink);background:transparent;padding:7px 10px;border-radius:3px;font-size:14px;font-weight:600}
+.pick input:checked+span,.action{background:var(--deep);color:#fff;border-color:var(--deep)}.pick input:focus-visible+span{outline:3px solid var(--orange);outline-offset:2px}.pick span{cursor:pointer}
+.action:hover{background:#245452}
+svg{display:block;max-width:100%;height:auto}.dotplot{width:100%;background:#f0f2ec;border:1px solid #dbe1d9;border-radius:3px;margin-top:8px}
+.small,figcaption{font-size:13px;color:var(--sub);line-height:1.45}.small{margin:8px 0}.stat-list{margin:7px 0 13px}
+.stat-list div{display:flex;justify-content:space-between;gap:8px;border-bottom:1px solid var(--rule);padding:7px 0;align-items:baseline}
+.stat-list dt{font-size:14px}.stat-list dd{margin:0;font:normal 24px/1.1 var(--display);font-variant-numeric:tabular-nums;white-space:nowrap}
+.note{border-left:3px solid var(--gold);padding:2px 0 2px 12px;margin:13px 0 8px;font-size:15px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin:20px 0 10px}
+.steps>div{padding:12px 16px 12px 0}.steps>div+div{padding-left:16px;border-left:1px solid var(--rule)}
+.steps b,.rowtitle{display:block;color:var(--teal);font-size:13px}.steps p{font-size:14px;margin:4px 0 0}
+details{margin:16px 0;font-size:14px}summary{cursor:pointer;color:var(--teal);font-weight:650}details p{max-width:850px}.presenter{border-top:1px solid var(--rule);padding-top:12px}.presenter li{margin:8px 0;max-width:900px}.footlinks{font-size:13px;margin:14px 0 0}.footlinks a{margin-right:12px}
+figure.diagram{margin-top:10px;background:#eff2ed;border:1px solid var(--rule);border-radius:4px;padding:9px}
+figure.diagram svg{margin:auto;width:100%;max-width:430px}
+.table{border-collapse:collapse;font-size:14px;width:100%;max-width:650px}th,td{padding:5px;text-align:left;border-bottom:1px solid var(--rule)}th{color:var(--sub);font-size:13px}
+.score{display:flex;align-items:baseline;justify-content:space-between;margin:12px 0 4px;font-size:14px}.score b{font:normal 31px/1 var(--display);font-variant-numeric:tabular-nums}
+.track{height:6px;background:#dce3db;position:relative}.track i{height:100%;display:block;background:var(--teal);transition:width .2s}.track i.hiponly{background:#657776}.track::after{content:"";width:2px;height:12px;position:absolute;top:-3px;left:50%;background:var(--ink)}
+.check{margin:12px 0;padding:13px 16px;background:#e8ede5}.check p{margin:3px 0}.lever-stats{display:flex;gap:18px;margin:12px 0 4px}.lever-stats div{font-size:12px}.lever-stats strong{display:block;font:normal 28px/1.1 var(--display);color:var(--teal)}.checkoutput{font:normal 23px/1.23 var(--display)}
+.actions{margin-top:20px;border-top:1px solid var(--rule);padding-top:14px;display:flex;gap:16px;justify-content:space-between;align-items:center}
+.actions a{font-size:15px;font-weight:650}.human{border-top:2px solid var(--ink);margin-top:22px;padding-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:22px}.human p{margin:3px 0 8px}.human-scores{display:flex;gap:6px;justify-content:space-between}.human-scores span{font-size:12px;color:var(--sub);display:block}.human-scores strong{font:normal 28px/1.2 var(--display)}.steps-test{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.steps-test section{border-top:2px solid var(--ink);padding-top:12px}.steps-test p{margin:8px 0}
+[hidden]{display:none!important}
+@media(max-width:760px){.grid,.grid.hip,.human,.steps-test{grid-template-columns:1fr}.grid{gap:18px}header{padding-top:18px}nav a{padding:9px 9px;font-size:13px}.steps{grid-template-columns:1fr}.steps>div,.steps>div+div{padding:8px 0;border-left:0}.steps>div+div{border-top:1px solid var(--rule)}.dotplot{min-height:170px}.sidebar{padding-top:10px}.lede{margin-bottom:15px}article{padding-top:19px}}
+@media(prefers-reduced-motion:reduce){.track i{transition:none}}
+@media print{header{background:white;color:var(--ink)}header p{color:var(--sub)}nav,.actions,fieldset,.action{display:none}article[hidden]{display:block!important}article{break-before:page}article:first-child{break-before:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<h1>Where does the body compensate?</h1>
+<p>Leaning over the supporting leg changes the turning demand at the hip. Test that mechanism, then check a separate knee prediction against an implant.</p>
+<nav aria-label="Choose an experiment"><a href="#hip" aria-current="page">Hip · design the test</a><a href="#knee">Knee · check a prediction</a><a href="#next">Proposed test</a></nav>
+</div></header>
+<main class="wrap">
+<article id="knee" hidden aria-labelledby="knee-title">
+<p class="kicker">Measured in one implant recipient</p><h2 id="knee-title">Did bouncy walking unload this knee?</h2>
+<p class="lede">Seven recorded stances contain direct measurements of force on the inner side of the knee. Choose the ordinary stance to compare against.</p>
+<div class="grid">
+<figure class="plate"><div class="panel-head"><h3>Early peak force</h3><span class="label dot">Implant measurement</span></div>
+<fieldset><legend>Ordinary walking reference</legend><label class="pick"><input type="radio" name="ref" value="0"><span>Stance 1 · calibration</span></label><label class="pick"><input type="radio" name="ref" value="1" checked><span>Stance 2 · held out</span></label></fieldset>
+<svg id="dotplot" class="dotplot" viewBox="0 0 560 225" role="img" aria-labelledby="dot-title dot-desc"><title id="dot-title">Seven early medial force peaks in one implant recipient</title><desc id="dot-desc">Force is plotted in body weights. A dashed line marks the selected ordinary stance. Exact readings appear in the expandable data table.</desc></svg>
+<figcaption><span class="label dash">Selected ordinary stance</span> · Each dot is one peak in 5–45% of stance. The two ordinary stances came from the same walking pass.</figcaption>
+</figure>
+<section class="sidebar" aria-labelledby="delta-title"><h3 id="delta-title">Change from ordinary</h3>
+<p class="small">Mean of the peaks for each gait minus the selected ordinary peak, in body weights (BW).</p>
+<dl class="stat-list" aria-live="polite"><div><dt>Bouncy</dt><dd id="delta-bouncy"></dd></div><div><dt>Forefoot strike</dt><dd id="delta-forefoot_strike"></dd></div><div><dt>Fast treadmill</dt><dd id="delta-fast_treadmill"></dd></div></dl>
+<p class="note" id="ref-note" aria-live="polite"></p><p class="small">The treadmill recording changed both speed and surface. Each modified gait has one or two observed stances.</p></section></div>
+<div class="steps"><div><b>Measured and derived inputs</b><p>Recorded motion and external loading supply knee angle, axial load, and flexion and adduction moments.</p></div><div><b>Calculated</b><p>Two muscle groups balance knee moments. The model divides estimated compression between inner and outer compartments.</p></div><div><b>Checked against the implant</b><p>One ordinary stance sets model parameters. Implant forces from the other six stances test its estimates.</p></div></div>
+<div class="check"><strong>Held-out prediction · fast treadmill</strong><p>Model estimate for the early inner-knee peak change versus the held-out ordinary stance: <b>+0.147 BW</b>.</p><button type="button" id="show-knee" class="action" aria-expanded="false" aria-controls="knee-answer">Reveal implant measurement</button><p class="checkoutput" id="knee-answer" hidden>Implant change was −0.026 BW. The model predicted the opposite direction.</p></div>
+<details><summary>Individual readings and prediction accuracy</summary><table class="table"><thead><tr><th>Recording</th><th>Stance</th><th>Early peak (BW)</th></tr></thead><tbody id="rows"></tbody></table><p>Across this recipient’s held-out waveforms, medial-force error was 0.304 BW for the mechanics estimate and 0.447 BW for a two-moment regression. The regression did better for lateral and total force, and for all three outcomes in a second recipient tested in ordinary walking. Pain ratings were unavailable for these strides.</p></details>
+<p class="footlinks"><a href="../knee-loading/data/stance-reference-audit.json">Seven measured peaks</a><a href="../knee-loading/README.md">Model and holdout</a></p>
+<div class="actions"><a href="#hip">← Virtual hip experiment</a><a href="#next">Design the human test →</a></div>
+</article>
+<article id="hip" aria-labelledby="hip-title">
+<p class="kicker">Calculated in virtual bodies</p><h2 id="hip-title">Two impairments in the same virtual body</h2>
+<p class="lede">In one run, the muscles that pull the leg sideways are weaker. In the other, the hip resists extension. The observer tries to identify which change we imposed.</p>
+<div class="grid hip">
+<section class="plate"><h3>How the hip and trunk interact</h3><p class="small">The movement rule lets the trunk lean more when hip muscles have less strength.</p>
+<figure class="diagram"><svg viewBox="0 0 425 204" role="img" aria-labelledby="hip-diagram-title hip-diagram-desc"><title id="hip-diagram-title">Conceptual front view of the effective load arm around the stance hip</title><desc id="hip-diagram-desc">Moving the trunk towards the supporting hip moves the effective line of load closer to the joint and shortens its moment arm.</desc>
+<defs><marker id="tip" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#9a4319"/></marker></defs>
+<g fill="#162b30" font-family="Helvetica,Arial,sans-serif" font-size="13" text-anchor="middle"><text x="106" y="18">Upright trunk</text><text x="312" y="18">Lean toward stance hip</text></g>
+<g fill="none" stroke="#c8d3cb" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M95 69L123 67L136 96M96 69L88 96M110 107L121 137L130 149 M273 77L305 66L323 90M275 77L270 107M314 107L327 137L338 148"/></g>
+<g fill="none" stroke="#849994" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M84 176L80 143L79 111L110 107 M110 104L112 65 M288 176L284 143L283 111L314 107 M312 103L294 67"/></g>
+<g fill="#849994"><circle cx="112" cy="49" r="11"/><circle cx="286" cy="51" r="11"/></g>
+<g fill="none" stroke="#00695e" stroke-width="3"><circle cx="79" cy="111" r="5"/><circle cx="283" cy="111" r="5"/></g>
+<g fill="#162b30"><rect x="79" y="175" width="10" height="6"/><rect x="283" y="175" width="10" height="6"/></g>
+<g fill="none" stroke="#00695e" stroke-width="1.8"><path d="M311 88Q305 88 301 94"/><path d="M294 109Q292 117 286 120"/></g>
+<g stroke="#9a4319" stroke-dasharray="3 3" opacity=".9"><path d="M113 90V160M296 90V160"/></g><g stroke="#9a4319" stroke-width="2.2" marker-end="url(#tip)"><path d="M113 78V113M296 78V113"/></g>
+<g stroke="#00695e" stroke-width="2"><path d="M79 150v8m0-4h34m0-4v8M283 150v8m0-4h13m0-4v8"/></g>
+<g fill="#435a5c" font-family="Helvetica,Arial,sans-serif" font-size="12" text-anchor="middle"><text x="106" y="197">Longer effective arm</text><text x="312" y="197">Shorter effective arm</text></g></svg><figcaption>Conceptual front view. Black blocks mark fixed foot placement. Teal arcs show permitted motion in this plane. Hip flexion acts out of plane. The teal bracket runs from the hip to the orange effective load line.</figcaption></figure>
+<div class="check lever"><strong>Change one equation at peak loaded stance</strong><p class="small">Hold the weakened virtual bodies’ trunk trajectories fixed. Allow their lean to shorten the effective lever, then compare with disabling that single mechanical term.</p><button type="button" class="action" id="show-lever" aria-expanded="false" aria-controls="lever-answer">Compare the lever effect</button><div id="lever-answer" hidden><div class="lever-stats"><div><strong id="lever-moment"></strong> lower turning demand</div><div><strong id="lever-angle"></strong> less hip adduction</div></div><p class="small">Median paired changes across 256 weakened virtual bodies. Median extra trunk lean was 1.64°. The median change in predicted abductor force was zero. <a href="../hip-study/data/observation-ablation.json">Equation sensitivity</a></p></div></div>
+<p class="small"><b>Solved</b> · hip flexion, hip adduction and lateral trunk lean. Leaning over the stance hip reduces the modeled external moment that the abductors must balance.</p><p class="small"><b>Prescribed</b> · movement targets, vertical ground force, foot placement and opposite-leg motion. The designed stance adds an opposite-hand load of 10% of body weight.</p>
+</section>
+<section class="sidebar"><h3>Choose the test</h3><fieldset><legend>Which task would you show the observer?</legend><label class="pick"><input type="radio" name="task" value="walk"><span>Walk</span></label><label class="pick"><input type="radio" name="task" value="loadedStance" checked><span>Loaded stance</span></label></fieldset>
+<button class="action" type="button" id="show-hip" aria-expanded="false" aria-controls="hip-answer">Reveal observer accuracy</button>
+<p class="small">◇ &nbsp; Synthetic observations include camera-like errors. The observer gets either two hip angles or those angles plus trunk lean.</p>
+<div id="hip-answer" hidden><p class="small">Balanced accuracy on 256 held-out virtual bodies. Vertical ticks mark 50% chance.</p>
+<div aria-live="polite"><div class="score"><span>Two hip angles</span><b id="hip-score"></b></div><div class="track"><i id="hip-bar" class="hiponly"></i></div><div class="score"><span>Hip angles + trunk lean</span><b id="trunk-score"></b></div><div class="track"><i id="trunk-bar"></i></div><p class="note" id="change"></p><p class="small" id="replication"></p><p class="small">Both observers see the same simulated bodies and tasks. This tests the information in the lean signal under a chosen movement rule.</p></div>
+</div>
+</section></div>
+<section class="human"><div><p class="kicker">Separate human study · ordinary walking</p><h3>Did the two angle excursions predict pain?</h3><p>In 48 women with greater trochanteric pain syndrome, we predicted each person’s baseline 0–10 hip pain rating from measurements of hip and trunk motion in the middle of stance. Each person was held out in turn.</p></div>
+<div><p class="rowtitle">Mean absolute error · pain points</p><div class="human-scores"><div><span>Training mean</span><strong>1.90</strong></div><div><span>Hip alone</span><strong>1.93</strong></div><div><span>Hip + trunk</span><strong>1.97</strong></div></div><p class="small">The training mean gave the lowest error. These walking data have a different task and endpoint from the virtual impairment experiment. <a href="../hip-study/data/gait-pain-check.json">Human data audit</a></p></div></section>
+<details><summary>Assumptions and sensitivity</summary><p>We train a nearest-neighbor classifier on 768 virtual bodies. Each held-out body has both imposed changes. Intervals resample these body pairs. Both tested movement rules encode a link between muscle capacity and trunk lean. The default rule balances trunk lean against muscle effort. The second makes the body lean to preserve a torque reserve. The trunk measurement noise assumes a 3° RMS error.</p><p id="reserve-result"></p><p>Combining walking and loaded stance with all three angles scored 68.4%, compared with 68.2% for loaded stance alone under the original controller. Clinical diagnoses and pain were outside this comparison.</p></details>
+<p class="footlinks"><a href="../hip-study/data/observation-ablation.json">Paired results and replications</a><a href="../hip-study/forward/README.md">Forward equations and assumptions</a></p>
+<div class="actions"><span></span><a href="#knee">Check a prediction against a knee implant →</a></div>
+</article>
+<article id="next" hidden aria-labelledby="next-title"><p class="kicker">Proposed human experiments</p><h2 id="next-title">When would the whole body earn its place?</h2><p class="lede">The prediction to test is whether explicitly modeling compensation elsewhere in the body improves a decision for someone new.</p>
+<div class="steps-test"><section><h3>Can we predict which gait unloads the knee?</h3><p>Compare recorded gait changes in additional implant recipients. Give a regression, a local knee model and a coupled body model the same available measurements. Set both models’ parameters using training data, then predict the direction and size of load change on unseen people and gait conditions.</p><p><strong>Independent check</strong> · implant force from repeated ordinary and modified stances. Report sign errors, magnitude errors and the comparison with ordinary step-to-step variation.</p></section>
+<section><h3>Can a second movement distinguish hip mechanisms?</h3><p>Capture hip angles and trunk lean during walking and a standardized loaded stance in the same people. Independently measure hip abductor strength and passive hip-extension torque with clinicians blinded to movement predictions.</p><p><strong>Independent check</strong> · on held-out people, first compare hip-only observations with added trunk lean. Then compare a predictor using those features directly, a mechanically uncoupled model and a coupled model given identical inputs. A claim about symptoms also requires measured symptom outcomes.</p></section></div>
+<details class="presenter"><summary>90-second presenter notes</summary><ol>
+<li><strong>0–20 seconds.</strong> “Is this virtual hip weak, or does it resist extension?” Point to the load line, then reveal the lever calculation. With the same lean, the shorter lever lowers turning demand by a median 7.7% at peak load.</li>
+<li><strong>20–42 seconds.</strong> Choose loaded stance. Reveal the two observers’ scores, 60.9% and 68.2%. “Adding trunk lean helps identify which change we imposed in these virtual bodies. The controller already lets the trunk lean in response to weakness.”</li>
+<li><strong>42–68 seconds.</strong> Point to the separate sample of 48 women. Hip and trunk motion in ordinary walking predicted pain less accurately than the training mean. On the knee screen, switch the ordinary reference. The same bouncy-walking peaks change from above to below the reference.</li>
+<li><strong>68–90 seconds.</strong> “Now test this in people. Measure strength and passive resistance independently and blind the assessors. For knee load, hold out repeated gait trials from new implant recipients and compare a regression, local mechanics and coupled mechanics on the same inputs.”</li></ol></details>
+<div class="actions"><a href="#knee">← Knee implant check</a><a href="#hip">Return to the virtual hip</a></div>
+</article></main>
+<script id="knee-data" type="application/json">{"source":{"file":"gait.json","upstream":"https://github.com/gilserrancoli/ReducePoly_forMSK/tree/00b6f94ee8bd2f60ae5b6f07a114f1aade089cb8/ExampleTrackingSimulations/OpenSimModel/subject_GC","participant":"GC4-JW"},"outcome":"Peak medial implant force measured in body weights (BW)","earlyStanceWindowPctInclusive":[5,45],"comparison":"Mean of the individual modified-stance peaks minus the selected ordinary-stance peak. Negative values indicate lower measured load.","references":"The full-stride replay uses the ordinary calibration stance. The formal gait comparison uses the ordinary evaluation stance. Both came from the same pass.","scope":"All stances come from one implant recipient. Repeated overground stances share a recording. Fast treadmill walking changed both speed and surface.","ordinaryPeakSpreadBw":0.267507,"stances":[{"id":"ngait_og5-stance-1","condition":"normal","role":"calibration","earlyMedialPeakBw":1.657664,"peakStancePct":33},{"id":"ngait_og5-stance-2","condition":"normal","role":"evaluation","earlyMedialPeakBw":1.390157,"peakStancePct":28},{"id":"bouncy7-stance-1","condition":"bouncy","role":"evaluation","earlyMedialPeakBw":1.59493,"peakStancePct":34},{"id":"bouncy7-stance-2","condition":"bouncy","role":"evaluation","earlyMedialPeakBw":1.436901,"peakStancePct":31},{"id":"mtpgait3-stance-1","condition":"forefoot_strike","role":"evaluation","earlyMedialPeakBw":1.596964,"peakStancePct":29},{"id":"mtpgait3-stance-2","condition":"forefoot_strike","role":"evaluation","earlyMedialPeakBw":1.531409,"peakStancePct":30},{"id":"ngait_tm_fast1-stance-1","condition":"fast_treadmill","role":"evaluation","earlyMedialPeakBw":1.363791,"peakStancePct":28}],"comparisons":[{"condition":"bouncy","meanEarlyMedialPeakBw":1.5159155,"byReference":[{"ordinaryStance":"ngait_og5-stance-1","role":"calibration","meanDeltaBw":-0.1417485,"individualDeltas":[{"id":"bouncy7-stance-1","deltaBw":-0.062734},{"id":"bouncy7-stance-2","deltaBw":-0.220763}]},{"ordinaryStance":"ngait_og5-stance-2","role":"evaluation","meanDeltaBw":0.1257585,"individualDeltas":[{"id":"bouncy7-stance-1","deltaBw":0.204773},{"id":"bouncy7-stance-2","deltaBw":0.046744}]}]},{"condition":"forefoot_strike","meanEarlyMedialPeakBw":1.5641865,"byReference":[{"ordinaryStance":"ngait_og5-stance-1","role":"calibration","meanDeltaBw":-0.0934775,"individualDeltas":[{"id":"mtpgait3-stance-1","deltaBw":-0.0607},{"id":"mtpgait3-stance-2","deltaBw":-0.126255}]},{"ordinaryStance":"ngait_og5-stance-2","role":"evaluation","meanDeltaBw":0.1740295,"individualDeltas":[{"id":"mtpgait3-stance-1","deltaBw":0.206807},{"id":"mtpgait3-stance-2","deltaBw":0.141252}]}]},{"condition":"fast_treadmill","meanEarlyMedialPeakBw":1.363791,"byReference":[{"ordinaryStance":"ngait_og5-stance-1","role":"calibration","meanDeltaBw":-0.293873,"individualDeltas":[{"id":"ngait_tm_fast1-stance-1","deltaBw":-0.293873}]},{"ordinaryStance":"ngait_og5-stance-2","role":"evaluation","meanDeltaBw":-0.026366,"individualDeltas":[{"id":"ngait_tm_fast1-stance-1","deltaBw":-0.026366}]}]}]}</script>
+<script id="hip-data" type="application/json">{"question":"Does observing trunk lean improve identification of two imposed mechanical impairments?","seed":20261122,"trainingBodies":768,"heldOutBodies":256,"bootstrapResamples":2000,"accuracyUnits":"fraction (1.0 = 100%)","methods":["Every virtual anatomy receives both perturbations: reduction in abductor torque capacity or additional passive hip extension resistance.","The same simulated hip\u2013trunk dynamics generate every observation. Only the channels supplied to the observer vary.","The body split, simulated camera noise, nine phases per task, error scaling and 15-nearest-neighbor classifier are the original experiment's.","Hip angles are flexion and adduction. Lateral trunk lean is the third channel. The camera-like trunk error has an assumed 3-degree RMS scale.","The paired percentile bootstrap resamples held-out body IDs and keeps both perturbations, tasks and channel sets together, conditional on training.","All classifiers train on the effort-minimizing controller. The alternate test controller maintains torque reserve. Its test bodies receive the same camera errors.","The additional twenty consecutive seeds independently regenerate anatomies, split, training, and observation errors with the effort controller. Their ranges describe variation across runs."],"originalCohort":{"effort":{"walk":{"balancedAccuracy":{"hipAngles":0.587890625,"hipAnglesAndTrunkLean":0.62109375,"trunkLean":0.55078125},"addedTrunkLean":{"difference":0.033203125,"pairedBootstrap95":[-0.017626953124999997,0.0859375]}},"loadedStance":{"balancedAccuracy":{"hipAngles":0.609375,"hipAnglesAndTrunkLean":0.681640625,"trunkLean":0.662109375},"addedTrunkLean":{"difference":0.072265625,"pairedBootstrap95":[0.025390625,0.12109375]}},"walkAndLoadedStance":{"balancedAccuracy":{"hipAngles":0.62890625,"hipAnglesAndTrunkLean":0.68359375,"trunkLean":0.6953125},"addedTrunkLean":{"difference":0.0546875,"pairedBootstrap95":[0.005859375,0.103515625]}},"walkAndLoadedStanceMinusLoadedStance":{"hipAngles":{"difference":0.01953125,"pairedBootstrap95":[-0.0234375,0.064453125]},"hipAnglesAndTrunkLean":{"difference":0.001953125,"pairedBootstrap95":[-0.03515625,0.0390625]},"trunkLean":{"difference":0.033203125,"pairedBootstrap95":[-0.009765625,0.076171875]}}},"unseenTorqueReserve":{"walk":{"balancedAccuracy":{"hipAngles":0.587890625,"hipAnglesAndTrunkLean":0.607421875,"trunkLean":0.51171875},"addedTrunkLean":{"difference":0.01953125,"pairedBootstrap95":[-0.029296875,0.06840820312499973]}},"loadedStance":{"balancedAccuracy":{"hipAngles":0.533203125,"hipAnglesAndTrunkLean":0.705078125,"trunkLean":0.74609375},"addedTrunkLean":{"difference":0.171875,"pairedBootstrap95":[0.123046875,0.224609375]}},"walkAndLoadedStance":{"balancedAccuracy":{"hipAngles":0.58203125,"hipAnglesAndTrunkLean":0.69140625,"trunkLean":0.76953125},"addedTrunkLean":{"difference":0.109375,"pairedBootstrap95":[0.066357421875,0.154296875]}},"walkAndLoadedStanceMinusLoadedStance":{"hipAngles":{"difference":0.048828125,"pairedBootstrap95":[0.00390625,0.091796875]},"hipAnglesAndTrunkLean":{"difference":-0.013671875,"pairedBootstrap95":[-0.05078125,0.0234375]},"trunkLean":{"difference":0.0234375,"pairedBootstrap95":[-0.013671875,0.0625]}}}},"additionalCohorts":{"count":20,"summary":{"walk":{"meanDifference":0.00712890625,"minDifference":-0.05078125,"maxDifference":0.0546875,"positiveCohorts":12},"loadedStance":{"meanDifference":0.03994140625,"minDifference":0.001953125,"maxDifference":0.08203125,"positiveCohorts":20},"walkAndLoadedStance":{"meanDifference":0.01953125,"minDifference":-0.015625,"maxDifference":0.044921875,"positiveCohorts":18}}},"mechanicalLeverSensitivity":{"question":"How much does the achieved compensatory lean alter frontal-plane hip mechanics inside the model?","task":"Contralateral loaded single-leg stance, reduced abductor torque capacity","pairedVirtualBodies":256,"handLoadBw":0.1,"phase":0.5,"verticalGroundForceBw":1.1,"intervention":"Disable only the reduction of external adduction moment by the achieved compensatory trunk lean. Both runs use the same anatomy, external load, hip tracking, strength limit and effort-minimizing trunk controller.","signConvention":"Positive relief or reduction means the coupled simulation has the lower value. Each contrast pairs the same virtual body at the same instant. Distribution percentiles summarize model heterogeneity.","demandWithoutTrunkReliefBwM":{"min":0.10211158351491513,"p10":0.10520905165511149,"median":0.11930965362856777,"p90":0.13297047324126196,"max":0.13796289057347805},"pairedDifferences":{"extraStanceSideLeanDeg":{"min":0.23019630967396076,"p10":0.7081923508444938,"median":1.6394459230978087,"p90":3.2770237188466185,"max":5.534126772923021},"externalMomentReliefBwM":{"min":0.0013784294432105167,"p10":0.003598141234882262,"median":0.009307645955024051,"p90":0.018708502697982778,"max":0.033726843087412695},"externalMomentReliefPercent":{"min":1.167482850867247,"p10":3.07848911742199,"median":7.710348894311332,"p90":15.935758093643226,"max":25.295167778533624},"reductionInHipAdductionDeg":{"min":0.0,"p10":0.0,"median":1.008377879560558,"p90":2.755115257245874,"max":6.095108575786977},"reductionInAbductorGroupForceBw":{"min":0.0,"p10":0.0,"median":0.0,"p90":0.06720435073230702,"max":0.26361761534850725}},"bodiesWithSameGroupForceAtPeak":205,"controls":{"nominalBodyAllOutputsIdentical":true,"achievedTrunkMotionIdenticalAcrossSwitch":true,"maxAbsoluteChangeInEachEffectOnDoublingSteps":{"extraStanceSideLeanDeg":0.003985505152045654,"externalMomentReliefBwM":2.421335588573964e-05,"externalMomentReliefPercent":0.020023525958688282,"reductionInHipAdductionDeg":0.019031917910870888,"reductionInAbductorGroupForceBw":0.00015773206969349474}},"interpretation":"The reduced-order equations assign a shorter frontal-plane load lever to stance-side lean. The hip may respond with less adduction even while the abductor group remains torque-limited. The switch isolates this equation term with prescribed ground loading. Tissue-specific force and clinical effects require independent measurements."},"interpretation":"The experiment tests the incremental utility of observing a signal inside a three-coordinate model. Both the trunk compensation rules and noise model are imposed. These results motivate measuring hip angles and trunk lean during loaded stance in people. Human diagnosis, tissue-specific pain and the added value of full-body forward dynamics require separate tests."}</script>
+<script>
+'use strict';
+const knee=JSON.parse(document.getElementById('knee-data').textContent);
+const hip=JSON.parse(document.getElementById('hip-data').textContent);
+const labels={normal:'Ordinary',bouncy:'Bouncy',forefoot_strike:'Forefoot',fast_treadmill:'Fast treadmill'};
+const byId=id=>document.getElementById(id);
+const fmt=(n,places=3)=>(n>0?'+':n<0?'−':'')+Math.abs(n).toFixed(places);
+const pct=n=>(100*n).toFixed(1)+'%';
+function elem(tag,attrs={},txt){
+  const e=document.createElementNS('http://www.w3.org/2000/svg',tag);
+  for(const [key,value] of Object.entries(attrs))e.setAttribute(key,value);
+  if(txt!==undefined)e.textContent=txt;
+  return e;
+}
+const plot=byId('dotplot');
+const layer=elem('g',{'font-family':'Helvetica,Arial,sans-serif',fill:'#162b30'});
+plot.appendChild(layer);
+const x=v=>116+(v-1.3)/.4*410;
+const y=i=>40+i*39;
+const groupKeys=Object.keys(labels);
+for(const label of groupKeys){
+  const i=groupKeys.indexOf(label);
+  layer.append(elem('text',{x:10,y:y(i)+5,'font-size':15},labels[label]));
+  layer.append(elem('line',{x1:x(1.3),x2:x(1.7),y1:y(i),y2:y(i),stroke:'#cad4cc'}));
+}
+for(let i=0;i<=4;i++){
+  const v=1.3+i*.1;
+  layer.append(elem('line',{x1:x(v),x2:x(v),y1:25,y2:168,stroke:'#d4ddd5'}));
+  layer.append(elem('text',{x:x(v),y:185,'text-anchor':'middle','font-size':14},v.toFixed(1)));
+}
+layer.append(elem('text',{x:320,y:211,'text-anchor':'middle','font-size':14},'Medial knee force · body weights'));
+const referenceLine=elem('line',{y1:20,y2:168,stroke:'#9a4319','stroke-width':2,'stroke-dasharray':'5 5'});
+layer.append(referenceLine);
+knee.stances.forEach(row=>{
+  const point=elem('circle',{cx:x(row.earlyMedialPeakBw),cy:y(groupKeys.indexOf(row.condition)),r:5.7,fill:'#00695e',stroke:'#f8f7f3','stroke-width':2});
+  point.append(elem('title',{},row.id+' · '+row.earlyMedialPeakBw.toFixed(3)+' BW'));
+  layer.append(point);
+  const tr=document.createElement('tr');
+  [labels[row.condition],row.id.split('-stance-')[1],row.earlyMedialPeakBw.toFixed(3)].forEach(value=>{const td=document.createElement('td');td.textContent=value;tr.append(td)});
+  byId('rows').append(tr);
+});
+function updateReference(){
+  const i=Number(document.querySelector('input[name=ref]:checked').value);
+  const value=knee.stances[i].earlyMedialPeakBw;
+  referenceLine.setAttribute('x1',x(value));referenceLine.setAttribute('x2',x(value));
+  for(const row of knee.comparisons)byId('delta-'+row.condition).textContent=fmt(row.byReference[i].meanDeltaBw)+' BW';
+  byId('ref-note').textContent='Against the '+value.toFixed(3)+' BW ordinary peak, bouncy and forefoot peaks average '+(i?'higher.':'lower.')+' The choice of ordinary stance changes the direction for both gaits.';
+}
+function updateHip(){
+  const task=document.querySelector('input[name=task]:checked').value;
+  const row=hip.originalCohort.effort[task];
+  const scores=row.balancedAccuracy;
+  const gain=row.addedTrunkLean;
+  byId('hip-score').textContent=pct(scores.hipAngles);byId('trunk-score').textContent=pct(scores.hipAnglesAndTrunkLean);
+  byId('hip-bar').style.width=pct(scores.hipAngles);byId('trunk-bar').style.width=pct(scores.hipAnglesAndTrunkLean);
+  byId('change').textContent='Adding trunk lean changed accuracy by '+fmt(100*gain.difference,1)+' percentage points. Paired 95% interval '+gain.pairedBootstrap95.map(v=>fmt(v*100,1)).join(' to ')+'.';
+  const runs=hip.additionalCohorts.summary[task];
+  byId('replication').textContent='Across 20 newly generated cohorts the gain averaged '+fmt(100*runs.meanDifference,1)+' points. '+runs.positiveCohorts+' of 20 gains were positive.';
+  const alt=hip.originalCohort.unseenTorqueReserve[task];
+  byId('reserve-result').textContent='With the alternate controller on the held-out bodies, the selected task scored '+pct(alt.balancedAccuracy.hipAngles)+' from hip angles and '+pct(alt.balancedAccuracy.hipAnglesAndTrunkLean)+' with trunk lean.';
+}
+document.querySelectorAll('input[name=ref]').forEach(e=>e.addEventListener('change',updateReference));
+document.querySelectorAll('input[name=task]').forEach(e=>e.addEventListener('change',updateHip));
+const lever=hip.mechanicalLeverSensitivity.pairedDifferences;
+byId('lever-moment').textContent=lever.externalMomentReliefPercent.median.toFixed(1)+'%';
+byId('lever-angle').textContent=lever.reductionInHipAdductionDeg.median.toFixed(1)+'°';
+byId('show-lever').addEventListener('click',()=>{
+  const answer=byId('lever-answer'),button=byId('show-lever');
+  answer.hidden=!answer.hidden;button.setAttribute('aria-expanded',String(!answer.hidden));
+  button.textContent=answer.hidden?'Compare the lever effect':'Hide lever comparison';
+});
+byId('show-hip').addEventListener('click',()=>{
+  const answer=byId('hip-answer'),button=byId('show-hip');
+  answer.hidden=!answer.hidden;button.setAttribute('aria-expanded',String(!answer.hidden));
+  button.textContent=answer.hidden?'Reveal observer accuracy':'Hide observer accuracy';
+});
+byId('show-knee').addEventListener('click',()=>{
+  const answer=byId('knee-answer'),button=byId('show-knee');
+  answer.hidden=!answer.hidden;button.setAttribute('aria-expanded',String(!answer.hidden));
+  button.textContent=answer.hidden?'Reveal implant measurement':'Hide implant measurement';
+});
+function showScene(activate=false){
+  const id=['knee','hip','next'].includes(location.hash.slice(1))?location.hash.slice(1):'hip';
+  document.querySelectorAll('main article').forEach(e=>e.hidden=e.id!==id);
+  document.querySelectorAll('nav a').forEach(e=>{if(e.hash==='#'+id)e.setAttribute('aria-current','page');else e.removeAttribute('aria-current')});
+  if(activate){const heading=byId(id+'-title');heading.tabIndex=-1;heading.focus({preventScroll:true});window.scrollTo(0,0);}
+}
+window.addEventListener('hashchange',()=>showScene(true));
+updateReference();updateHip();showScene();
+</script>
+</body></html>

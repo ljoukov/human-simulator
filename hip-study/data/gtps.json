@@ -1,0 +1,661 @@
+{
+  "title": "Frontal hip excursion during stance in two symptomatic cohorts",
+  "measure": "Adduction/abduction range over 20\u201380% of normalized stance (degrees)",
+  "sources": {
+    "gtpsDataset": "https://doi.org/10.17632/66mcwyk854.1",
+    "gtpsPaper": "https://doi.org/10.1016/j.gaitpost.2019.02.031",
+    "gtpsWorkbookSha256": "95f2b5fa6ac78367eddc4ce294c235e62f49a21169df70a9f8e2bed35a5470d6",
+    "oaDataset": "https://doi.org/10.6084/m9.figshare.13656233.v4",
+    "oaMetadata": "https://doi.org/10.6084/m9.figshare.13655975.v10",
+    "oaPaper": "https://doi.org/10.1038/s41597-022-01483-3",
+    "license": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "method": [
+    "Untaped baseline GTPS workbook, RHipAddAbd, one 101-point affected-foot stance trace per numeric ID.",
+    "Female preoperative OA patients, affected side only. Deduplicate repeated angle curves within trials. Require a complete interior force contact on the same time grid. Interpolate each loaded stance to 101 points and average across contacts within a participant before measuring excursion.",
+    "Use max minus min within 20\u201380% of normalized stance. This omits contact edges and is invariant to a constant angle offset or left/right sign reversal. Repeat over 10\u201390% and 0\u2013100%.",
+    "10,000 independent within-cohort participant bootstrap resamples. Shared central range is the intersection of the two empirical 10th\u201390th percentile intervals."
+  ],
+  "limitations": [
+    "Diagnosis and laboratory coincide. The GTPS site used the UWA model and the OA site used Plug-in Gait. Differences in coordinate systems, force gating, recruitment and severity remain.",
+    "The GTPS workbook supplies 51 unique baseline IDs and curves. The publication reports 50 women. All complete records are retained and single-record omission sensitivity is shown.",
+    "Both cohorts walked barefoot at their preferred speed. Individual GTPS ages and walking speeds are unavailable in the gait workbook, precluding individual age and speed matching.",
+    "The observations describe selected women and group overlap. Coexisting GTPS in OA is unknown and cross-site differences cannot establish clinical classification performance."
+  ],
+  "audit": {
+    "gtpsWorkbookRecords": 51,
+    "gtpsPaperParticipants": 50,
+    "gtpsAgePublished": {
+      "meanYears": 57.4,
+      "sdYears": 13.8
+    },
+    "oa": {
+      "affectedSideFemaleTrials": 861,
+      "usableContacts": 68,
+      "eligibleWomen": 55,
+      "includedWomen": 24,
+      "meanAgeYears": 68.25,
+      "sdAgeYears": 10.69
+    }
+  },
+  "gtps": {
+    "participants": 51,
+    "meanDeg": 4.231,
+    "sdDeg": 2.167,
+    "mean95CI": [
+      3.663,
+      4.828
+    ],
+    "medianDeg": 3.746,
+    "p10p90Deg": [
+      1.988,
+      6.83
+    ],
+    "minMaxDeg": [
+      0.587,
+      10.242
+    ]
+  },
+  "oa": {
+    "participants": 24,
+    "meanDeg": 2.515,
+    "sdDeg": 1.291,
+    "mean95CI": [
+      2.011,
+      3.033
+    ],
+    "medianDeg": 2.413,
+    "p10p90Deg": [
+      1.143,
+      4.063
+    ],
+    "minMaxDeg": [
+      0.716,
+      5.363
+    ]
+  },
+  "comparison": {
+    "gtpsMinusOaDeg": 1.715,
+    "difference95CI": [
+      0.954,
+      2.502
+    ],
+    "overlap": {
+      "sharedP10p90Deg": [
+        1.988,
+        4.063
+      ],
+      "gtpsInside": 24,
+      "oaInside": 11
+    },
+    "omitAnyOneGtpsDifferenceRangeDeg": [
+      1.595,
+      1.788
+    ]
+  },
+  "people": [
+    {
+      "id": "GTPS101",
+      "group": "GTPS",
+      "excursionDeg": 10.2423
+    },
+    {
+      "id": "GTPS102",
+      "group": "GTPS",
+      "excursionDeg": 6.5798
+    },
+    {
+      "id": "GTPS104",
+      "group": "GTPS",
+      "excursionDeg": 4.3122
+    },
+    {
+      "id": "GTPS105",
+      "group": "GTPS",
+      "excursionDeg": 5.7327
+    },
+    {
+      "id": "GTPS106",
+      "group": "GTPS",
+      "excursionDeg": 1.7635
+    },
+    {
+      "id": "GTPS107",
+      "group": "GTPS",
+      "excursionDeg": 5.046
+    },
+    {
+      "id": "GTPS108",
+      "group": "GTPS",
+      "excursionDeg": 4.168
+    },
+    {
+      "id": "GTPS109",
+      "group": "GTPS",
+      "excursionDeg": 3.6439
+    },
+    {
+      "id": "GTPS110",
+      "group": "GTPS",
+      "excursionDeg": 2.5911
+    },
+    {
+      "id": "GTPS111",
+      "group": "GTPS",
+      "excursionDeg": 2.6278
+    },
+    {
+      "id": "GTPS112",
+      "group": "GTPS",
+      "excursionDeg": 5.1816
+    },
+    {
+      "id": "GTPS114",
+      "group": "GTPS",
+      "excursionDeg": 3.4268
+    },
+    {
+      "id": "GTPS116",
+      "group": "GTPS",
+      "excursionDeg": 0.587
+    },
+    {
+      "id": "GTPS117",
+      "group": "GTPS",
+      "excursionDeg": 6.2633
+    },
+    {
+      "id": "GTPS136",
+      "group": "GTPS",
+      "excursionDeg": 10.2253
+    },
+    {
+      "id": "GTPS137",
+      "group": "GTPS",
+      "excursionDeg": 4.4167
+    },
+    {
+      "id": "GTPS138",
+      "group": "GTPS",
+      "excursionDeg": 2.3178
+    },
+    {
+      "id": "GTPS139",
+      "group": "GTPS",
+      "excursionDeg": 9.7668
+    },
+    {
+      "id": "GTPS140",
+      "group": "GTPS",
+      "excursionDeg": 3.8649
+    },
+    {
+      "id": "GTPS141",
+      "group": "GTPS",
+      "excursionDeg": 5.0366
+    },
+    {
+      "id": "GTPS144",
+      "group": "GTPS",
+      "excursionDeg": 3.6396
+    },
+    {
+      "id": "GTPS180",
+      "group": "GTPS",
+      "excursionDeg": 2.1507
+    },
+    {
+      "id": "GTPS188",
+      "group": "GTPS",
+      "excursionDeg": 3.3467
+    },
+    {
+      "id": "GTPS189",
+      "group": "GTPS",
+      "excursionDeg": 2.6399
+    },
+    {
+      "id": "GTPS190",
+      "group": "GTPS",
+      "excursionDeg": 6.9122
+    },
+    {
+      "id": "GTPS191",
+      "group": "GTPS",
+      "excursionDeg": 1.07
+    },
+    {
+      "id": "GTPS192",
+      "group": "GTPS",
+      "excursionDeg": 3.4297
+    },
+    {
+      "id": "GTPS193",
+      "group": "GTPS",
+      "excursionDeg": 1.6773
+    },
+    {
+      "id": "GTPS194",
+      "group": "GTPS",
+      "excursionDeg": 2.8191
+    },
+    {
+      "id": "GTPS195",
+      "group": "GTPS",
+      "excursionDeg": 3.1358
+    },
+    {
+      "id": "GTPS196",
+      "group": "GTPS",
+      "excursionDeg": 5.8686
+    },
+    {
+      "id": "GTPS197",
+      "group": "GTPS",
+      "excursionDeg": 5.8324
+    },
+    {
+      "id": "GTPS198",
+      "group": "GTPS",
+      "excursionDeg": 1.2805
+    },
+    {
+      "id": "GTPS199",
+      "group": "GTPS",
+      "excursionDeg": 1.988
+    },
+    {
+      "id": "GTPS200",
+      "group": "GTPS",
+      "excursionDeg": 2.7815
+    },
+    {
+      "id": "GTPS201",
+      "group": "GTPS",
+      "excursionDeg": 4.0847
+    },
+    {
+      "id": "GTPS202",
+      "group": "GTPS",
+      "excursionDeg": 3.2958
+    },
+    {
+      "id": "GTPS203",
+      "group": "GTPS",
+      "excursionDeg": 3.8757
+    },
+    {
+      "id": "GTPS204",
+      "group": "GTPS",
+      "excursionDeg": 2.5263
+    },
+    {
+      "id": "GTPS205",
+      "group": "GTPS",
+      "excursionDeg": 7.0541
+    },
+    {
+      "id": "GTPS206",
+      "group": "GTPS",
+      "excursionDeg": 3.2552
+    },
+    {
+      "id": "GTPS207",
+      "group": "GTPS",
+      "excursionDeg": 3.4162
+    },
+    {
+      "id": "GTPS208",
+      "group": "GTPS",
+      "excursionDeg": 4.6207
+    },
+    {
+      "id": "GTPS209",
+      "group": "GTPS",
+      "excursionDeg": 2.4206
+    },
+    {
+      "id": "GTPS210",
+      "group": "GTPS",
+      "excursionDeg": 5.9609
+    },
+    {
+      "id": "GTPS213",
+      "group": "GTPS",
+      "excursionDeg": 6.8305
+    },
+    {
+      "id": "GTPS215",
+      "group": "GTPS",
+      "excursionDeg": 4.7634
+    },
+    {
+      "id": "GTPS216",
+      "group": "GTPS",
+      "excursionDeg": 3.4461
+    },
+    {
+      "id": "GTPS217",
+      "group": "GTPS",
+      "excursionDeg": 3.7459
+    },
+    {
+      "id": "GTPS218",
+      "group": "GTPS",
+      "excursionDeg": 3.8786
+    },
+    {
+      "id": "GTPS219",
+      "group": "GTPS",
+      "excursionDeg": 6.2263
+    },
+    {
+      "id": "HOA1",
+      "group": "HOA",
+      "excursionDeg": 1.2324,
+      "age": 84.0,
+      "side": "R",
+      "contacts": 5
+    },
+    {
+      "id": "HOA106",
+      "group": "HOA",
+      "excursionDeg": 1.3408,
+      "age": 71.0,
+      "side": "R",
+      "contacts": 2
+    },
+    {
+      "id": "HOA110",
+      "group": "HOA",
+      "excursionDeg": 2.1745,
+      "age": 79.0,
+      "side": "R",
+      "contacts": 1
+    },
+    {
+      "id": "HOA112",
+      "group": "HOA",
+      "excursionDeg": 4.9813,
+      "age": 69.0,
+      "side": "L",
+      "contacts": 1
+    },
+    {
+      "id": "HOA12",
+      "group": "HOA",
+      "excursionDeg": 3.3961,
+      "age": 45.0,
+      "side": "R",
+      "contacts": 1
+    },
+    {
+      "id": "HOA120",
+      "group": "HOA",
+      "excursionDeg": 2.5257,
+      "age": 71.0,
+      "side": "L",
+      "contacts": 5
+    },
+    {
+      "id": "HOA13",
+      "group": "HOA",
+      "excursionDeg": 3.6334,
+      "age": 45.0,
+      "side": "R",
+      "contacts": 10
+    },
+    {
+      "id": "HOA14",
+      "group": "HOA",
+      "excursionDeg": 4.1007,
+      "age": 64.0,
+      "side": "L",
+      "contacts": 1
+    },
+    {
+      "id": "HOA17",
+      "group": "HOA",
+      "excursionDeg": 3.069,
+      "age": 53.0,
+      "side": "L",
+      "contacts": 5
+    },
+    {
+      "id": "HOA201",
+      "group": "HOA",
+      "excursionDeg": 2.3038,
+      "age": 82.0,
+      "side": "R",
+      "contacts": 4
+    },
+    {
+      "id": "HOA29",
+      "group": "HOA",
+      "excursionDeg": 5.3626,
+      "age": 75.0,
+      "side": "R",
+      "contacts": 6
+    },
+    {
+      "id": "HOA31",
+      "group": "HOA",
+      "excursionDeg": 2.7994,
+      "age": 79.0,
+      "side": "R",
+      "contacts": 3
+    },
+    {
+      "id": "HOA34",
+      "group": "HOA",
+      "excursionDeg": 0.7163,
+      "age": 70.0,
+      "side": "R",
+      "contacts": 2
+    },
+    {
+      "id": "HOA37",
+      "group": "HOA",
+      "excursionDeg": 2.8849,
+      "age": 59.0,
+      "side": "R",
+      "contacts": 4
+    },
+    {
+      "id": "HOA40",
+      "group": "HOA",
+      "excursionDeg": 1.0924,
+      "age": 76.0,
+      "side": "L",
+      "contacts": 2
+    },
+    {
+      "id": "HOA45",
+      "group": "HOA",
+      "excursionDeg": 3.585,
+      "age": 63.0,
+      "side": "L",
+      "contacts": 2
+    },
+    {
+      "id": "HOA46",
+      "group": "HOA",
+      "excursionDeg": 1.1107,
+      "age": 60.0,
+      "side": "R",
+      "contacts": 5
+    },
+    {
+      "id": "HOA52",
+      "group": "HOA",
+      "excursionDeg": 3.9754,
+      "age": 65.0,
+      "side": "L",
+      "contacts": 1
+    },
+    {
+      "id": "HOA53",
+      "group": "HOA",
+      "excursionDeg": 1.4762,
+      "age": 77.0,
+      "side": "L",
+      "contacts": 1
+    },
+    {
+      "id": "HOA75",
+      "group": "HOA",
+      "excursionDeg": 2.5223,
+      "age": 58.0,
+      "side": "R",
+      "contacts": 1
+    },
+    {
+      "id": "HOA83",
+      "group": "HOA",
+      "excursionDeg": 1.8449,
+      "age": 71.0,
+      "side": "R",
+      "contacts": 2
+    },
+    {
+      "id": "HOA89",
+      "group": "HOA",
+      "excursionDeg": 1.218,
+      "age": 73.0,
+      "side": "R",
+      "contacts": 1
+    },
+    {
+      "id": "HOA90",
+      "group": "HOA",
+      "excursionDeg": 1.2228,
+      "age": 71.0,
+      "side": "R",
+      "contacts": 1
+    },
+    {
+      "id": "HOA94",
+      "group": "HOA",
+      "excursionDeg": 1.7989,
+      "age": 78.0,
+      "side": "L",
+      "contacts": 2
+    }
+  ],
+  "sensitivity": {
+    "0to100": {
+      "gtps": {
+        "participants": 51,
+        "meanDeg": 11.46,
+        "sdDeg": 3.403,
+        "mean95CI": [
+          10.555,
+          12.402
+        ],
+        "medianDeg": 10.866,
+        "p10p90Deg": [
+          7.117,
+          15.927
+        ],
+        "minMaxDeg": [
+          6.322,
+          20.458
+        ]
+      },
+      "oa": {
+        "participants": 24,
+        "meanDeg": 5.389,
+        "sdDeg": 1.839,
+        "mean95CI": [
+          4.642,
+          6.085
+        ],
+        "medianDeg": 5.351,
+        "p10p90Deg": [
+          2.609,
+          7.742
+        ],
+        "minMaxDeg": [
+          1.633,
+          7.955
+        ]
+      },
+      "comparison": {
+        "gtpsMinusOaDeg": 6.071,
+        "difference95CI": [
+          4.919,
+          7.267
+        ],
+        "overlap": {
+          "sharedP10p90Deg": [
+            7.117,
+            7.742
+          ],
+          "gtpsInside": 1,
+          "oaInside": 1
+        },
+        "omitAnyOneGtpsDifferenceRangeDeg": [
+          5.891,
+          6.174
+        ]
+      }
+    },
+    "10to90": {
+      "gtps": {
+        "participants": 51,
+        "meanDeg": 6.716,
+        "sdDeg": 2.562,
+        "mean95CI": [
+          6.05,
+          7.435
+        ],
+        "medianDeg": 6.204,
+        "p10p90Deg": [
+          3.839,
+          10.285
+        ],
+        "minMaxDeg": [
+          2.938,
+          14.082
+        ]
+      },
+      "oa": {
+        "participants": 24,
+        "meanDeg": 3.891,
+        "sdDeg": 1.599,
+        "mean95CI": [
+          3.259,
+          4.519
+        ],
+        "medianDeg": 4.204,
+        "p10p90Deg": [
+          1.669,
+          6.074
+        ],
+        "minMaxDeg": [
+          1.218,
+          6.846
+        ]
+      },
+      "comparison": {
+        "gtpsMinusOaDeg": 2.825,
+        "difference95CI": [
+          1.893,
+          3.76
+        ],
+        "overlap": {
+          "sharedP10p90Deg": [
+            3.839,
+            6.074
+          ],
+          "gtpsInside": 20,
+          "oaInside": 10
+        },
+        "omitAnyOneGtpsDifferenceRangeDeg": [
+          2.678,
+          2.9
+        ]
+      }
+    }
+  }
+}

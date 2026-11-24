@@ -1,0 +1,125 @@
+.judging-slide {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(32px, 5.8vw, 96px);
+  width: 100%;
+  max-width: 1370px;
+  margin: auto;
+  padding-block: clamp(8px, 2.4vh, 28px);
+}
+
+.judging-slide h2 {
+  margin: 0 0 6px;
+  font: normal clamp(21px, 2.15vw, 32px)/1.15 Georgia, "Times New Roman", serif;
+  letter-spacing: -.025em;
+}
+
+.judging-slide p, .judging-readouts dt, .judging-work dd {
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(14px, 1.28vw, 18px);
+  line-height: 1.45;
+}
+
+.judging-feature {
+  padding-left: clamp(13px, 1.8vw, 30px);
+  border-left: 3px solid var(--blue);
+}
+
+.judging-feature .judging-number, .science-result .judging-number {
+  color: var(--blue);
+  font: normal clamp(39px, 5.5vw, 86px)/1.05 Georgia, "Times New Roman", serif;
+  font-variant-numeric: lining-nums tabular-nums;
+  letter-spacing: -.045em;
+  white-space: nowrap;
+  margin: 8px 0 12px;
+}
+
+.judging-number span { font-size: .62em; }
+
+.judging-readouts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(12px, 2.2vw, 36px);
+  margin: 12px 0;
+}
+
+.judging-readouts > div { display: flex; flex-direction: column-reverse; justify-content: flex-end; }
+.judging-readouts .judging-number { margin: 0 0 5px; font-size: clamp(32px, 4.3vw, 68px); }
+.judging-readouts dt { max-width: 26ch; }
+.judging-work { margin: 12px 0 0; }
+.judging-work > div { padding-block: clamp(8px, 1.4vh, 16px); }
+.judging-work > div + div { border-top: 1px solid var(--line); }
+.judging-work dt { margin: 0 0 3px; font-weight: 650; }
+.judging-notes > section { padding-block: clamp(10px, 1.85vh, 22px); }
+.judging-notes > section + section { border-top: 1px solid var(--line); }
+.judging-notes strong { color: var(--ink); }
+.judging-notes .judging-source { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 3px; font-size: 13px; text-underline-offset: .18em; }
+
+.science-slide { align-items: start; margin-top: clamp(8px, 3.5vh, 48px); padding-block: clamp(6px, 1.4vh, 20px); }
+.science-result + .science-result { border-left: 1px solid var(--line); padding-left: clamp(20px, 3vw, 54px); }
+.science-result .judging-readouts { margin: clamp(18px, 3vh, 36px) 0 10px; }
+.science-figure { width: min(100%, 74vh); margin: 12px 0 0; }
+.science-anatomy {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #283339;
+}
+.science-anatomy img { display: block; width: 100%; height: auto; }
+.science-callout {
+  position: absolute;
+  top: var(--marker-y);
+  left: var(--marker-x);
+  right: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transform: translateY(-50%);
+  color: #cce8ef;
+  font-size: clamp(11px, 1vw, 14px);
+  line-height: 1.2;
+}
+.science-callout::before { content: ''; flex: 0 0 clamp(12px, 3vw, 42px); border-top: 1px solid currentColor; }
+.science-callout::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 0 2px #283339;
+  transform: translate(-50%, -50%);
+}
+.science-callout--left {
+  left: 8px;
+  right: calc(100% - var(--marker-x));
+  flex-direction: row-reverse;
+  text-align: right;
+}
+.science-callout--left::after { left: 100%; }
+.science-callout--input { color: #f2c292; }
+.science-callout strong {
+  display: block;
+  margin-bottom: 2px;
+  font: normal clamp(16px, 2vw, 29px)/1.05 Georgia, "Times New Roman", serif;
+  white-space: nowrap;
+}
+.science-callout strong small { font-size: .65em; }
+.science-figure figcaption { margin-top: 7px; color: var(--muted); font-size: 13px; line-height: 1.4; }
+.science-result .science-takeaway { margin-top: 16px; color: var(--ink); }
+.science-takeaway strong { display: block; margin-bottom: 3px; }
+.science-result .science-source { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 12px; font-size: 13px; text-underline-offset: .18em; }
+
+@media (max-width: 760px) {
+  .judging-slide { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .science-slide { margin-top: 0; gap: 20px; }
+  .science-result + .science-result { border-left: 0; border-top: 1px solid var(--line); padding: 20px 0 0; }
+}
+
+@media (max-width: 360px) {
+  .judging-readouts .judging-number { font-size: 28px; }
+}

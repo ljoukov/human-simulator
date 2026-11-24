@@ -1,0 +1,406 @@
+{
+  "question": "Does observing trunk lean improve identification of two imposed mechanical impairments?",
+  "seed": 20261122,
+  "trainingBodies": 768,
+  "heldOutBodies": 256,
+  "bootstrapResamples": 2000,
+  "accuracyUnits": "fraction (1.0 = 100%)",
+  "methods": [
+    "Every virtual anatomy receives both perturbations: reduction in abductor torque capacity or additional passive hip extension resistance.",
+    "The same simulated hip\u2013trunk dynamics generate every observation. Only the channels supplied to the observer vary.",
+    "The body split, simulated camera noise, nine phases per task, error scaling and 15-nearest-neighbor classifier are the original experiment's.",
+    "Hip angles are flexion and adduction. Lateral trunk lean is the third channel. The camera-like trunk error has an assumed 3-degree RMS scale.",
+    "The paired percentile bootstrap resamples held-out body IDs and keeps both perturbations, tasks and channel sets together, conditional on training.",
+    "All classifiers train on the effort-minimizing controller. The alternate test controller maintains torque reserve. Its test bodies receive the same camera errors.",
+    "The additional twenty consecutive seeds independently regenerate anatomies, split, training, and observation errors with the effort controller. Their ranges describe variation across runs."
+  ],
+  "originalCohort": {
+    "effort": {
+      "walk": {
+        "balancedAccuracy": {
+          "hipAngles": 0.587890625,
+          "hipAnglesAndTrunkLean": 0.62109375,
+          "trunkLean": 0.55078125
+        },
+        "addedTrunkLean": {
+          "difference": 0.033203125,
+          "pairedBootstrap95": [
+            -0.017626953124999997,
+            0.0859375
+          ]
+        }
+      },
+      "loadedStance": {
+        "balancedAccuracy": {
+          "hipAngles": 0.609375,
+          "hipAnglesAndTrunkLean": 0.681640625,
+          "trunkLean": 0.662109375
+        },
+        "addedTrunkLean": {
+          "difference": 0.072265625,
+          "pairedBootstrap95": [
+            0.025390625,
+            0.12109375
+          ]
+        }
+      },
+      "walkAndLoadedStance": {
+        "balancedAccuracy": {
+          "hipAngles": 0.62890625,
+          "hipAnglesAndTrunkLean": 0.68359375,
+          "trunkLean": 0.6953125
+        },
+        "addedTrunkLean": {
+          "difference": 0.0546875,
+          "pairedBootstrap95": [
+            0.005859375,
+            0.103515625
+          ]
+        }
+      },
+      "walkAndLoadedStanceMinusLoadedStance": {
+        "hipAngles": {
+          "difference": 0.01953125,
+          "pairedBootstrap95": [
+            -0.0234375,
+            0.064453125
+          ]
+        },
+        "hipAnglesAndTrunkLean": {
+          "difference": 0.001953125,
+          "pairedBootstrap95": [
+            -0.03515625,
+            0.0390625
+          ]
+        },
+        "trunkLean": {
+          "difference": 0.033203125,
+          "pairedBootstrap95": [
+            -0.009765625,
+            0.076171875
+          ]
+        }
+      }
+    },
+    "unseenTorqueReserve": {
+      "walk": {
+        "balancedAccuracy": {
+          "hipAngles": 0.587890625,
+          "hipAnglesAndTrunkLean": 0.607421875,
+          "trunkLean": 0.51171875
+        },
+        "addedTrunkLean": {
+          "difference": 0.01953125,
+          "pairedBootstrap95": [
+            -0.029296875,
+            0.06840820312499973
+          ]
+        }
+      },
+      "loadedStance": {
+        "balancedAccuracy": {
+          "hipAngles": 0.533203125,
+          "hipAnglesAndTrunkLean": 0.705078125,
+          "trunkLean": 0.74609375
+        },
+        "addedTrunkLean": {
+          "difference": 0.171875,
+          "pairedBootstrap95": [
+            0.123046875,
+            0.224609375
+          ]
+        }
+      },
+      "walkAndLoadedStance": {
+        "balancedAccuracy": {
+          "hipAngles": 0.58203125,
+          "hipAnglesAndTrunkLean": 0.69140625,
+          "trunkLean": 0.76953125
+        },
+        "addedTrunkLean": {
+          "difference": 0.109375,
+          "pairedBootstrap95": [
+            0.066357421875,
+            0.154296875
+          ]
+        }
+      },
+      "walkAndLoadedStanceMinusLoadedStance": {
+        "hipAngles": {
+          "difference": 0.048828125,
+          "pairedBootstrap95": [
+            0.00390625,
+            0.091796875
+          ]
+        },
+        "hipAnglesAndTrunkLean": {
+          "difference": -0.013671875,
+          "pairedBootstrap95": [
+            -0.05078125,
+            0.0234375
+          ]
+        },
+        "trunkLean": {
+          "difference": 0.0234375,
+          "pairedBootstrap95": [
+            -0.013671875,
+            0.0625
+          ]
+        }
+      }
+    }
+  },
+  "additionalCohorts": {
+    "count": 20,
+    "summary": {
+      "walk": {
+        "meanDifference": 0.00712890625,
+        "minDifference": -0.05078125,
+        "maxDifference": 0.0546875,
+        "positiveCohorts": 12
+      },
+      "loadedStance": {
+        "meanDifference": 0.03994140625,
+        "minDifference": 0.001953125,
+        "maxDifference": 0.08203125,
+        "positiveCohorts": 20
+      },
+      "walkAndLoadedStance": {
+        "meanDifference": 0.01953125,
+        "minDifference": -0.015625,
+        "maxDifference": 0.044921875,
+        "positiveCohorts": 18
+      }
+    },
+    "details": [
+      {
+        "seed": 20261123,
+        "addedTrunkLean": {
+          "walk": 0.00390625,
+          "loadedStance": 0.052734375,
+          "walkAndLoadedStance": 0.04296875
+        }
+      },
+      {
+        "seed": 20261124,
+        "addedTrunkLean": {
+          "walk": 0.0,
+          "loadedStance": 0.029296875,
+          "walkAndLoadedStance": 0.021484375
+        }
+      },
+      {
+        "seed": 20261125,
+        "addedTrunkLean": {
+          "walk": -0.021484375,
+          "loadedStance": 0.08203125,
+          "walkAndLoadedStance": 0.015625
+        }
+      },
+      {
+        "seed": 20261126,
+        "addedTrunkLean": {
+          "walk": 0.001953125,
+          "loadedStance": 0.029296875,
+          "walkAndLoadedStance": 0.01171875
+        }
+      },
+      {
+        "seed": 20261127,
+        "addedTrunkLean": {
+          "walk": -0.0078125,
+          "loadedStance": 0.03125,
+          "walkAndLoadedStance": 0.00390625
+        }
+      },
+      {
+        "seed": 20261128,
+        "addedTrunkLean": {
+          "walk": -0.05078125,
+          "loadedStance": 0.0625,
+          "walkAndLoadedStance": 0.01953125
+        }
+      },
+      {
+        "seed": 20261129,
+        "addedTrunkLean": {
+          "walk": 0.02734375,
+          "loadedStance": 0.04296875,
+          "walkAndLoadedStance": 0.009765625
+        }
+      },
+      {
+        "seed": 20261130,
+        "addedTrunkLean": {
+          "walk": 0.013671875,
+          "loadedStance": 0.00390625,
+          "walkAndLoadedStance": 0.005859375
+        }
+      },
+      {
+        "seed": 20261131,
+        "addedTrunkLean": {
+          "walk": 0.0546875,
+          "loadedStance": 0.00390625,
+          "walkAndLoadedStance": -0.009765625
+        }
+      },
+      {
+        "seed": 20261132,
+        "addedTrunkLean": {
+          "walk": 0.005859375,
+          "loadedStance": 0.01171875,
+          "walkAndLoadedStance": 0.04296875
+        }
+      },
+      {
+        "seed": 20261133,
+        "addedTrunkLean": {
+          "walk": 0.00390625,
+          "loadedStance": 0.052734375,
+          "walkAndLoadedStance": 0.013671875
+        }
+      },
+      {
+        "seed": 20261134,
+        "addedTrunkLean": {
+          "walk": 0.03515625,
+          "loadedStance": 0.0234375,
+          "walkAndLoadedStance": -0.015625
+        }
+      },
+      {
+        "seed": 20261135,
+        "addedTrunkLean": {
+          "walk": -0.017578125,
+          "loadedStance": 0.0703125,
+          "walkAndLoadedStance": 0.044921875
+        }
+      },
+      {
+        "seed": 20261136,
+        "addedTrunkLean": {
+          "walk": -0.001953125,
+          "loadedStance": 0.076171875,
+          "walkAndLoadedStance": 0.03515625
+        }
+      },
+      {
+        "seed": 20261137,
+        "addedTrunkLean": {
+          "walk": 0.052734375,
+          "loadedStance": 0.001953125,
+          "walkAndLoadedStance": 0.0234375
+        }
+      },
+      {
+        "seed": 20261138,
+        "addedTrunkLean": {
+          "walk": 0.0546875,
+          "loadedStance": 0.072265625,
+          "walkAndLoadedStance": 0.03515625
+        }
+      },
+      {
+        "seed": 20261139,
+        "addedTrunkLean": {
+          "walk": -0.0390625,
+          "loadedStance": 0.02734375,
+          "walkAndLoadedStance": 0.01171875
+        }
+      },
+      {
+        "seed": 20261140,
+        "addedTrunkLean": {
+          "walk": -0.01171875,
+          "loadedStance": 0.037109375,
+          "walkAndLoadedStance": 0.015625
+        }
+      },
+      {
+        "seed": 20261141,
+        "addedTrunkLean": {
+          "walk": 0.005859375,
+          "loadedStance": 0.05078125,
+          "walkAndLoadedStance": 0.037109375
+        }
+      },
+      {
+        "seed": 20261142,
+        "addedTrunkLean": {
+          "walk": 0.033203125,
+          "loadedStance": 0.037109375,
+          "walkAndLoadedStance": 0.025390625
+        }
+      }
+    ]
+  },
+  "mechanicalLeverSensitivity": {
+    "question": "How much does the achieved compensatory lean alter frontal-plane hip mechanics inside the model?",
+    "task": "Contralateral loaded single-leg stance, reduced abductor torque capacity",
+    "pairedVirtualBodies": 256,
+    "handLoadBw": 0.1,
+    "phase": 0.5,
+    "verticalGroundForceBw": 1.1,
+    "intervention": "Disable only the reduction of external adduction moment by the achieved compensatory trunk lean. Both runs use the same anatomy, external load, hip tracking, strength limit and effort-minimizing trunk controller.",
+    "signConvention": "Positive relief or reduction means the coupled simulation has the lower value. Each contrast pairs the same virtual body at the same instant. Distribution percentiles summarize model heterogeneity.",
+    "demandWithoutTrunkReliefBwM": {
+      "min": 0.10211158351491513,
+      "p10": 0.10520905165511149,
+      "median": 0.11930965362856777,
+      "p90": 0.13297047324126196,
+      "max": 0.13796289057347805
+    },
+    "pairedDifferences": {
+      "extraStanceSideLeanDeg": {
+        "min": 0.23019630967396076,
+        "p10": 0.7081923508444938,
+        "median": 1.6394459230978087,
+        "p90": 3.2770237188466185,
+        "max": 5.534126772923021
+      },
+      "externalMomentReliefBwM": {
+        "min": 0.0013784294432105167,
+        "p10": 0.003598141234882262,
+        "median": 0.009307645955024051,
+        "p90": 0.018708502697982778,
+        "max": 0.033726843087412695
+      },
+      "externalMomentReliefPercent": {
+        "min": 1.167482850867247,
+        "p10": 3.07848911742199,
+        "median": 7.710348894311332,
+        "p90": 15.935758093643226,
+        "max": 25.295167778533624
+      },
+      "reductionInHipAdductionDeg": {
+        "min": 0.0,
+        "p10": 0.0,
+        "median": 1.008377879560558,
+        "p90": 2.755115257245874,
+        "max": 6.095108575786977
+      },
+      "reductionInAbductorGroupForceBw": {
+        "min": 0.0,
+        "p10": 0.0,
+        "median": 0.0,
+        "p90": 0.06720435073230702,
+        "max": 0.26361761534850725
+      }
+    },
+    "bodiesWithSameGroupForceAtPeak": 205,
+    "controls": {
+      "nominalBodyAllOutputsIdentical": true,
+      "achievedTrunkMotionIdenticalAcrossSwitch": true,
+      "maxAbsoluteChangeInEachEffectOnDoublingSteps": {
+        "extraStanceSideLeanDeg": 0.003985505152045654,
+        "externalMomentReliefBwM": 2.421335588573964e-05,
+        "externalMomentReliefPercent": 0.020023525958688282,
+        "reductionInHipAdductionDeg": 0.019031917910870888,
+        "reductionInAbductorGroupForceBw": 0.00015773206969349474
+      }
+    },
+    "interpretation": "The reduced-order equations assign a shorter frontal-plane load lever to stance-side lean. The hip may respond with less adduction even while the abductor group remains torque-limited. The switch isolates this equation term with prescribed ground loading. Tissue-specific force and clinical effects require independent measurements."
+  },
+  "interpretation": "The experiment tests the incremental utility of observing a signal inside a three-coordinate model. Both the trunk compensation rules and noise model are imposed. These results motivate measuring hip angles and trunk lean during loaded stance in people. Human diagnosis, tissue-specific pain and the added value of full-body forward dynamics require separate tests."
+}

@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#213830">
+  <title>Knee loading · Human Simulator</title>
+</head>
+<body>
+  <a class="skip-link" href="#study">Skip to experiment</a>
+  <header class="top-bar">
+    <div class="shell top-inner">
+      <a class="wordmark" href="../?region=legs"><span class="wordmark-mark" aria-hidden="true"></span>Human Simulator</a>
+      <nav aria-label="Main">
+        <a href="../?region=legs">Anatomy atlas</a>
+        <a href="./" aria-current="page">Knee loading</a>
+      </nav>
+    </div>
+  </header>
+  <main id="study" class="shell">
+    <section class="hero" aria-labelledby="study-title">
+      <div class="hero-inner">
+        <div>
+          <p class="kicker">Instrumented gait study</p>
+          <h1 id="study-title">From gait to knee load.</h1>
+          <p class="hero-lead">Replay whole-body movement and follow the forces from foot contact to the knee.</p>
+          <nav class="hero-jumps" aria-label="Study sections">
+            <a href="#gait-path">Full-body gait</a>
+            <a href="#tissue">Knee tissue study</a>
+            <a href="#pressure-view">Measured pressure</a>
+            <a href="#kernel">GPU benchmark</a>
+          </nav>
+        </div>
+        <div class="hero-meta">
+          <p class="kicker">Evidence</p>
+          <p id="study-source">Instrumented knee implants</p>
+          <p id="study-summary" class="hero-detail">Loading study results…</p>
+        </div>
+      </div>
+    </section>
+
+    <div id="study-status" role="status" class="notice" hidden></div>
+
+    <section id="gait-path" class="body-study" aria-labelledby="body-title">
+      <div class="section-head">
+        <div>
+          <h2 id="body-title">Follow a stride</h2>
+          <p class="muted">Compare full-body recordings, from arm swing to foot contact.</p>
+        </div>
+        <div class="tissue-source body-sources" role="group" aria-label="Recording collection">
+          <button type="button" data-body-source="reference" aria-pressed="true" disabled>Recorded walks</button>
+          <button type="button" data-body-source="implant" aria-pressed="false" disabled>Implant gait study</button>
+        </div>
+      </div>
+
+      <article class="card body-plate" aria-labelledby="body-anatomy-title">
+        <div class="body-toolbar">
+          <div class="filters body-pickers">
+            <label id="body-reference-picker" for="body-reference">First recording<select id="body-reference" disabled></select></label>
+            <label for="body-condition"><span id="body-condition-caption">Second recording</span><select id="body-condition" disabled></select></label>
+          </div>
+          <h3 id="body-anatomy-title" class="visually-hidden">3D gait comparison</h3>
+          <div class="tissue-source body-modes" role="group" aria-label="Anatomy detail">
+            <button type="button" data-body-mode="whole" aria-pressed="true">Whole body</button>
+            <button type="button" data-body-mode="knee" aria-pressed="false">Knee tissues</button>
+          </div>
+        </div>
+        <div class="tissue-stage-shell body-stage-shell">
+          <div class="tissue-viewport body-stage">
+            <div id="body-scene" class="tissue-canvas"></div>
+            <div id="body-knee-scene" class="tissue-canvas" hidden></div>
+            <div class="tissue-hud">
+              <div class="tissue-hud-item body-hud-item">
+                <strong id="body-reference-label">First recording</strong>
+                <span class="body-condition-detail" id="body-reference-detail"></span>
+                <span id="body-reference-event" class="tissue-angle"></span>
+                <dl class="tissue-force-pair body-force-pair" data-implant-only hidden>
+                  <div><dt>Right ground force</dt><dd id="body-reference-ground">…</dd></div>
+                  <div><dt>Medial knee force</dt><dd id="body-reference-load">…</dd></div>
+                </dl>
+              </div>
+              <div class="tissue-hud-item body-hud-item">
+                <strong id="body-selected-label">Second recording</strong>
+                <span class="body-condition-detail" id="body-selected-detail"></span>
+                <span id="body-selected-event" class="tissue-angle"></span>
+                <dl class="tissue-force-pair body-force-pair" data-implant-only hidden>
+                  <div><dt>Right ground force</dt><dd id="body-selected-ground">…</dd></div>
+                  <div><dt>Medial knee force</dt><dd id="body-selected-load">…</dd></div>
+                </dl>
+              </div>
+            </div>
+            <p id="body-status" class="tissue-status" role="status">Loading the motion recordings…</p>
+          </div>
+        </div>
+        <div class="body-timeline">
+          <div class="cursor-control body-cursor">
+            <button type="button" id="body-play" aria-pressed="false" disabled>
+              <span class="tissue-play-symbol" aria-hidden="true"></span><span id="body-play-label">Play stride</span>
+            </button>
+            <label for="body-phase">Stride phase</label>
+            <input id="body-phase" type="range" min="0" max="100" step="0.1" value="0" disabled>
+            <output for="body-phase" id="body-phase-value">0%</output>
+            <select id="body-speed" aria-label="Playback speed">
+              <option value="1">1× speed</option>
+              <option value="0.75" selected>0.75× speed</option>
+              <option value="0.5">0.5× speed</option>
+              <option value="0.25">0.25× speed</option>
+            </select>
+          </div>
+          <div class="stride-tracks" aria-label="Right foot contact and swing">
+            <div id="body-reference-track" class="stride-track"><span>Stance</span><span>Swing</span></div>
+            <div id="body-selected-track" class="stride-track"><span>Stance</span><span>Swing</span></div>
+          </div>
+          <div class="body-tools">
+            <div class="body-events" role="group" aria-label="Go to event in the selected stride">
+              <button type="button" data-body-event="contact" disabled>Foot contact</button>
+              <button type="button" data-body-event="peak" data-implant-only hidden>Early load peak</button>
+              <button type="button" data-body-event="toe-off" disabled>Toe-off</button>
+              <button type="button" data-body-event="swing" disabled>Mid-swing</button>
+            </div>
+            <div id="body-layers" class="tissue-layers" role="group" aria-label="Whole-body layers">
+              <label><input type="checkbox" data-body-layer="muscles" checked><span>Muscles</span></label>
+              <label><input type="checkbox" data-body-layer="skeleton" checked><span>Bones</span></label>
+              <label><input type="checkbox" data-body-layer="context"><span>Body surface</span></label>
+              <label data-implant-only hidden><input type="checkbox" data-body-layer="paths"><span>Muscle &amp; ligament paths</span></label>
+              <label><input type="checkbox" data-body-layer="ground" checked><span>Ground</span></label>
+              <label data-implant-only hidden><input type="checkbox" data-body-layer="forces" checked><span>Force arrows</span></label>
+              <label><input type="checkbox" data-body-layer="knee" checked><span>Knee marker</span></label>
+            </div>
+            <div id="body-knee-layers" class="tissue-layers" role="group" aria-label="Knee tissue layers" hidden>
+              <label><input type="checkbox" data-body-knee-layer="bone" checked><span>Bones</span></label>
+              <label><input type="checkbox" data-body-knee-layer="cartilage" checked><span>Cartilage</span></label>
+              <label><input type="checkbox" data-body-knee-layer="menisci" checked><span>Menisci</span></label>
+              <label><input type="checkbox" data-body-knee-layer="ligaments" checked><span>Ligaments</span></label>
+              <label><input type="checkbox" data-body-knee-layer="muscles"><span>Muscles</span></label>
+            </div>
+            <div class="tissue-camera" role="group" aria-label="Whole-body camera">
+              <select id="body-view" aria-label="Camera view">
+                <option value="side">Side</option>
+                <option value="oblique" selected>Oblique</option>
+                <option value="anterior">Anterior</option>
+                <option value="posterior">Posterior</option>
+              </select>
+              <button id="body-zoom-in" type="button" aria-label="Zoom in">+</button>
+              <button id="body-zoom-out" type="button" aria-label="Zoom out">−</button>
+              <button id="body-reset" type="button">Reset</button>
+            </div>
+          </div>
+          <div class="body-caption">
+            <p id="body-pose-note" class="muted"></p>
+            <a id="body-motion-source" class="subtle-link" target="_blank" rel="noopener noreferrer">Recording source</a>
+          </div>
+        </div>
+      </article>
+
+      <div id="body-pathway" class="body-pathway" aria-label="Movement, load, and symptom evidence" hidden>
+        <article class="card pathway-step">
+          <h3>Recorded movement</h3>
+          <p id="body-movement-description" class="muted"></p>
+          <dl id="body-motion-readouts" class="pathway-readouts"></dl>
+        </article>
+        <article class="card pathway-step" data-implant-only hidden>
+          <h3>Force from the ground</h3>
+          <p class="muted">Ground reaction comes from the force plate. Knee moments come from inverse dynamics.</p>
+          <dl id="body-ground-readouts" class="pathway-readouts"></dl>
+        </article>
+        <article class="card pathway-step" data-implant-only hidden>
+          <h3>Load inside the knee</h3>
+          <p class="muted">An instrumented implant measures compression in the medial and lateral compartments.</p>
+          <dl id="body-load-readouts" class="pathway-readouts"></dl>
+        </article>
+        <article class="card pathway-step pathway-clinical" data-implant-only hidden>
+          <h3>Medial knee pain</h3>
+          <p class="muted">Separate clinical evidence</p>
+          <p id="body-clinical-evidence"></p>
+          <a id="body-clinical-source" class="subtle-link">Randomized gait-retraining trial</a>
+        </article>
+        <article id="body-reference-card" class="card pathway-step">
+          <h3>Compare people, then follow load</h3>
+          <p class="muted">These walks show motion from individual people. Switch to the implant gait study to follow ground forces, knee moments, and measured compartment loads.</p>
+          <button type="button" id="body-open-implant" class="body-text-button">Open implant gait study</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="forces" class="science" aria-labelledby="force-title" hidden>
+      <div class="section-head">
+        <div>
+          <h2 id="force-title">Contact force through stance</h2>
+          <p id="comparison-caption" class="muted"></p>
+        </div>
+        <div class="filters">
+          <label>Gait comparison<select id="comparison"></select></label>
+          <label>Knee compartment<select id="compartment"></select></label>
+        </div>
+      </div>
+
+      <article id="tissue" class="card tissue-plate" aria-labelledby="tissue-title">
+        <div class="tissue-head">
+          <div>
+            <h3 id="tissue-title">The knee in motion</h3>
+            <p class="muted">Reference tissues posed at the recorded flexion angle.</p>
+          </div>
+          <div class="tissue-source" role="group" aria-label="Force source">
+            <button type="button" data-tissue-source="measured" aria-pressed="true">Implant force</button>
+            <button type="button" data-tissue-source="modeled" aria-pressed="false">Model median</button>
+          </div>
+        </div>
+
+        <div class="tissue-stage-shell">
+          <div class="tissue-viewport">
+            <div id="tissue-canvas" class="tissue-canvas"></div>
+            <div class="tissue-hud">
+              <div class="tissue-hud-item">
+                <strong id="tissue-reference-title">Reference gait</strong>
+                <span id="tissue-reference-angle" class="tissue-angle"></span>
+                <dl class="tissue-force-pair">
+                  <div><dt>Medial</dt><dd id="tissue-reference-medial">…</dd></div>
+                  <div><dt>Lateral</dt><dd id="tissue-reference-lateral">…</dd></div>
+                </dl>
+              </div>
+              <div class="tissue-hud-item">
+                <strong id="tissue-intervention-title">Comparison gait</strong>
+                <span id="tissue-intervention-angle" class="tissue-angle"></span>
+                <dl class="tissue-force-pair">
+                  <div><dt>Medial</dt><dd id="tissue-intervention-medial">…</dd></div>
+                  <div><dt>Lateral</dt><dd id="tissue-intervention-lateral">…</dd></div>
+                </dl>
+              </div>
+            </div>
+            <div id="tissue-status" class="tissue-status" role="status">Loading the 3D knee…</div>
+          </div>
+        </div>
+
+        <div class="tissue-controls">
+          <div class="tissue-options">
+            <div class="tissue-layers" role="group" aria-label="Tissue layers">
+              <label><input type="checkbox" data-tissue-layer="bone" checked><span>Bones</span></label>
+              <label><input type="checkbox" data-tissue-layer="cartilage" checked><span>Cartilage</span></label>
+              <label><input type="checkbox" data-tissue-layer="menisci" checked><span>Menisci</span></label>
+              <label><input type="checkbox" data-tissue-layer="ligaments"><span>Ligaments</span></label>
+              <label><input type="checkbox" data-tissue-layer="muscles"><span>Muscles</span></label>
+              <label><input type="checkbox" data-tissue-layer="loads" checked><span>Color by force</span></label>
+              <button id="tissue-isolate" type="button" aria-pressed="false">Isolate cartilage</button>
+            </div>
+            <div class="tissue-camera" role="group" aria-label="Camera">
+              <select id="tissue-view" aria-label="Anatomical view">
+                <option value="anterior">Anterior</option>
+                <option value="medial">Medial</option>
+                <option value="lateral">Lateral</option>
+                <option value="posterior">Posterior</option>
+                <option value="superior">Superior</option>
+              </select>
+              <button id="tissue-zoom-in" type="button" aria-label="Zoom in" title="Zoom in">+</button>
+              <button id="tissue-zoom-out" type="button" aria-label="Zoom out" title="Zoom out">−</button>
+              <button id="tissue-reset" type="button">Reset</button>
+            </div>
+          </div>
+
+          <div class="cursor-control tissue-cursor">
+            <button type="button" id="tissue-play" aria-label="Play stance" aria-pressed="false">
+              <span class="tissue-play-symbol" aria-hidden="true"></span><span id="tissue-play-label">Play stance</span>
+            </button>
+            <label for="stance-phase">Stance phase</label>
+            <input id="stance-phase" type="range" min="0" max="100" value="25" aria-label="Inspect stance phase">
+            <output for="stance-phase" id="phase-value">25%</output>
+          </div>
+
+          <div class="tissue-notes">
+            <div id="tissue-legend" class="tissue-legend" hidden>
+              <span>Compartment force</span><span>0</span><i id="tissue-gradient" aria-hidden="true"></i><span id="tissue-force-max"></span>
+            </div>
+            <p class="muted">Tibial cartilage colors indicate total force in each compartment. <a href="#pressure-view">Measured pressure map</a> · <a href="https://github.com/clnsmith/opensim-jam/blob/master/opensim-jam-release/examples/walking/graphics/walking_contact.gif">OpenSim-JAM example</a></p>
+          </div>
+        </div>
+      </article>
+
+      <div class="study-grid">
+        <article class="card curves" aria-label="Measured and modeled contact force curves">
+          <div class="chart-top">
+            <div class="legend" aria-label="Curve legend">
+              <span><i class="legend-line measured" aria-hidden="true"></i>Implant measurement</span>
+              <span><i class="legend-line model" aria-hidden="true"></i>Model median</span>
+              <span id="interval-legend"><i class="legend-band" aria-hidden="true"></i><span id="interval-label">Model interval</span></span>
+              <span id="proxy-legend" hidden><i class="legend-line proxy" aria-hidden="true"></i>Knee-moment baseline</span>
+            </div>
+            <span class="chart-unit">× body weight</span>
+          </div>
+          <div class="charts">
+            <figure>
+              <figcaption><span id="reference-title">Reference gait</span><span class="trial-count" id="reference-count"></span></figcaption>
+              <canvas id="reference-chart" role="img" aria-label="Reference gait contact force waveform"></canvas>
+              <dl id="reference-values" class="chart-values"></dl>
+            </figure>
+            <figure>
+              <figcaption><span id="intervention-title">Modified gait</span><span class="trial-count" id="intervention-count"></span></figcaption>
+              <canvas id="intervention-chart" role="img" aria-label="Modified gait contact force waveform"></canvas>
+              <dl id="intervention-values" class="chart-values"></dl>
+            </figure>
+          </div>
+          <div id="validation" class="validation" hidden>
+            <h4>Held-out checks</h4>
+            <div id="validation-metrics"></div>
+          </div>
+        </article>
+
+        <article class="card comparison" aria-labelledby="comparison-title">
+          <h3 id="comparison-title">Change with modified gait</h3>
+          <p class="muted" id="comparison-explanation">Change relative to the reference gait.</p>
+          <div id="changes" class="change-list"></div>
+        </article>
+      </div>
+      <article id="rankings" class="card rankings" aria-labelledby="rankings-title" hidden>
+        <h3 id="rankings-title">Compare gait changes</h3>
+        <p id="rankings-scope" class="muted"></p>
+        <div id="rankings-results" class="scrollable"></div>
+        <p id="rankings-note" class="muted"></p>
+      </article>
+    </section>
+
+    <section id="kernel" class="compute-section" aria-labelledby="kernel-title">
+      <div class="section-head">
+        <div>
+          <h2 id="kernel-title">CPU and GPU benchmark</h2>
+          <p class="muted">Matched force calculations across batches of gait frames and model parameter draws.</p>
+        </div>
+        <button id="run-benchmark" class="primary-button" type="button" hidden>Run on this device</button>
+      </div>
+      <article id="ensemble-benchmark" class="card compute ensemble-benchmark" aria-labelledby="ensemble-benchmark-title" hidden></article>
+      <div class="card compute">
+        <p id="benchmark-status" class="muted" role="status">No benchmark results are available yet.</p>
+        <div id="benchmark-results" hidden></div>
+      </div>
+    </section>
+
+    <section id="patella" class="patella-section" aria-labelledby="patella-title" hidden>
+      <div class="section-head">
+        <div>
+          <h2 id="patella-title">Kneecap motion check</h2>
+          <p class="muted" id="patella-summary"></p>
+        </div>
+        <a class="subtle-link" href="../?region=legs">Inspect knee anatomy</a>
+      </div>
+      <div class="card patella-readout">
+        <p id="patella-range" class="muted"></p>
+        <dl id="patella-rotation"></dl>
+        <a id="patella-source" class="subtle-link"></a>
+      </div>
+      <article id="pressure-view" class="card"></article>
+    </section>
+
+    <section class="methods" aria-labelledby="methods-title">
+      <div>
+        <h2 id="methods-title">Methods and data</h2>
+        <div id="methods"></div>
+      </div>
+      <div>
+        <h3>Sources</h3>
+        <ul id="sources" class="sources">
+          <li><a href="https://simtk.org/projects/kneeloads">SimTK Knee Loads Grand Challenge</a></li>
+          <li><a href="https://rcnl.rice.edu/PDFs/jor2010.pdf">Instrumented gait study</a></li>
+        </ul>
+        <div id="download-files" hidden>
+          <h3>Download results</h3>
+          <ul id="download-links" class="sources"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script type="module">
+    import '../../knee-loading/src/view.css';
+    import '../../knee-loading/src/view-app.ts';
+  </script>
+</body>
+</html>

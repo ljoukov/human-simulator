@@ -4,7 +4,7 @@
 
 Start with a recorded stride, follow the forces from the ground through the body, and zoom in to the tissues that carry them. Change a property of the virtual body and compare what happens at the joint and across the whole movement.
 
-[Run the anatomy viewer locally](#run-locally)
+[Run the interactive presentation](#run-locally)
 
 ![Human Simulator presentation beside a full-body anatomical model walking through a recorded stride](docs/media/project-overview/recorded-stride.png)
 
@@ -14,29 +14,29 @@ Compare motion-capture recordings side by side and step through foot contact, to
 
 ![Two motion-capture recordings at the same normalized stride phase, with skeleton and muscles visible](docs/media/project-overview/gait-recording-comparison.png)
 
-In one recorded forefoot-strike stride, the whole-body estimate reduced RMS vertical force error against force plates from **43.4 N to 30.9 N** compared with a pelvis-height estimate. [Source model and recordings](https://github.com/gilserrancoli/ReducePoly_forMSK/tree/00b6f94ee8bd2f60ae5b6f07a114f1aade089cb8)
+In one recorded forefoot-strike stride, the whole-body estimate reduced RMS vertical force error against force plates from **43.4 N to 30.9 N** compared with a pelvis-height estimate. [Whole-body force comparison](whole-body-study/README.md)
 
 ## Change one hip and see how the walker responds
 
-Reduce glute strength or shorten the iliotibial (IT) band, then compare the same virtual walker before and after the change. Synchronize the reference and adjusted views to see how trunk lean, hip flexion, and tissue tension evolve through the stride. [Reference walking model](https://github.com/antoinefalisse/3dpredictsim/tree/5fa3929fa9ba29d5c057c16b18671a017d8f15c1)
+Reduce glute strength or shorten the iliotibial (IT) band, then compare the same virtual walker before and after the change. Synchronize the reference and adjusted views to see how trunk lean, hip flexion, and tissue tension evolve through the stride. [Paired gait model](upper-limb/presentation/model/README.md)
 
 ![Reference and adjusted walkers above synchronized close-ups of their right hips](docs/media/project-overview/paired-walker-simulation.png)
 
 ## A change at the hip can reach the back and shoulder
 
-In a simulated pose 30% into a recorded stride, reducing right gluteus medius force by **50 N** changed the initial angular acceleration of lower-back rotation by **+439°/s²** and right shoulder flexion by **−29°/s²**.
+In a simulated pose 30% into a recorded stride, reducing right gluteus medius force by **50 N** changed the initial angular acceleration of lower-back rotation by **+439°/s²** and right shoulder flexion by **−29°/s²**. [Whole-body force-response experiment](whole-body-study/README.md#what-moves-first-when-hip-muscle-force-falls)
 
 ![Science slide showing how reduced hip muscle force changes simulated back and shoulder motion, alongside a comparison of ways to distinguish weakness from stiffness](docs/media/project-overview/whole-body-science.png)
 
-In a separate simulated single-leg stance with added weight, including trunk lean alongside hip angles raised balanced accuracy for distinguishing hip weakness from stiffness from **61% to 68%** across 256 held-out virtual bodies. The result suggests measuring both during the same test in people.
+In a separate simulated single-leg stance with added weight, including trunk lean alongside hip angles raised balanced accuracy for distinguishing hip weakness from stiffness from **61% to 68%** across 256 held-out virtual bodies. The result suggests measuring both during the same test in people. [Single-leg stance results](hip-study/data/observation-ablation.json) · [Interactive science slide](http://127.0.0.1:5178/presentation/#science)
 
 ## Anatomical precision, from joint to tissue
 
-Follow one instant of gait across four synchronized views of the body, outer hip, deep gluteal muscles, and joint surfaces. Inspect where tissues attach, how their paths wrap around joints, and how those paths change as the skeleton moves.
+Follow one instant of gait across four synchronized views of the body, outer hip, deep gluteal muscles, and joint surfaces. Inspect where tissues attach, how their paths wrap around joints, and how those paths change as the skeleton moves. [Hip study](hip-study/README.md)
 
 ![Four synchronized views showing the full skeleton in motion, superficial hip, deep gluteal tissues, and hip joint surfaces](docs/media/project-overview/hip-anatomy-and-contact.png)
 
-Across 512 sampled joint configurations, the paired gait model’s IT band path length had a **0.013 mm mean absolute error** relative to direct OpenSim geometry. Force plates and instrumented implants provide experimental references for external forces and internal joint loads. [Grand Challenge experiment](https://doi.org/10.1002/jor.22023)
+Across 512 sampled joint configurations, the paired gait model’s IT band path length had a **0.013 mm mean absolute error** relative to direct OpenSim geometry. Force plates and instrumented implants provide experimental references for external forces and internal joint loads. [Numerical checks](upper-limb/presentation/model/README.md#numerical-checks) · [Instrumented knee study](knee-loading/README.md)
 
 | [Arm anatomy](upper-limb/README.md) | [Leg anatomy](lower-limb/README.md) |
 | --- | --- |
@@ -54,7 +54,7 @@ The knee calibration benchmark scored **1,048,576 candidates across 91 measured 
 | Apple M4 GPU | 58.11 ms |
 | Apple M4 CPU (8 threads) | 116.35 ms |
 
-The GPU timings include candidate upload and score readback.
+The GPU timings include candidate upload and score readback. [Benchmark and reproducibility details](knee-loading/README.md#million-candidate-cuda-benchmark)
 
 ## Applications
 
@@ -71,10 +71,12 @@ npm ci
 npm run dev -- --port 5178
 ```
 
-[Arm viewer](http://127.0.0.1:5178/?region=arm) · [Leg viewer](http://127.0.0.1:5178/?region=legs)
+[Interactive presentation](http://127.0.0.1:5178/presentation/) · [Deterioration effects](http://127.0.0.1:5178/deterioration/) · [Knee loading](http://127.0.0.1:5178/knee-loading/#gait-path) · [Hip mechanics](http://127.0.0.1:5178/hip-study/) · [Arm viewer](http://127.0.0.1:5178/?region=arm) · [Leg viewer](http://127.0.0.1:5178/?region=legs)
 
 Run `npm run build` from `upper-limb` to build the web app and the offline `dist/upper-limb-viewer.html` and `dist/lower-limb-viewer.html`. [Animated arm GLB](upper-limb/assets/upper-limb.glb) · [Animated leg GLB](lower-limb/assets/lower-limb.glb) · [SimTK datasets and modeling resources](docs/simtk-review.md)
 
 ## Anatomy credits
 
 The walking atlas uses BodyParts3D © DBCLS under CC BY-SA 2.1 Japan. The limb and outer hip anatomy adapt Open3DModel under CC BY-SA 4.0. [BodyParts3D source](https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html) · [BodyParts3D license](https://creativecommons.org/licenses/by-sa/2.1/jp/deed.en) · [Open3DModel license](https://creativecommons.org/licenses/by-sa/4.0/)
+
+The instrumented hip screenshot renders a pose from OrthoLoad trial `H1L_060511_1_47`. [Recording attribution](hip-study/IMPLANT_METHODS.md)

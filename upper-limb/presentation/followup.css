@@ -1,0 +1,29 @@
+.follow-shell {
+  display: grid;
+  grid-template-columns: .88fr 1.12fr;
+  flex: 1;
+  gap: clamp(22px, 5vw, 86px);
+  padding: clamp(8px, 2vh, 26px) clamp(0px, 1.1vw, 20px);
+  align-items: start;
+}
+.follow-case { padding: clamp(18px, 2.4vw, 34px); background: #edeae0; border: 1px solid #cdcbbf; border-radius: 6px }
+.follow-switch { display: inline-flex; gap: 3px; background: #f9f7f0; border: 1px solid #bbbeb2; padding: 3px; border-radius: 5px; margin-bottom: clamp(14px, 3vh, 36px) }
+.follow-switch button { background: transparent; border: 0; color: #38494c; border-radius: 3px; font-size: 13px; padding: 7px 14px }
+.follow-switch button[aria-pressed=true] { background: #375d70; color: white; font-weight: 600 }
+.follow-lab, .follow-observation > span, .follow-visits li > span { font: 600 11px/1.4 ui-monospace, Menlo, monospace; letter-spacing: .065em; text-transform: uppercase; color: #70513f; margin: 0 0 7px }
+.follow-case h2, .follow-plan-head h2 { font: normal clamp(25px, 2.55vw, 40px)/1.12 Georgia, serif; letter-spacing: -.03em; color: #25322f; margin: 0 }
+.follow-mech, .follow-observation p, .follow-visits p { line-height: 1.45; color: #465452; font-size: clamp(13px, 1.12vw, 16px); margin: 8px 0 }
+.follow-observation { margin-top: clamp(16px, 3vh, 32px); border-top: 1px solid #c0c3b6; padding-top: 13px }
+.follow-observation a { font-size: 13px; text-underline-offset: 3px }
+.follow-plan { padding: 5px 0 }
+.follow-visits { padding: 0; margin: 16px 0 12px; list-style: none }
+.follow-visits li { position: relative; border-left: 1px solid #acbab9; padding: 0 0 12px 20px; margin-left: 5px }
+.follow-visits li:last-child { border-color: transparent; padding-bottom: 0 }
+.follow-visits li::before { content: ''; position: absolute; top: 4px; left: -4px; width: 7px; height: 7px; background: #49697a; border-radius: 50% }
+.follow-visits h3 { font-weight: 600; font-size: clamp(16px, 1.36vw, 21px); margin: 2px 0; color: #25322f }
+.follow-visits p { font-size: clamp(13px, 1.05vw, 15px); margin: 4px 0 }
+.follow-decision { font: normal clamp(16px, 1.45vw, 21px)/1.4 Georgia, serif; border-top: 1px solid #c3c6b9; padding-top: 10px; color: #334e60; margin: 0 }
+@media (max-width: 700px) {
+  .follow-shell { grid-template-columns: 1fr; padding: 0; gap: 18px }
+  .follow-switch { margin-bottom: 18px }
+}

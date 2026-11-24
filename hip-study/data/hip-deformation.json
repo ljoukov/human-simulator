@@ -1,0 +1,2508 @@
+{
+  "version": 2,
+  "unitsPerMetre": 1000000,
+  "recordBytes": 14,
+  "sourceAtlasSha256": "129e2cce9be7d132a25e27294c18187ab70552cb4fb8c336b65a76a306230a97",
+  "weightsSha256": "0d356d4f354d0c5baba87cce52c8a8f468cb1ee3c77f61331cf0e62266c62dd5",
+  "surfaces": {
+    "Hip bone": {
+      "mode": "pelvis",
+      "constant": 0,
+      "vertices": 5531
+    },
+    "Sacrum": {
+      "mode": "pelvis",
+      "constant": 0,
+      "vertices": 5250
+    },
+    "Femur": {
+      "mode": "femur",
+      "constant": 1,
+      "vertices": 2845
+    },
+    "Art cart of femur head": {
+      "mode": "femur",
+      "constant": 1,
+      "vertices": 1288
+    },
+    "Articular cartilage of hip bone acetabulum": {
+      "mode": "pelvis",
+      "constant": 0,
+      "vertices": 603
+    },
+    "Acetabular labrum": {
+      "mode": "pelvis",
+      "constant": 0,
+      "vertices": 697
+    },
+    "Hip joint capsule": {
+      "proximalTarget": "Acetabular labrum",
+      "distalTarget": "femoral neck/shaft",
+      "proximalSeeds": 438,
+      "distalSeeds": 840,
+      "bothEndsConnectedVertices": 2116,
+      "components": 1,
+      "mode": "surface geodesic",
+      "vertices": 2116,
+      "offsetBytes": 0,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": 0.0,
+        "distalMaxSlipMm": 0.0,
+        "replayEdgePathRangeMm": {
+          "bertaux-hoa001": [
+            39.486,
+            44.566
+          ],
+          "h1l-walk": [
+            37.949,
+            47.183
+          ],
+          "h1l-stand": [
+            42.124,
+            43.11
+          ],
+          "predsim-hip-0": [
+            37.829,
+            49.704
+          ],
+          "predsim-hip-50": [
+            38.312,
+            50.222
+          ],
+          "predsim-hip-75": [
+            38.642,
+            50.958
+          ],
+          "predsim-hip-90": [
+            38.91,
+            50.208
+          ]
+        },
+        "edgePathLengthsMm": [
+          46.304,
+          55.093,
+          33.023,
+          47.519,
+          46.25,
+          50.973,
+          43.445,
+          60.016,
+          31.513
+        ],
+        "areaRatioWorstPoseP01": 0.2086,
+        "areaRatioWorstPoseP99": 3.4468
+      }
+    },
+    "Gluteus medius muscle": {
+      "proximalTarget": "iliac wing",
+      "distalTarget": "trochanter",
+      "proximalSeeds": 30,
+      "distalSeeds": 142,
+      "bothEndsConnectedVertices": 327,
+      "components": 1,
+      "mode": "surface geodesic",
+      "insertionSeeds": 36,
+      "recordBytes": 16,
+      "insertionGeodesicMmRange": [
+        0.0,
+        162.189
+      ],
+      "vertices": 327,
+      "offsetBytes": 29624,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": 0.0,
+        "distalMaxSlipMm": 0.0,
+        "replayEdgePathRangeMm": {
+          "bertaux-hoa001": [
+            166.394,
+            177.225
+          ],
+          "h1l-walk": [
+            150.641,
+            174.04
+          ],
+          "h1l-stand": [
+            153.315,
+            157.851
+          ],
+          "predsim-hip-0": [
+            147.659,
+            175.424
+          ],
+          "predsim-hip-50": [
+            146.394,
+            175.072
+          ],
+          "predsim-hip-75": [
+            139.637,
+            173.365
+          ],
+          "predsim-hip-90": [
+            137.499,
+            171.951
+          ]
+        },
+        "edgePathLengthsMm": [
+          152.086,
+          138.892,
+          209.254,
+          135.274,
+          177.166,
+          151.387,
+          157.749,
+          121.992,
+          213.923
+        ],
+        "areaRatioWorstPoseP01": 0.3517,
+        "areaRatioWorstPoseP99": 1.9974
+      }
+    },
+    "Gluteus minimus muscle": {
+      "proximalTarget": "iliac wing",
+      "distalTarget": "trochanter",
+      "proximalSeeds": 84,
+      "distalSeeds": 225,
+      "bothEndsConnectedVertices": 622,
+      "components": 1,
+      "mode": "surface geodesic",
+      "insertionSeeds": 57,
+      "recordBytes": 16,
+      "insertionGeodesicMmRange": [
+        0.0,
+        127.619
+      ],
+      "vertices": 622,
+      "offsetBytes": 34856,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": 0.0,
+        "distalMaxSlipMm": 0.0,
+        "replayEdgePathRangeMm": {
+          "bertaux-hoa001": [
+            119.822,
+            123.147
+          ],
+          "h1l-walk": [
+            110.933,
+            115.46
+          ],
+          "h1l-stand": [
+            105.815,
+            108.996
+          ],
+          "predsim-hip-0": [
+            112.035,
+            118.037
+          ],
+          "predsim-hip-50": [
+            112.546,
+            116.821
+          ],
+          "predsim-hip-75": [
+            108.392,
+            117.089
+          ],
+          "predsim-hip-90": [
+            104.524,
+            117.954
+          ]
+        },
+        "edgePathLengthsMm": [
+          112.328,
+          113.531,
+          123.486,
+          95.771,
+          132.88,
+          113.986,
+          116.9,
+          93.335,
+          126.135
+        ],
+        "areaRatioWorstPoseP01": 0.0747,
+        "areaRatioWorstPoseP99": 1.8276
+      }
+    },
+    "Tensor fasciae latae": {
+      "proximalTarget": "iliac crest",
+      "distalTarget": "Iliotibial tract",
+      "proximalSeeds": 61,
+      "distalSeeds": 21,
+      "bothEndsConnectedVertices": 509,
+      "components": 1,
+      "mode": "tract insertion and surface geodesic",
+      "distalHostRestDistanceMm": [
+        0.0444,
+        1.5066
+      ],
+      "distalHostWeightRange": [
+        0.52855,
+        0.587259
+      ],
+      "laminaSoftCouplingVertices": 282,
+      "couplingMethod": "Hold proximal anchors at the pelvis. Assign distal anchors the barycentric weights of the nearest tract triangles. Retain a scaled geodesic muscle prior, with soft fascial coupling tapered between 1 and 3 mm and a graph-smoothed correction. The spatial scale and relative penalties are modeling assumptions.",
+      "anatomyReference": "https://doi.org/10.1002/ca.22248",
+      "vertices": 509,
+      "offsetBytes": 44808,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": 0.0,
+        "distalMaxSlipMm": 0.44913078182318605,
+        "replayEdgePathRangeMm": {
+          "bertaux-hoa001": [
+            147.562,
+            155.006
+          ],
+          "h1l-walk": [
+            141.52,
+            152.97
+          ],
+          "h1l-stand": [
+            143.23,
+            144.667
+          ],
+          "predsim-hip-0": [
+            142.647,
+            157.531
+          ],
+          "predsim-hip-50": [
+            142.796,
+            157.4
+          ],
+          "predsim-hip-75": [
+            141.997,
+            155.448
+          ],
+          "predsim-hip-90": [
+            140.851,
+            155.026
+          ]
+        },
+        "edgePathLengthsMm": [
+          151.628,
+          161.681,
+          129.852,
+          143.281,
+          162.476,
+          154.748,
+          150.558,
+          152.105,
+          130.714
+        ],
+        "areaRatioWorstPoseP01": 0.5936,
+        "areaRatioWorstPoseP99": 1.2421,
+        "tractInsertionReplays": {
+          "bertaux-hoa001": {
+            "frames": 101,
+            "maxTractInsertionSlipMm": 0.1883,
+            "maxWithinFrameAbsEdgeChangeP95P99Max": [
+              0.0672,
+              0.0745,
+              0.0879
+            ]
+          },
+          "h1l-walk": {
+            "frames": 101,
+            "maxTractInsertionSlipMm": 0.2051,
+            "maxWithinFrameAbsEdgeChangeP95P99Max": [
+              0.1231,
+              0.1441,
+              0.1795
+            ]
+          },
+          "h1l-stand": {
+            "frames": 101,
+            "maxTractInsertionSlipMm": 0.1117,
+            "maxWithinFrameAbsEdgeChangeP95P99Max": [
+              0.1029,
+              0.1192,
+              0.1332
+            ]
+          },
+          "predsim-hip-0": {
+            "frames": 101,
+            "maxTractInsertionSlipMm": 0.2057,
+            "maxWithinFrameAbsEdgeChangeP95P99Max": [
+              0.1112,
+              0.1276,
+              0.1643
+            ]
+          },
+          "predsim-hip-50": {
+            "frames": 101,
+            "maxTractInsertionSlipMm": 0.2009,
+            "maxWithinFrameAbsEdgeChangeP95P99Max": [
+              0.1077,
+              0.1241,
+              0.1582
+            ]
+          },
+          "predsim-hip-75": {
+            "frames": 101,
+            "maxTractInsertionSlipMm": 0.1922,
+            "maxWithinFrameAbsEdgeChangeP95P99Max": [
+              0.1164,
+              0.1369,
+              0.168
+            ]
+          },
+          "predsim-hip-90": {
+            "frames": 101,
+            "maxTractInsertionSlipMm": 0.1849,
+            "maxWithinFrameAbsEdgeChangeP95P99Max": [
+              0.1286,
+              0.1518,
+              0.1839
+            ]
+          }
+        }
+      }
+    },
+    "Iliotibial tract": {
+      "proximalTarget": "iliac crest",
+      "distalTarget": "distal section",
+      "proximalSeeds": 29,
+      "distalSeeds": 45,
+      "bothEndsConnectedVertices": 398,
+      "components": 1,
+      "mode": "surface geodesic",
+      "vertices": 398,
+      "offsetBytes": 51934,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": 0.0,
+        "distalMaxSlipMm": 0.0,
+        "replayEdgePathRangeMm": {
+          "bertaux-hoa001": [
+            296.55,
+            303.426
+          ],
+          "h1l-walk": [
+            284.223,
+            290.447
+          ],
+          "h1l-stand": [
+            274.372,
+            279.014
+          ],
+          "predsim-hip-0": [
+            286.121,
+            295.0
+          ],
+          "predsim-hip-50": [
+            286.754,
+            293.076
+          ],
+          "predsim-hip-75": [
+            280.155,
+            290.716
+          ],
+          "predsim-hip-90": [
+            273.307,
+            294.271
+          ]
+        },
+        "edgePathLengthsMm": [
+          288.031,
+          295.93,
+          287.156,
+          262.444,
+          322.937,
+          293.11,
+          287.953,
+          271.969,
+          294.337
+        ],
+        "areaRatioWorstPoseP01": 0.667,
+        "areaRatioWorstPoseP99": 1.3018
+      }
+    },
+    "Gluteus maximus muscle": {
+      "proximalTarget": "pelvic ring",
+      "distalTarget": "femoral neck/shaft",
+      "proximalSeeds": 21,
+      "distalSeeds": 24,
+      "bothEndsConnectedVertices": 522,
+      "components": 1,
+      "mode": "surface geodesic",
+      "vertices": 522,
+      "offsetBytes": 57506,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": 0.0,
+        "distalMaxSlipMm": 0.0,
+        "replayEdgePathRangeMm": {
+          "bertaux-hoa001": [
+            245.1,
+            267.957
+          ],
+          "h1l-walk": [
+            235.843,
+            277.931
+          ],
+          "h1l-stand": [
+            254.966,
+            258.795
+          ],
+          "predsim-hip-0": [
+            225.812,
+            277.054
+          ],
+          "predsim-hip-50": [
+            223.919,
+            275.956
+          ],
+          "predsim-hip-75": [
+            221.807,
+            275.105
+          ],
+          "predsim-hip-90": [
+            224.71,
+            274.507
+          ]
+        },
+        "edgePathLengthsMm": [
+          239.487,
+          206.886,
+          331.291,
+          241.569,
+          239.172,
+          232.452,
+          252.264,
+          209.413,
+          334.987
+        ],
+        "areaRatioWorstPoseP01": 0.5726,
+        "areaRatioWorstPoseP99": 1.7687
+      }
+    },
+    "Fascia lata": {
+      "proximalTarget": "iliac crest",
+      "distalTarget": "distal section",
+      "proximalSeeds": 70,
+      "distalSeeds": 148,
+      "bothEndsConnectedVertices": 1743,
+      "components": 1,
+      "mode": "surface geodesic",
+      "vertices": 1743,
+      "offsetBytes": 64814,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": 0.0,
+        "distalMaxSlipMm": 0.0,
+        "replayEdgePathRangeMm": {
+          "bertaux-hoa001": [
+            270.363,
+            287.349
+          ],
+          "h1l-walk": [
+            260.72,
+            287.331
+          ],
+          "h1l-stand": [
+            267.561,
+            270.124
+          ],
+          "predsim-hip-0": [
+            262.893,
+            303.913
+          ],
+          "predsim-hip-50": [
+            262.089,
+            303.482
+          ],
+          "predsim-hip-75": [
+            261.358,
+            299.108
+          ],
+          "predsim-hip-90": [
+            260.418,
+            299.149
+          ]
+        },
+        "edgePathLengthsMm": [
+          284.183,
+          312.008,
+          243.839,
+          272.82,
+          301.39,
+          278.057,
+          293.953,
+          288.751,
+          248.499
+        ],
+        "areaRatioWorstPoseP01": 0.5783,
+        "areaRatioWorstPoseP99": 1.7882
+      }
+    },
+    "Piriformis muscle": {
+      "proximalTarget": "Sacrum",
+      "distalTarget": "trochanter",
+      "proximalSeeds": 154,
+      "distalSeeds": 135,
+      "bothEndsConnectedVertices": 793,
+      "components": 1,
+      "mode": "surface geodesic",
+      "vertices": 793,
+      "offsetBytes": 89216,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": 0.0,
+        "distalMaxSlipMm": 0.0,
+        "replayEdgePathRangeMm": {
+          "bertaux-hoa001": [
+            130.334,
+            133.825
+          ],
+          "h1l-walk": [
+            125.31,
+            134.973
+          ],
+          "h1l-stand": [
+            127.159,
+            128.696
+          ],
+          "predsim-hip-0": [
+            126.958,
+            135.694
+          ],
+          "predsim-hip-50": [
+            126.301,
+            134.375
+          ],
+          "predsim-hip-75": [
+            124.287,
+            133.56
+          ],
+          "predsim-hip-90": [
+            125.632,
+            132.985
+          ]
+        },
+        "edgePathLengthsMm": [
+          125.799,
+          122.643,
+          153.176,
+          119.807,
+          134.495,
+          112.073,
+          141.565,
+          100.81,
+          157.373
+        ],
+        "areaRatioWorstPoseP01": 0.4916,
+        "areaRatioWorstPoseP99": 1.6784
+      }
+    },
+    "Superior gemellus muscle": {
+      "proximalTarget": "ischium/pubis",
+      "distalTarget": "trochanter",
+      "proximalSeeds": 93,
+      "distalSeeds": 56,
+      "bothEndsConnectedVertices": 306,
+      "components": 1,
+      "mode": "surface geodesic",
+      "vertices": 306,
+      "offsetBytes": 100318,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": 0.0,
+        "distalMaxSlipMm": 0.0,
+        "replayEdgePathRangeMm": {
+          "bertaux-hoa001": [
+            74.291,
+            76.623
+          ],
+          "h1l-walk": [
+            72.725,
+            77.439
+          ],
+          "h1l-stand": [
+            74.146,
+            74.615
+          ],
+          "predsim-hip-0": [
+            74.438,
+            79.342
+          ],
+          "predsim-hip-50": [
+            73.584,
+            78.345
+          ],
+          "predsim-hip-75": [
+            73.446,
+            76.694
+          ],
+          "predsim-hip-90": [
+            74.82,
+            77.682
+          ]
+        },
+        "edgePathLengthsMm": [
+          72.937,
+          72.456,
+          87.253,
+          73.354,
+          75.56,
+          61.341,
+          86.428,
+          64.6,
+          90.722
+        ],
+        "areaRatioWorstPoseP01": 0.1204,
+        "areaRatioWorstPoseP99": 2.0549
+      }
+    },
+    "Inferior gemellus muscle": {
+      "proximalTarget": "ischium/pubis",
+      "distalTarget": "trochanter",
+      "proximalSeeds": 57,
+      "distalSeeds": 97,
+      "bothEndsConnectedVertices": 321,
+      "components": 1,
+      "mode": "surface geodesic",
+      "vertices": 321,
+      "offsetBytes": 104602,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": 0.0,
+        "distalMaxSlipMm": 0.0,
+        "replayEdgePathRangeMm": {
+          "bertaux-hoa001": [
+            74.542,
+            79.077
+          ],
+          "h1l-walk": [
+            76.667,
+            83.996
+          ],
+          "h1l-stand": [
+            80.969,
+            82.048
+          ],
+          "predsim-hip-0": [
+            79.284,
+            84.448
+          ],
+          "predsim-hip-50": [
+            77.647,
+            83.966
+          ],
+          "predsim-hip-75": [
+            77.1,
+            83.788
+          ],
+          "predsim-hip-90": [
+            77.432,
+            86.466
+          ]
+        },
+        "edgePathLengthsMm": [
+          77.155,
+          78.973,
+          101.491,
+          82.984,
+          71.325,
+          61.429,
+          94.611,
+          69.081,
+          104.413
+        ],
+        "areaRatioWorstPoseP01": 0.4973,
+        "areaRatioWorstPoseP99": 1.7496
+      }
+    },
+    "Obturator internus": {
+      "proximalTarget": "ischium/pubis",
+      "distalTarget": "trochanter",
+      "proximalSeeds": 152,
+      "distalSeeds": 42,
+      "bothEndsConnectedVertices": 394,
+      "components": 1,
+      "mode": "surface geodesic",
+      "vertices": 394,
+      "offsetBytes": 109096,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": 0.0,
+        "distalMaxSlipMm": 0.0,
+        "replayEdgePathRangeMm": {
+          "bertaux-hoa001": [
+            105.395,
+            109.529
+          ],
+          "h1l-walk": [
+            105.793,
+            113.192
+          ],
+          "h1l-stand": [
+            109.687,
+            110.53
+          ],
+          "predsim-hip-0": [
+            107.932,
+            113.176
+          ],
+          "predsim-hip-50": [
+            107.015,
+            112.224
+          ],
+          "predsim-hip-75": [
+            106.768,
+            112.28
+          ],
+          "predsim-hip-90": [
+            107.684,
+            113.515
+          ]
+        },
+        "edgePathLengthsMm": [
+          106.289,
+          104.838,
+          127.382,
+          109.523,
+          103.424,
+          92.53,
+          121.286,
+          93.954,
+          130.128
+        ],
+        "areaRatioWorstPoseP01": 0.5254,
+        "areaRatioWorstPoseP99": 1.6583
+      }
+    },
+    "Obturator externus": {
+      "proximalTarget": "ischium/pubis",
+      "distalTarget": "trochanter",
+      "proximalSeeds": 59,
+      "distalSeeds": 78,
+      "bothEndsConnectedVertices": 410,
+      "components": 1,
+      "mode": "surface geodesic",
+      "vertices": 410,
+      "offsetBytes": 114612,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": 0.0,
+        "distalMaxSlipMm": 0.0,
+        "replayEdgePathRangeMm": {
+          "bertaux-hoa001": [
+            70.128,
+            72.533
+          ],
+          "h1l-walk": [
+            76.168,
+            78.708
+          ],
+          "h1l-stand": [
+            79.91,
+            82.052
+          ],
+          "predsim-hip-0": [
+            77.057,
+            83.481
+          ],
+          "predsim-hip-50": [
+            74.933,
+            83.897
+          ],
+          "predsim-hip-75": [
+            73.824,
+            86.386
+          ],
+          "predsim-hip-90": [
+            73.363,
+            89.471
+          ]
+        },
+        "edgePathLengthsMm": [
+          77.527,
+          83.726,
+          91.418,
+          88.572,
+          65.121,
+          65.952,
+          90.304,
+          83.755,
+          92.951
+        ],
+        "areaRatioWorstPoseP01": 0.5216,
+        "areaRatioWorstPoseP99": 1.7134
+      }
+    },
+    "Quadratus femoris muscle": {
+      "proximalTarget": "ischium/pubis",
+      "distalTarget": "trochanter",
+      "proximalSeeds": 116,
+      "distalSeeds": 75,
+      "bothEndsConnectedVertices": 542,
+      "components": 1,
+      "mode": "surface geodesic",
+      "vertices": 542,
+      "offsetBytes": 120352,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": 0.0,
+        "distalMaxSlipMm": 0.0,
+        "replayEdgePathRangeMm": {
+          "bertaux-hoa001": [
+            57.276,
+            61.55
+          ],
+          "h1l-walk": [
+            65.24,
+            70.065
+          ],
+          "h1l-stand": [
+            70.798,
+            73.774
+          ],
+          "predsim-hip-0": [
+            66.537,
+            73.319
+          ],
+          "predsim-hip-50": [
+            64.505,
+            74.203
+          ],
+          "predsim-hip-75": [
+            62.949,
+            78.66
+          ],
+          "predsim-hip-90": [
+            61.942,
+            82.577
+          ]
+        },
+        "edgePathLengthsMm": [
+          67.088,
+          76.99,
+          89.834,
+          83.339,
+          49.882,
+          56.039,
+          80.006,
+          82.26,
+          91.215
+        ],
+        "areaRatioWorstPoseP01": 0.2205,
+        "areaRatioWorstPoseP99": 2.3179
+      }
+    },
+    "Iliacus muscle": {
+      "proximalTarget": "iliac wing",
+      "distalTarget": "lesser trochanter vicinity",
+      "proximalSeeds": 177,
+      "distalSeeds": 115,
+      "bothEndsConnectedVertices": 990,
+      "components": 1,
+      "mode": "surface geodesic",
+      "vertices": 990,
+      "offsetBytes": 127940,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": 0.0,
+        "distalMaxSlipMm": 0.0,
+        "replayEdgePathRangeMm": {
+          "bertaux-hoa001": [
+            157.524,
+            165.761
+          ],
+          "h1l-walk": [
+            153.292,
+            167.553
+          ],
+          "h1l-stand": [
+            158.84,
+            159.976
+          ],
+          "predsim-hip-0": [
+            153.875,
+            172.79
+          ],
+          "predsim-hip-50": [
+            154.111,
+            173.123
+          ],
+          "predsim-hip-75": [
+            154.108,
+            172.747
+          ],
+          "predsim-hip-90": [
+            153.995,
+            172.095
+          ]
+        },
+        "edgePathLengthsMm": [
+          166.144,
+          178.744,
+          139.549,
+          163.397,
+          170.123,
+          169.37,
+          165.852,
+          176.301,
+          139.396
+        ],
+        "areaRatioWorstPoseP01": 0.1619,
+        "areaRatioWorstPoseP99": 1.5538
+      }
+    },
+    "Psoas major": {
+      "proximalTarget": "lumbar end",
+      "distalTarget": "lesser trochanter vicinity",
+      "proximalSeeds": 101,
+      "distalSeeds": 66,
+      "bothEndsConnectedVertices": 732,
+      "components": 1,
+      "mode": "surface geodesic",
+      "vertices": 732,
+      "offsetBytes": 141800,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": 0.0,
+        "distalMaxSlipMm": 0.0,
+        "replayEdgePathRangeMm": {
+          "bertaux-hoa001": [
+            279.257,
+            286.434
+          ],
+          "h1l-walk": [
+            279.406,
+            293.963
+          ],
+          "h1l-stand": [
+            287.515,
+            289.892
+          ],
+          "predsim-hip-0": [
+            278.769,
+            297.96
+          ],
+          "predsim-hip-50": [
+            279.255,
+            299.132
+          ],
+          "predsim-hip-75": [
+            280.114,
+            302.31
+          ],
+          "predsim-hip-90": [
+            280.831,
+            302.392
+          ]
+        },
+        "edgePathLengthsMm": [
+          292.678,
+          307.651,
+          267.111,
+          301.311,
+          285.606,
+          297.53,
+          289.187,
+          321.028,
+          264.694
+        ],
+        "areaRatioWorstPoseP01": 0.6132,
+        "areaRatioWorstPoseP99": 1.232
+      }
+    },
+    "Adductor brevis": {
+      "proximalTarget": "ischium/pubis",
+      "distalTarget": "distal section",
+      "proximalSeeds": 39,
+      "distalSeeds": 47,
+      "bothEndsConnectedVertices": 337,
+      "components": 1,
+      "mode": "surface geodesic",
+      "vertices": 337,
+      "offsetBytes": 152048,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": 0.0,
+        "distalMaxSlipMm": 0.0,
+        "replayEdgePathRangeMm": {
+          "bertaux-hoa001": [
+            139.423,
+            151.703
+          ],
+          "h1l-walk": [
+            148.732,
+            172.854
+          ],
+          "h1l-stand": [
+            163.552,
+            170.085
+          ],
+          "predsim-hip-0": [
+            145.622,
+            185.897
+          ],
+          "predsim-hip-50": [
+            146.644,
+            188.472
+          ],
+          "predsim-hip-75": [
+            147.369,
+            196.556
+          ],
+          "predsim-hip-90": [
+            147.443,
+            199.489
+          ]
+        },
+        "edgePathLengthsMm": [
+          170.194,
+          205.094,
+          159.746,
+          199.7,
+          148.235,
+          172.554,
+          171.499,
+          233.155,
+          153.394
+        ],
+        "areaRatioWorstPoseP01": 0.4374,
+        "areaRatioWorstPoseP99": 1.6178
+      }
+    },
+    "Adductor longus": {
+      "proximalTarget": "ischium/pubis",
+      "distalTarget": "distal section",
+      "proximalSeeds": 29,
+      "distalSeeds": 54,
+      "bothEndsConnectedVertices": 312,
+      "components": 1,
+      "mode": "surface geodesic",
+      "vertices": 312,
+      "offsetBytes": 156766,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": 0.0,
+        "distalMaxSlipMm": 0.0,
+        "replayEdgePathRangeMm": {
+          "bertaux-hoa001": [
+            126.214,
+            134.758
+          ],
+          "h1l-walk": [
+            137.388,
+            156.6
+          ],
+          "h1l-stand": [
+            150.928,
+            157.762
+          ],
+          "predsim-hip-0": [
+            134.72,
+            170.02
+          ],
+          "predsim-hip-50": [
+            136.052,
+            172.46
+          ],
+          "predsim-hip-75": [
+            135.531,
+            181.258
+          ],
+          "predsim-hip-90": [
+            134.519,
+            185.667
+          ]
+        },
+        "edgePathLengthsMm": [
+          154.332,
+          186.835,
+          156.773,
+          188.037,
+          129.232,
+          155.74,
+          160.1,
+          218.488,
+          149.751
+        ],
+        "areaRatioWorstPoseP01": 0.3276,
+        "areaRatioWorstPoseP99": 1.7512
+      }
+    },
+    "Adductor magnus": {
+      "proximalTarget": "ischium/pubis",
+      "distalTarget": "distal section",
+      "proximalSeeds": 117,
+      "distalSeeds": 145,
+      "bothEndsConnectedVertices": 1125,
+      "components": 1,
+      "mode": "surface geodesic",
+      "vertices": 1125,
+      "offsetBytes": 161134,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": 0.0,
+        "distalMaxSlipMm": 0.0,
+        "replayEdgePathRangeMm": {
+          "bertaux-hoa001": [
+            126.492,
+            151.515
+          ],
+          "h1l-walk": [
+            128.732,
+            167.33
+          ],
+          "h1l-stand": [
+            150.098,
+            154.966
+          ],
+          "predsim-hip-0": [
+            125.966,
+            163.971
+          ],
+          "predsim-hip-50": [
+            127.817,
+            164.713
+          ],
+          "predsim-hip-75": [
+            130.357,
+            165.043
+          ],
+          "predsim-hip-90": [
+            126.744,
+            166.215
+          ]
+        },
+        "edgePathLengthsMm": [
+          131.144,
+          138.837,
+          238.919,
+          165.514,
+          127.511,
+          133.825,
+          135.407,
+          161.995,
+          236.683
+        ],
+        "areaRatioWorstPoseP01": 0.4493,
+        "areaRatioWorstPoseP99": 3.4335
+      }
+    },
+    "Gracilis muscle": {
+      "proximalTarget": "ischium/pubis",
+      "distalTarget": "distal section",
+      "proximalSeeds": 57,
+      "distalSeeds": 58,
+      "bothEndsConnectedVertices": 376,
+      "components": 1,
+      "mode": "surface geodesic",
+      "vertices": 376,
+      "offsetBytes": 176884,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": 0.0,
+        "distalMaxSlipMm": 0.0,
+        "replayEdgePathRangeMm": {
+          "bertaux-hoa001": [
+            122.328,
+            126.975
+          ],
+          "h1l-walk": [
+            128.018,
+            141.364
+          ],
+          "h1l-stand": [
+            136.621,
+            142.32
+          ],
+          "predsim-hip-0": [
+            126.132,
+            158.841
+          ],
+          "predsim-hip-50": [
+            126.9,
+            160.522
+          ],
+          "predsim-hip-75": [
+            126.785,
+            166.345
+          ],
+          "predsim-hip-90": [
+            125.536,
+            170.651
+          ]
+        },
+        "edgePathLengthsMm": [
+          139.159,
+          173.262,
+          170.72,
+          170.11,
+          132.266,
+          137.276,
+          150.115,
+          195.052,
+          166.204
+        ],
+        "areaRatioWorstPoseP01": 0.4444,
+        "areaRatioWorstPoseP99": 1.7872
+      }
+    },
+    "Pectineus muscle": {
+      "proximalTarget": "ischium/pubis",
+      "distalTarget": "distal section",
+      "proximalSeeds": 34,
+      "distalSeeds": 20,
+      "bothEndsConnectedVertices": 244,
+      "components": 1,
+      "mode": "surface geodesic",
+      "vertices": 244,
+      "offsetBytes": 182148,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": 0.0,
+        "distalMaxSlipMm": 0.0,
+        "replayEdgePathRangeMm": {
+          "bertaux-hoa001": [
+            110.58,
+            123.015
+          ],
+          "h1l-walk": [
+            118.489,
+            142.536
+          ],
+          "h1l-stand": [
+            133.774,
+            139.657
+          ],
+          "predsim-hip-0": [
+            115.746,
+            153.787
+          ],
+          "predsim-hip-50": [
+            116.691,
+            155.973
+          ],
+          "predsim-hip-75": [
+            117.928,
+            163.047
+          ],
+          "predsim-hip-90": [
+            118.436,
+            165.752
+          ]
+        },
+        "edgePathLengthsMm": [
+          140.215,
+          169.402,
+          118.826,
+          165.376,
+          117.966,
+          142.224,
+          142.476,
+          193.531,
+          112.017
+        ],
+        "areaRatioWorstPoseP01": 0.3406,
+        "areaRatioWorstPoseP99": 1.6392
+      }
+    },
+    "Sartorius muscle": {
+      "proximalTarget": "iliac crest",
+      "distalTarget": "distal section",
+      "proximalSeeds": 38,
+      "distalSeeds": 44,
+      "bothEndsConnectedVertices": 371,
+      "components": 1,
+      "mode": "surface geodesic",
+      "vertices": 371,
+      "offsetBytes": 185564,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": 0.0,
+        "distalMaxSlipMm": 0.0,
+        "replayEdgePathRangeMm": {
+          "bertaux-hoa001": [
+            235.333,
+            250.583
+          ],
+          "h1l-walk": [
+            227.462,
+            252.108
+          ],
+          "h1l-stand": [
+            235.164,
+            237.263
+          ],
+          "predsim-hip-0": [
+            229.067,
+            266.316
+          ],
+          "predsim-hip-50": [
+            228.592,
+            266.292
+          ],
+          "predsim-hip-75": [
+            228.217,
+            263.604
+          ],
+          "predsim-hip-90": [
+            227.721,
+            263.291
+          ]
+        },
+        "edgePathLengthsMm": [
+          249.283,
+          275.372,
+          211.89,
+          242.479,
+          262.181,
+          245.581,
+          255.874,
+          260.041,
+          215.133
+        ],
+        "areaRatioWorstPoseP01": 0.5992,
+        "areaRatioWorstPoseP99": 1.1822
+      }
+    },
+    "Rectus femoris": {
+      "proximalTarget": "Hip bone",
+      "distalTarget": "distal section",
+      "proximalSeeds": 54,
+      "distalSeeds": 57,
+      "bothEndsConnectedVertices": 381,
+      "components": 1,
+      "mode": "surface geodesic",
+      "vertices": 381,
+      "offsetBytes": 190758,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": 0.0,
+        "distalMaxSlipMm": 0.0,
+        "replayEdgePathRangeMm": {
+          "bertaux-hoa001": [
+            212.453,
+            214.907
+          ],
+          "h1l-walk": [
+            209.924,
+            212.077
+          ],
+          "h1l-stand": [
+            207.84,
+            208.441
+          ],
+          "predsim-hip-0": [
+            209.78,
+            216.91
+          ],
+          "predsim-hip-50": [
+            210.024,
+            216.785
+          ],
+          "predsim-hip-75": [
+            208.871,
+            215.389
+          ],
+          "predsim-hip-90": [
+            207.917,
+            214.789
+          ]
+        },
+        "edgePathLengthsMm": [
+          211.154,
+          222.697,
+          228.608,
+          208.985,
+          223.609,
+          211.484,
+          212.344,
+          223.078,
+          231.876
+        ],
+        "areaRatioWorstPoseP01": 0.729,
+        "areaRatioWorstPoseP99": 1.4152
+      }
+    },
+    "Vastus lateralis muscle": {
+      "mode": "femur",
+      "constant": 1,
+      "vertices": 312
+    },
+    "Vastus intermedius muscle": {
+      "mode": "femur",
+      "constant": 1,
+      "vertices": 298
+    },
+    "Vastus medialis muscle": {
+      "mode": "femur",
+      "constant": 1,
+      "vertices": 252
+    },
+    "Long head of biceps femoris": {
+      "proximalTarget": "ischium/pubis",
+      "distalTarget": "distal section",
+      "proximalSeeds": 14,
+      "distalSeeds": 62,
+      "bothEndsConnectedVertices": 340,
+      "components": 1,
+      "mode": "surface geodesic",
+      "vertices": 340,
+      "offsetBytes": 196092,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": 0.0,
+        "distalMaxSlipMm": 0.0,
+        "replayEdgePathRangeMm": {
+          "bertaux-hoa001": [
+            112.526,
+            138.2
+          ],
+          "h1l-walk": [
+            112.475,
+            154.185
+          ],
+          "h1l-stand": [
+            133.535,
+            138.252
+          ],
+          "predsim-hip-0": [
+            112.865,
+            151.466
+          ],
+          "predsim-hip-50": [
+            112.914,
+            151.026
+          ],
+          "predsim-hip-75": [
+            114.042,
+            151.009
+          ],
+          "predsim-hip-90": [
+            112.385,
+            151.96
+          ]
+        },
+        "edgePathLengthsMm": [
+          114.876,
+          120.242,
+          231.767,
+          143.167,
+          111.849,
+          110.613,
+          127.468,
+          127.987,
+          233.129
+        ],
+        "areaRatioWorstPoseP01": 0.6115,
+        "areaRatioWorstPoseP99": 2.8424
+      }
+    },
+    "Semitendinosus muscle": {
+      "proximalTarget": "ischium/pubis",
+      "distalTarget": "distal section",
+      "proximalSeeds": 9,
+      "distalSeeds": 48,
+      "bothEndsConnectedVertices": 216,
+      "components": 1,
+      "mode": "surface geodesic",
+      "vertices": 216,
+      "offsetBytes": 200852,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": 0.0,
+        "distalMaxSlipMm": 0.0,
+        "replayEdgePathRangeMm": {
+          "bertaux-hoa001": [
+            101.151,
+            123.759
+          ],
+          "h1l-walk": [
+            96.882,
+            136.276
+          ],
+          "h1l-stand": [
+            114.585,
+            118.844
+          ],
+          "predsim-hip-0": [
+            95.821,
+            133.747
+          ],
+          "predsim-hip-50": [
+            96.615,
+            134.354
+          ],
+          "predsim-hip-75": [
+            97.509,
+            133.779
+          ],
+          "predsim-hip-90": [
+            96.03,
+            133.716
+          ]
+        },
+        "edgePathLengthsMm": [
+          98.65,
+          107.937,
+          212.407,
+          123.921,
+          108.746,
+          102.896,
+          103.004,
+          114.894,
+          211.616
+        ],
+        "areaRatioWorstPoseP01": 0.7098,
+        "areaRatioWorstPoseP99": 2.8169
+      }
+    },
+    "Semimembranosus muscle": {
+      "proximalTarget": "ischium/pubis",
+      "distalTarget": "distal section",
+      "proximalSeeds": 25,
+      "distalSeeds": 69,
+      "bothEndsConnectedVertices": 272,
+      "components": 1,
+      "mode": "surface geodesic",
+      "vertices": 272,
+      "offsetBytes": 203876,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": 0.0,
+        "distalMaxSlipMm": 0.0,
+        "replayEdgePathRangeMm": {
+          "bertaux-hoa001": [
+            106.621,
+            128.383
+          ],
+          "h1l-walk": [
+            105.351,
+            141.385
+          ],
+          "h1l-stand": [
+            122.986,
+            127.22
+          ],
+          "predsim-hip-0": [
+            103.645,
+            138.578
+          ],
+          "predsim-hip-50": [
+            104.773,
+            139.418
+          ],
+          "predsim-hip-75": [
+            106.382,
+            139.211
+          ],
+          "predsim-hip-90": [
+            104.061,
+            139.59
+          ]
+        },
+        "edgePathLengthsMm": [
+          107.102,
+          116.627,
+          213.515,
+          135.642,
+          112.418,
+          111.141,
+          110.452,
+          132.167,
+          211.694
+        ],
+        "areaRatioWorstPoseP01": 0.6603,
+        "areaRatioWorstPoseP99": 2.8028
+      }
+    },
+    "Ligament of head of femur": {
+      "proximalTarget": "Transverse acetabular ligament",
+      "distalTarget": "head",
+      "proximalSeeds": 114,
+      "distalSeeds": 245,
+      "bothEndsConnectedVertices": 968,
+      "components": 1,
+      "mode": "surface geodesic",
+      "vertices": 968,
+      "offsetBytes": 207684,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": 0.0,
+        "distalMaxSlipMm": 0.0,
+        "replayEdgePathRangeMm": {
+          "bertaux-hoa001": [
+            25.571,
+            28.134
+          ],
+          "h1l-walk": [
+            19.606,
+            23.618
+          ],
+          "h1l-stand": [
+            18.952,
+            19.82
+          ],
+          "predsim-hip-0": [
+            19.297,
+            24.256
+          ],
+          "predsim-hip-50": [
+            19.415,
+            25.122
+          ],
+          "predsim-hip-75": [
+            17.821,
+            25.2
+          ],
+          "predsim-hip-90": [
+            17.483,
+            25.152
+          ]
+        },
+        "edgePathLengthsMm": [
+          20.14,
+          18.881,
+          28.788,
+          21.143,
+          33.413,
+          30.538,
+          26.386,
+          31.857,
+          28.953
+        ],
+        "areaRatioWorstPoseP01": 0.1899,
+        "areaRatioWorstPoseP99": 7.103
+      }
+    },
+    "Transverse acetabular ligament": {
+      "mode": "pelvis",
+      "constant": 0,
+      "vertices": 426
+    },
+    "Sacrotuberal ligament": {
+      "mode": "pelvis",
+      "constant": 0,
+      "vertices": 1680
+    },
+    "Sacrospinous ligament": {
+      "mode": "pelvis",
+      "constant": 0,
+      "vertices": 462
+    },
+    "Obturator membrane": {
+      "mode": "pelvis",
+      "constant": 0,
+      "vertices": 254
+    },
+    "Anterior sacro-iliac ligament": {
+      "mode": "pelvis",
+      "constant": 0,
+      "vertices": 444
+    },
+    "Interossea / Posterior sacro-iliac ligament": {
+      "mode": "pelvis",
+      "constant": 0,
+      "vertices": 3103
+    },
+    "Iliolumbar ligament": {
+      "mode": "pelvis",
+      "constant": 0,
+      "vertices": 1089
+    },
+    "Descending part of Iliofemoral ligament": {
+      "proximalTarget": "Hip bone",
+      "distalTarget": "femoral neck/shaft",
+      "proximalSeeds": 80,
+      "distalSeeds": 225,
+      "bothEndsConnectedVertices": 810,
+      "components": 1,
+      "mode": "surface geodesic",
+      "vertices": 810,
+      "offsetBytes": 221236,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": 0.0,
+        "distalMaxSlipMm": 0.0,
+        "replayEdgePathRangeMm": {
+          "bertaux-hoa001": [
+            64.543,
+            72.764
+          ],
+          "h1l-walk": [
+            60.28,
+            74.546
+          ],
+          "h1l-stand": [
+            65.913,
+            67.036
+          ],
+          "predsim-hip-0": [
+            60.815,
+            79.329
+          ],
+          "predsim-hip-50": [
+            61.147,
+            79.72
+          ],
+          "predsim-hip-75": [
+            61.155,
+            79.514
+          ],
+          "predsim-hip-90": [
+            61.04,
+            78.666
+          ]
+        },
+        "edgePathLengthsMm": [
+          73.146,
+          85.683,
+          47.158,
+          70.832,
+          77.246,
+          77.486,
+          71.763,
+          85.958,
+          46.758
+        ],
+        "areaRatioWorstPoseP01": 0.1205,
+        "areaRatioWorstPoseP99": 1.4539
+      }
+    },
+    "Transverse part of Iliofemoral ligament": {
+      "proximalTarget": "Hip bone",
+      "distalTarget": "femoral neck/shaft",
+      "proximalSeeds": 106,
+      "distalSeeds": 236,
+      "bothEndsConnectedVertices": 780,
+      "components": 1,
+      "mode": "surface geodesic",
+      "vertices": 780,
+      "offsetBytes": 232576,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": 0.0,
+        "distalMaxSlipMm": 0.0,
+        "replayEdgePathRangeMm": {
+          "bertaux-hoa001": [
+            44.368,
+            48.588
+          ],
+          "h1l-walk": [
+            39.949,
+            45.877
+          ],
+          "h1l-stand": [
+            39.299,
+            40.392
+          ],
+          "predsim-hip-0": [
+            40.431,
+            47.111
+          ],
+          "predsim-hip-50": [
+            40.799,
+            47.144
+          ],
+          "predsim-hip-75": [
+            39.461,
+            45.934
+          ],
+          "predsim-hip-90": [
+            37.502,
+            45.332
+          ]
+        },
+        "edgePathLengthsMm": [
+          44.995,
+          51.174,
+          37.942,
+          38.454,
+          54.784,
+          54.308,
+          40.57,
+          52.202,
+          36.349
+        ],
+        "areaRatioWorstPoseP01": 0.1865,
+        "areaRatioWorstPoseP99": 1.4836
+      }
+    },
+    "Pubofemoral ligament": {
+      "proximalTarget": "Hip bone",
+      "distalTarget": "femoral neck/shaft",
+      "proximalSeeds": 27,
+      "distalSeeds": 63,
+      "bothEndsConnectedVertices": 224,
+      "components": 1,
+      "mode": "surface geodesic",
+      "vertices": 224,
+      "offsetBytes": 243496,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": 0.0,
+        "distalMaxSlipMm": 0.0,
+        "replayEdgePathRangeMm": {
+          "bertaux-hoa001": [
+            63.982,
+            66.47
+          ],
+          "h1l-walk": [
+            67.472,
+            72.769
+          ],
+          "h1l-stand": [
+            71.408,
+            73.396
+          ],
+          "predsim-hip-0": [
+            66.776,
+            75.753
+          ],
+          "predsim-hip-50": [
+            66.98,
+            76.572
+          ],
+          "predsim-hip-75": [
+            66.82,
+            79.454
+          ],
+          "predsim-hip-90": [
+            66.539,
+            80.609
+          ]
+        },
+        "edgePathLengthsMm": [
+          72.144,
+          81.485,
+          72.593,
+          82.05,
+          64.153,
+          72.761,
+          72.13,
+          91.406,
+          70.792
+        ],
+        "areaRatioWorstPoseP01": 0.5216,
+        "areaRatioWorstPoseP99": 1.5461
+      }
+    },
+    "Ischiofemoral ligament": {
+      "proximalTarget": "Hip bone",
+      "distalTarget": "femoral neck/shaft",
+      "proximalSeeds": 98,
+      "distalSeeds": 99,
+      "bothEndsConnectedVertices": 324,
+      "components": 1,
+      "mode": "surface geodesic",
+      "vertices": 324,
+      "offsetBytes": 246632,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": 0.0,
+        "distalMaxSlipMm": 0.0,
+        "replayEdgePathRangeMm": {
+          "bertaux-hoa001": [
+            41.543,
+            46.475
+          ],
+          "h1l-walk": [
+            43.3,
+            50.549
+          ],
+          "h1l-stand": [
+            47.484,
+            48.448
+          ],
+          "predsim-hip-0": [
+            45.053,
+            50.21
+          ],
+          "predsim-hip-50": [
+            44.243,
+            49.491
+          ],
+          "predsim-hip-75": [
+            43.945,
+            49.734
+          ],
+          "predsim-hip-90": [
+            44.122,
+            50.698
+          ]
+        },
+        "edgePathLengthsMm": [
+          43.796,
+          45.052,
+          65.511,
+          49.587,
+          38.25,
+          34.807,
+          54.399,
+          42.732,
+          67.335
+        ],
+        "areaRatioWorstPoseP01": 0.1433,
+        "areaRatioWorstPoseP99": 3.1472
+      }
+    },
+    "Lumbar vertebra (L5)": {
+      "mode": "pelvis",
+      "constant": 0,
+      "vertices": 3706
+    },
+    "Coccyx": {
+      "mode": "pelvis",
+      "constant": 0,
+      "vertices": 368
+    },
+    "Annulus fibrosus L5 S1": {
+      "mode": "pelvis",
+      "constant": 0,
+      "vertices": 292
+    },
+    "Trochanteric bursa of gluteus maximus": {
+      "mode": "femur",
+      "constant": 1,
+      "vertices": 98
+    },
+    "Trochanteric bursa of gluteus minimus": {
+      "mode": "femur",
+      "constant": 1,
+      "vertices": 176
+    },
+    "Trochanteric bursae of gluteus medius": {
+      "mode": "femur",
+      "constant": 1,
+      "vertices": 338
+    },
+    "Subcutaneous trochanteric bursa": {
+      "mode": "femur",
+      "constant": 1,
+      "vertices": 98
+    },
+    "Gluteal aponeurosis": {
+      "mode": "adjacent tissue interpolation",
+      "donors": [
+        "Gluteus medius muscle",
+        "Gluteus minimus muscle",
+        "Gluteus maximus muscle"
+      ],
+      "medianHostDistanceMm": 7.78,
+      "vertices": 213,
+      "offsetBytes": 251168,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": null,
+        "distalMaxSlipMm": null,
+        "replayEdgePathRangeMm": {},
+        "edgePathLengthsMm": [],
+        "areaRatioWorstPoseP01": 0.3775,
+        "areaRatioWorstPoseP99": 1.6883
+      }
+    },
+    "Common tendon of Semitendinosus and Long head of biceps femoris": {
+      "mode": "adjacent tissue interpolation",
+      "donors": [
+        "Semitendinosus muscle",
+        "Long head of biceps femoris"
+      ],
+      "medianHostDistanceMm": 3.09,
+      "vertices": 424,
+      "offsetBytes": 254150,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": null,
+        "distalMaxSlipMm": null,
+        "replayEdgePathRangeMm": {},
+        "edgePathLengthsMm": [],
+        "areaRatioWorstPoseP01": 0.9542,
+        "areaRatioWorstPoseP99": 1.1228
+      }
+    },
+    "Zona orbicularis of hip joint": {
+      "mode": "adjacent tissue interpolation",
+      "donors": [
+        "Hip joint capsule"
+      ],
+      "medianHostDistanceMm": 1.44,
+      "vertices": 204,
+      "offsetBytes": 260086,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": null,
+        "distalMaxSlipMm": null,
+        "replayEdgePathRangeMm": {},
+        "edgePathLengthsMm": [],
+        "areaRatioWorstPoseP01": 0.7245,
+        "areaRatioWorstPoseP99": 1.4604
+      }
+    },
+    "Sciatic nerve": {
+      "mode": "adjacent tissue interpolation",
+      "donors": [
+        "Gluteus maximus muscle",
+        "Obturator internus",
+        "Piriformis muscle",
+        "Quadratus femoris muscle",
+        "Pectineus muscle",
+        "Iliacus muscle",
+        "Tensor fasciae latae"
+      ],
+      "medianHostDistanceMm": 8.88,
+      "vertices": 4414,
+      "offsetBytes": 262942,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": null,
+        "distalMaxSlipMm": null,
+        "replayEdgePathRangeMm": {},
+        "edgePathLengthsMm": [],
+        "areaRatioWorstPoseP01": 0.3364,
+        "areaRatioWorstPoseP99": 7.2883
+      }
+    },
+    "Femoral nerve": {
+      "mode": "adjacent tissue interpolation",
+      "donors": [
+        "Iliacus muscle",
+        "Psoas major",
+        "Rectus femoris",
+        "Pectineus muscle"
+      ],
+      "medianHostDistanceMm": 4.03,
+      "vertices": 588,
+      "offsetBytes": 324738,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": null,
+        "distalMaxSlipMm": null,
+        "replayEdgePathRangeMm": {},
+        "edgePathLengthsMm": [],
+        "areaRatioWorstPoseP01": 0.5167,
+        "areaRatioWorstPoseP99": 1.2472
+      }
+    },
+    "Superior gluteal nerve": {
+      "mode": "adjacent tissue interpolation",
+      "donors": [
+        "Gluteus medius muscle",
+        "Gluteus minimus muscle",
+        "Gluteus maximus muscle"
+      ],
+      "medianHostDistanceMm": 3.36,
+      "vertices": 6003,
+      "offsetBytes": 332970,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": null,
+        "distalMaxSlipMm": null,
+        "replayEdgePathRangeMm": {},
+        "edgePathLengthsMm": [],
+        "areaRatioWorstPoseP01": 0.2174,
+        "areaRatioWorstPoseP99": 1.8118
+      }
+    },
+    "Inferior gluteal nerve": {
+      "mode": "adjacent tissue interpolation",
+      "donors": [
+        "Gluteus medius muscle",
+        "Gluteus minimus muscle",
+        "Gluteus maximus muscle"
+      ],
+      "medianHostDistanceMm": 5.6,
+      "vertices": 7125,
+      "offsetBytes": 417012,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": null,
+        "distalMaxSlipMm": null,
+        "replayEdgePathRangeMm": {},
+        "edgePathLengthsMm": [],
+        "areaRatioWorstPoseP01": 0.5006,
+        "areaRatioWorstPoseP99": 1.7589
+      }
+    },
+    "Intermuscular gluteal bursae": {
+      "mode": "adjacent tissue interpolation",
+      "donors": [
+        "Gluteus medius muscle",
+        "Gluteus minimus muscle",
+        "Gluteus maximus muscle"
+      ],
+      "medianHostDistanceMm": 3.54,
+      "vertices": 1014,
+      "offsetBytes": 516762,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": null,
+        "distalMaxSlipMm": null,
+        "replayEdgePathRangeMm": {},
+        "edgePathLengthsMm": [],
+        "areaRatioWorstPoseP01": 0.885,
+        "areaRatioWorstPoseP99": 1.306
+      }
+    },
+    "Bursa of piriformis": {
+      "mode": "adjacent tissue interpolation",
+      "donors": [
+        "Piriformis muscle"
+      ],
+      "medianHostDistanceMm": 2.35,
+      "vertices": 126,
+      "offsetBytes": 530958,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": null,
+        "distalMaxSlipMm": null,
+        "replayEdgePathRangeMm": {},
+        "edgePathLengthsMm": [],
+        "areaRatioWorstPoseP01": 0.676,
+        "areaRatioWorstPoseP99": 1.4786
+      }
+    },
+    "Iliopectineal bursa": {
+      "mode": "adjacent tissue interpolation",
+      "donors": [
+        "Iliacus muscle",
+        "Psoas major"
+      ],
+      "medianHostDistanceMm": 2.68,
+      "vertices": 338,
+      "offsetBytes": 532722,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": null,
+        "distalMaxSlipMm": null,
+        "replayEdgePathRangeMm": {},
+        "edgePathLengthsMm": [],
+        "areaRatioWorstPoseP01": 0.3958,
+        "areaRatioWorstPoseP99": 1.2639
+      }
+    },
+    "Sciatic bursa of gluteus maximus (Ischiogluteal bursa)": {
+      "mode": "adjacent tissue interpolation",
+      "donors": [
+        "Gluteus medius muscle",
+        "Gluteus minimus muscle",
+        "Gluteus maximus muscle"
+      ],
+      "medianHostDistanceMm": 15.47,
+      "vertices": 330,
+      "offsetBytes": 537454,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": null,
+        "distalMaxSlipMm": null,
+        "replayEdgePathRangeMm": {},
+        "edgePathLengthsMm": [],
+        "areaRatioWorstPoseP01": 0.7192,
+        "areaRatioWorstPoseP99": 1.577
+      }
+    },
+    "Sciatic bursa of obturator internus": {
+      "mode": "adjacent tissue interpolation",
+      "donors": [
+        "Obturator internus"
+      ],
+      "medianHostDistanceMm": 2.06,
+      "vertices": 338,
+      "offsetBytes": 542074,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": null,
+        "distalMaxSlipMm": null,
+        "replayEdgePathRangeMm": {},
+        "edgePathLengthsMm": [],
+        "areaRatioWorstPoseP01": 0.961,
+        "areaRatioWorstPoseP99": 1.0395
+      }
+    },
+    "Subtendinous bursa of iliacus": {
+      "mode": "adjacent tissue interpolation",
+      "donors": [
+        "Iliacus muscle",
+        "Psoas major"
+      ],
+      "medianHostDistanceMm": 2.28,
+      "vertices": 338,
+      "offsetBytes": 546806,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": null,
+        "distalMaxSlipMm": null,
+        "replayEdgePathRangeMm": {},
+        "edgePathLengthsMm": [],
+        "areaRatioWorstPoseP01": 0.972,
+        "areaRatioWorstPoseP99": 1.0142
+      }
+    },
+    "Subtendinous bursa of obturator internus": {
+      "mode": "adjacent tissue interpolation",
+      "donors": [
+        "Obturator internus"
+      ],
+      "medianHostDistanceMm": 3.06,
+      "vertices": 234,
+      "offsetBytes": 551538,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": null,
+        "distalMaxSlipMm": null,
+        "replayEdgePathRangeMm": {},
+        "edgePathLengthsMm": [],
+        "areaRatioWorstPoseP01": 0.5179,
+        "areaRatioWorstPoseP99": 1.8271
+      }
+    },
+    "Ascending branch of lateral circumflex femoral artery": {
+      "mode": "adjacent tissue interpolation",
+      "donors": [
+        "Iliacus muscle",
+        "Psoas major",
+        "Rectus femoris",
+        "Pectineus muscle"
+      ],
+      "medianHostDistanceMm": 15.38,
+      "vertices": 732,
+      "offsetBytes": 554814,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": null,
+        "distalMaxSlipMm": null,
+        "replayEdgePathRangeMm": {},
+        "edgePathLengthsMm": [],
+        "areaRatioWorstPoseP01": 0.4509,
+        "areaRatioWorstPoseP99": 1.8893
+      }
+    },
+    "Femoral artery": {
+      "mode": "adjacent tissue interpolation",
+      "donors": [
+        "Iliacus muscle",
+        "Psoas major",
+        "Rectus femoris",
+        "Pectineus muscle"
+      ],
+      "medianHostDistanceMm": 9.27,
+      "vertices": 448,
+      "offsetBytes": 565062,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": null,
+        "distalMaxSlipMm": null,
+        "replayEdgePathRangeMm": {},
+        "edgePathLengthsMm": [],
+        "areaRatioWorstPoseP01": 0.2014,
+        "areaRatioWorstPoseP99": 1.863
+      }
+    },
+    "Femoral neck vessels": {
+      "mode": "adjacent tissue interpolation",
+      "donors": [
+        "Hip joint capsule"
+      ],
+      "medianHostDistanceMm": 2.06,
+      "vertices": 1800,
+      "offsetBytes": 571334,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": null,
+        "distalMaxSlipMm": null,
+        "replayEdgePathRangeMm": {},
+        "edgePathLengthsMm": [],
+        "areaRatioWorstPoseP01": 0.5027,
+        "areaRatioWorstPoseP99": 1.6475
+      }
+    },
+    "Lateral circumflex femoral artery": {
+      "mode": "adjacent tissue interpolation",
+      "donors": [
+        "Iliacus muscle",
+        "Psoas major",
+        "Rectus femoris",
+        "Pectineus muscle"
+      ],
+      "medianHostDistanceMm": 27.84,
+      "vertices": 1321,
+      "offsetBytes": 596534,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": null,
+        "distalMaxSlipMm": null,
+        "replayEdgePathRangeMm": {},
+        "edgePathLengthsMm": [],
+        "areaRatioWorstPoseP01": 0.1272,
+        "areaRatioWorstPoseP99": 2.7928
+      }
+    },
+    "Medial circumflex femoral artery": {
+      "mode": "adjacent tissue interpolation",
+      "donors": [
+        "Iliacus muscle",
+        "Psoas major",
+        "Rectus femoris",
+        "Pectineus muscle"
+      ],
+      "medianHostDistanceMm": 36.13,
+      "vertices": 2197,
+      "offsetBytes": 615028,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": null,
+        "distalMaxSlipMm": null,
+        "replayEdgePathRangeMm": {},
+        "edgePathLengthsMm": [],
+        "areaRatioWorstPoseP01": 0.2418,
+        "areaRatioWorstPoseP99": 4.9623
+      }
+    },
+    "Deep femoral vein": {
+      "mode": "adjacent tissue interpolation",
+      "donors": [
+        "Iliacus muscle",
+        "Psoas major",
+        "Rectus femoris",
+        "Pectineus muscle"
+      ],
+      "medianHostDistanceMm": 7.68,
+      "vertices": 264,
+      "offsetBytes": 645786,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": null,
+        "distalMaxSlipMm": null,
+        "replayEdgePathRangeMm": {},
+        "edgePathLengthsMm": [],
+        "areaRatioWorstPoseP01": 0.0349,
+        "areaRatioWorstPoseP99": 2.0297
+      }
+    },
+    "Femoral vein": {
+      "mode": "adjacent tissue interpolation",
+      "donors": [
+        "Iliacus muscle",
+        "Psoas major",
+        "Rectus femoris",
+        "Pectineus muscle"
+      ],
+      "medianHostDistanceMm": 8.07,
+      "vertices": 508,
+      "offsetBytes": 649482,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": null,
+        "distalMaxSlipMm": null,
+        "replayEdgePathRangeMm": {},
+        "edgePathLengthsMm": [],
+        "areaRatioWorstPoseP01": 0.2332,
+        "areaRatioWorstPoseP99": 1.9339
+      }
+    },
+    "Lateral circumflex femoral vein": {
+      "mode": "adjacent tissue interpolation",
+      "donors": [
+        "Iliacus muscle",
+        "Psoas major",
+        "Rectus femoris",
+        "Pectineus muscle"
+      ],
+      "medianHostDistanceMm": 14.25,
+      "vertices": 756,
+      "offsetBytes": 656594,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": null,
+        "distalMaxSlipMm": null,
+        "replayEdgePathRangeMm": {},
+        "edgePathLengthsMm": [],
+        "areaRatioWorstPoseP01": 0.1307,
+        "areaRatioWorstPoseP99": 2.6156
+      }
+    },
+    "Medial circumflex femoral vein": {
+      "mode": "adjacent tissue interpolation",
+      "donors": [
+        "Iliacus muscle",
+        "Psoas major",
+        "Rectus femoris",
+        "Pectineus muscle"
+      ],
+      "medianHostDistanceMm": 29.02,
+      "vertices": 888,
+      "offsetBytes": 667178,
+      "validation": {
+        "neutralMaxDisplacementMm": 0.0,
+        "proximalMaxSlipMm": null,
+        "distalMaxSlipMm": null,
+        "replayEdgePathRangeMm": {},
+        "edgePathLengthsMm": [],
+        "areaRatioWorstPoseP01": 0.3506,
+        "areaRatioWorstPoseP99": 3.9312
+      }
+    }
+  },
+  "poseDegrees": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      -30,
+      0,
+      0
+    ],
+    [
+      75,
+      0,
+      0
+    ],
+    [
+      0,
+      -25,
+      0
+    ],
+    [
+      0,
+      30,
+      0
+    ],
+    [
+      0,
+      0,
+      -30
+    ],
+    [
+      0,
+      0,
+      30
+    ],
+    [
+      -30,
+      -25,
+      -30
+    ],
+    [
+      75,
+      30,
+      30
+    ]
+  ],
+  "replayFrames": {
+    "bertaux-hoa001": 101,
+    "h1l-walk": 101,
+    "h1l-stand": 101,
+    "predsim-hip-0": 101,
+    "predsim-hip-50": 101,
+    "predsim-hip-75": 101,
+    "predsim-hip-90": 101
+  },
+  "replayMotionSha256": "6e9c20bead364cadbb988b08c3e02ff548cfd0003e5aac7112bc8f2500074010",
+  "insertionRegion": {
+    "distanceUnitMm": 0.01,
+    "fullThroughMm": 5,
+    "endsAtMm": 35,
+    "method": "For each of the two gluteal muscles, the nearest quarter of the inferred femur pins to the trochanter surface forms an illustrative insertion footprint. Measure shortest distance along atlas edges from that footprint. Cubic easing from 5 to 35 mm draws the distal region. These widths are display assumptions, and tendon was not independently segmented."
+  },
+  "poseConvention": "[flexion, adduction, internal rotation]; rotate about fitted hip centre using ZXY(add,-flex,rotation).",
+  "method": "Proximity to anatomically selected bone surfaces sampled at \u22642 mm spacing or to atlas section patches defines approximate anchors. Blended tissues use mesh-geodesic distance between anchor patches with cubic easing and normalized spatial convolution; a smooth distance constraint fixes both anchor patches. Vertex positions move on a spherical arc about the fitted hip centre. Nearby fascial/neurovascular surfaces can inherit neighboring tissue motion. The truncated distal thigh follows the femur. Lumbar attachments travel with the pelvis.",
+  "interpretation": "Kinematic illustration. Pins are inferred from a neutral dissection. The computed surface-edge lengths and area ratios check mesh behavior; they do not measure individual muscle fibers, tendon strain, pressure, contact, or inflammation."
+}

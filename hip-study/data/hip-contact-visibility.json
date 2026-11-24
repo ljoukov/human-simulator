@@ -1,0 +1,260 @@
+{
+  "model": "Open3D teaching atlas and seven retargeted hip-motion clips",
+  "method": "For each pose, render depth-tested opaque anatomical IDs and the projected iliotibial tract alone. Count muscle pixels in four-connected components of at least two pixels fully inside the tract footprint. Repeat with original attachment-based articulation and current surface positions.",
+  "limitation": "This view-dependent metric detects enclosed visible intersections. Edge occlusions, subsurface collisions and physiological contact pressures require different measurements.",
+  "camera": "Orthographic superficial hip preset. Positive azimuth turns towards anterior from ipsilateral lateral. Elevation is measured above the horizontal. Mirror the transverse axis for left hips.",
+  "reference": "Original attachment-based spherical articulation with the uncoupled tensor fasciae latae weights. The active pass uses current rendered positions for all structures.",
+  "size": {
+    "width": 800,
+    "height": 550
+  },
+  "hashes": {
+    "originalAttachments": "e036c764d32e8a593450f8c5f99bece84219f3f596f8c65c5889d3c080a026ea",
+    "hip-visibility-reference.json": "95ec250078302c9efa668cf5958250fc0ad25e8ce8f40770144318f697afe675",
+    "contact.c": "73f73809b0551ace42a70ed2659ef82476b6f8d485f8012609bd3192e0339d7c",
+    "motion.json": "6e9c20bead364cadbb988b08c3e02ff548cfd0003e5aac7112bc8f2500074010",
+    "hip-attachments.bin": "0d356d4f354d0c5baba87cce52c8a8f468cb1ee3c77f61331cf0e62266c62dd5",
+    "hip-contact.bin": "e528c29c531679153a8a983a65d0ffeb3cfbe31e30619f3ae5265593f582f513",
+    "hip-atlas.glb": "129e2cce9be7d132a25e27294c18187ab70552cb4fb8c336b65a76a306230a97",
+    "hip-contact.wasm": "aacc909314e9f0c3e4f0022120104f1b17e38f9e89ab712204ccc15e1aeffa5f"
+  },
+  "browser": "157.0.8103.79",
+  "views": [
+    {
+      "azimuthDeg": 26,
+      "elevationDeg": 10,
+      "clips": [
+        {
+          "id": "bertaux-hoa001",
+          "frames": 101,
+          "original": {
+            "framesWithIslands": 101,
+            "sumPixels": 38731,
+            "maximumPixels": 731
+          },
+          "current": {
+            "framesWithIslands": 0,
+            "sumPixels": 0,
+            "maximumPixels": 0
+          },
+          "poseAt51Percent": {
+            "original": {
+              "footprint": 46757,
+              "count": 372,
+              "byStructure": {
+                "Tensor fasciae latae": 372
+              }
+            },
+            "current": {
+              "footprint": 46848,
+              "count": 0,
+              "byStructure": {}
+            }
+          }
+        },
+        {
+          "id": "h1l-walk",
+          "frames": 101,
+          "original": {
+            "framesWithIslands": 86,
+            "sumPixels": 45324,
+            "maximumPixels": 961
+          },
+          "current": {
+            "framesWithIslands": 0,
+            "sumPixels": 0,
+            "maximumPixels": 0
+          }
+        },
+        {
+          "id": "h1l-stand",
+          "frames": 101,
+          "original": {
+            "framesWithIslands": 101,
+            "sumPixels": 155333,
+            "maximumPixels": 2197
+          },
+          "current": {
+            "framesWithIslands": 0,
+            "sumPixels": 0,
+            "maximumPixels": 0
+          }
+        },
+        {
+          "id": "predsim-hip-0",
+          "frames": 101,
+          "original": {
+            "framesWithIslands": 85,
+            "sumPixels": 36869,
+            "maximumPixels": 941
+          },
+          "current": {
+            "framesWithIslands": 0,
+            "sumPixels": 0,
+            "maximumPixels": 0
+          }
+        },
+        {
+          "id": "predsim-hip-50",
+          "frames": 101,
+          "original": {
+            "framesWithIslands": 87,
+            "sumPixels": 40874,
+            "maximumPixels": 993
+          },
+          "current": {
+            "framesWithIslands": 0,
+            "sumPixels": 0,
+            "maximumPixels": 0
+          }
+        },
+        {
+          "id": "predsim-hip-75",
+          "frames": 101,
+          "original": {
+            "framesWithIslands": 99,
+            "sumPixels": 85365,
+            "maximumPixels": 1821
+          },
+          "current": {
+            "framesWithIslands": 0,
+            "sumPixels": 0,
+            "maximumPixels": 0
+          }
+        },
+        {
+          "id": "predsim-hip-90",
+          "frames": 101,
+          "original": {
+            "framesWithIslands": 101,
+            "sumPixels": 142548,
+            "maximumPixels": 3721
+          },
+          "current": {
+            "framesWithIslands": 0,
+            "sumPixels": 0,
+            "maximumPixels": 0
+          }
+        }
+      ]
+    },
+    {
+      "azimuthDeg": -25,
+      "elevationDeg": 5,
+      "clips": [
+        {
+          "id": "bertaux-hoa001",
+          "frames": 101,
+          "original": {
+            "framesWithIslands": 59,
+            "sumPixels": 9746,
+            "maximumPixels": 303
+          },
+          "current": {
+            "framesWithIslands": 0,
+            "sumPixels": 0,
+            "maximumPixels": 0
+          },
+          "poseAt51Percent": {
+            "original": {
+              "footprint": 48334,
+              "count": 269,
+              "byStructure": {
+                "Tensor fasciae latae": 269
+              }
+            },
+            "current": {
+              "footprint": 48182,
+              "count": 0,
+              "byStructure": {}
+            }
+          }
+        },
+        {
+          "id": "h1l-walk",
+          "frames": 101,
+          "original": {
+            "framesWithIslands": 30,
+            "sumPixels": 439,
+            "maximumPixels": 54
+          },
+          "current": {
+            "framesWithIslands": 0,
+            "sumPixels": 0,
+            "maximumPixels": 0
+          }
+        },
+        {
+          "id": "h1l-stand",
+          "frames": 101,
+          "original": {
+            "framesWithIslands": 100,
+            "sumPixels": 69455,
+            "maximumPixels": 1316
+          },
+          "current": {
+            "framesWithIslands": 0,
+            "sumPixels": 0,
+            "maximumPixels": 0
+          }
+        },
+        {
+          "id": "predsim-hip-0",
+          "frames": 101,
+          "original": {
+            "framesWithIslands": 61,
+            "sumPixels": 4617,
+            "maximumPixels": 200
+          },
+          "current": {
+            "framesWithIslands": 0,
+            "sumPixels": 0,
+            "maximumPixels": 0
+          }
+        },
+        {
+          "id": "predsim-hip-50",
+          "frames": 101,
+          "original": {
+            "framesWithIslands": 56,
+            "sumPixels": 3565,
+            "maximumPixels": 158
+          },
+          "current": {
+            "framesWithIslands": 0,
+            "sumPixels": 0,
+            "maximumPixels": 0
+          }
+        },
+        {
+          "id": "predsim-hip-75",
+          "frames": 101,
+          "original": {
+            "framesWithIslands": 51,
+            "sumPixels": 28934,
+            "maximumPixels": 1434
+          },
+          "current": {
+            "framesWithIslands": 0,
+            "sumPixels": 0,
+            "maximumPixels": 0
+          }
+        },
+        {
+          "id": "predsim-hip-90",
+          "frames": 101,
+          "original": {
+            "framesWithIslands": 78,
+            "sumPixels": 87821,
+            "maximumPixels": 2654
+          },
+          "current": {
+            "framesWithIslands": 0,
+            "sumPixels": 0,
+            "maximumPixels": 0
+          }
+        }
+      ]
+    }
+  ]
+}
